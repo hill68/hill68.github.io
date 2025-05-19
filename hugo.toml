@@ -1,3 +1,49 @@
-baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+baseURL = "https://hill68.github.io/"    # 换成你的地址
+languageCode = "zh-cn"
+title = "你的站点标题"
+theme = "hugo-theme-relearn"
+disableKinds = ["taxonomy"] # 可选：关闭 Hugo 自带的 /tags/ 目录
+
+[pagination]
+  pagerSize = 10   # 每页文章数量
+  
+# URL 结构
+[permalinks]
+  post = "/:year/:month/:slug/"
+
+# 文章列表分组（可选）
+[taxonomies]
+  category = "categories"
+  tag      = "tags"
+  
+[params.author]
+  name = "你的名字"
+
+
+# Relearn 主题自定义参数
+[params]
+  subtitle     = "副标题 / 口号"
+  dateFormat   = "2006-01-02"
+  showReadingTime = true
+  highlightTheme  = "monokai"   # 代码高亮风格
+  # 若需数学公式支持，启用 MathJax
+  math = true
+
+# 菜单
+[menu]
+  [[menu.main]]
+    name = "首页"
+    url  = "/"
+    weight = 1
+  [[menu.main]]
+    name = "分类"
+    url  = "/categories/"
+    weight = 2
+  [[menu.main]]
+    name = "标签"
+    url  = "/tags/"
+    weight = 3
+  [[menu.main]]
+    name = "关于"
+    url  = "/about/"
+    weight = 4
