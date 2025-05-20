@@ -29,6 +29,7 @@ publishDir = "docs"
   subtitle     = "副标题 / 口号"
   dateFormat   = "2006-01-02"
   showReadingTime = true
+  themeVariant = 'zen-light'
   highlightTheme  = "monokai"   # 代码高亮风格
   # 若需数学公式支持，启用 MathJax
   math = true
