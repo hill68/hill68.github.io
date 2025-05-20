@@ -1,5 +1,9 @@
 name: Build & Deploy to GitHub Pages
 
+# 给这个 workflow 写权限
+permissions:
+  contents: write
+
 on:
   push:
     branches: [ main ]
