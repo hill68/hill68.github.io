@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Log :: 你的站点标题</title>
+    <link>http://localhost:1313/log/index.html</link>
+    <description>This is a new chapter.</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 20 May 2025 11:13:37 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/log/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Page1</title>
+      <link>http://localhost:1313/log/page1/index.html</link>
+      <pubDate>Tue, 20 May 2025 11:13:37 +0800</pubDate>
+      <guid>http://localhost:1313/log/page1/index.html</guid>
+      <description>Page1&#xA;将基于运动基元的A*算法从四旋翼无人机改进适配到固定翼无人机 参考的基于运动基元的四旋翼无人机A*算法：&#xA;https://github.com/HKUST-Aerial-Robotics/Fast-Planner/blob/master/fast_planner/path_searching/src/kinodynamic_astar.cpp&#xA;总体思路&#xA;分析四旋翼A*算法的核心部分：了解其状态表示、控制输入、运动模型和运动基元生成方式。&#xA;理解固定翼无人机的动力学特性：明确其状态变量、控制输入、运动学/动力学模型，以及物理和操作限制。&#xA;整合调整：在前两步的基础上，重新定义状态和控制输入，修改运动基元生成方法，调整启发式函数和代价函数，确保算法的合理性和可行性。&#xA;1. 四旋翼A*算法概述 1.1 状态表示&#xA;位置：$\mathbf{p} = [x, y, z]^T$ 速度：$\mathbf{v} = [v_x, v_y, v_z]^T$ 状态向量：$\mathbf{s} = [\mathbf{p}, \mathbf{v}]^T$，共6维。 1.2 控制输入&#xA;加速度：$\mathbf{a} = [a_x, a_y, a_z]^T$ 控制输入集：在最大加速度范围内进行离散化，生成一系列可能的加速度向量。 1.3 运动模型&#xA;假设加速度在时间段$\tau$内恒定，使用匀加速运动方程进行状态转移： $$ \begin{cases} \mathbf{p}(t+\tau) = \mathbf{p}(t) + \mathbf{v}(t) \tau + \frac{1}{2} \mathbf{a} \tau^2 \ \mathbf{v}(t+\tau) = \mathbf{v}(t) + \mathbf{a} \tau \end{cases} $$&#xA;1.4 运动基元生成&#xA;对控制输入$\mathbf{a}$和持续时间$\tau$进行离散化，生成一系列可能的运动基元。 在节点扩展时，应用这些运动基元进行状态转移，生成新节点。 2. 固定翼无人机动力学特性 2.1 状态表示&#xA;位置：$\mathbf{p} = [x, y, z]^T$ 航向角：$\chi$（水平面内的方向） 俯仰角（航迹角）：$\gamma$（垂直方向的角度） 速度大小：$v$（通常假设恒定或在一定范围内） 状态向量：$\mathbf{s} = [x, y, z, \chi, \gamma]^T$，共5维。 2.2 控制输入</description>
+    </item>
+  </channel>
+</rss>

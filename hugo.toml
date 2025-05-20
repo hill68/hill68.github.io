@@ -6,10 +6,13 @@ disableKinds = ["taxonomy"] # 可选：关闭 Hugo 自带的 /tags/ 目录
 
 [pagination]
   pagerSize = 10   # 每页文章数量
+
+# 指定 Hugo build 输出到 docs/ 而不是默认 public/
+publishDir = "docs"
   
 # URL 结构
 [permalinks]
-  post = "/:year/:month/:slug/"
+  post = "/:year-:month/:slug/"
 
 # 文章列表分组（可选）
 [taxonomies]
