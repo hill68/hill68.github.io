@@ -9,6 +9,14 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "FlitSoft Docs",
+    "content": "electromagnetic",
+    "description": "electromagnetic",
+    "tags": [],
+    "title": "Electromagnetic",
+    "uri": "/electromagnetic/index.html"
+  },
+  {
+    "breadcrumb": "FlitSoft Docs",
     "content": "This is a new chapter.",
     "description": "This is a new chapter.",
     "tags": [],
