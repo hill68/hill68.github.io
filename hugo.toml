@@ -1,6 +1,6 @@
 baseURL = "https://hill68.github.io/"    # 换成你的地址
 languageCode = "zh-cn"
-title = "你的站点标题"
+title = "FlitSoft Docs"
 theme = "hugo-theme-relearn"
 disableKinds = ["taxonomy"] # 可选：关闭 Hugo 自带的 /tags/ 目录
 
