@@ -117,7 +117,7 @@ $$
 
   {{< math >}}
   \dot{\gamma}_D = \left\{ -\dot{\gamma}_{\max}, -\dot{\gamma}_{\max} + \Delta_{\gamma}, \ldots, 0, \ldots, \dot{\gamma}_{\max} - \Delta_{\gamma}, \dot{\gamma}_{\max} \right\}
-{{< /smath >}}
+{{< /math >}}
 
 - **组合控制输入集**：
 
