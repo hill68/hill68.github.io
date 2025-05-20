@@ -24,7 +24,14 @@ jobs:
         run: rm -rf docs
 
       - name: Build site
-        run: hugo --minify --cleanDestinationDir
+
+      - name: Build site
+         run: |
+           hugo --config hugo.toml \
+                      --minify \
+                      --cleanDestinationDir \
+                     --destination docs
+
 
       - name: Commit & Push docs/
         run: |
