@@ -1,0 +1,35 @@
+name: Build & Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+        with:
+          submodules: true
+          persist-credentials: true    # 允许后续 git push
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: '0.147.3'      # 换成你本地 hugo version 显示 extended 的版本
+
+      - name: Clean output dir
+        run: rm -rf docs
+
+      - name: Build site
+        run: hugo --minify --cleanDestinationDir
+
+      - name: Commit & Push docs/
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs
+          git commit -m "ci: rebuild site" || echo "No changes to commit"
+          git push
