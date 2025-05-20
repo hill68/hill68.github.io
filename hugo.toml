@@ -4,9 +4,6 @@ title = "FlitSoft Docs"
 theme = "hugo-theme-relearn"
 disableKinds = ["taxonomy"] # 可选：关闭 Hugo 自带的 /tags/ 目录
 
-# 给这个 workflow 写权限
-permissions:
-  contents: write
 
 [pagination]
   pagerSize = 10   # 每页文章数量
