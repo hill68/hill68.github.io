@@ -34,6 +34,16 @@ publishDir = "docs"
   # 若需数学公式支持，启用 MathJax
   math = true
 
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['\[', '\]'], ['$$', '$$']]
+          inline = [['\(', '\)'], ['$', '$']]
+
 # 菜单
 [menu]
   [[menu.main]]
