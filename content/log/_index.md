@@ -1,7 +1,7 @@
 +++
 title = "Log"
 type = "chapter"
-weight = 2
+weight = 10
 +++
 
 This is a new chapter.
