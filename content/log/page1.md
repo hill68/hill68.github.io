@@ -110,19 +110,19 @@ $$
   - **航向角变化率 $\dot{\chi}$**：
 
 $$
-    \dot{\chi}_D = \left\{ -\dot{\chi}_{\max}, -\dot{\chi}_{\max} + \Delta_{\chi}, \ldots, 0, \ldots, \dot{\chi}_{\max} - \Delta_{\chi}, \dot{\chi}_{\max} \right\}
+\dot{\chi}_D = \left\{ -\dot{\chi}_{\max}, -\dot{\chi}_{\max} + \Delta_{\chi}, \ldots, 0, \ldots, \dot{\chi}_{\max} - \Delta_{\chi}, \dot{\chi}_{\max} \right\}
 $$
 
   - **航迹角变化率 $\dot{\gamma}$**：
 
 $$
-    \dot{\gamma}_D = \left\{ -\dot{\gamma}_{\max}, -\dot{\gamma}_{\max} + \Delta_{\gamma}, \ldots, 0, \ldots, \dot{\gamma}_{\max} - \Delta_{\gamma}, \dot{\gamma}_{\max} \right\}
+\dot{\gamma}_D = \left\{ -\dot{\gamma}_{\max}, -\dot{\gamma}_{\max} + \Delta_{\gamma}, \ldots, 0, \ldots, \dot{\gamma}_{\max} - \Delta_{\gamma}, \dot{\gamma}_{\max} \right\}
 $$
 
   - **组合控制输入集**：
 
 $$
-    \mathcal{U}_D = \left\{ (\dot{\chi}, \dot{\gamma}) \ \big| \ \dot{\chi} \in \dot{\chi}_D, \ \dot{\gamma} \in \dot{\gamma}_D \right\}
+\mathcal{U}_D = \left\{ (\dot{\chi}, \dot{\gamma}) \ \big| \ \dot{\chi} \in \dot{\chi}_D, \ \dot{\gamma} \in \dot{\gamma}_D \right\}
 $$
 
 - **时间步长的确定**：设定固定的时间步长$\tau$，或者根据无人机的速度和环境动态调整。
