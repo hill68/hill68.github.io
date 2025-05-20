@@ -110,8 +110,8 @@ $$
 
 - **航向角变化率 $\dot{\chi}$**：
 
-  $$
-  \dot{\chi}_D = \{ -\dot{\chi}_{\max}, -\dot{\chi}_{\max} + \Delta_{\chi}, \ldots, 0, \ldots, \dot{\chi}_{\max} - \Delta_{\chi}, \dot{\chi}_{\max} \}
+$$
+  \dot{\gamma}_D = \left\{ -\dot{\gamma}_{\max}, -\dot{\gamma}_{\max} + \Delta_{\gamma}, \ldots, 0, \ldots, \dot{\gamma}_{\max} - \Delta_{\gamma}, \dot{\gamma}_{\max} \right\}
   $$
 
 - **航迹角变化率 $\dot{\gamma}$**：
