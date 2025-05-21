@@ -1,7 +1,7 @@
 +++
-title = "Log"
+title = "Gaming"
 type = "chapter"
-weight = 100
+weight = 40
 +++
 
 This is a new chapter.

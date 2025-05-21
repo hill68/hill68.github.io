@@ -1,7 +1,7 @@
 +++
-title = "Log"
+title = "LLM"
 type = "chapter"
-weight = 100
+weight = 30
 +++
 
 This is a new chapter.
