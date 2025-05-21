@@ -4,7 +4,7 @@ draft = false
 title = 'JSBSim Quickstart'
 +++
 
-# JSBSim Quickstart
+
 
 https://jsbsim-team.github.io/jsbsim-reference-manual/
 
