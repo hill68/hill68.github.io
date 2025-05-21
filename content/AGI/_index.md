@@ -1,5 +1,5 @@
 +++
-title = "LLM"
+title = "AGI"
 type = "chapter"
 weight = 30
 +++
