@@ -5,15 +5,15 @@ var relearn_searchindex = [
     "description": "UAV flight simulation",
     "tags": [],
     "title": "UAV",
-    "uri": "/uav/index.html"
+    "uri": "/uas/index.html"
   },
   {
     "breadcrumb": "FlitSoft Docs",
     "content": "electromagnetic",
     "description": "electromagnetic",
     "tags": [],
-    "title": "Electromagnetic",
-    "uri": "/electromagnetic/index.html"
+    "title": "EM",
+    "uri": "/em/index.html"
   },
   {
     "breadcrumb": "FlitSoft Docs",
