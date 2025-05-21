@@ -20,6 +20,46 @@ var relearn_searchindex = [
     "content": "This is a new chapter.",
     "description": "This is a new chapter.",
     "tags": [],
+    "title": "LLM",
+    "uri": "/agi/index.html"
+  },
+  {
+    "breadcrumb": "FlitSoft Docs",
+    "content": "This is a new chapter.",
+    "description": "This is a new chapter.",
+    "tags": [],
+    "title": "Gaming",
+    "uri": "/gaming/index.html"
+  },
+  {
+    "breadcrumb": "FlitSoft Docs",
+    "content": "This is a new chapter.",
+    "description": "This is a new chapter.",
+    "tags": [],
+    "title": "C2",
+    "uri": "/c2/index.html"
+  },
+  {
+    "breadcrumb": "FlitSoft Docs",
+    "content": "This is a new chapter.",
+    "description": "This is a new chapter.",
+    "tags": [],
+    "title": "Simulation",
+    "uri": "/simulation/index.html"
+  },
+  {
+    "breadcrumb": "FlitSoft Docs",
+    "content": "This is a new chapter.",
+    "description": "This is a new chapter.",
+    "tags": [],
+    "title": "Visualization",
+    "uri": "/visualization/index.html"
+  },
+  {
+    "breadcrumb": "FlitSoft Docs",
+    "content": "This is a new chapter.",
+    "description": "This is a new chapter.",
+    "tags": [],
     "title": "Log",
     "uri": "/log/index.html"
   },
