@@ -45,7 +45,7 @@ var relearn_searchindex = [
     "description": "This is a new chapter.",
     "tags": [],
     "title": "Simulation",
-    "uri": "/simulation/index.html"
+    "uri": "/simu/index.html"
   },
   {
     "breadcrumb": "FlitSoft Docs",
@@ -53,7 +53,7 @@ var relearn_searchindex = [
     "description": "This is a new chapter.",
     "tags": [],
     "title": "Visualization",
-    "uri": "/visualization/index.html"
+    "uri": "/visual/index.html"
   },
   {
     "breadcrumb": "FlitSoft Docs",
