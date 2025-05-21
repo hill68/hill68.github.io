@@ -20,7 +20,7 @@ var relearn_searchindex = [
     "content": "This is a new chapter.",
     "description": "This is a new chapter.",
     "tags": [],
-    "title": "LLM",
+    "title": "AGI",
     "uri": "/agi/index.html"
   },
   {
