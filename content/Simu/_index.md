@@ -5,3 +5,6 @@ weight = 60
 +++
 
 This is a new chapter.
+
+{{% children description="true" %}}
+
