@@ -92,76 +92,76 @@ JSBSim 与 Prepar3D 集成，利用 Prepar3D 的外部视觉系统，渲染到�
 
 虽然 JSBSim 用户不需要了解飞行模拟器操作的所有细节，但理解其基本工作原理是有帮助的。以下是一些重要的概念。
 
-- 参考框架用于描述飞行器模型中各种项目的位置和布局。
+- 参考坐标系用于描述飞行器模型中各种项目的位置和布局。
 - 在定义飞行器模型时，单位的指定具有灵活性——支持英制单位和公制单位。
 - 使用“属性”使得 JSBSim 成为一个通用模拟器，提供了一种通过参数（或变量）接口与各种系统进行交互的方法。属性广泛用于描述飞机和发动机特性配置文件中。
 - 数学在飞行物理建模中发挥着重要作用。JSBSim 使用数据表格，因为飞行动力学特性通常存储在表格中。JSBSim 还允许设置任意代数函数，从而广泛自由地描述气动和飞行控制特性。
 - 用户至少需要具备基本的飞行器飞行力学知识，了解飞机飞行时的常规力和力矩。
 - 理解飞行控制和系统建模方法是成功和有效仿真的关键。
 
-# 参考框架
+# 参考坐标系
 
-在描述对象的位置、飞机的姿态和方向，或为给定的飞行条件指定输入时，需要理解一些基本的参考框架。以下是对这些框架的简要介绍：
+在描述对象的位置、飞机的姿态和方向，或为给定的飞行条件指定输入时，需要理解一些基本的参考坐标系。以下是对这些坐标系的简要介绍：
 
-## 结构框架，或“构造框架”
+## 结构坐标系，或“构造坐标系”
 
-该框架是常见的制造商参考框架，用于定义飞机上的各个点，例如重心位置、所有轮子的位置信息、飞行员视点、点质量、推进器等。JSBSim 飞机配置文件中的项目就是使用此框架来定位的。
+该坐标系是常见的制造商参考坐标系，用于定义飞机上的各个点，例如重心位置、所有轮子的位置信息、飞行员视点、点质量、推进器等。JSBSim 飞机配置文件中的项目就是使用此坐标系来定位的。
 
-在结构框架中，X 轴沿着机身长度方向延伸，指向飞机尾部，Y 轴指向飞机右翼，Z 轴则朝上。通常，这个框架的原点 $O_C$ 位于飞机前部（例如机头尖端、单发动机飞机的机头防火墙处，或者位于机头前方的一段距离）。这个框架通常被命名为 $\mathcal{F}_{\mathrm{C}}=\left\{O_{\mathrm{C}}, x_{\mathrm{C}}, y_{\mathrm{C}}, z_{\mathrm{C}}\right\}$.。
+在结构坐标系中，X 轴沿着机身长度方向延伸，指向飞机尾部，Y 轴指向飞机右翼，Z 轴则朝上。通常，这个坐标系的原点 $O_C$ 位于飞机前部（例如机头尖端、单发动机飞机的机头防火墙处，或者位于机头前方的一段距离）。这个坐标系通常被命名为 $\mathcal{F}_{\mathrm{C}}=\left\{O_{\mathrm{C}}, x_{\mathrm{C}}, y_{\mathrm{C}}, z_{\mathrm{C}}\right\}$.。
 
-![结构框架](https://jsbsim-team.github.io/jsbsim-reference-manual/assets/img/ac_construction_axes.svg)
+![结构坐标系](https://jsbsim-team.github.io/jsbsim-reference-manual/assets/img/ac_construction_axes.svg)
 
-结构（或构造）框架的飞机参考坐标系，原点 $O_C$。除了结构框架轴 $x_C$, $y_C$, zC 外，还展示了标准机体框架轴 $x_B$, $y_B$, $z_B$，它们的原点在重心 G 处。飞行员的视点位于 PEP。
+结构（或构造）坐标系的飞机参考坐标系，原点 $O_C$。除了结构坐标系轴 $x_C$, $y_C$, zC 外，还展示了标准机体坐标系轴 $x_B$, $y_B$, $z_B$，它们的原点在重心 G 处。飞行员的视点位于 PEP。
 
 X 轴通常与机身中心线重合，并且通常与推力轴重合（例如在单发动机螺旋桨飞机中，它通过螺旋桨轴心）。沿 $x_C$ 轴的位置称为站位，沿 zC 轴的位置称为水线位置，沿 $y_C$ 轴的位置称为尾线位置。
 
-![结构框架](https://jsbsim-team.github.io/jsbsim-reference-manual/assets/img/c172x_blender.png)
+![结构坐标系](https://jsbsim-team.github.io/jsbsim-reference-manual/assets/img/c172x_blender.png)
 
-这是从 3D 建模软件 Blender 中截取的屏幕截图，展示了 Cessna 172 的模型及其结构框架 $\mathcal{F}_{\mathrm{C}}=\left\{O_{\mathrm{C}}, x_{\mathrm{C}}, y_{\mathrm{C}}, z_{\mathrm{C}}\right\}$。在这个例子中，原点 $O_C$ 位于驾驶舱内，靠近仪表盘。
+这是从 3D 建模软件 Blender 中截取的屏幕截图，展示了 Cessna 172 的模型及其结构坐标系 $\mathcal{F}_{\mathrm{C}}=\left\{O_{\mathrm{C}}, x_{\mathrm{C}}, y_{\mathrm{C}}, z_{\mathrm{C}}\right\}$。在这个例子中，原点 $O_C$ 位于驾驶舱内，靠近仪表盘。
 
 注意，JSBSim 模拟的飞机的原点可以位于任意位置，因为 JSBSim 内部仅使用重心（CG）与各个物体之间的*相对距离*——而不是物体的绝对位置。
 
 ![重心位置](https://jsbsim-team.github.io/jsbsim-reference-manual/assets/img/ac_center_of_gravity.svg)
 
-在结构框架中确定的重心位置（CG）为点 G。
+在结构坐标系中确定的重心位置（CG）为点 G。
 
 ![地面反作用力](https://jsbsim-team.github.io/jsbsim-reference-manual/assets/img/c172_ground_reaction.svg)
 
-根据结构框架位置定义的地面接触点。
+根据结构坐标系位置定义的地面接触点。
 
 ![关键位置](https://jsbsim-team.github.io/jsbsim-reference-manual/assets/img/c172_sideview.svg)
 
-结构框架中的两个关键点位置 $P_{\mathrm{ARP}}$ 和 $P_{\mathrm{CG}, \mathrm{EW}}$ ，分别为气动力矩的极点和空重 CG（空机重心）。机翼根部的形状和弦长也被勾画出来。
+结构坐标系中的两个关键点位置 $P_{\mathrm{ARP}}$ 和 $P_{\mathrm{CG}, \mathrm{EW}}$ ，分别为气动力矩的极点和空重 CG（空机重心）。机翼根部的形状和弦长也被勾画出来。
 
 ![关键位置](https://jsbsim-team.github.io/jsbsim-reference-manual/assets/img/c172_perspective_view_left.svg)
 
 除了 $P_{\mathrm{CG}, \mathrm{EW}}$，还展示了两个重要的位置，$P_{\text {Pilot }}$ 和 $P_{\text {Right Pass }}$ ，分别代表飞行员和右侧乘客的质量集中点。
 
-## 机体框架
+## 机体坐标系
 
-在 JSBSim 中，机体框架类似于结构框架，但沿 $y_C$ 轴旋转 180 度，原点与重心（CG）重合。通常，机体框架是通过已知飞机重心 G 位置和纵向结构轴 $x_C$ 方向来定义的。$x_B$ 轴应选择与 $x_C$ 轴平行，且从 G 指向机头的正方向。
+在 JSBSim 中，机体坐标系类似于结构坐标系，但沿 $y_C$ 轴旋转 180 度，原点与重心（CG）重合。通常，机体坐标系是通过已知飞机重心 G 位置和纵向结构轴 $x_C$ 方向来定义的。$x_B$ 轴应选择与 $x_C$ 轴平行，且从 G 指向机头的正方向。
 
-机体轴框架通常命名为$\mathcal{F}_{\mathrm{B}}=\left\{G, x_{\mathrm{B}}, y_{\mathrm{B}}, z_{\mathrm{B}}\right\}$。$x_B$ 轴称为*滚转轴*，指向前方，$y_B$ 轴称为*俯仰轴*，指向右翼，$z_B$ 轴称为*偏航轴*，指向飞机腹部。
+机体轴坐标系通常命名为$\mathcal{F}_{\mathrm{B}}=\left\{G, x_{\mathrm{B}}, y_{\mathrm{B}}, z_{\mathrm{B}}\right\}$。$x_B$ 轴称为*滚转轴*，指向前方，$y_B$ 轴称为*俯仰轴*，指向右翼，$z_B$ 轴称为*偏航轴*，指向飞机腹部。
 
 ![机体轴](https://jsbsim-team.github.io/jsbsim-reference-manual/assets/img/ac_body_axes.svg)
 
-标准的飞机机体轴框架，原点在重心 G 处。
+标准的飞机机体轴坐标系，原点在重心 G 处。
 
-在机体框架中，飞机的力和力矩被相加，结果加速度被积分以得到速度。
+在机体坐标系中，飞机的力和力矩被相加，结果加速度被积分以得到速度。
 
-## 稳定框架，或“气动框架”
+## 稳定坐标系，或“气动坐标系”
 
-这个框架是根据相对风矢量相对于机体的瞬时方向来定义的。如果为了简化假设空气相对于地球静止（无风），且 $\boldsymbol{V}$ 是飞机质心相对于地球固定观察者的速度矢量（也称为 $\boldsymbol{V}_{\mathrm{CM} / \mathrm{E}}$，以强调相对运动），那么 $-\boldsymbol{V}$ 就是相对风速，$V=\|V\|$是空速。
+这个坐标系是根据相对风矢量相对于机体的瞬时方向来定义的。如果为了简化假设空气相对于地球静止（无风），且 $\boldsymbol{V}$ 是飞机质心相对于地球固定观察者的速度矢量（也称为 $\boldsymbol{V}_{\mathrm{CM} / \mathrm{E}}$，以强调相对运动），那么 $-\boldsymbol{V}$ 就是相对风速，$V=\|V\|$是空速。
 
-该框架命名为 $\mathcal{F}_{\mathrm{A}}=\left\{G, x_{\mathrm{A}}, y_{\mathrm{A}}, z_{\mathrm{A}}\right\}$，其中轴 $x_{\mathrm{A}}$ 指向相对风矢量投影到飞机对称平面 $x_{\mathrm{B}} z_{\mathrm{B}}$ 上的方向。轴 $y_{\mathrm{A}}$ 仍然指向右翼，并与机体轴 $y_{\mathrm{B}}$ 重合，轴 $z_{\mathrm{A}}$ 完成右手坐标系。
+该坐标系命名为 $\mathcal{F}_{\mathrm{A}}=\left\{G, x_{\mathrm{A}}, y_{\mathrm{A}}, z_{\mathrm{A}}\right\}$，其中轴 $x_{\mathrm{A}}$ 指向相对风矢量投影到飞机对称平面 $x_{\mathrm{B}} z_{\mathrm{B}}$ 上的方向。轴 $y_{\mathrm{A}}$ 仍然指向右翼，并与机体轴 $y_{\mathrm{B}}$ 重合，轴 $z_{\mathrm{A}}$ 完成右手坐标系。
 
 ![Alpha 和 Beta](https://jsbsim-team.github.io/jsbsim-reference-manual/assets/img/ac_aero_axes.svg)
 
-气动框架，定义了气动角度 $\alpha_{\mathrm{B}}$ 和 $\beta$.
+气动坐标系，定义了气动角度 $\alpha_{\mathrm{B}}$ 和 $\beta$.
 
-这两个轴 $x_{\mathrm{A}}$ 和 $z_{\mathrm{A}}$ 根据定义属于飞机的对称面，但它们在飞行过程中可能会旋转，因为相对风速矢量 $V$ 相对于飞行器的方向可能会发生变化。上图展示了如何构建气动框架。两个轴 $x_{\mathrm{A}}$ 和 $x_{\mathrm{B}}$ 之间的夹角是飞机的迎角 $\alpha_{\mathrm{B}}$。相对风的瞬时方向 $\boldsymbol{V}$ 与其在平面 $x_{\mathrm{B}} z_{\mathrm{B}}$ 上的投影之间形成的夹角是侧滑角 $\beta$。
+这两个轴 $x_{\mathrm{A}}$ 和 $z_{\mathrm{A}}$ 根据定义属于飞机的对称面，但它们在飞行过程中可能会旋转，因为相对风速矢量 $V$ 相对于飞行器的方向可能会发生变化。上图展示了如何构建气动坐标系。两个轴 $x_{\mathrm{A}}$ 和 $x_{\mathrm{B}}$ 之间的夹角是飞机的迎角 $\alpha_{\mathrm{B}}$。相对风的瞬时方向 $\boldsymbol{V}$ 与其在平面 $x_{\mathrm{B}} z_{\mathrm{B}}$ 上的投影之间形成的夹角是侧滑角 $\beta$。
 
-这个框架，在一些手册中被称为稳定框架，在此也称为“气动框架”，因为瞬时气动合力 $\mathcal{F}_{\mathrm{A}}$ 在 $z_{\mathrm{A}}$ 轴上的投影 $Z_{\mathrm{A}}$ 定义了气动升力。具体来说，升力 $L$ 是这样定义的：$-L$ 是气动合力 $\mathcal{F}_{\mathrm{A}}$ 沿 $z_{\mathrm{A}}$ 轴的分量，即 $Z_{\mathrm{A}}=-L$。
+这个坐标系，在一些手册中被称为稳定坐标系，在此也称为“气动坐标系”，因为瞬时气动合力 $\mathcal{F}_{\mathrm{A}}$ 在 $z_{\mathrm{A}}$ 轴上的投影 $Z_{\mathrm{A}}$ 定义了气动升力。具体来说，升力 $L$ 是这样定义的：$-L$ 是气动合力 $\mathcal{F}_{\mathrm{A}}$ 沿 $z_{\mathrm{A}}$ 轴的分量，即 $Z_{\mathrm{A}}=-L$。
 
 为了更好地理解上述描述，考虑一个在飞行力学中常见的典型动作：零侧滑（或“协调”）、保持恒定高度的匀速转弯。在这种情况下，机翼会倾斜，升力也会倾斜。在这种转弯中，气动合力 $\mathcal{F}_{\mathrm{A}}$ 是倾斜的，而 $x_{\mathrm{A}}$ 轴保持水平。一般来说，升力作为一个矢量总是定义在飞机的对称面内。
 
@@ -169,48 +169,48 @@ X 轴通常与机身中心线重合，并且通常与推力轴重合（例如在
 
 在恒定高度的匀速协调转弯中，倾斜升力的情况。倾斜角 $\phi_{\mathrm{W}}$ 是绕相对风速矢量的旋转。当速度矢量与北方对齐时，运动被定格在时间上。协调转弯意味着 $\beta=0$，恒定高度意味着 $x_{\mathrm{A}}$ 轴保持水平。
 
-*备注* —— 在动态稳定性研究中，“稳定框架”与上述的气动框架略有不同：飞机飞行力学和稳定性约定中的稳定框架不过是一个特定的机体固定框架，定义是基于初始的对称、稳定、机翼水平、恒定高度的飞行状态。该状态给出了 $x_S$ 的方向（在该特定飞行姿态下与 $x_A$ 重合）。因此，在动态稳定性研究中，稳定框架与气动框架不同，是固定在飞行器上的。
+*备注* —— 在动态稳定性研究中，“稳定坐标系”与上述的气动坐标系略有不同：飞机飞行力学和稳定性约定中的稳定坐标系不过是一个特定的机体固定坐标系，定义是基于初始的对称、稳定、机翼水平、恒定高度的飞行状态。该状态给出了 $x_S$ 的方向（在该特定飞行姿态下与 $x_A$ 重合）。因此，在动态稳定性研究中，稳定坐标系与气动坐标系不同，是固定在飞行器上的。
 
-在 JSBSim 中，稳定框架 $\mathcal{F}_{\mathrm{S}}=\left\{G, x_{\mathrm{S}}, y_{\mathrm{S}}, z_{\mathrm{S}}\right\}$ 代表了气动框架。
+在 JSBSim 中，稳定坐标系 $\mathcal{F}_{\mathrm{S}}=\left\{G, x_{\mathrm{S}}, y_{\mathrm{S}}, z_{\mathrm{S}}\right\}$ 代表了气动坐标系。
 
-## 地心惯性框架（ECI）和地心固定框架（ECEF）
+## 地心惯性坐标系（ECI）和地心固定坐标系（ECEF）
 
-地心惯性框架（或简称“惯性框架”）$\mathcal{F}_{\mathrm{ECI}}=\left\{O_{\mathrm{ECI}}, x_{\mathrm{ECI}}, y_{\mathrm{ECI}}, z_{\mathrm{ECI}}\right\}$固定，其原点位于地球中心。其笛卡尔坐标轴相对于恒星保持固定，为飞机（或航天器）运动方程提供最简洁的参考框架。正 $z_{\mathrm{ECI}}$ 轴穿过地球的地理北极。$x_{\mathrm{ECI}}$ 和 $y_{\mathrm{ECI}}$ 轴位于赤道平面内。$x_{\mathrm{ECI}}$ 轴始终与从太阳质心到地球在春分时的轨道位置的连线平行。下图展示了 ECI 系统。
+地心惯性坐标系（或简称“惯性坐标系”）$\mathcal{F}_{\mathrm{ECI}}=\left\{O_{\mathrm{ECI}}, x_{\mathrm{ECI}}, y_{\mathrm{ECI}}, z_{\mathrm{ECI}}\right\}$固定，其原点位于地球中心。其笛卡尔坐标轴相对于恒星保持固定，为飞机（或航天器）运动方程提供最简洁的参考坐标系。正 $z_{\mathrm{ECI}}$ 轴穿过地球的地理北极。$x_{\mathrm{ECI}}$ 和 $y_{\mathrm{ECI}}$ 轴位于赤道平面内。$x_{\mathrm{ECI}}$ 轴始终与从太阳质心到地球在春分时的轨道位置的连线平行。下图展示了 ECI 系统。
 
-![惯性框架](https://jsbsim-team.github.io/jsbsim-reference-manual/assets/img/inertial_frame.svg)
+![惯性坐标系](https://jsbsim-team.github.io/jsbsim-reference-manual/assets/img/inertial_frame.svg)
 
-地心惯性（ECI）框架和地心固定（ECEF）框架。
+地心惯性（ECI）坐标系和地心固定（ECEF）坐标系。
 
-地心地固参考系（ECEF）的坐标轴，如 $x_{\mathrm{ECEF}}$、$y_{\mathrm{ECEF}}$ 和 $z_{\mathrm{ECEF}}$，也如上图所示。ECEF 坐标轴相对于地球保持固定。这个笛卡尔系统的原点 $O_{\mathrm{ECEF}}$，与惯性框架一样，位于地球的质心。$z_{\mathrm{ECEF}}$ 轴也沿着地球的自转轴，并与 $z_{\mathrm{ECI}}$ 轴重合。$x_{\mathrm{ECEF}}$ 和 $y_{\mathrm{ECEF}}$ 轴都位于赤道平面内，且正 $x_{\mathrm{ECEF}}$ 轴通过本初子午线（格林威治子午线）。ECEF 框架绕惯性框架的 $z_{\mathrm{ECI}}$ 轴以角速度 $\omega_{\mathrm{E}}$ 逆时针旋转。地球的角速度 $\omega_{\mathrm{E}}$ 近似等于 $2 \pi / 24$ 弧度/小时。
+地心地固参考系（ECEF）的坐标轴，如 $x_{\mathrm{ECEF}}$、$y_{\mathrm{ECEF}}$ 和 $z_{\mathrm{ECEF}}$，也如上图所示。ECEF 坐标轴相对于地球保持固定。这个笛卡尔系统的原点 $O_{\mathrm{ECEF}}$，与惯性坐标系一样，位于地球的质心。$z_{\mathrm{ECEF}}$ 轴也沿着地球的自转轴，并与 $z_{\mathrm{ECI}}$ 轴重合。$x_{\mathrm{ECEF}}$ 和 $y_{\mathrm{ECEF}}$ 轴都位于赤道平面内，且正 $x_{\mathrm{ECEF}}$ 轴通过本初子午线（格林威治子午线）。ECEF 坐标系绕惯性坐标系的 $z_{\mathrm{ECI}}$ 轴以角速度 $\omega_{\mathrm{E}}$ 逆时针旋转。地球的角速度 $\omega_{\mathrm{E}}$ 近似等于 $2 \pi / 24$ 弧度/小时。
 
-## 北向切平面框架
+## 北向切平面坐标系
 
-当假设地球表面有数学表示（如椭球体或近似球体）时，可以定义一个切平面坐标系。选取与地表某一点 $O_{\mathrm{E}}$ 相切的平面作为参考。一个叫做“北向切平面框架”的地理坐标系 $\mathcal{F}_{\mathrm{E}}=\left\{O_{\mathrm{E}}, x_{\mathrm{E}}, y_{\mathrm{E}}, z_{\mathrm{E}}\right\}$ 具有固定原点 $O_{\mathrm{E}}$，其平面 $x_{\mathrm{E}} y_{\mathrm{E}}$ 与切平面重合。轴 $x_{\mathrm{E}}$ 指向地理北方，轴 $y_{\mathrm{E}}$ 指向东方，最后，轴 $z_{\mathrm{E}}$ 指向地面，平行于椭球体的法线（如果使用近似球体代替椭球体，则该轴指向地球中心）。因此，框架 $\mathcal{F}_{\mathrm{E}}$ 也被称为切平面 NED 坐标系（North-East-Down）。
+当假设地球表面有数学表示（如椭球体或近似球体）时，可以定义一个切平面坐标系。选取与地表某一点 $O_{\mathrm{E}}$ 相切的平面作为参考。一个叫做“北向切平面坐标系”的地理坐标系 $\mathcal{F}_{\mathrm{E}}=\left\{O_{\mathrm{E}}, x_{\mathrm{E}}, y_{\mathrm{E}}, z_{\mathrm{E}}\right\}$ 具有固定原点 $O_{\mathrm{E}}$，其平面 $x_{\mathrm{E}} y_{\mathrm{E}}$ 与切平面重合。轴 $x_{\mathrm{E}}$ 指向地理北方，轴 $y_{\mathrm{E}}$ 指向东方，最后，轴 $z_{\mathrm{E}}$ 指向地面，平行于椭球体的法线（如果使用近似球体代替椭球体，则该轴指向地球中心）。因此，坐标系 $\mathcal{F}_{\mathrm{E}}$ 也被称为切平面 NED 坐标系（North-East-Down）。
 
-![ECI 和 ECEF 框架](https://jsbsim-team.github.io/jsbsim-reference-manual/assets/img/earth_frames.svg)
+![ECI 和 ECEF 坐标系](https://jsbsim-team.github.io/jsbsim-reference-manual/assets/img/earth_frames.svg)
 
-地心固定（ECEF）框架、地理坐标、切平面框架和局部垂直框架。
+地心固定（ECEF）坐标系、地理坐标、切平面坐标系和局部垂直坐标系。
 
-## 局部垂直局部水平框架，或局部 NED 框架
+## 局部垂直局部水平坐标系，或局部 NED 坐标系
 
-局部垂直框架$\mathcal{F}_{\mathrm{V}}=\left\{G, x_{\mathrm{V}}, y_{\mathrm{V}}, z_{\mathrm{V}}\right\}$ 与飞机在空间中的朝向无关，而仅由其重心相对于某个便捷的地球固定观察者的位置定义。如果 $G_{\mathrm{GT}}$ 是重心在地面上的投影（即“地面跟踪”），则坐标平面 $x_{\mathrm{V}} y_{\mathrm{V}}$ 平行于在 $G_{\mathrm{GT}}$ 处与地球表面局部切平面的平面——即平面 $x_{\mathrm{E}} y_{\mathrm{E}}$，其中 $O_{\mathrm{E}} \equiv G_{\mathrm{GT}}$。然后，轴 $x_{\mathrm{V}}$ 指向地理北方，轴 $y_{\mathrm{V}}$ 指向东，最后，轴 $z_V$ 指向地球中心的下方。因此，框架 $\mathcal{F}_{\mathrm{V}}$ 也被称为局部NED（载机）框架。
+局部垂直坐标系$\mathcal{F}_{\mathrm{V}}=\left\{G, x_{\mathrm{V}}, y_{\mathrm{V}}, z_{\mathrm{V}}\right\}$ 与飞机在空间中的朝向无关，而仅由其重心相对于某个便捷的地球固定观察者的位置定义。如果 $G_{\mathrm{GT}}$ 是重心在地面上的投影（即“地面跟踪”），则坐标平面 $x_{\mathrm{V}} y_{\mathrm{V}}$ 平行于在 $G_{\mathrm{GT}}$ 处与地球表面局部切平面的平面——即平面 $x_{\mathrm{E}} y_{\mathrm{E}}$，其中 $O_{\mathrm{E}} \equiv G_{\mathrm{GT}}$。然后，轴 $x_{\mathrm{V}}$ 指向地理北方，轴 $y_{\mathrm{V}}$ 指向东，最后，轴 $z_V$ 指向地球中心的下方。因此，坐标系 $\mathcal{F}_{\mathrm{V}}$ 也被称为局部NED（载机）坐标系。
 
 ![局部垂直坐标系](https://jsbsim-team.github.io/jsbsim-reference-manual/assets/img/ac_local_vertical_axes.svg)
 
-飞机体框架和局部垂直框架（NED框架）。图中还展示了飞机的欧拉角：航向角 $\psi$（图中为负），俯仰角 $\theta$，和滚转角 $\phi$。
+飞机体坐标系和局部垂直坐标系（NED坐标系）。图中还展示了飞机的欧拉角：航向角 $\psi$（图中为负），俯仰角 $\theta$，和滚转角 $\phi$。
 
-NED惯例确保飞机的重量是一个力，在框架 $\mathcal{F}_{\mathrm{V}}$ 中的分量为 $(0,0, m g)$，其中 $m$ 是飞机的质量，$g$ 是重力加速度。
+NED惯例确保飞机的重量是一个力，在坐标系 $\mathcal{F}_{\mathrm{V}}$ 中的分量为 $(0,0, m g)$，其中 $m$ 是飞机的质量，$g$ 是重力加速度。
 
-上述图展示了一个包含两个框架 $\mathcal{F}_{\mathrm{V}}$ 和 $\mathcal{F}_{\mathrm{B}}$ 的飞机。定义机体框架相对于局部NED框架的朝向的欧拉角是飞机的欧拉角。对于大气飞行器，定义欧拉角时使用的旋转序列是“3-2-1”。这定义了相对于固定在地球上的观察者的航向角 $\psi$、俯仰角 $\theta$ 和滚转角 $\phi$。
+上述图展示了一个包含两个坐标系 $\mathcal{F}_{\mathrm{V}}$ 和 $\mathcal{F}_{\mathrm{B}}$ 的飞机。定义机体坐标系相对于局部NED坐标系的朝向的欧拉角是飞机的欧拉角。对于大气飞行器，定义欧拉角时使用的旋转序列是“3-2-1”。这定义了相对于固定在地球上的观察者的航向角 $\psi$、俯仰角 $\theta$ 和滚转角 $\phi$。
 
 ![欧拉陀螺仪](https://jsbsim-team.github.io/jsbsim-reference-manual/assets/img/ac_euler_gimbal.svg)
 
 
-飞机的欧拉角旋转序列。框架$\mathcal{F}_{\mathrm{E}}=\left\{O_{\mathrm{E}}, x_{\mathrm{E}}, y_{\mathrm{E}}, z_{\mathrm{E}}\right\}$ 是一个地球固定的 NED 坐标系，原点 $O_{\mathrm{E}}$ 位于地面某处（或海平面），且平面 $x_{\mathrm{E}} y_{\mathrm{E}}$ 与地球表面相切。如果地面跟踪点 $G_{\mathrm{GT}}$ 离 $O_{\mathrm{E}}$ 不远，则地球框架 $\mathcal{F}_{\mathrm{E}}$ 的轴线与局部 NED 框架 $\mathcal{F}_{\mathrm{V}}=\left\{G, x_{\mathrm{V}}, y_{\mathrm{V}}, z_{\mathrm{V}}\right\}$的轴线平行。
+飞机的欧拉角旋转序列。坐标系$\mathcal{F}_{\mathrm{E}}=\left\{O_{\mathrm{E}}, x_{\mathrm{E}}, y_{\mathrm{E}}, z_{\mathrm{E}}\right\}$ 是一个地球固定的 NED 坐标系，原点 $O_{\mathrm{E}}$ 位于地面某处（或海平面），且平面 $x_{\mathrm{E}} y_{\mathrm{E}}$ 与地球表面相切。如果地面跟踪点 $G_{\mathrm{GT}}$ 离 $O_{\mathrm{E}}$ 不远，则地球坐标系 $\mathcal{F}_{\mathrm{E}}$ 的轴线与局部 NED 坐标系 $\mathcal{F}_{\mathrm{V}}=\left\{G, x_{\mathrm{V}}, y_{\mathrm{V}}, z_{\mathrm{V}}\right\}$的轴线平行。
 
 
 
-## 风框架
+## 风坐标系
 
 除了升力，瞬时气动合力矢量 $\mathcal{F}_{\mathrm{A}}$ 在参考系中还有两个分量，其中 $z_{\mathrm{A}}$ 是第三轴。该参考系称为风参考系 $\mathcal{F}_{\mathrm{W}}=\left\{G, x_{\mathrm{W}}, y_{\mathrm{W}}, z_{\mathrm{W}}\right\}$。
 
@@ -1106,7 +1106,7 @@ $$
 
 ![推力推进器](https://jsbsim-team.github.io/jsbsim-reference-manual/assets/img/ac_thrust_definitions.svg)
 
-一架双引擎螺旋桨飞机。在机体框架中，推进器、推力应用点和推力矢量的方向位置。
+一架双引擎螺旋桨飞机。在机体坐标系中，推进器、推力应用点和推力矢量的方向位置。
 
 ![推进器位置](https://jsbsim-team.github.io/jsbsim-reference-manual/assets/img/c172_thruster.svg)
 
