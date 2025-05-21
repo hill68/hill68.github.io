@@ -2,7 +2,7 @@ var relearn_searchindex = [
   {
     "breadcrumb": "FlitSoft Docs",
     "content": "UAV flight simulation",
-    "description": "UAV flight simulation",
+    "description": "This summary is independent of the content.",
     "tags": [],
     "title": "UAS",
     "uri": "/uas/index.html"
@@ -10,7 +10,7 @@ var relearn_searchindex = [
   {
     "breadcrumb": "FlitSoft Docs",
     "content": "This is a new chapter.\nelectromagnetic",
-    "description": "This is a new chapter.\nelectromagnetic",
+    "description": "This summary is independent of the content.",
     "tags": [],
     "title": "EM",
     "uri": "/em/index.html"
@@ -18,7 +18,7 @@ var relearn_searchindex = [
   {
     "breadcrumb": "FlitSoft Docs",
     "content": "This is a new chapter.",
-    "description": "This is a new chapter.",
+    "description": "This summary is independent of the content.",
     "tags": [],
     "title": "AGI",
     "uri": "/agi/index.html"
@@ -26,7 +26,7 @@ var relearn_searchindex = [
   {
     "breadcrumb": "FlitSoft Docs",
     "content": "This is a new chapter.",
-    "description": "This is a new chapter.",
+    "description": "This summary is independent of the content.",
     "tags": [],
     "title": "Gaming",
     "uri": "/gaming/index.html"
@@ -34,7 +34,7 @@ var relearn_searchindex = [
   {
     "breadcrumb": "FlitSoft Docs",
     "content": "This is a new chapter.",
-    "description": "This is a new chapter.",
+    "description": "This summary is independent of the content.",
     "tags": [],
     "title": "C2",
     "uri": "/c2/index.html"
@@ -42,7 +42,7 @@ var relearn_searchindex = [
   {
     "breadcrumb": "FlitSoft Docs",
     "content": "This is a new chapter.\nJSBSim User manual用户手册 https://jsbsim-team.github.io/jsbsim-reference-manual/\n本部分解释了如何使用 JSBSim 进行模拟运行、创建飞行器模型、编写脚本，以及如何执行其他不涉及对 JSBSim 程序代码进行更改的任务。\nJSBSim 软件提供了许多现成可用的飞行器模型示例。一旦用户熟悉了进行模拟所需的所有步骤和设置，可能会希望查看这些示例，并详细了解更有经验的 JSBSim 用户是如何实现某些特定模型的。\n该项目和发行版中包含的飞行器模型不包含任何专有、敏感或机密数据。所有数据均来源于教材（如 Stevens 和 Lewis 的《Aircraft Control and Simulation》以及 Sutton 的《Rocket Propulsion Elements》）、公开的技术报告（见：NASA技术报告网站和AIAA网站），或其他公开数据（如FAA网站）。JSBSim 发行版中包含的飞行器模型，以及与现有商业或军事飞行器名称相对应的模型，都是基于公开信息制作的近似模型，仅供教育或娱乐使用。\n概述 什么是 JSBSim？ 从应用程序编程的角度来看，JSBSim 是一个主要用 C++ 编程语言编写的程序代码集合（其中包括一些 C 语言例程）。组成 JSBSim 的一些 C++ 类用于建模物理实体，如大气、飞行控制系统或引擎。某些类封装了诸如运动方程、矩阵、四元数或向量等概念或数学构造。一些类管理其他对象的集合。总的来说，JSBSim 应用程序接受控制输入，计算并汇总来自这些控制输入和环境的力矩，并在离散时间步中推进飞行器的状态（速度、方位、位置等）。\nJSBSim 已经在各种平台上构建和运行，如 Windows 或 Linux 系统上的 PC、苹果 Macintosh 以及硅谷图形公司的 IRIX 操作系统。自由的 GNU g++ 编译器可以轻松编译 JSBSim，其他如 Borland 和 Microsoft 的编译器也能很好地工作。更多信息请参见《程序员指南》。\n从最终用户的角度来看（例如进行研究的学生），JSBSim 可以被视为一个“黑箱”，它通过 XML 格式的输入文件进行提供。这些 XML 文件包含了航天器、引擎、脚本等的描述。当这些文件被加载到 JSBSim 中时，它们指示 JSBSim 模拟该飞行器的飞行情况，作为更大仿真框架的一部分（例如 FlightGear 或 OpenEaagles），或者在批处理模式下以比实际时间更快的速度运行。每次运行 JSBSim 都会生成包含模拟飞行器性能和动态数据的文件。\nJSBSim Quickstarthttps://jsbsim-team.github.io/jsbsim-reference-manual/\nJSBSim 是一个轻量级的数据驱动型非线性六自由度（6DoF）批处理仿真应用，旨在建模飞机的飞行动力学与控制。从最早的版本开始，JSBSim 就受益于其成长过程中的开源开发环境，以及众多用户对其持续改进所提出的各种想法。\n本在线参考手册是一个社区合作项目，旨在让用户和开发者了解软件的所有功能。\n许可证： JSBSim 根据 GNU 较宽通用公共许可证（LGPL）授权。\nAcknowledgements 这款软件是许多人多年来共同努力的成果。\nTony Peden 几乎从 JSBSim 的第一天起就开始为其发展做出贡献。他负责初始化和修剪代码。Tony 还将 David Megginson 的属性系统集成到了 JSBSim 中。Tony 来自俄亥俄州立大学，拥有航空与航天工程学位。\nDavid Culp 为 JSBSim 开发了涡轮发动机模型，并设计了多个使用该模型的飞机，包括 T-38。David 拥有多种军用和民用飞机的飞行经验，包括 T-38、波音 707、727、737、757、767、SGS 2-32 和 OV-10。David 是一名航空航天工程师，毕业于美国空军学院。\nDavid Megginson 曾长期参与 FlightGear 的核心开发工作。David 将我们的飞行动力学与他的一般航空飞行经验相结合，以帮助实现最大程度的真实感，除此之外，他还设计了 FlightGear 和 JSBSim 所使用的属性系统。他以对 XML 技术的贡献而闻名，并编写了 FlightGear 和 JSBSim 使用的 easyXML 解析器。\nErik Hofman 做了多方面的工作，包括寻找飞机数据、创建飞行模型（如 F-16），并进行一些编程工作。他还测试了 IRIX 兼容性。Erik 拥有计算机科学学位。",
-    "description": "This is a new chapter.\nJSBSim User manual用户手册 https://jsbsim-team.github.io/jsbsim-reference-manual/\n本部分解释了如何使用 JSBSim 进行模拟运行、创建飞行器模型、编写脚本，以及如何执行其他不涉及对 JSBSim 程序代码进行更改的任务。\nJSBSim 软件提供了许多现成可用的飞行器模型示例。一旦用户熟悉了进行模拟所需的所有步骤和设置，可能会希望查看这些示例，并详细了解更有经验的 JSBSim 用户是如何实现某些特定模型的。\n该项目和发行版中包含的飞行器模型不包含任何专有、敏感或机密数据。所有数据均来源于教材（如 Stevens 和 Lewis 的《Aircraft Control and Simulation》以及 Sutton 的《Rocket Propulsion Elements》）、公开的技术报告（见：NASA技术报告网站和AIAA网站），或其他公开数据（如FAA网站）。JSBSim 发行版中包含的飞行器模型，以及与现有商业或军事飞行器名称相对应的模型，都是基于公开信息制作的近似模型，仅供教育或娱乐使用。\n概述 什么是 JSBSim？ 从应用程序编程的角度来看，JSBSim 是一个主要用 C++ 编程语言编写的程序代码集合（其中包括一些 C 语言例程）。组成 JSBSim 的一些 C++ 类用于建模物理实体，如大气、飞行控制系统或引擎。某些类封装了诸如运动方程、矩阵、四元数或向量等概念或数学构造。一些类管理其他对象的集合。总的来说，JSBSim 应用程序接受控制输入，计算并汇总来自这些控制输入和环境的力矩，并在离散时间步中推进飞行器的状态（速度、方位、位置等）。\nJSBSim 已经在各种平台上构建和运行，如 Windows 或 Linux 系统上的 PC、苹果 Macintosh 以及硅谷图形公司的 IRIX 操作系统。自由的 GNU g++ 编译器可以轻松编译 JSBSim，其他如 Borland 和 Microsoft 的编译器也能很好地工作。更多信息请参见《程序员指南》。\n从最终用户的角度来看（例如进行研究的学生），JSBSim 可以被视为一个“黑箱”，它通过 XML 格式的输入文件进行提供。这些 XML 文件包含了航天器、引擎、脚本等的描述。当这些文件被加载到 JSBSim 中时，它们指示 JSBSim 模拟该飞行器的飞行情况，作为更大仿真框架的一部分（例如 FlightGear 或 OpenEaagles），或者在批处理模式下以比实际时间更快的速度运行。每次运行 JSBSim 都会生成包含模拟飞行器性能和动态数据的文件。",
+    "description": "This summary is independent of the content.",
     "tags": [],
     "title": "Simulation",
     "uri": "/simu/index.html"
@@ -58,7 +58,7 @@ var relearn_searchindex = [
   {
     "breadcrumb": "FlitSoft Docs",
     "content": "基于运动基元的A*算法12 3\n将基于运动基元的A*算法从四旋翼无人机改进适配到固定翼无人机 参考的基于运动基元的四旋翼无人机A*算法：\nhttps://github.com/HKUST-Aerial-Robotics/Fast-Planner/blob/master/fast_planner/path_searching/src/kinodynamic_astar.cpp\n总体思路\n分析四旋翼A*算法的核心部分：了解其状态表示、控制输入、运动模型和运动基元生成方式。\n理解固定翼无人机的动力学特性：明确其状态变量、控制输入、运动学/动力学模型，以及物理和操作限制。\n整合调整：在前两步的基础上，重新定义状态和控制输入，修改运动基元生成方法，调整启发式函数和代价函数，确保算法的合理性和可行性。\n1. 四旋翼A*算法概述 1.1 状态表示\n位置：$\\mathbf{p} = [x, y, z]^T$ 速度：$\\mathbf{v} = [v_x, v_y, v_z]^T$ 状态向量：$\\mathbf{s} = [\\mathbf{p}, \\mathbf{v}]^T$，共6维。 1.2 控制输入\n加速度：$\\mathbf{a} = [a_x, a_y, a_z]^T$ 控制输入集：在最大加速度范围内进行离散化，生成一系列可能的加速度向量。 1.3 运动模型\n假设加速度在时间段$\\tau$内恒定，使用匀加速运动方程进行状态转移： $$ \\begin{cases} \\mathbf{p}(t+\\tau) = \\mathbf{p}(t) + \\mathbf{v}(t) \\tau + \\frac{1}{2} \\mathbf{a} \\tau^2 \\\\ \\mathbf{v}(t+\\tau) = \\mathbf{v}(t) + \\mathbf{a} \\tau \\end{cases} $$1.4 运动基元生成\n对控制输入$\\mathbf{a}$和持续时间$\\tau$进行离散化，生成一系列可能的运动基元。 在节点扩展时，应用这些运动基元进行状态转移，生成新节点。 2. 固定翼无人机动力学特性 2.1 状态表示\n位置：$\\mathbf{p} = [x, y, z]^T$ 航向角：$\\chi$（水平面内的方向） 俯仰角（航迹角）：$\\gamma$（垂直方向的角度） 速度大小：$v$（通常假设恒定或在一定范围内） 状态向量：$\\mathbf{s} = [x, y, z, \\chi, \\gamma]^T$，共5维。 2.2 控制输入\nThis is a new chapter.",
-    "description": "基于运动基元的A*算法12 3\n将基于运动基元的A*算法从四旋翼无人机改进适配到固定翼无人机 参考的基于运动基元的四旋翼无人机A*算法：\nhttps://github.com/HKUST-Aerial-Robotics/Fast-Planner/blob/master/fast_planner/path_searching/src/kinodynamic_astar.cpp\n总体思路\n分析四旋翼A*算法的核心部分：了解其状态表示、控制输入、运动模型和运动基元生成方式。\n理解固定翼无人机的动力学特性：明确其状态变量、控制输入、运动学/动力学模型，以及物理和操作限制。\n整合调整：在前两步的基础上，重新定义状态和控制输入，修改运动基元生成方法，调整启发式函数和代价函数，确保算法的合理性和可行性。\n1. 四旋翼A*算法概述 1.1 状态表示\n位置：$\\mathbf{p} = [x, y, z]^T$ 速度：$\\mathbf{v} = [v_x, v_y, v_z]^T$ 状态向量：$\\mathbf{s} = [\\mathbf{p}, \\mathbf{v}]^T$，共6维。 1.2 控制输入\n加速度：$\\mathbf{a} = [a_x, a_y, a_z]^T$ 控制输入集：在最大加速度范围内进行离散化，生成一系列可能的加速度向量。 1.3 运动模型\n假设加速度在时间段$\\tau$内恒定，使用匀加速运动方程进行状态转移： $$ \\begin{cases} \\mathbf{p}(t+\\tau) = \\mathbf{p}(t) + \\mathbf{v}(t) \\tau + \\frac{1}{2} \\mathbf{a} \\tau^2 \\\\ \\mathbf{v}(t+\\tau) = \\mathbf{v}(t) + \\mathbf{a} \\tau \\end{cases} $$1.4 运动基元生成\n对控制输入$\\mathbf{a}$和持续时间$\\tau$进行离散化，生成一系列可能的运动基元。 在节点扩展时，应用这些运动基元进行状态转移，生成新节点。 2. 固定翼无人机动力学特性 2.1 状态表示\n位置：$\\mathbf{p} = [x, y, z]^T$ 航向角：$\\chi$（水平面内的方向） 俯仰角（航迹角）：$\\gamma$（垂直方向的角度） 速度大小：$v$（通常假设恒定或在一定范围内） 状态向量：$\\mathbf{s} = [x, y, z, \\chi, \\gamma]^T$，共5维。 2.2 控制输入",
+    "description": "This summary is independent of the content.",
     "tags": [],
     "title": "Log",
     "uri": "/log/index.html"
