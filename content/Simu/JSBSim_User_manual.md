@@ -2,6 +2,7 @@
 date = '2025-05-21T15:44:38+08:00'
 draft = false
 title = 'JSBSim User manual'
+summary= "This summary is independent of the content."
 +++
 
 # 用户手册
