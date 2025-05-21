@@ -2,7 +2,7 @@
 +++
 date = '2025-05-21T17:07:50+08:00'
 draft = false
-title = '三段S曲线速度规划模型'
+title = 's-curve-calculator.tsx.'
 summary= "This summary is independent of the content."
 +++
 
