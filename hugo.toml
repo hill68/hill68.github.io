@@ -33,6 +33,8 @@ publishDir = "docs"
   highlightTheme  = "monokai"   # 代码高亮风格
   # 若需数学公式支持，启用 MathJax
   math = true
+ #隐藏Home按钮
+  disableLandingPageButton = true
 
 [markup]
   [markup.goldmark]
