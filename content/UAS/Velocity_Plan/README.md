@@ -1,7 +1,7 @@
 +++
 date = '2025-05-21T17:07:50+08:00'
 draft = false
-title = 'Code README'
+title = 'C++ Code README'
 summary= "This summary is independent of the content."
 +++
 
