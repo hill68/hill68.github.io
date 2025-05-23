@@ -1,7 +1,7 @@
 +++
 title = "Velocity Plan"
 type = "chapter"
-weight = 1
+weight = 2
 +++
 
 {{% children sort="title" %}}
