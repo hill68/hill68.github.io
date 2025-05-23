@@ -5,16 +5,21 @@ title = 'Advanced Battle Management System'
 summary= "This summary is independent of the content."
 +++
 
+
+
+
 <iframe
-  src="{{ "pdf/Advanced Battle Management System.ch.pdf" | relURL }}"
+  src="/pdf/Advanced_Battle_Management_System.pdf"
   width="100%"
   height="600"
   style="border:1px solid #ccc;"
 >
   此浏览器不支持 iframe，请  
-  <a href="{{ "pdf/Advanced_Battle_Management_System.pdf" | relURL }}">点击下载 PDF</a>
+  <a href="/pdf/Advanced_Battle_Management_System.pdf">点击下载 PDF</a>
 </iframe>
 
+
++1
 +1
 +1
 
