@@ -2,7 +2,7 @@
 date = '2025-05-21T15:43:38+08:00'
 draft = false
 title = 'JSBSim Quickstart'
-summary= "This summary is independent of the content."
+summary= "旨在让用户和开发者了解JSBSim软件的所有功能。"
 +++
 
 

@@ -2,7 +2,7 @@
 date = '2025-05-21T15:44:38+08:00'
 draft = false
 title = 'JSBSim User manual'
-summary= "This summary is independent of the content."
+summary= "如何使用 JSBSim 进行模拟运行、创建飞行器模型、编写脚本，以及如何执行其他不涉及对 JSBSim 程序代码进行更改的任务。"
 +++
 
 # 用户手册
