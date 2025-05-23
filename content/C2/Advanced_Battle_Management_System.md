@@ -5,6 +5,7 @@ title = 'Advanced Battle Management System'
 summary= "This summary is independent of the content."
 +++
 
+[中文译文](/pdf/Advanced_Battle_Management_System.pdf)
 
 
 
@@ -19,20 +20,8 @@ summary= "This summary is independent of the content."
 </iframe>
 
 
-+1
-+1
-+1
-+1
+
 
 [中文译文](/pdf/Advanced_Battle_Management_System.pdf)
 
-<object
-  data="{{ "pdf/Advanced_Battle_Management_System.pdf" | relURL }}"
-  type="application/pdf"
-  width="100%"
-  height="600"
->
-  <p>浏览器无法直接预览 PDF，  
-  <a href="{{ "pdf/Advanced_Battle_Management_System.pdf" | relURL }}">请点击这里下载</a></p>
-</object>
 
