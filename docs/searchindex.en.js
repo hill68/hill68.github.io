@@ -33,7 +33,7 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "FlitSoft Docs",
-    "content": "This is a new chapter.\nWhy We ThinkThis summary is independent of the content.",
+    "content": "This is a new chapter.\nWhy We ThinkThis summary is independent of the content.\nWhy We ThinkThis summary is independent of the content.",
     "description": "This summary is independent of the content.",
     "tags": [],
     "title": "AGI",
@@ -78,6 +78,14 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Log",
     "uri": "/log/index.html"
+  },
+  {
+    "breadcrumb": "FlitSoft Docs \u003e  AGI",
+    "content": "Advanced Battle Management System [中文译文](/pdf/Advanced Battle Management System.ch.pdf)",
+    "description": "This summary is independent of the content.",
+    "tags": [],
+    "title": "Why We Think",
+    "uri": "/agi/advanced-battle-management-system.ch/index.html"
   },
   {
     "breadcrumb": "FlitSoft Docs \u003e  AGI",
