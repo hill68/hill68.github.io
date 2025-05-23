@@ -81,7 +81,7 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "FlitSoft Docs \u003e  C2",
-    "content": "Advanced Battle Management System [中文译文](/pdf/Advanced Battle Management System.ch.pdf)",
+    "content": "[中文译文][ccc](pdf/Advanced Battle Management System.ch.pdf)",
     "description": "This summary is independent of the content.",
     "tags": [],
     "title": "Advanced Battle Management System",
