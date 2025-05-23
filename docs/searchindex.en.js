@@ -57,7 +57,7 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "FlitSoft Docs",
-    "content": "This is a new chapter.\nAdvanced Battle Management System先进战斗管理系统 (ABMS) 空军面临的需求、进展、挑战与机遇.\n决策优势与主动权决策优势与主动权：完善联合全域指挥与控制",
+    "content": "This is a new chapter.\nAdvanced Battle Management System先进战斗管理系统 (ABMS) ——美国空军面临的需求、进展、挑战与机遇.\n决策优势与主动权决策优势与主动权：完善联合全域指挥与控制",
     "description": "This summary is independent of the content.",
     "tags": [],
     "title": "C2",
@@ -90,7 +90,7 @@ var relearn_searchindex = [
   {
     "breadcrumb": "FlitSoft Docs \u003e  C2",
     "content": "中文译文\n此浏览器不支持 iframe，请 点击下载 PDF 中文译文",
-    "description": "先进战斗管理系统 (ABMS) 空军面临的需求、进展、挑战与机遇.",
+    "description": "先进战斗管理系统 (ABMS) ——美国空军面临的需求、进展、挑战与机遇.",
     "tags": [],
     "title": "Advanced Battle Management System",
     "uri": "/c2/advanced_battle_management_system/index.html"
