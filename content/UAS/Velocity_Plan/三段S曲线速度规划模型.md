@@ -14,6 +14,8 @@ summary= "This summary is independent of the content."
 
 [在线计算器链接](https://claude.site/artifacts/b51c9be9-4c9f-45a5-a5e0-dcc62e1054c4)
 
+C++代码库： https://github.com/flitai/Velocity_Plan/
+
 ---
 
 ## 2. 模型参数与符号定义
