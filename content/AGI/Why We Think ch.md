@@ -5,7 +5,7 @@ title = 'Why We Think'
 summary= "This summary is independent of the content."
 +++
 
-# 我们为何思考
+
 
 日期：2025年5月1日 | 预计阅读时间：40分钟 | 作者：Lilian Weng
 
