@@ -1,5 +1,5 @@
 +++
-title = "固定翼无人机飞行动力学模型"
+title = "Aerodynamics"
 type = "chapter"
 weight = 1
 +++
