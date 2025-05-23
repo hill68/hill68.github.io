@@ -81,7 +81,7 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "FlitSoft Docs \u003e  C2",
-    "content": "此浏览器不支持 iframe，请 点击下载 PDF +1 +1 +1 +1\n中文译文\n\u003cobject data=\"{{ “pdf/Advanced_Battle_Management_System.pdf” | relURL }}\" type=“application/pdf” width=“100%” height=“600”\n浏览器无法直接预览 PDF，",
+    "content": "中文译文\n此浏览器不支持 iframe，请 点击下载 PDF 中文译文",
     "description": "This summary is independent of the content.",
     "tags": [],
     "title": "Advanced Battle Management System",
