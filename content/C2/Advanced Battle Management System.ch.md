@@ -1,7 +1,7 @@
 +++
 date = '2025-05-23T17:07:50+08:00'
 draft = false
-title = 'Why We Think'
+title = 'Advanced Battle Management System'
 summary= "This summary is independent of the content."
 +++
 
