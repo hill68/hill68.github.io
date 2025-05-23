@@ -4,4 +4,4 @@ type = "chapter"
 weight = 2
 +++
 
-{{% children sort="title" %}}
+{{% children description="true" %}}
