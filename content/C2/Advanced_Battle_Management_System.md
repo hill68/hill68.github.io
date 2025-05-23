@@ -22,6 +22,7 @@ summary= "This summary is independent of the content."
 +1
 +1
 +1
++1
 
 [中文译文](/pdf/Advanced_Battle_Management_System.pdf)
 
