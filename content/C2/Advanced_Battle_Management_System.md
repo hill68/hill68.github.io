@@ -16,7 +16,7 @@ summary= "This summary is independent of the content."
 </iframe>
 
 
-[中文译文](pdf/Advanced_Battle_Management_System.pdf)
+[中文译文](/pdf/Advanced_Battle_Management_System.pdf)
 
 <object
   data="{{ "pdf/Advanced_Battle_Management_System.pdf" | relURL }}"
