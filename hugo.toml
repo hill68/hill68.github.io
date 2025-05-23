@@ -38,18 +38,25 @@ publishDir = "docs"
 
 [markup]
   [markup.goldmark]
+    # 允许在 Markdown 中渲染原生 HTML
+    [markup.goldmark.renderer]
+      unsafe = true
+
+    # 启用 passthrough 扩展，并自定义数学分隔符
     [markup.goldmark.extensions]
       [markup.goldmark.extensions.passthrough]
         enable = true
 
-        [markup.goldmark.extensions.passthrough.delimiters]
-          block = [['\[', '\]'], ['$$', '$$']]
-          inline = [['\(', '\)'], ['$', '$']]
+      [markup.goldmark.extensions.passthrough.delimiters]
+        block = [
+          ['\[', '\]'],
+          ['$$', '$$']
+        ]
+        inline = [
+          ['\(', '\)'],
+          ['$', '$']
+        ]
 
-[markup]
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true    # 允许在 Markdown 中渲染原生 HTML
 
 
 # 菜单
