@@ -1,8 +1,8 @@
 var relearn_searchindex = [
   {
-    "breadcrumb": "FlitSoft Docs \u003e  UAS",
-    "content": "小型固定翼无人机飞行动力学模型",
-    "description": "小型固定翼无人机飞行动力学模型",
+    "breadcrumb": "FlitSoft Docs \u003e  UAS Simulation",
+    "content": "小型固定翼无人机飞行动力学模型为小型固定翼无人机仿真系统提供逼真的飞行动力学与飞行控制方案，替代当前的简单PID+运动学模型。文档涵盖系统需求、6-DOF动力学模型、级联控制架构、模块接口、参数标定及实现建议等内容。",
+    "description": "小型固定翼无人机飞行动力学模型为小型固定翼无人机仿真系统提供逼真的飞行动力学与飞行控制方案，替代当前的简单PID+运动学模型。文档涵盖系统需求、6-DOF动力学模型、级联控制架构、模块接口、参数标定及实现建议等内容。",
     "tags": [],
     "title": "Aerodynamics",
     "uri": "/uas/fix_wing_uav_flight_sim/index.html"
@@ -16,7 +16,7 @@ var relearn_searchindex = [
     "uri": "/em/antenna-pattern/index.html"
   },
   {
-    "breadcrumb": "FlitSoft Docs \u003e  UAS",
+    "breadcrumb": "FlitSoft Docs \u003e  UAS Simulation",
     "content": "三段S曲线速度规划模型",
     "description": "三段S曲线速度规划模型",
     "tags": [],
@@ -25,10 +25,10 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "FlitSoft Docs",
-    "content": "UAV flight simulation\nAerodynamics 小型固定翼无人机飞行动力学模型 Velocity Plan 三段S曲线速度规划模型",
+    "content": "Aerodynamics 小型固定翼无人机飞行动力学模型为小型固定翼无人机仿真系统提供逼真的飞行动力学与飞行控制方案，替代当前的简单PID+运动学模型。文档涵盖系统需求、6-DOF动力学模型、级联控制架构、模块接口、参数标定及实现建议等内容。\nVelocity Plan 三段S曲线速度规划模型",
     "description": "This summary is independent of the content.",
     "tags": [],
-    "title": "UAS",
+    "title": "UAS Simulation",
     "uri": "/uas/index.html"
   },
   {
@@ -112,7 +112,7 @@ var relearn_searchindex = [
     "uri": "/c2/decision-advantage-and-initiative-completing-joint-all-domain-command-and-control.ch/index.html"
   },
   {
-    "breadcrumb": "FlitSoft Docs \u003e  UAS \u003e  Aerodynamics",
+    "breadcrumb": "FlitSoft Docs \u003e  UAS Simulation \u003e  Aerodynamics",
     "content": "1. 概述 本设计文档旨在为小型固定翼无人机仿真系统提供逼真的飞行动力学与飞行控制方案，替代当前的简单PID+运动学模型，指导后续具体实现与集成。文档涵盖系统需求、6-DOF动力学模型、级联控制架构、模块接口、参数标定及实现建议等内容。\nC++代码实现\n2. 系统需求 实时性：仿真步长 ≤ 0.01s，支持 6-DOF 状态更新与控制运算。 精度：考虑升力、阻力、侧力及机动特性，航向/姿态/速度跟踪误差 ≤ 5%。 可扩展性：支持载荷变化、风场扰动、不同气动数据库切换。 接口兼容：保留现有接口文档中输入/输出字段，向后兼容。 3. 飞行动力学模型（6-DOF） 3.1 状态变量定义 位置与速度：$\\mathbf{r}=[x,y,z]^T$, $\\mathbf{v}=[u,v,w]^T$（机体坐标系）。 姿态与角速度：Euler 角 $[\\phi,\\theta,\\psi]^T$，角速率 $[p,q,r]^T$。 总状态向量：$\\mathbf{x}=[\\mathbf{r},\\mathbf{v},\\phi,\\theta,\\psi,p,q,r]^T$。 3.2 动力学方程 平动方程： $m\\dot{\\mathbf{v}}=\\mathbf{F}_a+\\mathbf{F}_g+\\mathbf{F}_t$\n$\\mathbf{F}_a$：气动力，包含升力、阻力、侧力，由攻角 $\\alpha$、侧滑角 $\\beta$ 及控制面偏角计算。 $\\mathbf{F}_g$：重力，在机体坐标系下投影。 $\\mathbf{F}_t$：推进力，由推力曲线或简单发动机模型获得。 转动方程： $\\mathbf{I}\\dot{\\boldsymbol{\\omega}}+\\boldsymbol{\\omega}\\times(\\mathbf{I}\\boldsymbol{\\omega})=\\mathbf{M}_a+\\mathbf{M}_t$\n$\\mathbf{M}_a$：气动力矩，依赖于控制面夹角与角速率。 $\\mathbf{M}_t$：发动机或尾舵力矩。 姿态更新： $\\dot{\\mathbf{R}}=\\mathbf{R}[\\boldsymbol{\\omega}]_\\times$ 或使用Euler角微分： $\\begin{bmatrix}\\dot{\\phi}\\\\\\dot{\\theta}\\\\\\dot{\\psi}\\end{bmatrix}=\\mathbf{E}(\\phi,\\theta)\\begin{bmatrix}p\\\\q\\\\r\\end{bmatrix}.$\n3.3 气动系数获取与典型值 系数 物理含义 典型值 单位 $C_{L0}$ 零攻角升力系数 0.2 — $C_{L_{\\alpha}}$ 升力曲线斜率 5.7 1/rad $C_{D0}$ 零升阻力系数 0.02 — $k$ 诱导阻力因子 $1/(\\pi AR e)\\approx0.066$ — $AR$ 展弦比 6 — $e$ 诱导阻力效率因子 0.8 — $C_{m0}$ 零攻角俯仰力矩系数 0.05 — $C_{m_{\\alpha}}$ 俯仰力矩斜率 -0.38 1/rad $C_{L_{\\delta_e}}$ 升力—升降舵偏导 0.8 1/rad $C_{m_{\\delta_e}}$ 俯仰力矩—升降舵偏导 -1.1 1/rad 注：数值来源于 Beard \u0026 McLain (2012)；Stevens \u0026 Lewis (2003)，可根据实际试验标定。\n3.4 数值集成 推荐使用 4/5 阶 Runge–Kutta 积分器，步长 0.005–0.01s，保证数值稳定性与精度。 4. 级联控制架构与典型增益 采用三级级联 PID 控制：外环生成姿态/速率指令，中环生成速率指令，内环生成舵面输出。\n4.1 外环（航迹／航路跟随，20 Hz） 航向控制\n误差：$\\tildeψ=ψ_d-ψ$ 控制：$φ_d=K_{p,ψ}\\tildeψ+K_{i,ψ}\\int\\tildeψdt$ 增益：$K_{p,ψ}=1.2,;K_{i,ψ}=0.01$ 高度控制\n误差：$\\tilde h=h_d-h$ 控制：$θ_d=K_{p,h}\\tilde h+K_{i,h}\\int\\tilde h dt$ 增益：$K_{p,h}=0.8,;K_{i,h}=0.005$ 空速控制\n误差：$\\tilde V=V_d-V$ 控制：$δ_T=K_{p,V}\\tilde V+K_{i,V}\\int\\tilde V dt$ 增益：$K_{p,V}=0.5,;K_{i,V}=0.02$ 偏航跟踪\n误差：$\\tildeψ=ψ_d-ψ$ 控制：$r_d=K_{p,ψ_r}\\tildeψ+K_{i,ψ_r}\\int\\tildeψdt$ 增益：$K_{p,ψ_r}=0.5,;K_{i,ψ_r}=0.02$ 4.2 中环（姿态／速率生成，50 Hz） 横滚角生成\n误差：$\\tildeφ=φ_d-φ$ 控制：$p_d=K_{p,φ}\\tildeφ+K_{d,φ}\\dot{\\tildeφ}$ 增益：$K_{p,φ}=5.5,;K_{d,φ}=1.2$ 俯仰角生成\n误差：$\\tildeθ=θ_d-θ$ 控制：$q_d=K_{p,θ}\\tildeθ+K_{i,θ}\\int\\tildeθdt+K_{d,θ}\\dot{\\tildeθ}$ 增益：$K_{p,θ}=6.0,;K_{i,θ}=0.2,;K_{d,θ}=1.0$ 偏航速率辅助\n可结合侧滑角环或直接使用 $r_d$。 4.3 内环（角速率控制，100 Hz） 横滚速率控制\n误差：$\\tilde p=p_d-p$ 控制：$δ_a=K_{p,p}\\tilde p+K_{d,p}\\dot{\\tilde p}$ 增益：$K_{p,p}=8.0,;K_{d,p}=1.5$ 俯仰速率控制\n误差：$\\tilde q=q_d-q$ 控制：$δ_e=K_{p,q}\\tilde q+K_{d,q}\\dot{\\tilde q}$ 增益：$K_{p,q}=9.0,;K_{d,q}=1.8$ 偏航速率控制\n误差：$\\tilde r=r_d-r$ 控制：$δ_r=K_{p,r}\\tilde r+K_{d,r}\\dot{\\tilde r}$ 增益：$K_{p,r}=4.0,;K_{d,r}=0.5$ 4.4 执行周期与时序 外环 20 Hz, 中环 50 Hz, 内环 100 Hz\n主循环示例：\nwhile(sim) { read_state(); if(time%0.05==0) external_loop(); if(time%0.02==0) attitude_loop(); rate_loop(); integrate_dynamics(Δt); log(); } 5. 接口与模块划分 模块 输入 输出 动力学模型 状态 $\\mathbf{x}$，控制 $[δ_T,δ_a,δ_e,δ_r]$ 更新后状态 $\\mathbf{x}_{t+Δt}$ 外环控制 目标航迹/姿态，当前状态 $ψ_d,θ_d,V_d,h_d,r_d,p_d,q_d$ 中环控制 $φ_d,θ_d,r_d$，当前姿态 $p_d,q_d,r_d$ 内环控制 $p_d,q_d,r_d$，当前角速 $δ_a,δ_e,δ_r$ 6. 参数标定与验证 开环仿真：验证动力学模型平飞稳定性。 阶跃响应测试：分析外环/中环/内环步响应特性。 闭环跟踪：执行航线跟随、高度保持、空速保持任务，记录误差。 蒙特卡洛测试：加入风/参数扰动，评估鲁棒性。 7. 实现建议 使用 Eigen 实现矩阵运算与 RK 积分。 将控制器与动力学模型封装为模块化接口（虚基类+派生）。 参数通过 JSON/YAML 配置加载，并支持在线调参。 日志与可视化：保存关键变量，用于离线分析与调优。 8. 参考文献 Stevens, B.L., \u0026 Lewis, F.L. (2003). Aircraft Control and Simulation. Wiley. Beard, R.W., \u0026 McLain, T.W. (2012). Small Unmanned Aircraft: Theory and Practice. Princeton University Press. JSBSim User Guide, PRIMES, Inc.",
     "description": "为小型固定翼无人机仿真系统提供逼真的飞行动力学与飞行控制方案，替代当前的简单PID+运动学模型。文档涵盖系统需求、6-DOF动力学模型、级联控制架构、模块接口、参数标定及实现建议等内容。",
     "tags": [],
@@ -120,7 +120,7 @@ var relearn_searchindex = [
     "uri": "/uas/fix_wing_uav_flight_sim/fix_wing_uav_flight_sim/index.html"
   },
   {
-    "breadcrumb": "FlitSoft Docs \u003e  UAS \u003e  Velocity Plan",
+    "breadcrumb": "FlitSoft Docs \u003e  UAS Simulation \u003e  Velocity Plan",
     "content": "该文档描述了算法的数学模型、约束条件以及求解流程。文档中的符号和公式与代码中的计算逻辑相对应，详细说明了如何根据输入参数（如轨迹弧长 $S$、总飞行时间$T$、进入速度 $v_{In}$、期望速度 $v_{Des}$、最小/最大速度 $v_{min}, v_{max}$、最大加速度 $a_{Max} $和最大加加速度 $j_{Max}$）计算出整个轨迹在仿真步长 $dt$ 下的速度、加速度和加加速度曲线，同时在后段尽可能保持接近期望速度飞行，并通过二分查找调整 $v_{Des}$ 以匹配目标弧长。\n1. 引言 本模型旨在为无人机轨迹规划提供一条平滑的 S 曲线速度规划方案。给定目标轨迹弧长 $S$ 与总飞行时间 $T$，输入参数包括进入速度 $v_{in}$ 与期望速度 $v_{des}$（代码中记为 vIn 与 vDes），同时受到速度上下限 $v_{min}, v_{max}$ 以及动态约束：最大加速度 $a_{max}$ 和最大加加速度 $j_{max}$ 的限制。整个模型通过先计算变速（过渡）阶段的 S 曲线段，再补充恒速段（定速阶段），最后利用二分查找方法调整期望速度以匹配目标弧长，从而生成一组离散时间点上的速度、加速度和加加速度数据。\n在线计算器链接\nC++代码库： https://github.com/flitai/Velocity_Plan/\n2. 模型参数与符号定义 输入参数：\n$S$ : 轨迹弧长（米） $T$ : 总飞行时间（秒） $v_{in}$ : 进入速度（米/秒） $v_{des}$ : 期望速度（米/秒） $v_{min}$ : 最小允许速度（米/秒） $v_{max}$ : 最大允许速度（米/秒） $a_{max}$ : 最大加速度（米/秒²） $j_{max}$ : 最大加加速度（米/秒³） $dt$ : 仿真步长（秒） 其他符号：\n$\\Delta v = v_{des} - v_{in}$ $s = \\text{sgn}(\\Delta v)$，正表示加速，负表示减速。 3. S 曲线变速段设计 为实现平滑过渡，S 曲线变速段分为两种情况，根据 $|\\Delta v|$ 与 $\\frac{a_{max}^2}{j_{max}}$ 的关系区分为【梯形 S 曲线】与【三角形 S 曲线】。\n3.1 梯形 S 曲线 当\n$$ |\\Delta v| \\ge \\frac{a_{max}^2}{j_{max}}, $$ 采用梯形 S 曲线，其分为三个子段：\n上升阶段（加加速阶段）：\n时间区间：$t \\in [0, T_j]$，其中\n$$ T_j = \\frac{a_{max}}{j_{max}}. $$ 动态表达式： $$ \\begin{aligned} j(t) \u0026= s\\, j_{max},\\\\ a(t) \u0026= s\\, j_{max}\\, t,\\\\ v(t) \u0026= v_{in} + \\frac{s\\, j_{max}\\, t^2}{2}. \\end{aligned} $$ 恒定加速阶段：\n时间区间：$t \\in (T_j,\\, T_j + T_a]$，其中\n$$ T_a = \\frac{|\\Delta v|}{a_{max}} - T_j. $$ 动态表达式： $$ \\begin{aligned} j(t) \u0026= 0,\\\\ a(t) \u0026= s\\, a_{max},\\\\ v(t) \u0026= v_{in} + \\frac{s\\, a_{max}^2}{2j_{max}} + s\\, a_{max}(t - T_j). \\end{aligned} $$ 下降阶段（减加速阶段）：\n时间区间：$t \\in (T_j+T_a,\\, T_{conv}]$，其中\n$$ T_{conv} = 2T_j + T_a. $$ 定义局部时间 $\\tau = t - (T_j+T_a)$，动态表达式： $$ \\begin{aligned} j(t) \u0026= -s\\, j_{max},\\\\ a(t) \u0026= s\\, a_{max} - s\\, j_{max}\\, \\tau,\\\\ v(t) \u0026= v_{in} + \\frac{s\\, a_{max}^2}{2j_{max}} + s\\, a_{max}\\, T_a + s\\Big(a_{max}\\tau - \\frac{j_{max}\\, \\tau^2}{2}\\Big). \\end{aligned} $$ 3.2 三角形 S 曲线 当\n$$ |\\Delta v| \u003c \\frac{a_{max}^2}{j_{max}}, $$ 采用三角形 S 曲线，其分为两个子段：\n上升阶段：\n时间区间：$t \\in [0, T']$，其中\n$$ T' = \\sqrt{\\frac{|\\Delta v|}{j_{max}}}. $$ 动态表达式： $$ \\begin{aligned} j(t) \u0026= s\\, j_{max},\\\\ a(t) \u0026= s\\, j_{max}\\, t,\\\\ v(t) \u0026= v_{in} + \\frac{s\\, j_{max}\\, t^2}{2}. \\end{aligned} $$ 下降阶段：\n时间区间：$t \\in (T',\\, 2T']$，设 $\\tau = t - T'$，动态表达式： $$ \\begin{aligned} j(t) \u0026= -s\\, j_{max},\\\\ a(t) \u0026= s\\, j_{max}(T' - \\tau),\\\\ v(t) \u0026= v_{in} + \\frac{s\\, j_{max}\\, T'^2}{2} + s\\Big(j_{max}\\, T'\\,\\tau - \\frac{j_{max}\\,\\tau^2}{2}\\Big). \\end{aligned} $$ 此时，总变速段时间为\n$$ T_{conv} = 2T'. $$ 4. 定速阶段 在变速阶段（$t \\le T_{conv}$）结束后，进入定速阶段，设定：\n$$ v(t) = v_{des},\\quad a(t)=0,\\quad j(t)=0,\\quad \\text{for } t \\in (T_{conv},\\, T]. $$ 定速阶段的位移为\n$$ S_{const} = v_{des}\\,(T - T_{conv}). $$ 5. 总位移匹配与 vDes 调整 整个飞行的总位移为： $$ S_{total} = S_{conv} + S_{const}, $$ 其中\n$S_{conv} = \\int_{0}^{T_{conv}} v(t)\\, dt$（变速段的累计位移）， $S_{const} = v_{des}\\,(T - T_{conv})$。 目标是满足\n$$ S_{total} = S. $$由于直接根据初始参数计算得到的 $S_{total}$ 可能与目标 $S$ 不符，代码中采用二分查找法在允许范围 $[v_{min}, v_{max}]$ 内调整期望速度 $v_{des}$，使得修正后的 $v_{des}$ 满足 $$ \\left|S_{conv} + v_{des}\\,(T - T_{conv}) - S\\right| \u003c \\epsilon, $$ 其中 $\\epsilon$ 为容忍误差（例如 0.001 米）。\n同时，通过比例因子\n$$ \\text{scaleFactor} = \\frac{v_{des}^{*}}{v_{des}}, $$ 记录调整幅度，以便反馈用户。\n6. 离散化与仿真步骤 时间离散化：\n将总飞行时间 $T$ 以步长 $dt$ 离散为 $N = \\lceil T/dt \\rceil$ 个时间点。\n按阶段计算：\n对于 $t \\le T_{conv}$ 的点，依据所选 S 曲线（梯形或三角形）分别计算对应的 $v(t)$、$a(t)$ 与 $j(t)$，同时累加位移 $S_{conv}$。 对于 $t \u003e T_{conv}$ 的点，设 $v(t) = v_{des}$（调整后的值），位移按 $v_{des} \\times dt$ 累加。 数据输出：\n生成离散的时间序列数据，格式为\n$$ \\{t_k,\\, v(t_k),\\, a(t_k),\\, j(t_k)\\},\\quad k=0,1,\\ldots, N, $$ 用于后续图形显示和进一步分析。\n7. 模型求解流程 初始计算：\n根据输入参数计算 $\\Delta v$ 和符号 $s$。判断 $|\\Delta v|$ 是否满足梯形 S 曲线条件，从而计算对应的 $T_j, T_a$（或 $T'$），进而确定变速阶段时间 $T_{conv}$。\n积分求位移：\n对变速段进行数值积分获得 $S_{conv}$，再计算定速段位移 $S_{const}$，从而得出 $S_{total}$。\n二分查找调整 $v_{des}$：\n若 $S_{total}$ 与目标 $S$ 存在误差，则在 $[v_{min}, v_{max}]$ 范围内采用二分查找调整 $v_{des}$，直到满足误差要求。\n生成输出数据：\n依据调整后的 $v_{des}$ 与计算结果生成全程的速度、加速度与加加速度数据，并输出曲线信息与统计指标。\n8. 总结 本 S 曲线速度规划模型在满足总飞行时间 $T$ 与轨迹弧长 $S$ 的严格约束下，通过以下步骤实现：\n变速段设计： 根据 $v_{in}$ 与 $v_{des}$ 之间的差值，选择梯形或三角形 S 曲线生成平滑的加速/减速过渡，计算出变速段时间 $T_{conv}$ 与累计位移 $S_{conv}$。 定速段补充： 变速结束后，采用定速 $v_{des}$ 飞行，确保后段尽可能长以接近期望速度。 迭代优化： 采用二分查找调整期望速度 $v_{des}$（同时记录比例因子），以确保总体位移匹配目标 $S$。 离散仿真： 按照步长 $dt$ 离散生成整段轨迹的速度、加速度和加加速度数据。 该模型不仅实现了速度规划的平滑性和安全性，同时在后段尽可能保持接近飞出速度飞行，从而满足特定飞行性能的要求。",
     "description": "This summary is independent of the content.",
     "tags": [],
