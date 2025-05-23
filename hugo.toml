@@ -46,6 +46,12 @@ publishDir = "docs"
           block = [['\[', '\]'], ['$$', '$$']]
           inline = [['\(', '\)'], ['$', '$']]
 
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true    # 允许在 Markdown 中渲染原生 HTML
+
+
 # 菜单
 [menu]
   [[menu.main]]
