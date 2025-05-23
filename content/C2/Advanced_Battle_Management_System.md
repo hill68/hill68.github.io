@@ -2,7 +2,7 @@
 date = '2025-05-23T17:07:50+08:00'
 draft = false
 title = 'Advanced Battle Management System'
-summary= "This summary is independent of the content."
+summary= "先进战斗管理系统 (ABMS) 空军面临的需求、进展、挑战与机遇."
 +++
 
 [中文译文](/pdf/Advanced_Battle_Management_System.pdf)
