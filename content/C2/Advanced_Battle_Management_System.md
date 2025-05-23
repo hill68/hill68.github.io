@@ -15,6 +15,7 @@ summary= "This summary is independent of the content."
   <a href="{{ "pdf/Advanced_Battle_Management_System.pdf" | relURL }}">点击下载 PDF</a>
 </iframe>
 
++1
 
 [中文译文](/pdf/Advanced_Battle_Management_System.pdf)
 
