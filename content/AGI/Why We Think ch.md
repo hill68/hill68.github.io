@@ -2,7 +2,7 @@
 date = '2025-05-23T17:07:50+08:00'
 draft = false
 title = 'Why We Think'
-summary= "This summary is independent of the content."
+summary= "测试时计算（test time compute）与思维链（Chain-of-thought, CoT）已显著提升了模型性能，同时也引发了许多研究问题。本文旨在回顾关于如何有效利用测试时计算（即“思考时间”）以及为何它能带来帮助的最新进展。"
 +++
 
 
