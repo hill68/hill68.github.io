@@ -14,14 +14,6 @@ Article in Control Systems Technology, IEEE Transactions on · June 2005
 
 Source: IEEE Xplore
 
-$$
-\begin{aligned}
-&-c \leq \dot{\psi} \leq c \quad\quad(5)\\
-&0<v_{\min } \leq v \leq v_{\max }. \quad\quad(6)
-\end{aligned}
-$$
-
-
 Erik P. Anderson,  Randal W. Beard,  Timothy W. McLain
 
 Brigham Young University - Provo Main Campus
@@ -93,7 +85,7 @@ Brigham Young University - Provo Main Campus
 
 $$
 \begin{aligned}
-\dot{z}_{x} &=v \cos \psi \quad\quad(1)\\ 
+\dot{z}_{x} &=v \cos \psi \tag{1}\\ 
 \dot{z}_{y} &=v \sin \psi \quad\quad(2)\\ 
 \dot{\psi} &=\alpha_{\psi}\left(\psi^{c}-\psi\right) \quad\quad(3)\\ 
 \dot{v} &=\alpha_{v}\left(v^{c}-v\right) \quad\quad(4)
@@ -109,8 +101,7 @@ $$
 \end{aligned}
 $$
 
-
-**定义 1: ** 如果存在输入 $\psi^{c}(t)$ 和 $v^{c}(t)$，使得当 $\mathbf{z}(0)=\mathbf{z}^{d}(0)$ 时，$\mathbf{z}(t)=\mathbf{z}^{d}(t)$，并且动力学方程(1)-(4)和约束(5)-(6)在所有 $t \geq 0$ 时都得到满足，则称轨迹 $\mathbf{z}^{d}(t)=\left(z_{x}^{d}, z_{y}^{d}\right)^{T}$ 为动态可行的。
+定义 1:  如果存在输入 $\psi^{c}(t)$ 和 $v^{c}(t)$，使得当 $\mathbf{z}(0)=\mathbf{z}^{d}(0)$ 时，$\mathbf{z}(t)=\mathbf{z}^{d}(t)$，并且动力学方程(1)-(4)和约束(5)-(6)在所有 $t \geq 0$ 时都得到满足，则称轨迹 $\mathbf{z}^{d}(t)=\left(z_{x}^{d}, z_{y}^{d}\right)^{T}$ 为动态可行的。
 
 图 1 所示的动态轨迹平滑器 (DTS) 的输入是航路点路径
 $$
@@ -131,6 +122,7 @@ $$
 其中，$u \in[-c, c]$ 是将被选择以满足指定目标的输入。我们将假设轨迹以恒定速度 $\hat{v} \in\left[v_{\min }, v_{\max }\right]$ 行驶。注意，如果 $\hat{\mathbf{z}}(0)=\mathbf{z}(0)$，则方程(7)-(9)保证生成动态可行的轨迹。因此，可行性问题是预先得到满足的。方程(7)-(9)通过固定步长的常微分方程（ODE）求解器求解，并实时传播。换句话说，DTS的输出与无人机动力学的演变在时间上相对应。如果使用四阶Runge-Kutta算法[28]，则每个采样周期内需要计算四次$u$。因此，计算复杂度依赖于$u$的计算。
 
 注意，如果 $u=+c$，则方程(7)-(8)中给出的DTS描绘出一个右旋圆，如图2所示。类似地，如果 $u=-c$，则DTS描绘出一个左旋圆。如图2所示，DTS的局部可达区域由这两个圆所界定。定义局部可达区域的圆的半径为 $R=\hat{v} / c$。注意，随着期望速度的增加，最小转弯半径也会增加。如果 $(\hat{\mathbf{z}}, \hat{\psi})$，其中 $\hat{\mathbf{z}}=\left(\hat{z}_{x}, \hat{z}_{y}\right)^{T}$ 是DTS的配置，那么界定可达区域的两个圆的圆心给出为
+
 $$
 \begin{aligned}
 &\mathbf{c}_{R}(t)=\hat{\mathbf{z}}(t)+R\left(\begin{array}{c}
@@ -152,7 +144,7 @@ $$
 
 在第三节中，我们将定义一类可行轨迹，并证明它们满足庞特里亚金最小值原理的必要条件，用于最小化从一个航路点段到下一个航路点段的过渡时间，同时满足动力学方程(1)-(4)和约束(5)-(6)。为了准确起见，我们回顾庞特里亚金最小值原理[26]，其可以表述如下。
 
-**定义 2: ** 给定动力学系统 $\dot{x}=f(x, u)$，初始条件为 $x_{0}$，终端约束集 $\chi=\left\{x \in \mathbb{R}^{n}: g(x)=0\right\}$ 和控制约束集 $\mathcal{U}=\left\{u \in \mathbb{R}^{m}: h(u) \geq 0\right\}$，其中 $f, g: \mathbb{R}^{n} \rightarrow \mathbb{R}^{q}$ 和 $h$ 是连续可微的，并且 $\frac{\partial g}{\partial x}$ 和 $\frac{\partial h}{\partial u}$ 的秩是满秩的，控制策略 $u^{*}(t)$ 是关于成本函数 $J=\int_{0}^{T} l(x, u) d t$ 的极值控制策略，其中 $l$ 是连续可微的，若存在一个连续分段可微的函数 $\lambda(t) \in \mathbb{R}^{n}$ 和常数 $\rho \in \mathbb{R}^{q}$，使得以下方程得到满足
+定义 2:  给定动力学系统 $\dot{x}=f(x, u)$，初始条件为 $x_{0}$，终端约束集 $\chi=\left\{x \in \mathbb{R}^{n}: g(x)=0\right\}$ 和控制约束集 $\mathcal{U}=\left\{u \in \mathbb{R}^{m}: h(u) \geq 0\right\}$，其中 $f, g: \mathbb{R}^{n} \rightarrow \mathbb{R}^{q}$ 和 $h$ 是连续可微的，并且 $\frac{\partial g}{\partial x}$ 和 $\frac{\partial h}{\partial u}$ 的秩是满秩的，控制策略 $u^{*}(t)$ 是关于成本函数 $J=\int_{0}^{T} l(x, u) d t$ 的极值控制策略，其中 $l$ 是连续可微的，若存在一个连续分段可微的函数 $\lambda(t) \in \mathbb{R}^{n}$ 和常数 $\rho \in \mathbb{R}^{q}$，使得以下方程得到满足
 $$
 \begin{aligned}
 \dot{x}^{*} &=\frac{\partial H}{\partial \lambda}\left(x^{*}, u^{*}, \lambda^{*}\right) \\
