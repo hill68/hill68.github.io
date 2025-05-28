@@ -85,7 +85,7 @@ Brigham Young University - Provo Main Campus
 
 $$
 \begin{aligned}
-\dot{z}_{x} &=v \cos \psi \tag{1}\\ 
+\dot{z}_{x} &=v \cos \psi \quad\quad(1)\\ 
 \dot{z}_{y} &=v \sin \psi \quad\quad(2)\\ 
 \dot{\psi} &=\alpha_{\psi}\left(\psi^{c}-\psi\right) \quad\quad(3)\\ 
 \dot{v} &=\alpha_{v}\left(v^{c}-v\right) \quad\quad(4)
@@ -95,10 +95,11 @@ $$
 其中，$\alpha_{\psi}$ 和 $\alpha_{v}$ 是已知常数，依赖于自动驾驶仪的实现。此外，基础的无人机动力学约束了航向速率和速度，如下所示：
 
 $$
-\begin{aligned}
-&-c \leq \dot{\psi} \leq c \quad\quad(5)\\
-&0<v_{\min } \leq v \leq v_{\max }. \quad\quad(6)
-\end{aligned}
+-c \leq \dot{\psi} \leq c \quad\quad(5)
+$$
+
+$$
+0<v_{\min } \leq v \leq v_{\max }. \quad\quad(6)
 $$
 
 定义 1:  如果存在输入 $\psi^{c}(t)$ 和 $v^{c}(t)$，使得当 $\mathbf{z}(0)=\mathbf{z}^{d}(0)$ 时，$\mathbf{z}(t)=\mathbf{z}^{d}(t)$，并且动力学方程(1)-(4)和约束(5)-(6)在所有 $t \geq 0$ 时都得到满足，则称轨迹 $\mathbf{z}^{d}(t)=\left(z_{x}^{d}, z_{y}^{d}\right)^{T}$ 为动态可行的。
