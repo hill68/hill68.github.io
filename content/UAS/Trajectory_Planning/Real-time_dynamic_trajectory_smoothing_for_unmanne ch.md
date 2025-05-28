@@ -15,7 +15,7 @@ Article in Control Systems Technology, IEEE Transactions on · June 2005
 Source: IEEE Xplore
 
 
-Erik P. Anderson, $\quad$ Randal W. Beard, $\quad$ Timothy W. McLain
+Erik P. Anderson,  Randal W. Beard,  Timothy W. McLain
 
 Brigham Young University - Provo Main Campus
 
