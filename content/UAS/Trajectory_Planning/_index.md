@@ -1,7 +1,7 @@
 +++
-title = "Velocity Plan"
+title = "Trajectory Planning"
 type = "chapter"
-weight = 3
+weight = 2
 +++
 
 {{% children description="true" %}}
