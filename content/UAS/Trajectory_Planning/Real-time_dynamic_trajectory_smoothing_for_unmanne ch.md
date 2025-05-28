@@ -14,6 +14,13 @@ Article in Control Systems Technology, IEEE Transactions on · June 2005
 
 Source: IEEE Xplore
 
+$$
+\begin{aligned}
+&-c \leq \dot{\psi} \leq c \quad\quad(5)\\
+&0<v_{\min } \leq v \leq v_{\max }. \quad\quad(6)
+\end{aligned}
+$$
+
 
 Erik P. Anderson,  Randal W. Beard,  Timothy W. McLain
 
