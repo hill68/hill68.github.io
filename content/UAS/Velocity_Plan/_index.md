@@ -1,5 +1,5 @@
 +++
-title = "Velocity Plan"
+title = "Velocity Planning"
 type = "chapter"
 weight = 3
 +++
