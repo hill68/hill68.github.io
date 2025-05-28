@@ -181,7 +181,8 @@ $$
 <img src="/images/kappa/f3.png" width="400" alt="f3 图示" />
 
 
-![图3](/images/kappa/f3.png)
+![f3 图示](/images/kappa/f3.png){width="400px"}
+
 
 图3. 在$\kappa$-轨迹定义中使用的内切圆。
 
