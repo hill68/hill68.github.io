@@ -13,6 +13,7 @@ summary= "提出一种基于二分查找的数值方法，用以求解参数 $\k
 本报告针对DTS（Dynamically Time‐Scaled）算法生成的轨迹，提出一种基于二分查找的数值方法，用以求解参数 $\kappa^*$，从而使得生成的 $\kappa$-轨迹路径长度与原始航路点轨迹 $\mathcal{P}$ 的路径长度完全一致。该方法依托于路径长度差函数 $\Lambda(\kappa)$ 在区间 $[0,1]$ 上的单调性和端点符号异号性质，通过迭代逼近 $\Lambda(\kappa)=0$ 的唯一解，实现了时间关键任务下轨迹光滑与时序约束的双重满足。
 
 ---
+C++实现代码参见：https://github.com/flitai/kappa-trajectories/
 
 ## 1. 问题描述
 
