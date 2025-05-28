@@ -22,6 +22,4 @@ summary= "先进战斗管理系统 (ABMS) ——美国空军面临的需求、�
 
 
 
-[中文译文](/pdf/Advanced_Battle_Management_System.pdf)
-
 
