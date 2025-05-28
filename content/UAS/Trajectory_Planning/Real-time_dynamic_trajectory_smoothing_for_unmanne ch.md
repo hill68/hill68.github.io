@@ -102,7 +102,7 @@ $$
 \end{aligned}
 $$
 
-**定义 1：**如果存在输入 $\psi^{c}(t)$ 和 $v^{c}(t)$，使得当 $\mathbf{z}(0)=\mathbf{z}^{d}(0)$ 时，$\mathbf{z}(t)=\mathbf{z}^{d}(t)$，并且动力学方程(1)-(4)和约束(5)-(6)在所有 $t \geq 0$ 时都得到满足，则称轨迹 $\mathbf{z}^{d}(t)=\left(z_{x}^{d}, z_{y}^{d}\right)^{T}$ 为动态可行的。
+**定义 1: ** 如果存在输入 $\psi^{c}(t)$ 和 $v^{c}(t)$，使得当 $\mathbf{z}(0)=\mathbf{z}^{d}(0)$ 时，$\mathbf{z}(t)=\mathbf{z}^{d}(t)$，并且动力学方程(1)-(4)和约束(5)-(6)在所有 $t \geq 0$ 时都得到满足，则称轨迹 $\mathbf{z}^{d}(t)=\left(z_{x}^{d}, z_{y}^{d}\right)^{T}$ 为动态可行的。
 
 图 1 所示的动态轨迹平滑器 (DTS) 的输入是航路点路径
 $$
@@ -144,7 +144,7 @@ $$
 
 在第三节中，我们将定义一类可行轨迹，并证明它们满足庞特里亚金最小值原理的必要条件，用于最小化从一个航路点段到下一个航路点段的过渡时间，同时满足动力学方程(1)-(4)和约束(5)-(6)。为了准确起见，我们回顾庞特里亚金最小值原理[26]，其可以表述如下。
 
-**定义 2：**给定动力学系统 $\dot{x}=f(x, u)$，初始条件为 $x_{0}$，终端约束集 $\chi=\left\{x \in \mathbb{R}^{n}: g(x)=0\right\}$ 和控制约束集 $\mathcal{U}=\left\{u \in \mathbb{R}^{m}: h(u) \geq 0\right\}$，其中 $f, g: \mathbb{R}^{n} \rightarrow \mathbb{R}^{q}$ 和 $h$ 是连续可微的，并且 $\frac{\partial g}{\partial x}$ 和 $\frac{\partial h}{\partial u}$ 的秩是满秩的，控制策略 $u^{*}(t)$ 是关于成本函数 $J=\int_{0}^{T} l(x, u) d t$ 的极值控制策略，其中 $l$ 是连续可微的，若存在一个连续分段可微的函数 $\lambda(t) \in \mathbb{R}^{n}$ 和常数 $\rho \in \mathbb{R}^{q}$，使得以下方程得到满足
+**定义 2: ** 给定动力学系统 $\dot{x}=f(x, u)$，初始条件为 $x_{0}$，终端约束集 $\chi=\left\{x \in \mathbb{R}^{n}: g(x)=0\right\}$ 和控制约束集 $\mathcal{U}=\left\{u \in \mathbb{R}^{m}: h(u) \geq 0\right\}$，其中 $f, g: \mathbb{R}^{n} \rightarrow \mathbb{R}^{q}$ 和 $h$ 是连续可微的，并且 $\frac{\partial g}{\partial x}$ 和 $\frac{\partial h}{\partial u}$ 的秩是满秩的，控制策略 $u^{*}(t)$ 是关于成本函数 $J=\int_{0}^{T} l(x, u) d t$ 的极值控制策略，其中 $l$ 是连续可微的，若存在一个连续分段可微的函数 $\lambda(t) \in \mathbb{R}^{n}$ 和常数 $\rho \in \mathbb{R}^{q}$，使得以下方程得到满足
 $$
 \begin{aligned}
 \dot{x}^{*} &=\frac{\partial H}{\partial \lambda}\left(x^{*}, u^{*}, \lambda^{*}\right) \\
