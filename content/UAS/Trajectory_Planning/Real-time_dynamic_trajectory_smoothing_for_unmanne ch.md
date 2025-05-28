@@ -267,7 +267,11 @@ $$
 我们推测，bang-bang控制策略
 
 $$
-u^{*}(t)= \begin{cases}-c, & 0 \leq t<t_{1} \\ c, & t_{1} \leq t \leq T\end{cases}
+u^*(t) \;=\;
+\begin{cases}
+  -c, & 0 \le t < t_{1},\\
+   c, & t_{1} \le t \le T
+\end{cases}
 $$
 
 是最小时间极值轨迹，并且证明由此得到的系统轨迹满足方程(12)-(17)。方程(12)显然得到满足，因为 $\partial H / \partial \lambda = (\hat{v} \cos \hat{\psi}, \hat{v} \sin \hat{\psi}, u)^{T}$。方程(13)和(14)导致以下常微分方程（ODE）系统：
