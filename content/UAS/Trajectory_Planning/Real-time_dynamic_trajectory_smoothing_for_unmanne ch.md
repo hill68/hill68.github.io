@@ -48,7 +48,7 @@ Brigham Young University - Provo Main Campus
 
 我们的特别关注点是无人机的协作定时问题$[4]，[5]，[6]$。例如，在同时拦截问题中，一组无人机必须穿越动态变化的威胁区域，以与其他无人机同时到达各自的目的地。当威胁出现时，整个团队必须重新规划路径，以满足同时到达的约束条件。为了解决这个问题，我们最近提出了一种基于图1所示分层架构的协作控制技术[7]，[8]。如图1所示，协调定时管理器生成一组目标，并附有预计到达时间（ETA）数据。我们对协调定时管理器的处理方法在[7]，[8]中有详细介绍。本论文特别重要的是，协调定时管理器基于直线航路点路径规划协作任务。动态轨迹平滑器（DTS）的作用是将航路点路径平滑成满足无人机动态约束的时间参数化轨迹。然而，如果DTS生成的轨迹与原始航路点路径的路径长度不同，那么预计到达时间（ETA）将发生变化，从而使得协调定时管理器生成的协作定时计划失效。因此，我们希望DTS生成的轨迹与原始航路点路径具有相同的路径长度。
 
-![](https://cdn.mathpix.com/cropped/2022_07_18_9ff4460d05508d94c751g-04.jpg?height=542&width=668&top_left_y=170&top_left_x=284)
+<img src="/images/kappa/f1.png" width="400" alt="图1" />
 
 图1. 动态轨迹平滑器（DTS）是整体系统架构中的关键部分。
 
@@ -138,7 +138,7 @@ $$
 
 对应的半径为 $R$ 的圆分别表示为 $\mathcal{C}_{L}$ 和 $\mathcal{C}_{R}$。由于可达区域的边界由已知圆心和半径的圆所定义，因此，可以通过计算效率较高的方式来找到可达区域与直线和圆的交点。
 
-![](https://cdn.mathpix.com/cropped/2022_07_18_9ff4460d05508d94c751g-08.jpg?height=344&width=310&top_left_y=179&top_left_x=467)
+<img src="/images/kappa/f2.png" width="400" alt="图2" />
 
 图2. DTS的局部可达区域。
 
@@ -175,7 +175,7 @@ $$
 将沿着相应路径段的单位向量表示为图3所示。令 $\beta$ 表示 $\mathbf{q}_{i}$ 和 $\mathbf{q}_{i+1}$ 之间的夹角，我们得到
 
 
-<img src="/images/kappa/f3.png" width="400" alt="f3 图示" />
+<img src="/images/kappa/f3.png" width="400" alt="图3" />
 
 图3. 在$\kappa$-轨迹定义中使用的内切圆。
 
@@ -225,7 +225,7 @@ $$
 
 
 
-<img src="/images/kappa/f4.png" width="400" alt="f4 图示" />
+<img src="/images/kappa/f4.png" width="400" alt="图4" />
 
 图. 4. 一个动态可行的$\kappa$-轨迹。
 
@@ -234,7 +234,7 @@ $$
 
 证明：注意，图4所示的$\kappa$-轨迹关于$\beta$的平分线是对称的。由于对称性，只需证明从$\mathbf{p}(\kappa)$到线段$\overline{\mathbf{w}_{i} \mathbf{w}_{i+1}}$的轨迹是最小时间极值轨迹。为了不失一般性，进行坐标变换，使得线段$\overline{\mathbf{w}_{i} \mathbf{w}_{i+1}}$位于$Y$轴上，如图5所示。考虑具有初始条件的时间最优控制问题：
 
-<img src="/images/kappa/f5.png" width="400" alt="f5 图示" />
+<img src="/images/kappa/f5.png" width="400" alt="图5" />
 
 Fig. 5. 变换坐标中的时间最优控制问题。
 
@@ -373,7 +373,7 @@ $$
 
 在本节中，我们介绍了一种实时算法，该算法生成 $\kappa$-轨迹。如果 $\kappa=1$，则 $\kappa$ 轨迹以最短时间从航路点段 $\overline{\mathbf{w}_{i-1} \mathbf{w}_{i}}$ 过渡到航路点段 $\overline{\mathbf{w}_{i} \mathbf{w}_{i+1}}$。如果 $\kappa=0$，则 $\kappa$-轨迹执行一个最小时间过渡，前提是它直接通过 $\mathbf{w}_{i}$。我们还将在本节中展示如何选择 $\kappa$，使得 $\kappa$-轨迹具有与原始航路点路径相同的路径长度。
 
-<img src="/images/kappa/f6.png" width="400" alt="f6图示" />
+<img src="/images/kappa/f6.png" width="400" alt="图6" />
 
 图6. 选择 $u$ 背后基本思想的图示。
 
