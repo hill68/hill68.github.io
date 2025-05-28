@@ -11,7 +11,7 @@ summary= "针对模块化的κ轨迹点生成 C++ 代码的详细说明。用于
 
 该代码将专注于根据论文中的几何定义（Definition 3 [cite: 108] 和 Lemma 6 的证明图 Fig. 9 [cite: 170]）计算构成转弯的三个圆弧段以及与这些圆弧相切的入段点和出段点。
 
-[C++实现代码]（https://github.com/flitai/kappa-trajectories/）
+[C++实现代码](https://github.com/flitai/kappa-trajectories/)
 
 ### **核心思路：**
 
@@ -175,5 +175,5 @@ summary= "针对模块化的κ轨迹点生成 C++ 代码的详细说明。用于
 
 因此，离散化的核心原则是在每个构成转弯的圆弧上，以相等的角度增量来采样点。
 
-[C++实现代码]（https://github.com/flitai/kappa-trajectories/）
+[C++实现代码](https://github.com/flitai/kappa-trajectories/)
 
