@@ -130,12 +130,12 @@ $$
 \begin{aligned}
 &\mathbf{c}_{R}(t)=\hat{\mathbf{z}}(t)+R\left(\begin{array}{c}
 -\sin (\hat{\psi}(t)) \\
-\cos (\hat{\psi}(t)) \quad\quad(10)
-\end{array}\right) \\
+\cos (\hat{\psi}(t))
+\end{array}\right)  \quad\quad(10) \\
 &\mathbf{c}_{L}(t)=\hat{\mathbf{z}}+R\left(\begin{array}{c}
 \sin (\hat{\psi}(t)) \\
--\cos (\hat{\psi}(t)) \quad\quad(11)
-\end{array}\right)
+-\cos (\hat{\psi}(t)) 
+\end{array}\right) \quad\quad(11)
 \end{aligned}
 $$
 
