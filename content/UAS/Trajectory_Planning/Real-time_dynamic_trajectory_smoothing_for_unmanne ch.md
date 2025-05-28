@@ -176,7 +176,7 @@ $$
 
 
 
-<img src="img\f3.png" width=400/>
+<img src="\images\kappa\f3.png" width=400/>
 
 图3. 在$\kappa$-轨迹定义中使用的内切圆。
 
