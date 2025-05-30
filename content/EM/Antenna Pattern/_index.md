@@ -2,9 +2,9 @@
 title = "Antenna Pattern"
 type = "chapter"
 weight = 1
-summary= "This summary is independent of the content."
+summary= "天线方向图模型"
 +++
 
 
-{{% children sort="title" %}}
+{{% children description="true" %}}
 
