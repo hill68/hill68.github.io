@@ -17,19 +17,11 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "FlitSoft Docs \u003e  EM",
-    "content": "辛格方向图模型 高斯方向图模型",
-    "description": "This summary is independent of the content.",
+    "content": "辛格方向图模型This summary is independent of the content.\n高斯方向图模型This summary is independent of the content.",
+    "description": "天线方向图模型",
     "tags": [],
     "title": "Antenna Pattern",
     "uri": "/em/antenna-pattern/index.html"
-  },
-  {
-    "breadcrumb": "FlitSoft Docs \u003e  EM",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Communication",
-    "uri": "/em/comm/index.html"
   },
   {
     "breadcrumb": "FlitSoft Docs \u003e  UAS",
@@ -38,6 +30,14 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Trajectory Planning",
     "uri": "/uas/trajectory_planning/index.html"
+  },
+  {
+    "breadcrumb": "FlitSoft Docs \u003e  EM",
+    "content": "aaa",
+    "description": "通信模型",
+    "tags": [],
+    "title": "Communication",
+    "uri": "/em/comm/index.html"
   },
   {
     "breadcrumb": "FlitSoft Docs \u003e  UAS",
@@ -57,7 +57,7 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "FlitSoft Docs",
-    "content": "Antenna PatternThis summary is independent of the content.\nCommunication",
+    "content": "Antenna Pattern天线方向图模型\nCommunication通信模型",
     "description": "This summary is independent of the content.",
     "tags": [],
     "title": "EM",
