@@ -24,6 +24,14 @@ var relearn_searchindex = [
     "uri": "/em/antenna-pattern/index.html"
   },
   {
+    "breadcrumb": "FlitSoft Docs \u003e  EM",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Communication",
+    "uri": "/em/comm/index.html"
+  },
+  {
     "breadcrumb": "FlitSoft Docs \u003e  UAS",
     "content": "kappa-trajectories κ轨迹平滑κ轨迹生成算法。κ=1：轨迹以最短时间过渡到下一个航段；κ=0：轨迹执行一个最小时间过渡，并直接通过航路点；求解κ∈[0,1]使轨迹具有与原始航路点路径等长\nκ轨迹点生成代码说明针对模块化的κ轨迹点生成 C++ 代码的详细说明。用于在给定 κ∈ [0,1] 的条件下，在航路点之间生成平滑的 κ-轨迹点。\n无人机实时动态轨迹平滑一种实时、可行的轨迹生成算法，用于无人机通过一系列航路点飞行。 利用庞特里亚金的最小原理 (Pontryagin’s Minimum Principle) 证明了由算法生成的连接航点的直线路径段之间的转换是时间最优的。 此外，算法可以配置为动态可行轨迹与直线航路点路径具有相同的路径长度。 并详细描述了与算法相关的实现问题。 仿真研究表明了所提出方法的有效性。\n等长轨迹κ求解算法设计一种基于二分查找的数值方法，用以求解参数 κ，从而使得生成的 κ-轨迹路径长度与原始航路点路径长度完全一致。",
     "description": "kappa-trajectories κ轨迹平滑κ轨迹生成算法。κ=1：轨迹以最短时间过渡到下一个航段；κ=0：轨迹执行一个最小时间过渡，并直接通过航路点；求解κ∈[0,1]使轨迹具有与原始航路点路径等长\nκ轨迹点生成代码说明针对模块化的κ轨迹点生成 C++ 代码的详细说明。用于在给定 κ∈ [0,1] 的条件下，在航路点之间生成平滑的 κ-轨迹点。\n无人机实时动态轨迹平滑一种实时、可行的轨迹生成算法，用于无人机通过一系列航路点飞行。 利用庞特里亚金的最小原理 (Pontryagin’s Minimum Principle) 证明了由算法生成的连接航点的直线路径段之间的转换是时间最优的。 此外，算法可以配置为动态可行轨迹与直线航路点路径具有相同的路径长度。 并详细描述了与算法相关的实现问题。 仿真研究表明了所提出方法的有效性。\n等长轨迹κ求解算法设计一种基于二分查找的数值方法，用以求解参数 κ，从而使得生成的 κ-轨迹路径长度与原始航路点路径长度完全一致。",
@@ -49,7 +57,7 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "FlitSoft Docs",
-    "content": "Antenna PatternThis summary is independent of the content.",
+    "content": "Antenna PatternThis summary is independent of the content.\nCommunication",
     "description": "This summary is independent of the content.",
     "tags": [],
     "title": "EM",
