@@ -33,7 +33,7 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "FlitSoft Docs \u003e  EM",
-    "content": "aaa",
+    "content": "aaa 地空测控链路计算模型该模型侧重于通过考虑视距限制、信号传播特性、接收机灵敏度及多普勒频移影响等因素，评估无人机地空测控链路的连通性和性能。",
     "description": "通信模型",
     "tags": [],
     "title": "Communication",
@@ -214,6 +214,14 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Tacview Technical Reference",
     "uri": "/visual/tacview/index.html"
+  },
+  {
+    "breadcrumb": "FlitSoft Docs \u003e  EM \u003e  Communication",
+    "content": "地空测控链路计算模型 版本： 2.0 日期： 2025年5月29日\n1. 引言 本文档概述了地空测控（M\u0026C）链路的计算模型设计，主要针对无人机（UAV）。无人机数据链用于实现无人机与地面控制站（GCS）之间的遥控、遥测、跟踪、定位及信息传输。该模型侧重于通过考虑视距限制、信号传播特性、接收机灵敏度及多普勒频移影响等因素，评估链路的连通性和性能。\n模型旨在为通信可靠性和有效性评估提供理论依据，使用指标包括比特误码率（BER）、最大有效传输速率和最大有效通信距离。报告详细说明了判断链路状态（连接或中断）的数学公式和逻辑流程。",
+    "description": "该模型侧重于通过考虑视距限制、信号传播特性、接收机灵敏度及多普勒频移影响等因素，评估无人机地空测控链路的连通性和性能。",
+    "tags": [],
+    "title": "地空测控链路计算模型",
+    "uri": "/em/comm/%E5%9C%B0%E7%A9%BA%E6%B5%8B%E6%8E%A7%E9%93%BE%E8%B7%AF%E8%AE%A1%E7%AE%97%E6%A8%A1%E5%9E%8B/index.html"
   },
   {
     "breadcrumb": "FlitSoft Docs \u003e  EM \u003e  Antenna Pattern",
