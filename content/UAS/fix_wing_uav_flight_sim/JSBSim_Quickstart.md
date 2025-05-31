@@ -11,6 +11,9 @@ https://jsbsim-team.github.io/jsbsim-reference-manual/
 
 ![JSBSim Logo](https://jsbsim-team.github.io/jsbsim-reference-manual/assets/img/logo_jsbsim_globe.svg)
 
+
+<img src="(https://jsbsim-team.github.io/jsbsim-reference-manual/assets/img/logo_jsbsim_globe.svg)" width="400" alt="图1" />
+
 JSBSim 是一个轻量级的数据驱动型非线性六自由度（6DoF）批处理仿真应用，旨在建模飞机的飞行动力学与控制。从最早的版本开始，JSBSim 就受益于其成长过程中的开源开发环境，以及众多用户对其持续改进所提出的各种想法。
 
 本在线参考手册是一个社区合作项目，旨在让用户和开发者了解软件的所有功能。
