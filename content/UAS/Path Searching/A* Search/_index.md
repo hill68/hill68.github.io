@@ -1,8 +1,8 @@
 +++
-title = "Path Search"
+title = "A* Path Searching"
 type = "chapter"
 weight = 1
-summary= "路径搜索模型"
+summary= "A*路径搜索模型"
 +++
 
 {{% children description="true" %}}

@@ -3,13 +3,9 @@ date = '2025-05-20T11:13:37+08:00'
 draft = false
 math=true 
 title = '基于运动基元的A*算法'
-summary= "This summary is independent of the content."
+summary= "将基于运动基元的A*算法从四旋翼无人机改进适配到固定翼无人机"
 +++
 
-12
-3
-
-## 将基于运动基元的A\*算法从四旋翼无人机改进适配到固定翼无人机
 
 参考的基于运动基元的四旋翼无人机A\*算法：
 
