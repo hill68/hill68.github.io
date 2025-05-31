@@ -1,32 +1,67 @@
-/* 使用更高优先级的选择器 */
+/* 定义所有字体 */
+@font-face {
+    font-family: 'TitleFont';
+    src: url('/fonts/AktivGrotesk-Bold.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'HeadingFont';
+    src: url('/fonts/AktivGrotesk-Medium.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'BodyFont';
+    src: url('/fonts/AktivGrotesk-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* 应用到你现有的选择器 */
+/* H1 使用 TitleFont */
 .body #body-inner h1,
 #body #body-inner h1,
 article h1,
 .content h1 {
-    font-family: "思源黑体", "Microsoft YaHei", "微软雅黑", "Helvetica Neue", Arial, sans-serif !important;
+    font-family: 'TitleFont', "Helvetica Neue", Arial, sans-serif !important;
     font-size: 2rem !important;
-    font-weight: 550 !important;
+    /*font-weight: 700 !important;*/
 }
 
+/* H2 使用 HeadingFont */
 .body #body-inner h2,
 #body #body-inner h2,
 article h2,
 .content h2 {
-    font-family: "思源黑体", "Microsoft YaHei", "微软雅黑", "Helvetica Neue", Arial, sans-serif !important;
+    font-family: 'HeadingFont', "Helvetica Neue", Arial, sans-serif !important;
     font-size: 1.5rem !important;
 }
 
+/* H3 也使用 HeadingFont */
 .body #body-inner h3,
 #body #body-inner h3,
 article h3,
 .content h3 {
-    font-family: "思源黑体", "Microsoft YaHei", "微软雅黑", "Helvetica Neue", Arial, sans-serif !important;
+    font-family: 'HeadingFont', "Helvetica Neue", Arial, sans-serif !important;
     font-size: 1.2rem !important;
 }
 
-/* 页面标题（通常在顶部） */
+/* 页面主标题使用 TitleFont */
 #body h1:first-child,
 .content > h1:first-child {
-    font-family: "Times New Roman", "Helvetica Neue", Arial, sans-serif !important;
+    font-family: 'TitleFont', "Helvetica Neue", Arial, sans-serif !important;
     font-size: 3rem !important;
+}
+
+/* 如果想给正文也设置字体 */
+.body #body-inner p,
+article p,
+.content p {
+    font-family: 'BodyFont', Georgia, serif !important;
 }
