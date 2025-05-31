@@ -4,8 +4,8 @@
 article h1,
 .content h1 {
     font-family: "思源黑体", "Microsoft YaHei", "微软雅黑", "Helvetica Neue", Arial, sans-serif !important;
-    font-size: 2.5rem !important;
-    font-weight: 700 !important;
+    font-size: 2rem !important;
+    font-weight: 550 !important;
 }
 
 .body #body-inner h2,
@@ -13,7 +13,7 @@ article h1,
 article h2,
 .content h2 {
     font-family: "思源黑体", "Microsoft YaHei", "微软雅黑", "Helvetica Neue", Arial, sans-serif !important;
-    font-size: 2rem !important;
+    font-size: 1.5rem !important;
 }
 
 .body #body-inner h3,
@@ -21,7 +21,7 @@ article h2,
 article h3,
 .content h3 {
     font-family: "思源黑体", "Microsoft YaHei", "微软雅黑", "Helvetica Neue", Arial, sans-serif !important;
-    font-size: 1.5rem !important;
+    font-size: 1.2rem !important;
 }
 
 /* 页面标题（通常在顶部） */
