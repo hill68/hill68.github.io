@@ -2,7 +2,7 @@
 title = "Simulation"
 type = "chapter"
 weight = 60
-summary= "This summary is independent of the content."
+summary= "仿真平台与技术新进展"
 +++
 
 This is a new chapter.

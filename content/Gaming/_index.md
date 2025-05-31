@@ -2,7 +2,7 @@
 title = "Gaming"
 type = "chapter"
 weight = 40
-summary= "This summary is independent of the content."
+summary= "智能博弈文献与模型"
 +++
 
 

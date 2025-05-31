@@ -1,8 +1,8 @@
 +++
-title = "AGI"
+title = "AI"
 type = "chapter"
 weight = 30
-summary= "This summary is independent of the content."
+summary= "AI文献与进展"
 +++
 
 

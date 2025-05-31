@@ -2,7 +2,7 @@
 title = "C2"
 type = "chapter"
 weight = 50
-summary= "This summary is independent of the content."
+summary= "C2新概念与模型"
 +++
 
 This is a new chapter.
