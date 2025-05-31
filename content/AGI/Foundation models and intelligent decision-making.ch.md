@@ -1337,5 +1337,5 @@ Jinhai Zhang, and Xinxin Li. Performance of chatgpt and bard on the medical lice
 [636]Jiaming Ji, Tianyi Qiu, Boyuan Chen, Borong Zhang, Hantao Lou, Kaile Wang, Yawen Duan, Zhonghao He, Jiayi Zhou, Zhaowei Zhang, et al. Ai alignment: A comprehensive survey. arXiv preprint arXiv:2310.19852, 2023.
 [637]Jing Yao, Xiaoyuan Yi, Shitong Duan, Jindong Wang, Yuzhuo Bai, Muhua Huang, Peng Zhang, Tun Lu, Zhicheng Dou, Maosong Sun, et al. Value compass leaderboard: A platform for fundamental and validated evaluation of llms values. arXiv preprint arXiv:2501.07071, 2025.
 [638]Shalom H Schwartz. An overview of the schwartz theory of basic values. Online readings in Psychology and Culture, 2(1):11, 2012.
-![](https://cdn.mathpix.com/cropped/2025_05_24_d7c1ff42be05c697a2e8g-130.jpg?height=974&width=935&top_left_y=855&top_left_x=555)
+
 
