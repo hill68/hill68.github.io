@@ -1,22 +1,32 @@
-/* static/css/custom.css */
-
-/* 页面主标题 */
-#body-inner h1 {
-    font-family: "Times New Roman", "Helvetica Neue", Arial, sans-serif;
-    font-size: 2.5rem; /* 调整大小 */
-    font-weight: 700;
+/* 使用更高优先级的选择器 */
+.body #body-inner h1,
+#body #body-inner h1,
+article h1,
+.content h1 {
+    font-family: "Times New Roman", "Helvetica Neue", Arial, sans-serif !important;
+    font-size: 2.5rem !important;
+    font-weight: 700 !important;
 }
 
-/* 文章中的各级标题 */
-#body-inner h2 {
-    font-size: 2rem;
+.body #body-inner h2,
+#body #body-inner h2,
+article h2,
+.content h2 {
+    font-family: "Times New Roman", "Helvetica Neue", Arial, sans-serif !important;
+    font-size: 2rem !important;
 }
 
-#body-inner h3 {
-    font-size: 1.5rem;
+.body #body-inner h3,
+#body #body-inner h3,
+article h3,
+.content h3 {
+    font-family: "Times New Roman", "Helvetica Neue", Arial, sans-serif !important;
+    font-size: 1.5rem !important;
 }
 
-/* 侧边栏标题 
-#sidebar .searchbox label {
-    font-family: "你想要的字体", sans-serif;
-}*/
+/* 页面标题（通常在顶部） */
+#body h1:first-child,
+.content > h1:first-child {
+    font-family: "Times New Roman", "Helvetica Neue", Arial, sans-serif !important;
+    font-size: 3rem !important;
+}
