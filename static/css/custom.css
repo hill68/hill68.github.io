@@ -32,7 +32,7 @@ article h1,
     font-family: 'TitleFont', "Helvetica Neue", Arial, sans-serif !important;
     font-size: 2rem !important;
     font-weight: 550 !important;
-    /* color: #0959aa !important;  改变颜色 */ 
+    /*color: #0959aa !important;  改变颜色 */ 
 }
 
 /* H2 使用 HeadingFont */
@@ -64,6 +64,7 @@ article h3,
 .body #body-inner p,
 article p,
 .content p {
-    font-family:  Georgia, serif !important;
-    /*color: #2c3e50 !important;   改变颜色 */
+  font-family:  'BodyFont', "Helvetica Neue", Arial, sans-serif !important;
+  /*font-family:  'BodyFont', Georgia, serif !important; */
+  color: #1e76ce !important;  /* 改变颜色 */
 }
