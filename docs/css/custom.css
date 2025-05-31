@@ -31,7 +31,7 @@ article h1,
 .content h1 {
     font-family: 'TitleFont', "Helvetica Neue", Arial, sans-serif !important;
     font-size: 2rem !important;
-    /*font-weight: 700 !important;*/
+    font-weight: 550 !important;
 }
 
 /* H2 使用 HeadingFont */
