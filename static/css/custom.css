@@ -64,4 +64,5 @@ article h3,
 article p,
 .content p {
     font-family: 'BodyFont', Georgia, serif !important;
+    color: #2c3e50 !important;  /* 改变颜色 */
 }
