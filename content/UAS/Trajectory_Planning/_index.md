@@ -1,7 +1,7 @@
 +++
 title = "Trajectory Planning"
 type = "chapter"
-weight = 2
+weight = 5
 summary= "轨迹规划模型"
 +++
 
