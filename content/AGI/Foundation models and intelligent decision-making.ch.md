@@ -20,9 +20,6 @@ Accepted Date: 8 May 2025
 
 © 2025 Published by Elsevier Inc. on behalf of Youth Innovation Co., Ltd.
 
-## 公开摘要
-
-
 
 Jincai Huang ${ }^{16,17,44}$, Yongjun Xu ${ }^{1,36,37,44}$, Qi Wang ${ }^{1,36,37,44}$, Qi (Cheems) Wang ${ }^{2,44}$, Xingxing Liang ${ }^{17,44}$, Fei Wang ${ }^{1,36,37,44}$, Zhao Zhang ${ }^{1,12,44}$, Wei Wei ${ }^{3,44}$, Boxuan Zhang ${ }^{4,44}$, Libo Huang ${ }^{1,44}$, Jingru Chang ${ }^{5,44}$, Liantao Ma ${ }^{6,44}$, Ting Ma ${ }^{7,44}$, Yuxuan Liang ${ }^{8,44}$, Jie Zhang ${ }^{9,41,44}$, Jian Guo ${ }^{10,44}$, Xuhui Jiang ${ }^{10,44}$, Xinxin Fan ${ }^{1,36,37,44}$, Zhulin An ${ }^{1,36,37,44}$, Tingting Li ${ }^{1,44}$, Xuefei Li ${ }^{1,36}$, Zezhi Shao ${ }^{1}$, Tangwen Qian ${ }^{1}$, Tao Sun ${ }^{1}$, Boyu Diao ${ }^{1,36,37}$, Chuanguang Yang ${ }^{1,36}$, Chenqing Yu ${ }^{1,36}$, Yiqing Wu ${ }^{1}$, Mengxian $\mathrm{Li}^{1,36}$, Haifeng Zhang ${ }^{11,36}$, Yongcheng Zeng ${ }^{11,36}$, Zhicheng Zhang ${ }^{12,36}$, Zhengqiu Zhu ${ }^{16}$, Yiqin Lv ${ }^{13}$, Aming Li ${ }^{14,38}$, Xu Chen ${ }^{15}$, Bo An ${ }^{18}$, Wei Xiao ${ }^{4}$, Chenguang Bai ${ }^{19}$, Yuxing Mao ${ }^{19}$, Zhigang Yin ${ }^{19}$, Sheng Gui ${ }^{20,39}$, Wentao Su ${ }^{21}$, Yinghao Zhu ${ }^{6}$, Junyi Gao ${ }^{22,40}$, Xinyu He ${ }^{23}$, Yizhou $\mathrm{Li}^{24}$, Guangyin Jin ${ }^{25}$, Xiang Ao ${ }^{1,36,37}$, Xuehao Zhai ${ }^{26}$, Haoran Tan ${ }^{27}$, Lijun Yun ${ }^{28}$, Hongquan Shi ${ }^{29}$, Jun $\mathrm{Li}^{30}$, Changjun Fan ${ }^{16,17}$, Kuihua Huang ${ }^{17}$, Ewen Harrison ${ }^{22}$, Victor C. M. Leung ${ }^{31,42,43}$, Sihang Qiu $^{16, *}$, Yanjie Dong ${ }^{31, *}$, Xiaolong Zheng ${ }^{12,36, *}$, Gang Wang ${ }^{4, *}$, Yu Zheng ${ }^{32, *}$, Yuanzhuo Wang ${ }^{1,36,37, *}$, Jiafeng Guo ${ }^{1,37, *}$, Lizhe Wang ${ }^{30, *}$, Xueqi Cheng ${ }^{1,37, *}$, Yaonan Wang ${ }^{27, *}$, Shanlin Yang ${ }^{33, *}$, Mengyin $\mathrm{Fu}^{34, *}$, Aiguo $\mathrm{Fei}^{35, *}$<br>
 
