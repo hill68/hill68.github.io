@@ -13,7 +13,7 @@ summary= "测试时计算（test time compute）与思维链（Chain-of-thought,
 
 测试时计算（test time compute）（[Graves et al. 2016](https://arxiv.org/abs/1603.08983)、[Ling, et al. 2017](https://arxiv.org/abs/1705.04146)、[Cobbe et al. 2021](https://arxiv.org/abs/2110.14168)）与思维链（Chain-of-thought, CoT）（[Wei et al. 2022](https://arxiv.org/abs/2201.11903)、[Nye et al. 2021](https://arxiv.org/abs/2112.00114)）已显著提升了模型性能，同时也引发了许多研究问题。本文旨在回顾关于如何有效利用测试时计算（即“思考时间”）以及为何它能带来帮助的最新进展。
 
-# 动机
+## 动机
 
 让模型“思考得更久”有多种动机。
 
