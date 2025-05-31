@@ -9,8 +9,6 @@ summary= "旨在让用户和开发者了解JSBSim软件的所有功能。"
 
 https://jsbsim-team.github.io/jsbsim-reference-manual/
 
-![JSBSim Logo](https://jsbsim-team.github.io/jsbsim-reference-manual/assets/img/logo_jsbsim_globe.svg)
-
 
 <img
   src="https://jsbsim-team.github.io/jsbsim-reference-manual/assets/img/logo_jsbsim_globe.svg"
