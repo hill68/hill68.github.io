@@ -57,19 +57,11 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "FlitSoft Docs \u003e  UAS",
-    "content": "kappa-trajectoriesκ轨迹平滑模型\nTrajectory Planning轨迹规划模型",
+    "content": "kappa-trajectoriesκ轨迹平滑模型",
     "description": "轨迹规划模型",
     "tags": [],
     "title": "Trajectory Planning",
     "uri": "/uas/trajectory_planning/index.html"
-  },
-  {
-    "breadcrumb": "FlitSoft Docs \u003e  UAS \u003e  Trajectory Planning",
-    "content": "",
-    "description": "轨迹规划模型",
-    "tags": [],
-    "title": "Trajectory Planning",
-    "uri": "/uas/trajectory_planning/_index-copy/index.html"
   },
   {
     "breadcrumb": "FlitSoft Docs",

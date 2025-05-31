@@ -3,7 +3,7 @@
 #body #body-inner h1,
 article h1,
 .content h1 {
-    font-family: "Times New Roman", "Helvetica Neue", Arial, sans-serif !important;
+    font-family: "思源黑体", "Microsoft YaHei", "微软雅黑", "Helvetica Neue", Arial, sans-serif !important;
     font-size: 2.5rem !important;
     font-weight: 700 !important;
 }
