@@ -40,6 +40,14 @@ var relearn_searchindex = [
     "uri": "/uas/path-searching/index.html"
   },
   {
+    "breadcrumb": "FlitSoft Docs \u003e  UAS",
+    "content": "基于非线性模型预测控制的无人机编队飞行在非线性模型预测控制（NMPC）框架下设计了一种分布式、无碰撞的编队飞行控制律。编队构型在虚拟参考点坐标系中确定。通过代价惩罚实现避障，通过代价惩罚结合新的优先级策略实现机间防碰撞。",
+    "description": "阵型控制",
+    "tags": [],
+    "title": "Path Searching",
+    "uri": "/uas/formation-control/index.html"
+  },
+  {
     "breadcrumb": "FlitSoft Docs \u003e  EM",
     "content": "地空测控链路计算模型该模型侧重于通过考虑视距限制、信号传播特性、接收机灵敏度及多普勒频移影响等因素，评估无人机地空测控链路的连通性和性能。",
     "description": "通信模型",
@@ -65,7 +73,7 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "FlitSoft Docs",
-    "content": "Aerodynamics 小型固定翼无人机飞行动力学模型为小型固定翼无人机仿真系统提供逼真的飞行动力学与飞行控制方案，替代当前的简单PID+运动学模型。文档涵盖系统需求、6-DOF动力学模型、级联控制架构、模块接口、参数标定及实现建议等内容。\nJSBSim User manual如何使用 JSBSim 进行模拟运行、创建飞行器模型、编写脚本，以及如何执行其他不涉及对 JSBSim 程序代码进行更改的任务。\nJSBSim Quickstart旨在让用户和开发者了解JSBSim软件的所有功能。\nPath Searching路径搜索模型\nVelocity Planning 三段S曲线速度规划模型旨在为无人机轨迹规划提供一条平滑的 S 曲线速度规划方案。通过先计算变速（过渡）阶段的 S 曲线段，再补充恒速段（定速阶段），最后利用二分查找方法调整期望速度以匹配目标弧长，从而生成一组离散时间点上的速度、加速度和加加速度数据。\nTrajectory Planning轨迹规划模型",
+    "content": "Aerodynamics 小型固定翼无人机飞行动力学模型为小型固定翼无人机仿真系统提供逼真的飞行动力学与飞行控制方案，替代当前的简单PID+运动学模型。文档涵盖系统需求、6-DOF动力学模型、级联控制架构、模块接口、参数标定及实现建议等内容。\nJSBSim User manual如何使用 JSBSim 进行模拟运行、创建飞行器模型、编写脚本，以及如何执行其他不涉及对 JSBSim 程序代码进行更改的任务。\nJSBSim Quickstart旨在让用户和开发者了解JSBSim软件的所有功能。\nPath Searching路径搜索模型\nPath Searching阵型控制\nVelocity Planning 三段S曲线速度规划模型旨在为无人机轨迹规划提供一条平滑的 S 曲线速度规划方案。通过先计算变速（过渡）阶段的 S 曲线段，再补充恒速段（定速阶段），最后利用二分查找方法调整期望速度以匹配目标弧长，从而生成一组离散时间点上的速度、加速度和加加速度数据。\nTrajectory Planning轨迹规划模型",
     "description": "速度规划模型",
     "tags": [],
     "title": "UAS",
@@ -190,6 +198,14 @@ var relearn_searchindex = [
     "tags": [],
     "title": "三段S曲线速度规划模型",
     "uri": "/uas/velocity_plan/%E4%B8%89%E6%AE%B5s%E6%9B%B2%E7%BA%BF%E9%80%9F%E5%BA%A6%E8%A7%84%E5%88%92%E6%A8%A1%E5%9E%8B/index.html"
+  },
+  {
+    "breadcrumb": "FlitSoft Docs \u003e  UAS \u003e  Path Searching",
+    "content": "Zhou Chao, Shao-Lei Zhou, Lei Ming, and Wen-Guang Zhang\nDepartment of Control Engineering, Naval Aeronautical and Astronautical University, YanTai 264001, China\nCorrespondence should be addressed to Zhou Chao, rickzhou2010@126.com\nCopyright © 2012 Zhou Chao et al. This is an open access article distributed under the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original work is properly cited.\n摘要 我们在非线性模型预测控制（NMPC）框架下设计了一种分布式、无碰撞的编队飞行控制律。编队构型在虚拟参考点坐标系中确定。通过代价惩罚实现避障，通过代价惩罚结合新的优先级策略实现机间防碰撞。\n1. 引言 近年来，关于多智能体系统协同控制的研究已得到广泛开展。推动这一研究热潮的动力之一，是分布式多无人机（UAV）在分布式感知和协同作业中的应用 [1]。在多无人机协同控制问题的若干主要子问题中，编队飞行具有重要意义，并得到了广泛研究 $[2,3]$。多无人机编队飞行的主要目标，是在控制整体群体行为的同时，实现期望的群体编队形状 [2]。\n针对无人机编队飞行，已提出多种控制方案，如PID方法 [3]、势场法 $[4,5]$、约束力法 [2]、自适应输出反馈法 [6]、滑模控制法 [7] 和基于一致性的方法 [8]。但这些方法无法显式地考虑约束条件，如固定翼无人机的失速速度、角转速约束以及控制输入饱和约束。基于优化的方法能够恰当地处理这些约束，已被证明是解决编队控制问题较为成功的方法之一。其中最为流行的优化方法之一是模型预测控制（MPC）方法。\n模型预测控制（Model Predictive Control, MPC），或称滚动时域控制（Receding Horizon Control, RHC），是一种反馈控制方案，在每一个时间步都要求解一次轨迹优化问题。将最优序列中的第一个控制输入应用于系统，并在随后的每一步重复进行优化 [9]。目前该领域研究非常活跃，Mayne 等人在 [10] 对该方法做了详尽综述。它已被广泛用于动态较慢的系统，如化工过程。随着现代计算机运算速度的提升，其应用领域已扩展到多智能体控制和大规模分布式控制问题。其广泛应用的一个动因，是MPC能够处理其他方法难以解决的控制和状态硬约束。集中式MPC已被应用于多车协同控制 [11]，但单次优化所需的计算量会迅速变得难以承受，且随着无人车数量的增加，计算复杂度呈极差的扩展性。为了解决这一问题，分布式模型预测控制（DMPC）方法 [12] 通过将优化划分为更小的子问题被提出。\n编队控制策略对于编队控制问题而言至关重要。文献中，针对编队控制问题主要有三种信息结构方法：即领航-跟随（leader-follower）[13]、虚拟结构（virtual structure）[14] 和行为方法（behavioral approach）[15]。大多数多智能体编队控制研究采用领航-跟随结构，其中部分无人机设为领航机，其余为跟随机。这一方法易于理解与实现，但对领航机故障不具备鲁棒性。尽管虚拟领航者策略被提出以提升鲁棒性，但链式结构导致其抗扰能力较差 [13]。在虚拟结构方法中，将整个编队视为一个虚拟刚体结构。各个无人机不是跟踪轨迹，而是跟踪一个运动点，从而允许虚拟结构与另一无人机相连接 [12]。由于编队内所有智能体被视作单一对象，群体的引导比其他方法更为容易。但编队只能实现同步机动，且难以考虑避障问题 [16]。行为方法则为每架无人机设计若干期望行为，包括保持队形、目标追踪和防碰撞/避障。每架无人机的控制动作是各行为控制的加权平均 [17]。该方法适用于不确定环境，但缺乏严格的理论分析。\n基于MPC的多无人机编队控制问题已被广泛研究，如 [18-21]。在 [20] 中，采用了双模MPC方法实现机器人编队控制。为了保证系统稳定性，双模控制器需在MPC控制与终端状态控制之间切换。部分学者专门研究了MPC方法下的无人机编队飞行问题 [22-28]。其中，[22,24] 主要研究了紧密编队飞行问题，[25-28] 仅在MPC问题建模中采用了无人机线性动力学模型。[23] 在MPC建模中采用了无人机非线性动力学模型和领航-跟随结构进行编队飞行控制器设计，利用Karush-Kuhn-Tucker (KKT) 变量实现防碰撞机动，但需要动态选择合适变量以平衡轨迹跟踪与防碰撞之间的权衡。\n序贯二次规划（Sequential Quadratic Program, SQP）是求解非线性规划（NLP）问题最有效的方法之一。它采用罚函数或优值函数以促进全局收敛性。然而，在实际应用中通常难以选择合适的罚参数。为避免罚参数设置带来的实际问题，Fletcher 和 Leyffer [29] 引入了一种SQP信赖域算法的过滤器，以提升全局收敛性。\n本文中，我们在非线性MPC框架下设计了一种分布式无人机编队飞行控制律。采用虚拟参考点控制策略以确定编队形态。\n在本文中，我们在非线性MPC框架下设计了一种分布式无人机编队飞行控制律。采用虚拟参考点控制策略来确定编队构型。本文的主要贡献在于，通过新的代价惩罚项实现了避障保障。机间防碰撞则通过代价函数与优先级策略相结合，并利用延迟的邻居信息来实现。为简化问题，假设编队飞行中所用的所有数据均未受到过程噪声和测量噪声的影响。\n本文其余部分安排如下：第2节给出了问题的形式化描述。第3节设计了基于非线性模型预测控制的无碰撞编队飞行控制律。第4节展示了仿真结果，并在性能方面将本算法与其他方法进行了对比。最后，第5节给出了总结与未来工作展望。\n2. 问题描述 2.1. 二维无人机动力学模型 一种常见的无人机控制系统是双环结构，其中姿态动力学由内环控制，位置动力学由外环控制。在编队飞行的多无人机群体背景下，外环还包含一个能够实现并保持给定编队构型的控制器。为简化分析，本文分析了无人机在水平平面内的二维运动 [30]，并将无人机的内环动力学建模为一阶模型：\n$$ \\begin{gather*} \\dot{x}_{i}=v_{i} \\sin \\psi_{i} \\\\ \\dot{y}_{i}=v_{i} \\cos \\psi_{i} \\\\ \\dot{\\psi}_{i}=\\frac{g \\tan \\gamma_{i}}{v_{i}} \\tag{2.1}\\\\ \\dot{v}_{i}=\\frac{1}{\\alpha_{v}}\\left(v_{i}^{c}-v_{i}\\right) \\\\ \\dot{\\gamma}_{i}=\\frac{1}{\\alpha_{\\gamma}}\\left(\\gamma_{i}^{c}-\\gamma_{i}\\right) \\end{gather*} $$其中，$\\left(x_{i}, y_{i}\\right), \\psi_{i}, v_{i}$ 和 $\\gamma_{i}$ 分别为无人机 $i$ 的惯性位置、航向角、速度和滚转角。$v_{i}^{c}$ 和 $\\gamma_{i}^{c}$ 分别为下发给无人机 $i$ 自动驾驶仪的指令速度和滚转角；$g$ 为重力常数。$\\alpha_{v}$ 和 $\\alpha_{\\gamma}$ 为正数常量。\n通常，无人机编队飞行时会有一个参考轨迹。动力学与运动学约束限制了无人机无法跟踪任意参考轨迹。借鉴文献 [31]，我们假设编队飞行轨迹生成器生成的参考轨迹满足以下方程：\n$$ \\begin{gather*} \\dot{x}_{r}=v_{r} \\cos \\psi_{r} \\\\ \\dot{y}_{r}=v_{r} \\sin \\psi_{r} \\tag{2.2}\\\\ \\dot{\\psi}_{r}=w_{r} \\end{gather*} $$其中 $v_{r}$ 和 $w_{r}$ 为分段连续且一致有界的量，满足以下约束条件：\n$$ \\begin{gather*} 0",
+    "description": "在非线性模型预测控制（NMPC）框架下设计了一种分布式、无碰撞的编队飞行控制律。编队构型在虚拟参考点坐标系中确定。通过代价惩罚实现避障，通过代价惩罚结合新的优先级策略实现机间防碰撞。",
+    "tags": [],
+    "title": "基于非线性模型预测控制的无人机编队飞行",
+    "uri": "/uas/formation-control/%E5%9F%BA%E4%BA%8E%E9%9D%9E%E7%BA%BF%E6%80%A7%E6%A8%A1%E5%9E%8B%E9%A2%84%E6%B5%8B%E6%8E%A7%E5%88%B6%E7%9A%84%E6%97%A0%E4%BA%BA%E6%9C%BA%E7%BC%96%E9%98%9F%E9%A3%9E%E8%A1%8C/index.html"
   },
   {
     "breadcrumb": "FlitSoft Docs \u003e  UAS \u003e  Trajectory Planning \u003e  kappa-trajectories",
