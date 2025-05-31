@@ -23,39 +23,38 @@ Accepted Date: 8 May 2025
 
 Jincai Huang ${ }^{16,17,44}$, Yongjun Xu ${ }^{1,36,37,44}$, Qi Wang ${ }^{1,36,37,44}$, Qi (Cheems) Wang ${ }^{2,44}$, Xingxing Liang ${ }^{17,44}$, Fei Wang ${ }^{1,36,37,44}$, Zhao Zhang ${ }^{1,12,44}$, Wei Wei ${ }^{3,44}$, Boxuan Zhang ${ }^{4,44}$, Libo Huang ${ }^{1,44}$, Jingru Chang ${ }^{5,44}$, Liantao Ma ${ }^{6,44}$, Ting Ma ${ }^{7,44}$, Yuxuan Liang ${ }^{8,44}$, Jie Zhang ${ }^{9,41,44}$, Jian Guo ${ }^{10,44}$, Xuhui Jiang ${ }^{10,44}$, Xinxin Fan ${ }^{1,36,37,44}$, Zhulin An ${ }^{1,36,37,44}$, Tingting Li ${ }^{1,44}$, Xuefei Li ${ }^{1,36}$, Zezhi Shao ${ }^{1}$, Tangwen Qian ${ }^{1}$, Tao Sun ${ }^{1}$, Boyu Diao ${ }^{1,36,37}$, Chuanguang Yang ${ }^{1,36}$, Chenqing Yu ${ }^{1,36}$, Yiqing Wu ${ }^{1}$, Mengxian $\mathrm{Li}^{1,36}$, Haifeng Zhang ${ }^{11,36}$, Yongcheng Zeng ${ }^{11,36}$, Zhicheng Zhang ${ }^{12,36}$, Zhengqiu Zhu ${ }^{16}$, Yiqin Lv ${ }^{13}$, Aming Li ${ }^{14,38}$, Xu Chen ${ }^{15}$, Bo An ${ }^{18}$, Wei Xiao ${ }^{4}$, Chenguang Bai ${ }^{19}$, Yuxing Mao ${ }^{19}$, Zhigang Yin ${ }^{19}$, Sheng Gui ${ }^{20,39}$, Wentao Su ${ }^{21}$, Yinghao Zhu ${ }^{6}$, Junyi Gao ${ }^{22,40}$, Xinyu He ${ }^{23}$, Yizhou $\mathrm{Li}^{24}$, Guangyin Jin ${ }^{25}$, Xiang Ao ${ }^{1,36,37}$, Xuehao Zhai ${ }^{26}$, Haoran Tan ${ }^{27}$, Lijun Yun ${ }^{28}$, Hongquan Shi ${ }^{29}$, Jun $\mathrm{Li}^{30}$, Changjun Fan ${ }^{16,17}$, Kuihua Huang ${ }^{17}$, Ewen Harrison ${ }^{22}$, Victor C. M. Leung ${ }^{31,42,43}$, Sihang Qiu $^{16, *}$, Yanjie Dong ${ }^{31, *}$, Xiaolong Zheng ${ }^{12,36, *}$, Gang Wang ${ }^{4, *}$, Yu Zheng ${ }^{32, *}$, Yuanzhuo Wang ${ }^{1,36,37, *}$, Jiafeng Guo ${ }^{1,37, *}$, Lizhe Wang ${ }^{30, *}$, Xueqi Cheng ${ }^{1,37, *}$, Yaonan Wang ${ }^{27, *}$, Shanlin Yang ${ }^{33, *}$, Mengyin $\mathrm{Fu}^{34, *}$, Aiguo $\mathrm{Fei}^{35, *}$<br>
 
-${ }^{1}$ Institute of Computing Technology, Chinese Academy of Sciences, Beijing 100190, China<br>${ }^{2}$ Department of Automation, Tsinghua University, Beijing 100084, China<br>${ }^{3}$ Huazhong University of Science and Technology, Wuhan 430074, China<br>${ }^{4}$ School of Automation, Beijing Institute of Technology, Beijing 100081, China<br>${ }^{5}$ School of Information Science and Engineering, Dalian Polytechnic University, Dalian 116034, China<br>${ }^{6}$ National Engineering Research Center for Software Engineering, Peking University, Beijing 100871, China<br>${ }^{7}$ Department of Oral Implantology, Peking University School and Hospital of Stomatology, Beijing 100081, China<br>${ }^{8}$ The Hong Kong University of Science and Technology (Guangzhou), Guangzhou 511453, China<br>${ }^{9}$ College of Information and Electrical Engineering, China Agricultural University, Beijing 100083, China<br>${ }^{10}$ IDEA Research, International Digital Economy Academy, Shenzhen 518057, China<br>${ }^{11}$ Institute of Automation, Chinese Academy of Sciences, Beijing 100190, China<br>${ }^{12}$ The State Key Laboratory of Multimodal Artificial Intelligence Systems, Institute of Automation, Chinese Academy of Sciences, Beijing 100190, China<br>${ }^{13}$ College of Science, National University of Defense Technology, Changsha 410073, China
-
-${ }^{14}$ Center for Systems and Control, College of Engineering, Peking University, Beijing 100871, China
-${ }^{15}$ Gaoling School of Artificial Intelligence, Renmin University of China, Beijing 100872, China
-${ }^{16}$ College of Systems Engineering, National University of Defense Technology, Changsha 410073, China
-${ }^{17}$ Laboratory for Big Data and Decision, National University of Defense Technology, Changsha 410073,China
-${ }^{18}$ College of Computing and Data Science, Nanyang Technological University, Singapore 639798, Singapore
-${ }^{19}$ School of Electrical Engineering, Chongqing University, Chongqing 400044, China
-${ }^{20}$ Department of Mathematics, The University of Hong Kong, Hong Kong SAR 999077, China
-${ }^{21}$ School of Food Science and Technology, Dalian Polytechnic University, Dalian 116034, China
-${ }^{22}$ Centre for Medical Informatics, University of Edinburgh, Edinburgh EH16 4UX, UK
-${ }^{23}$ Department of Stomatology, Peking Union Medical College Hospital, Chinese Academy of Medical Sciences and Peking Union Medical College, Beijing 100730, China
-${ }^{24}$ Department of Stomatology, Yuquan Hospital, School of Clinical Medicine, Tsinghua University, Beijing 100040, China
-${ }^{25}$ National Innovative Institute of Defense Technology, Beijing 100091, China
-${ }^{26}$ Department of civil and environmental engineering, Imperial College London, London SW7 2AZ, UK
-${ }^{27}$ College of Electrical and Information Engineering, Hunan University, Changsha 410082, China
+${ }^{1}$ Institute of Computing Technology, Chinese Academy of Sciences, Beijing 100190, China<br>${ }^{2}$ Department of Automation, Tsinghua University, Beijing 100084, China<br>${ }^{3}$ Huazhong University of Science and Technology, Wuhan 430074, China<br>${ }^{4}$ School of Automation, Beijing Institute of Technology, Beijing 100081, China<br>${ }^{5}$ School of Information Science and Engineering, Dalian Polytechnic University, Dalian 116034, China<br>${ }^{6}$ National Engineering Research Center for Software Engineering, Peking University, Beijing 100871, China<br>${ }^{7}$ Department of Oral Implantology, Peking University School and Hospital of Stomatology, Beijing 100081, China<br>${ }^{8}$ The Hong Kong University of Science and Technology (Guangzhou), Guangzhou 511453, China<br>${ }^{9}$ College of Information and Electrical Engineering, China Agricultural University, Beijing 100083, China<br>${ }^{10}$ IDEA Research, International Digital Economy Academy, Shenzhen 518057, China<br>${ }^{11}$ Institute of Automation, Chinese Academy of Sciences, Beijing 100190, China<br>${ }^{12}$ The State Key Laboratory of Multimodal Artificial Intelligence Systems, Institute of Automation, Chinese Academy of Sciences, Beijing 100190, China<br>${ }^{13}$ College of Science, National University of Defense Technology, Changsha 410073, China<br>
+${ }^{14}$ Center for Systems and Control, College of Engineering, Peking University, Beijing 100871, China<br>
+${ }^{15}$ Gaoling School of Artificial Intelligence, Renmin University of China, Beijing 100872, China<br>
+${ }^{16}$ College of Systems Engineering, National University of Defense Technology, Changsha 410073, China<br>
+${ }^{17}$ Laboratory for Big Data and Decision, National University of Defense Technology, Changsha 410073,China<br>
+${ }^{18}$ College of Computing and Data Science, Nanyang Technological University, Singapore 639798, Singapore<br>
+${ }^{19}$ School of Electrical Engineering, Chongqing University, Chongqing 400044, China<br>
+${ }^{20}$ Department of Mathematics, The University of Hong Kong, Hong Kong SAR 999077, China<br>
+${ }^{21}$ School of Food Science and Technology, Dalian Polytechnic University, Dalian 116034, China<br>
+${ }^{22}$ Centre for Medical Informatics, University of Edinburgh, Edinburgh EH16 4UX, UK<br>
+${ }^{23}$ Department of Stomatology, Peking Union Medical College Hospital, Chinese Academy of Medical Sciences and Peking Union Medical College, Beijing 100730, China<br>
+${ }^{24}$ Department of Stomatology, Yuquan Hospital, School of Clinical Medicine, Tsinghua University, Beijing 100040, China<br>
+${ }^{25}$ National Innovative Institute of Defense Technology, Beijing 100091, China<br>
+${ }^{26}$ Department of civil and environmental engineering, Imperial College London, London SW7 2AZ, UK<br>
+${ }^{27}$ College of Electrical and Information Engineering, Hunan University, Changsha 410082, China<br>
 ${ }^{28}$ HUA-Innovation High-Tech(Hangzhou) Co., Ltd. , Hangzhou 311100, China
-${ }^{29}$ Dalian Naval Academy, Dalian 116018, China
-${ }^{30}$ School of Computer Science, China University of Geosciences, Wuhan 430078, China
-${ }^{31}$ Shenzhen MSU-BIT University, Shenzhen 518172, China
-${ }^{32}$ JD Technology & JD Intelligent Cities Research, Beijing 101111, China
-${ }^{33}$ School of Management, Hefei University of Technology, Hefei 230009, China
-${ }^{34}$ Nanjing University of Science and Technology, Nanjing 210094, China
-${ }^{35}$ School of Computer Science, National Pilot Software Engineering School, Beijing University of Posts and Telecommunications, Beijing 100876, China
-${ }^{36}$ University of Chinese Academy of Sciences, Beijing 100049, China
-${ }^{37}$ Key Lab of AI Safety, Chinese Academy of Sciences, Beijing 100190, China
-${ }^{38}$ Center for Multi-Agent Research, Institute for Artificial Intelligence, Peking University, Beijing 100871, China
-${ }^{39}$ LSEC, Academy of Mathematics and Systems Science, Chinese Academy of Sciences, Beijing 100190, China
-${ }^{40}$ Health Data Research UK, London NW1 2BE, UK
-${ }^{41}$ State Key Laboratory of Efficient Utilization of Agricultural Water Resources, Beijing 100083, China
-${ }^{42}$ Shenzhen University, Shenzhen 518060, China
+${ }^{29}$ Dalian Naval Academy, Dalian 116018, China<br>
+${ }^{30}$ School of Computer Science, China University of Geosciences, Wuhan 430078, China<br>
+${ }^{31}$ Shenzhen MSU-BIT University, Shenzhen 518172, China<br>
+${ }^{32}$ JD Technology & JD Intelligent Cities Research, Beijing 101111, China<br>
+${ }^{33}$ School of Management, Hefei University of Technology, Hefei 230009, China<br>
+${ }^{34}$ Nanjing University of Science and Technology, Nanjing 210094, China<br>
+${ }^{35}$ School of Computer Science, National Pilot Software Engineering School, Beijing University of Posts and Telecommunications, Beijing 100876, China<br>
+${ }^{36}$ University of Chinese Academy of Sciences, Beijing 100049, China<br>
+${ }^{37}$ Key Lab of AI Safety, Chinese Academy of Sciences, Beijing 100190, China<br>
+${ }^{38}$ Center for Multi-Agent Research, Institute for Artificial Intelligence, Peking University, Beijing 100871, China<br>
+${ }^{39}$ LSEC, Academy of Mathematics and Systems Science, Chinese Academy of Sciences, Beijing 100190, China<br>
+${ }^{40}$ Health Data Research UK, London NW1 2BE, UK<br>
+${ }^{41}$ State Key Laboratory of Efficient Utilization of Agricultural Water Resources, Beijing 100083, China<br>
+${ }^{42}$ Shenzhen University, Shenzhen 518060, China<br>
 ${ }^{43}$ The University of British Columbia, Vancouver V6T1Z4, Canada
-${ }^{44}$ These authors contributed equally
+${ }^{44}$ These authors contributed equally<br>
 
 *Correspondence: qiusihang11@nudt.edu.cn (S. Q.), ydong@smbu.edu.cn (Y. D.),
 xiaolong.zheng@ia.ac.cn (X. Z.), gangwang@bit.edu.cn (G. W.), msyuzheng@outlook.com (Y. Z.),
