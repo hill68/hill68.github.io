@@ -33,7 +33,7 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "FlitSoft Docs \u003e  EM",
-    "content": "aaa 地空测控链路计算模型该模型侧重于通过考虑视距限制、信号传播特性、接收机灵敏度及多普勒频移影响等因素，评估无人机地空测控链路的连通性和性能。",
+    "content": "地空测控链路计算模型该模型侧重于通过考虑视距限制、信号传播特性、接收机灵敏度及多普勒频移影响等因素，评估无人机地空测控链路的连通性和性能。",
     "description": "通信模型",
     "tags": [],
     "title": "Communication",
