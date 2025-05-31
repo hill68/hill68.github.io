@@ -35,6 +35,8 @@ publishDir = "docs"
   math = true
  #隐藏Home按钮
   disableLandingPageButton = true
+  #显示打印按钮
+  disablePrintButton = false
 
 [markup]
   [markup.goldmark]
