@@ -12,7 +12,7 @@ article h1,
 #body #body-inner h2,
 article h2,
 .content h2 {
-    font-family: "Times New Roman", "Helvetica Neue", Arial, sans-serif !important;
+    font-family: "思源黑体", "Microsoft YaHei", "微软雅黑", "Helvetica Neue", Arial, sans-serif !important;
     font-size: 2rem !important;
 }
 
@@ -20,7 +20,7 @@ article h2,
 #body #body-inner h3,
 article h3,
 .content h3 {
-    font-family: "Times New Roman", "Helvetica Neue", Arial, sans-serif !important;
+    font-family: "思源黑体", "Microsoft YaHei", "微软雅黑", "Helvetica Neue", Arial, sans-serif !important;
     font-size: 1.5rem !important;
 }
 
