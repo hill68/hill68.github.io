@@ -37,6 +37,8 @@ publishDir = "docs"
   disableLandingPageButton = true
   #显示打印按钮
   disablePrintButton = false
+  #改变页面字体
+  customCSS = ["css/custom.css"]
 
 [markup]
   [markup.goldmark]
