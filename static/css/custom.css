@@ -61,6 +61,7 @@ article h3,
 }
 
 /* 如果想给正文也设置字体 */
+/*
 .body #body-inner p,
 article p,
 .content p {
@@ -68,3 +69,4 @@ article p,
   /*font-family:  'BodyFont', Georgia, serif !important; */
   color: #1e76ce !important;  /* 改变颜色 */
 }
+*/
