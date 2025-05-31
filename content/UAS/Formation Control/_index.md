@@ -1,5 +1,5 @@
 +++
-title = "Path Searching"
+title = "Formation Control"
 type = "chapter"
 weight = 2
 +++
