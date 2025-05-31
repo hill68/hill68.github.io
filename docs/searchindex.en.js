@@ -24,12 +24,20 @@ var relearn_searchindex = [
     "uri": "/em/antenna-pattern/index.html"
   },
   {
-    "breadcrumb": "FlitSoft Docs \u003e  UAS",
-    "content": "kappa-trajectoriesκ轨迹平滑模型",
-    "description": "轨迹规划模型",
+    "breadcrumb": "FlitSoft Docs \u003e  UAS \u003e  Path Search",
+    "content": "",
+    "description": "A*路径搜索模型",
     "tags": [],
-    "title": "Trajectory Planning",
-    "uri": "/uas/trajectory_planning/index.html"
+    "title": "kappa-trajectories",
+    "uri": "/uas/path-search/a-search/index.html"
+  },
+  {
+    "breadcrumb": "FlitSoft Docs \u003e  UAS",
+    "content": "kappa-trajectoriesA*路径搜索模型",
+    "description": "路径搜索模型",
+    "tags": [],
+    "title": "Path Search",
+    "uri": "/uas/path-search/index.html"
   },
   {
     "breadcrumb": "FlitSoft Docs \u003e  EM",
@@ -48,8 +56,16 @@ var relearn_searchindex = [
     "uri": "/uas/velocity_plan/index.html"
   },
   {
+    "breadcrumb": "FlitSoft Docs \u003e  UAS",
+    "content": "kappa-trajectoriesκ轨迹平滑模型",
+    "description": "轨迹规划模型",
+    "tags": [],
+    "title": "Trajectory Planning",
+    "uri": "/uas/trajectory_planning/index.html"
+  },
+  {
     "breadcrumb": "FlitSoft Docs",
-    "content": "Aerodynamics 小型固定翼无人机飞行动力学模型为小型固定翼无人机仿真系统提供逼真的飞行动力学与飞行控制方案，替代当前的简单PID+运动学模型。文档涵盖系统需求、6-DOF动力学模型、级联控制架构、模块接口、参数标定及实现建议等内容。\nJSBSim User manual如何使用 JSBSim 进行模拟运行、创建飞行器模型、编写脚本，以及如何执行其他不涉及对 JSBSim 程序代码进行更改的任务。\nJSBSim Quickstart旨在让用户和开发者了解JSBSim软件的所有功能。\nTrajectory Planning轨迹规划模型\nVelocity Planning 三段S曲线速度规划模型旨在为无人机轨迹规划提供一条平滑的 S 曲线速度规划方案。通过先计算变速（过渡）阶段的 S 曲线段，再补充恒速段（定速阶段），最后利用二分查找方法调整期望速度以匹配目标弧长，从而生成一组离散时间点上的速度、加速度和加加速度数据。",
+    "content": "Aerodynamics 小型固定翼无人机飞行动力学模型为小型固定翼无人机仿真系统提供逼真的飞行动力学与飞行控制方案，替代当前的简单PID+运动学模型。文档涵盖系统需求、6-DOF动力学模型、级联控制架构、模块接口、参数标定及实现建议等内容。\nJSBSim User manual如何使用 JSBSim 进行模拟运行、创建飞行器模型、编写脚本，以及如何执行其他不涉及对 JSBSim 程序代码进行更改的任务。\nJSBSim Quickstart旨在让用户和开发者了解JSBSim软件的所有功能。\nPath Search路径搜索模型\nVelocity Planning 三段S曲线速度规划模型旨在为无人机轨迹规划提供一条平滑的 S 曲线速度规划方案。通过先计算变速（过渡）阶段的 S 曲线段，再补充恒速段（定速阶段），最后利用二分查找方法调整期望速度以匹配目标弧长，从而生成一组离散时间点上的速度、加速度和加加速度数据。\nTrajectory Planning轨迹规划模型",
     "description": "速度规划模型",
     "tags": [],
     "title": "UAS",
