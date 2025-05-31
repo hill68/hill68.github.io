@@ -1377,278 +1377,644 @@ The authors declare no competing interests.
 
 [319] Shunyu Yao, Jeffrey Zhao, Dian Yu, Nan Du, Izhak Shafran, Karthik R. Narasimhan, and Yuan Cao. React: Synergizing reasoning and acting in language models. In The Eleventh International Conference on Learning Representations, ICLR 2023, Kigali, Rwanda, May 1-5, 2023. OpenReview.net, 2023.
 
-[320]Shuofei Qiao, Runnan Fang, Ningyu Zhang, Yuqi Zhu, Xiang Chen, Shumin Deng, Yong Jiang, Pengjun Xie, Fei Huang, and Huajun Chen. Agent planning with world knowledge model. CoRR, abs/2405.14205, 2024.
-[321]Guanzhi Wang, Yuqi Xie, Yunfan Jiang, Ajay Mandlekar, Chaowei Xiao, Yuke Zhu, Linxi Fan, and Anima Anandkumar. Voyager: An open-ended embodied agent with large language models. Trans. Mach. Learn. Res., 2024, 2024.
-[322]Huandong Wang, Huan Yan, Can Rong, Yuan Yuan, Fenyu Jiang, Zhenyu Han, Hongjie Sui, Depeng Jin, and Yong Li. Multi-scale simulation of complex systems: a perspective of integrating
-knowledge and data. ACM Computing Surveys, 56(12):1-38, 2024.
-[323]Mohamed Amine Ben Rabia and Adil Bellabdaoui. Simulation-based analytics: A systematic literature review. Simu- lation Modelling Practice and Theory, 117:102511, 2022.
-[324]Bin Chen, Runkang Guo, Zhengqiu Zhu, Yong Zhao, Yatai Ji, Aiguo Chen, and Guangquan Cheng. A novel research pattern for the simulation of complex systems sigd. Journal of System Simulation, 36(12):2993, 2024.
-[325]Xiao Xue, Xiangning Yu, and Fei-Yue Wang. Chatgpt chats on computational experiments: From interactive intelli- gence to imaginative intelligence for design of artificial societies and optimization of foundational models. IEEE/CAA Journal of Automatica Sinica, 10(6):1357-1360, 2023.
-[326]Yong Zhao, Zhengqiu Zhu, Bin Chen, Sihang Qiu, Jincai Huang, Xin Lu, Weiyi Yang, Chuan Ai, Kuihua Huang, Cheng He, et al. Towards parallel intelligence: An interdisciplinary solution for complex systems. The Innovation, 2023.
-[327]Tianyuan Dai, Josiah Wong, Yunfan Jiang, Chen Wang, Cem Gokmen, Ruohan Zhang, Jiajun Wu, and Li Fei-Fei. Automated creation of digital cousins for robust policy learning. arXiv preprint arXiv:2410.07408, 2024.
-[328]Thomas Allen. Us department of defense modeling and simulation: new approaches and initiatives. Information & Security an International Journal, 23(23):32-48, 2009.
-[329]Xinyi Mou, Xuanwen Ding, Qi He, Liang Wang, Jingcong Liang, Xinnong Zhang, Libo Sun, Jiayu Lin, Jie Zhou, Xuanjing Huang, et al. From individual to society: A survey on social simulation driven by large language model-based agents. arXiv preprint arXiv:2412.03563, 2024.
-[330]Alexander Lavin, David Krakauer, Hector Zenil, Justin Gottschlich, Tim Mattson, Johann Brehmer, Anima Anandku- mar, Sanjay Choudry, Kamil Rocki, Atılım Gu"nes, Baydin, et al. Simulation intelligence: Towards a new generation of scientific methods. arXiv preprint arXiv:2112.03235, 2021.
-[331]Lin Wu, Lizhe Wang, Nan Li, Tao Sun, Tangwen Qian, Yu Jiang, Fei Wang, and Yongjun Xu. Modeling the covid-19 outbreak in china through multi-source information fusion. The Innovation, 1(2), 2020.
-[332]Zhengqiu Zhu, Bin Chen, Hailiang Chen, Sihang Qiu, Changjun Fan, Yong Zhao, Runkang Guo, Chuan Ai, Zhong Liu, Zhiming Zhao, et al. Strategy evaluation and optimization with an artificial society toward a pareto optimum. The Innovation, 3(5), 2022.
-[333]Bin Chen, Runkang Guo, Zhengqiu Zhu, Chuan Ai, and Xiaogang Qiu. Simulation of covid-19 outbreak in nanjing lukou airport based on complex dynamical networks. Complex System Modeling and Simulation, 3(1):71-82, 2023.
-[334]Aleksei Petrenko, Erik Wijmans, Brennan Shacklett, and Vladlen Koltun. Megaverse: Simulating embodied agents at one million experiences per second. In International Conference on Machine Learning, pages 8556-8566. PMLR, 2021.
-[335]Yandan Yang, Baoxiong Jia, Peiyuan Zhi, and Siyuan Huang. Physcene: Physically interactable
+好的，这是从[320]开始继续整理的参考文献格式：
 
-3d scene synthesis for embodied ai. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 16262-16272, 2024.
-[336]Marcelo Jacinto, Joa~o Pinto, Jay Patrikar, John Keller, Rita Cunha, Sebastian Scherer, and António Pascoal. Pega- sus simulator: An isaac sim framework for multiple aerial vehicles simulation. In 2024 International Conference on Unmanned Aircraft Systems (ICUAS), pages 917922. IEEE, 2024.
-[337]Kanishka Rao, Chris Harris, Alex Irpan, Sergey Levine, Julian Ibarz, and Mohi Khansari. Rlcyclegan: Reinforce- ment learning aware simulation-to-real. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 11157-11166, 2020.
-[338]Kaiqu Liang, Haimin Hu, Ryan Liu, Thomas L Griffiths, and Jaime Ferna'ndez Fisac. Rlhs: Mitigating misalignment in rlhf with hindsight simulation. arXiv preprint arXiv:2501.08617, 2025.
-[339]Jason Wei, Yi Tay, Rishi Bommasani, Colin Raffel, Barret Zoph, Sebastian Borgeaud, Dani Yogatama, Maarten Bosma, Denny Zhou, Donald Metzler, et al. Emergent abilities of large language models. arXiv preprint arXiv:2206.07682, 2022.
-[340]Anthony Brohan, Noah Brown, Justice Carbajal, Yevgen Chebotar, Joseph Dabis, Chelsea Finn, Keerthana Gopalakr- ishnan, Karol Hausman, Alex Herzog, Jasmine Hsu, et al. Rt-1: Robotics transformer for real-world control at scale. arXiv preprint arXiv:2212.06817, 2022.
-[341]Trevor Strohman, Donald Metzler, Howard Turtle, and W Bruce Croft. Indri: A language modelbased search engine for complex queries. In Proceedings of the international conference on intelligent analysis, pages 2-6. Washington, DC., 2005.
-[342]David Silver, Thomas Hubert, Julian Schrittwieser, Ioannis Antonoglou, Matthew Lai, Arthur Guez, Marc Lanctot, Laurent Sifre, Dharshan Kumaran, Thore Graepel, et al. Mastering chess and shogi by self-play with a general rein- forcement learning algorithm. arXiv preprint arXiv:1712.01815, 2017.
-[343]Gerald Tesauro. Td-gammon, a self-teaching backgammon program, achieves master-level play. Neural computation, 6(2):215-219, 1994.
-[344]Dmitry Kalashnikov, Alex Irpan, Peter Pastor, Julian Ibarz, Alexander Herzog, Eric Jang, Deirdre Quillen, Ethan Holly, Mrinal Kalakrishnan, Vincent Vanhoucke, et al. Scalable deep reinforcement learning for vision-based robotic manip- ulation. In Conference on robot learning, pages 651-673. PMLR, 2018.
-[345]Ilge Akkaya, Marcin Andrychowicz, Maciek Chociej, Mateusz Litwin, Bob McGrew, Arthur Petron, Alex Paino, Matthias Plappert, Glenn Powell, Raphael Ribas, et al. Solving rubik's cube with a robot hand. arXiv preprint arXiv:1910.07113, 2019.
-[346]Jiankai Sun, De-An Huang, Bo Lu, Yun-Hui Liu, Bolei Zhou, and Animesh Garg. Plate: Visuallygrounded planning with transformers in procedural tasks. IEEE Robotics and Automation Letters, 7(2):4924-4930, 2022.
-[347]Wenjie Liu, Jian Sun, Gang Wang, Francesco Bullo, and Jie Chen. Data-driven resilient predictive control under denial- of-service. IEEE Transactions on Automatic Control, 68(8):4722-4737,
+[320] Shuofei Qiao, Runnan Fang, Ningyu Zhang, Yuqi Zhu, Xiang Chen, Shumin Deng, Yong Jiang, Pengjun Xie, Fei Huang, and Huajun Chen. Agent planning with world knowledge model. CoRR, abs/2405.14205, 2024.
 
-August 2023.
-[348]Dingyuan Zhang, Dingkang Liang, Hongcheng Yang, Zhikang Zou, Xiaoqing Ye, Zhe Liu, and Xiang Bai. Sam3d: Zero-shot 3d object detection via segment anything model. arXiv preprint arXiv:2306.02245, 2023.
-[349]Yining Hong, Haoyu Zhen, Peihao Chen, Shuhong Zheng, Yilun Du, Zhenfang Chen, and Chuang Gan. 3d-llm: Injecting the 3d world into large language models. Advances in Neural Information Processing Systems, 36:20482-20494, 2023.
-[350]William Chen, Siyi Hu, Rajat Talak, and Luca Carlone. Leveraging large language models for robot 3d scene under- standing. arXiv preprint arXiv:2209.05629, 2022.
-[351]Weipu Zhang, Gang Wang, Jian Sun, Yetian Yuan, and Gao Huang. STORM: Efficient stochastic transformer based world models for reinforcement learning. Advances in Neural Information Processing Systems, 36, 2024.
-[352]Zhaohan Feng, Jie Chen, Wei Xiao, Jian Sun, Bin Xin, and Gang Wang. Learning hybrid policies for MPC with application to drone flight in unknown dynamic environments. Unmanned Systems, 12(02):429-441, 2024.
-[353]Ziyu Zhou, Gang Wang, Jian Sun, Jikai Wang, and Jie Chen. Efficient and robust time-optimal trajectory planning and control for agile quadrotor flight. IEEE Robotics and Automation Letters, 8(12):7913-7920, December 2023.
-[354]Yetian Yuan, Shuze Wang, Yunpeng Mei, Weipu Zhang, Jian Sun, and Gang Wang. Improving world models for robot arm grasping with backward dynamics prediction. International Journal of Machine Learning and Cybernetics, 15:3879-3891, April 2024.
-[355]Yitao Jiang, Luyang Zhao, Alberto Quattrini Li, Muhao Chen, and Devin Balkcom. Exploring spontaneous social interaction swarm robotics powered by large language models.
-[356]Zhao Mandi, Homanga Bharadhwaj, Vincent Moens, Shuran Song, Aravind Rajeswaran, and Vikash Kumar. Cacti: A framework for scalable multi-task multi-scene visual imitation learning. arXiv preprint arXiv:2212.05711, 2022.
-[357]Norman Di Palo, Arunkumar Byravan, Leonard Hasenclever, Markus Wulfmeier, Nicolas Heess, and Martin Riedmiller. Towards a unified agent with foundation models. arXiv preprint arXiv:2307.09668, 2023.
-[358]Minae Kwon, Sang Michael Xie, Kalesha Bullard, and Dorsa Sadigh. Reward design with language models. arXiv preprint arXiv:2303.00001, 2023.
-[359]Yifan Du, Junyi Li, Tianyi Tang, Wayne Xin Zhao, and Ji-Rong Wen. Zero-shot visual question answering with language model feedback. arXiv preprint arXiv:2305.17006, 2023.
-[360]Ramdane Tami, Boussaad Soualmi, Abdelkrim Doufene, Javier Ibanez, and Justin Dauwels. Machine learning method to ensure robust decision-making of avs. In 2019 IEEE Intelligent Transportation Systems Conference (ITSC), pages 1217-1222. IEEE, 2019.
-[361]Shengxi Gui, Shuang Song, Rongjun Qin, and Yang Tang. Remote sensing object detection in the deep learning era—a review. Remote Sensing, 16(2):327, 2024.
-[362]Ranganath R Navalgund, V Jayaraman, and PS Roy. Remote sensing applications: An overview. current science, pages 1747-1766, 2007.
-[363]Philipe Dias, Abhishek Potnis, Sreelekha Guggilam, Lexie Yang, Aristeidis Tsaris, Henry Medeiros, and Dalton Lunga. An agenda for multimodal foundation models for earth observation. In IGARSS 2023-2023 IEEE International Geo- science and Remote Sensing Symposium, pages 1237-1240. IEEE, 2023.
-[364]Yuchi Ma, Shuo Chen, Stefano Ermon, and David B Lobell. Transfer learning in environmental remote sensing. Remote Sensing of Environment, 301:113924, 2024.
-[365]Yezhen Cong, Samar Khanna, Chenlin Meng, Patrick Liu, Erik Rozi, Yutong He, Marshall Burke, David Lobell, and Stefano Ermon. Satmae: Pre-training transformers for temporal and multispectral satellite imagery. Advances in Neural Information Processing Systems, 35:197-211, 2022.
-[366]Colorado J Reed, Ritwik Gupta, Shufan Li, Sarah Brockman, Christopher Funk, Brian Clipp, Kurt Keutzer, Salvatore Candido, Matt Uyttendaele, and Trevor Darrell. Scale-mae: A scale-aware masked autoencoder for multiscale geospatial representation learning. In Proceedings of the IEEE/CVF International Conference on Computer Vision, pages 4088-4099, 2023.
-[367]Xinye Wanyan, Sachith Seneviratne, Shuchang Shen, and Michael Kirley. Extending global-local view alignment for self-supervised learning with remote sensing imagery. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 2443-2453, 2024.
-[368]Wade A. Smith and Robert B. Randall. Rolling element bearing diagnostics using the case western reserve university data: A benchmark study. Mechanical Systems and Signal Processing, 64-65:100-131, 2015.
-[369]Yuma Koizumi, Shoichiro Saito, Hisashi Uematsu, Noboru Harada, and Keisuke Imoto. Toyadmos: A dataset of miniature-machine operating sounds for anomalous sound detection. In 2019 IEEE Workshop on Applications of Signal Processing to Audio and Acoustics (WASPAA), pages 313-317, 2019.
-[370]Yunwei Zhang, Qiaochu Tang, Yao Zhang, Jiabin Wang, Ulrich Stimming, and Alpha Lee. Identifying degradation pat- terns of lithium ion batteries from impedance spectroscopy using machine learning. Nature Communications, 11:1706, 042020.
-[371]Yinjiao Xing, Wei He, Michael Pecht, and Kwok Leung Tsui. State of charge estimation of lithiumion batteries using the open-circuit voltage at various ambient temperatures. Applied energy, 113:106-115, 2014.
-[372]Erik Jakobsson, Erik Frisk, Mattias Krysander, and Robert Pettersson. A dataset for fault classification in rock drills, a fast oscillating hydraulic system. In Annual Conference of the PHM Society, 2022.
-[373]Yuhong Jin, Lei Hou, and Yushu Chen. A time series transformer based method for the rotating machinery fault diagnosis. Neurocomputing, 494:379-395, 2022.
-[374]Xiaohong Wang, Xudong Jiang, Henghui Ding, Yuqian Zhao, and Jun Liu. Knowledge-aware deep framework for collaborative skin lesion segmentation and melanoma recognition. Pattern
+[321] Guanzhi Wang, Yuqi Xie, Yunfan Jiang, Ajay Mandlekar, Chaowei Xiao, Yuke Zhu, Linxi Fan, and Anima Anandkumar. Voyager: An open-ended embodied agent with large language models. Trans. Mach. Learn. Res., 2024, 2024.
 
-Recognition, 120:108075, 2021.
-[375]Qi Li, Jinfeng Huang, Hongliang He, Xinran Zhang, Feibin Zhang, Zhaoye Qin, and Fulei Chu. Vsllava: a pipeline of large multimodal foundation model for industrial vibration signal analysis, 2024.
-[376]Arash Ajoudani, Andrea Maria Zanchettin, Serena Ivaldi, Alin Albu-Scha"ffer, Kazuhiro Kosuge, and Oussama Khatib. Progress and prospects of the human-robot collaboration. Autonomous Robots, 42, 062018.
-[377]Maximilian Diehl, Chris Paxton, and Karinne Ramirez-Amaro. Automated generation of robotic planning domains from observations. In 2021 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), pages 6732-6738, 2021.
-[378]Keisuke Shirai, Cristian C. Beltran-Hernandez, Masashi Hamaya, Atsushi Hashimoto, Shohei Tanaka, Kento Kawa- harazuka, Kazutoshi Tanaka, Yoshitaka Ushiku, and Shinsuke Mori. Visionlanguage interpreter for robot task planning. In 2024 IEEE International Conference on Robotics and Automation (ICRA), pages 2051-2058, 2024.
-[379]Meng-Lun Lee, Sara Behdad, Xiao Liang, and Minghui Zheng. Task allocation and planning for product disassembly with human-robot collaboration. Robotics and Computer-Integrated Manufacturing, 76:102306, 2022.
-[380]Tian Yu, Jing Huang, and Qing Chang. Optimizing task scheduling in human-robot collaboration with deep multi-agent reinforcement learning. Journal of Manufacturing Systems, 60:487-499, 2021.
-[381]Anthony Brohan, Noah Brown, Justice Carbajal, Yevgen Chebotar, Joseph Dabis, Chelsea Finn, Keerthana Gopalakrish- nan, Karol Hausman, Alex Herzog, Jasmine Hsu, Julian Ibarz, Brian Ichter, Alex Irpan, Tomas Jackson, Sally Jesmonth, Nikhil J Joshi, Ryan Julian, Dmitry Kalashnikov, Yuheng Kuang, Isabel Leal, Kuang-Huei Lee, Sergey Levine, Yao Lu, Utsav Malla, Deeksha Manjunath, Igor Mordatch, Ofir Nachum, Carolina Parada, Jodilyn Peralta, Emily Perez, Karl Pertsch, Jornell Quiambao, Kanishka Rao, Michael Ryoo, Grecia Salazar, Pannag Sanketi, Kevin Sayed, Jaspiar Singh, Sumedh Sontakke, Austin Stone, Clayton Tan, Huong Tran, Vincent Vanhoucke, Steve Vega, Quan Vuong, Fei Xia, Ted Xiao, Peng Xu, Sichun Xu, Tianhe Yu, and Brianna Zitkovich. Rt-1: Robotics transformer for real-world control at scale, 2023.
-[382]Waleed Ejaz, Shree K. Sharma, Salman Saadat, Muhammad Naeem, Alagan Anpalagan, and N.A. Chughtai. A com- prehensive survey on resource allocation for cran in 5 g and beyond networks. Journal of Network and Computer Applications, 160:102638, 2020.
-[383]Gerald Kelechi Ijemaru, Ibrahim Adeyanju, Kehinde Olusuyi, T Ofusori, E Ngharamike, and AA Sobowale. Security challenges of wireless communications networks: a survey. Int. J. Appl. Eng. Res, 13(8):5680-5692, 2018.
-[384]Yifei Xu, Yuning Chen, Xumiao Zhang, Xianshang Lin, Pan Hu, Yunfei Ma, Songwu Lu, Wan Du, Zhuoqing Mao, Ennan Zhai, and Dennis Cai. Cloudeval-yaml: A practical benchmark for cloud configuration generation. In P. Gibbons, G. Pekhimenko, and C. De Sa, editors, Proceedings of
+[322] Huandong Wang, Huan Yan, Can Rong, Yuan Yuan, Fenyu Jiang, Zhenyu Han, Hongjie Sui, Depeng Jin, and Yong Li. Multi-scale simulation of complex systems: a perspective of integrating knowledge and data. ACM Computing Surveys, 56(12):1-38, 2024.
 
-Machine Learning and Systems, volume 6, pages 173-195, 2024.
-[385]Zhengfu He, Tianxiang Sun, Kuanning Wang, Xuanjing Huang, and Xipeng Qiu. Diffusionbert: Improving generative masked language models with diffusion models, 2022.
-[386]Rajdeep Mondal, Alan Tang, Ryan Beckett, Todd Millstein, and George Varghese. What do llms need to synthesize correct router configurations? In Proceedings of the 22nd ACM Workshop on Hot Topics in Networks, HotNets '23, page 189-195, New York, NY, USA, 2023. Association for Computing Machinery.
-[387]Sathiya Kumaran Mani, Yajie Zhou, Kevin Hsieh, Santiago Segarra, Trevor Eberl, Eliran Azulai, Ido Frizler, Ranveer Chandra, and Srikanth Kandula. Enhancing network management using code generated by large language models. In Proceedings of the 22nd ACM Workshop on Hot Topics in Networks, HotNets '23, page 196-204, New York, NY, USA, 2023. Association for Computing Machinery.
-[388]Markus Bayer, Philipp Kuehn, Ramin Shanehsaz, and Christian Reuter. Cysecbert: A domainadapted language model for the cybersecurity domain. ACM Transactions on Privacy and Security, 27(2):1-20, 2024.
-[389]Ehsan Aghaei, Xi Niu, Waseem Shadid, and Ehab Al-Shaer. Securebert: A domain-specific language model for cy- bersecurity. In International Conference on Security and Privacy in Communication Systems, pages 39-56. Springer, 2022.
-[390]Mohamed Amine Ferrag, Mthandazo Ndhlovu, Norbert Tihanyi, Lucas C Cordeiro, Merouane Debbah, Thierry Lestable, and Narinderjit Singh Thandi. Revolutionizing cyber threat detection with large language models: A privacy- preserving bert-based lightweight model for iot/iiot devices. IEEE Access, 2024.
-[391]Luiz Rodrigues, Filipe Dwan Pereira, Luciano Cabral, Dragan Gas`evic', Geber Ramalho, and Rafael Ferreira Mello. As- sessing the quality of automatic-generated short answers using gpt-4. Computers and Education: Artificial Intelligence, 7:100248, 2024. [392]Nan Wu, Jun Xu, Jinqing Linghu, and Jie Huang. Real-time optimal control and dispatching strategy of multi-microgrid energy based on storage collaborative. International Journal of Electrical Power & Energy Systems, 160:110063, 2024. [393]L Huang. "big watt" to promote the application of power ai in the future., 2024. [394]Tanveer Ahmad, Hongyu Zhu, Dongdong Zhang, Rasikh Tariq, A Bassam, Fasee Ullah, Ahmed S AlGhamdi, and Sultan S Alshamrani. Energetics systems and artificial intelligence: Applications of industry 4.0. Energy Reports, 8:334-361, 2022. [395]Nils H van der Blij, Laura M Ramirez-Elizondo, Matthijs TJ Spaan, and Pavol Bauer. Grid sense multiple access: A decentralized control algorithm for dc grids. International Journal of Electrical Power & Energy Systems, 119:105818, 2020. [396]Zohaib Jan, Farhad Ahamed, Wolfgang Mayer, Niki Patel, Georg Grossmann, Markus Stumptner, and Ana Kuusk. Artificial intelligence for industry 4.0: Systematic review of applications, challenges, and opportunities. Expert Systems with Applications, 216:119456, 2023. [397]Tingting Chen, Vignesh Sampath, Marvin Carl May, Shuo Shan, Oliver Jonas Jorg, Juan Jose' Aguilar Mart'ın, Florian Stamer, Gualtiero Fantoni, Guido Tosello, and Matteo Calaon. Machine learning in manufacturing towards industry 4.0: From 'for now' to 'four-know'. Applied Sciences, 13(3), 2023. [398]Senthil Kumar Jagatheesaperumal, Mohamed Rahouti, Kashif Ahmad, Ala Al-Fuqaha, and Mohsen Guizani. The duo of artificial intelligence and big data for industry 4.0: Applications, techniques, challenges, and future research directions. IEEE Internet of Things Journal, 9(15):12861-12885, 2022. [399]National Research Council, Division on Engineering, Physical Sciences, Board on Mathematical Sciences, Their Ap- plications, Committee on Mathematical Foundations of Verification, and Uncertainty Quantification. Assessing the reliability of complex models: mathematical and statistical foundations of verification, validation, and uncertainty quantification. National Academies Press, 2012. [400]Charu C Aggarwal, Lagerstrom-Fife Aggarwal, and Lagerstrom-Fife. Linear algebra and optimization for machine learning, volume 156. Springer, 2020. [401]Guangchuang Yu. Thirteen years of clusterprofiler. The Innovation, 5(6), 2024. [402]Iman Ahmadianfar, Omid Bozorg-Haddad, and Xuefeng Chu. Gradient-based optimizer: A new metaheuristic opti- mization algorithm. Information Sciences, 540:131-159, 2020. [403]Haidong Li, Hongchuang Li, Ming Zhang, Chaolin Huang, and Xin Zhou. Direct imaging of pulmonary gas exchange with hyperpolarized xenon mri. The Innovation, 5(6), 2024. [404]Matthias Seeger, Florian Steinke, and Koji Tsuda. Bayesian inference and optimal design in the sparse linear model. In Artificial Intelligence and Statistics, pages 444-451. PMLR, 2007. [405]Kellie J Archer, Han Fu, Krzysztof Mro'zek, Deedra Nicolet, Alice S Mims, Geoffrey L Uy, Wendy Stock, John C Byrd, Wolfgang Hiddemann, Klaus H Metzeler, et al. Improving risk stratification for 2022 european leukemianet favorable-risk patients with acute myeloid leukemia. The Innovation, 5(6), 2024. [406]Christof Koch and Idan Segev. The role of single neurons in information processing. Nature neuroscience, 3(11):1171-1177, 2000. [407]Changyong Dou, Yunwei Tang, Nijun Jiang, Lin Yan, and Haifeng Ding. Analysis of sichuan wildfire based on the first synergetic observation from three payloads of sdgsat-1. The Innovation, 5(6), 2024. [408]Simon Haykin and Neural Network. A comprehensive foundation. Neural networks, 2(2004):41, 2004. [409]Salman Khan, Muzammal Naseer, Munawar Hayat, Syed Waqas Zamir, Fahad Shahbaz Khan, and Mubarak Shah. Transformers in vision: A survey. ACM computing surveys (CSUR), 54(10s):141, 2022. [410]Yi Tay, Dara Bahri, Donald Metzler, Da-Cheng Juan, Zhe Zhao, and Che Zheng. Synthesizer: Rethinking self-attention for transformer models. In International conference on machine learning, pages 10183-10192. PMLR, 2021. [411]Dandan Ma, Yuzhe Ma, Jinfu Ma, Qun Yang, Claudia Felser, and Guowei Li. Energy conversion materials need phonons. The Innovation, 5(6), 2024. [412]Karl Cobbe, Vineet Kosaraju, Mohammad Bavarian, Mark Chen, Heewoo Jun, Lukasz Kaiser, Matthias Plappert, Jerry Tworek, Jacob Hilton, Reiichiro Nakano, et al. Training verifiers to solve math word problems. arXiv preprint arXiv:2110.14168, 2021. [413]Le'on Bottou. Stochastic gradient descent tricks. In Neural Networks: Tricks of the Trade: Second Edition, pages 421-436. Springer, 2012. [414]Yali Cui, Yi Wu, and Yingjin Yuan. Amplification editing empowers in situ large-scale dna duplication. The Innovation, 5(6), 2024. [415]Peng Xiao, Yongfeng Yin, Bin Liu, Bo Jiang, and Yashwant K Malaiya. Adaptive testing based on moment estimation. IEEE Transactions on Systems, Man, and Cybernetics: Systems, 50(3):911922, 2017. [416]Sujuan Xu, Runzhou Chen, Xinqi Zhang, Yufeng Wu, Liuyan Yang, Zongyi Sun, Zhitao Zhu, Aiping Song, Ze Wu, Ting Li, et al. The evolutionary tale of lilies: Giant genomes derived from transposon insertions and polyploidization. The Innovation, 5(6), 2024. [417]George Em Karniadakis, Ioannis G Kevrekidis, Lu Lu, Paris Perdikaris, Sifan Wang, and Liu Yang. Physics-informed machine learning. Nature Reviews Physics, 3(6):422-440, 2021. [418]Angran Li, Ruijia Chen, Amir Barati Farimani, and Yongjie Jessica Zhang. Reaction diffusion system prediction based on convolutional neural network. Scientific reports, 10(1):3894, 2020. [419]Stephan Rasp, Michael S Pritchard, and Pierre Gentine. Deep learning to represent subgrid processes in climate models. Proceedings of the national academy of sciences, 115(39):9684-9689, 2018. [420]Kamal Choudhary, Brian DeCost, Chi Chen, Anubhav Jain, Francesca Tavazza, Ryan Cohn, Cheol Woo Park, Alok Choudhary, Ankit Agrawal, Simon JL Billinge, et al. Recent advances and applications of deep learning methods in materials science. npj Computational Materials, 8(1):59, 2022. [421]Nan Xu, Wenyu Li, Peng Gong, and Hui Lu. Satellite altimeter observed surface water increase across lake-rich regions of the arctic. The Innovation, 5(6), 2024. [422]Samuel Kim, Peter Y Lu, Srijon Mukherjee, Michael Gilbert, Li Jing, Vladimir C` eperic', and Marin Soljac`ic'. Integration of neural network-based symbolic regression in deep learning for scientific discovery. IEEE transactions on neural networks and learning systems, 32(9):4166-4177, 2020. [423]Guillaume Lample and Franc, ois Charton. Deep learning for symbolic mathematics. International Conference on Learning Representations, 2019. [424]Jakub Voznica, Anna Zhukova, Veronika Boskova, E Saulnier, F Lemoine, Mathieu MoslonkaLefebvre, and Olivier Gascuel. Deep learning from phylogenies to uncover the epidemiological dynamics of outbreaks. Nature Communica- tions, 13(1):3896, 2022. [425]Ahmet Murat Ozbayoglu, Mehmet Ugur Gudelek, and Omer Berat Sezer. Deep learning for financial applications: A survey. Applied soft computing, 93:106384, 2020. [426]Eric Edelman, Fabian Tijssen, Popke Rein Munniksma, Wim Bast, Harold Ten Bohmer, Nicole van Eldik, Marieke Spreeuwenberg, Wolfgang Buhre, and Frits van Merode. Clinical knowledge modeling: An essential step in the digital transformation of healthcare. The Innovation, 5(6), 2024. [427]Xiyi Yang, Jia Jia, Xiaoyu Zhou, and Shouyang Wang. The future of artificial intelligence: Time to embrace more international collaboration. The Innovation, 5(6), 2024. [428]Muning Wen, Runji Lin, Hanjing Wang, Yaodong Yang, Ying Wen, Luo Mai, Jun Wang, Haifeng Zhang, and Weinan Zhang. Large sequence models for sequential decision-making: a survey. Frontiers of Computer Science, 17(6):176349, 2023. [429]Weinan. Zhang. Large decision models. International Joint Conferences on Artificial Intelligence, pages 7062-7067, 2023. [430]Xu Wang, Sen Wang, Xingxing Liang, Dawei Zhao, Jincai Huang, Xin Xu, Bin Dai, and Qiguang Miao. Deep re- inforcement learning: A survey. IEEE Transactions on Neural Networks and Learning Systems, 35(4):5064-5078, 2022. [431]Emre Oral, Ria Chawla, Michel Wijkstra, Narges Mahyar, and Evanthia Dimara. From information to choice: A critical inquiry into visualization tools for decision making. IEEE Transactions on Visualization and Computer Graphics, 2023. [432]Zheng Chu, Jingchang Chen, Qianglong Chen, Weijiang Yu, Tao He, Haotian Wang, Weihua Peng, Ming Liu, Bing Qin, and Ting Liu. A survey of chain of thought reasoning: Advances, frontiers and future. arXiv preprint arXiv:2309.15402, 2023. [433]Tianyang Lin, Yuxin Wang, Xiangyang Liu, and Xipeng Qiu. A survey of transformers. AI open, 3:111-132, 2022. [434]Tianyu Wu, Shizhu He, Jingping Liu, Siqi Sun, Kang Liu, Qing-Long Han, and Yang Tang. A brief overview of chatgpt: The history, status quo and potential future development. IEEE/CAA Journal of Automatica Sinica, 10(5):1122-1136, 2023. [435]Michael Moor, Oishi Banerjee, Zahra Shakeri Hossein Abad, Harlan M Krumholz, Jure Leskovec, Eric J Topol, and Pranav Rajpurkar. Foundation models for generalist medical artificial intelligence. Nature, 616(7956):259-265, 2023. [436]Tao Tu, Shekoofeh Azizi, Danny Driess, Mike Schaekermann, Mohamed Amin, Pi-Chuan Chang, Andrew Carroll, Charles Lau, Ryutaro Tanno, Ira Ktena, et al. Towards generalist biomedical ai. NEJM AI, 1(3):AIoa2300138, 2024. [437]Karan Singhal, Shekoofeh Azizi, Tao Tu, S Sara Mahdavi, Jason Wei, Hyung Won Chung, Nathan Scales, Ajay Tanwani, Heather Cole-Lewis, Stephen Pfohl, et al. Large language models encode clinical knowledge. Nature, 620(7972):172-180, 2023. [438]Karan Singhal, Tao Tu, Juraj Gottweis, Rory Sayres, Ellery Wulczyn, Le Hou, Kevin Clark, Stephen Pfohl, Heather Cole-Lewis, Darlene Neal, et al. Towards expert-level medical question answering with large language models. arXiv preprint arXiv:2305.09617, 2023. [439]Xiaohong Liu, Hao Liu, Guoxing Yang, Zeyu Jiang, Shuguang Cui, Zhaoze Zhang, Huan Wang, Liyuan Tao, Yongchang Sun, Zhu Song, et al. A generalist medical language model for disease diagnosis assistance. Nature Medicine, pages 1-11, 2025. [440]Nicholas R Rydzewski, Deepak Dinakaran, Shuang G Zhao, Eytan Ruppin, Baris Turkbey, Deborah E Citrin, and Krishnan R Patel. Comparative evaluation of llms in clinical oncology. NEJM AI, 1(5):AIoa2300151, 2024. [441]Cyril Zakka, Rohan Shad, Akash Chaurasia, Alex R Dalal, Jennifer L Kim, Michael Moor, Robyn Fong, Curran Phillips, Kevin Alexander, Euan Ashley, et al. Almanac-retrieval-augmented language models for clinical medicine. NEJM AI, 1(2):AIoa2300068, 2024. [442]Ozan Unlu, Jiyeon Shin, Charlotte J Mailly, Michael F Oates, Michela R Tucci, Matthew Varugheese, Kavishwar Wagholikar, Fei Wang, Benjamin M Scirica, Alexander J Blood, et al. Retrieval-augmented generation-enabled gpt-4 for clinical trial screening. NEJM AI, page AIoa2400181, 2024. [443]Kyle Lam and Jianing Qiu. Foundation models: the future of surgical artificial intelligence? British Journal of Surgery, 111(4):znae090, 2024. [444]Yuanyuan Peng, Aidi Lin, Meng Wang, Tian Lin, Linna Liu, Jianhua Wu, Ke Zou, Tingkun Shi, Lixia Feng, Zhen Liang, et al. Enhancing ai reliability: A foundation model with uncertainty estimation for optical coherence tomography-based retinal disease diagnosis. Cell Reports Medicine, 2024. [445]Yuanyuan Tian, Zhiyuan Li, Yanrui Jin, Mengxiao Wang, Xiaoyang Wei, Liqun Zhao, Yunqing Liu, Jinlei Liu, and Chengliang Liu. Foundation model of ecg diagnosis: Diagnostics and explanations of any form and rhythm on ecg. Cell Reports Medicine, 5(12), 2024. [446]Jun Ma, Yuting He, Feifei Li, Lin Han, Chenyu You, and Bo Wang. Segment anything in medical images. Nature Communications, 15(1):654, 2024. [447]Christian Bluethgen, Pierre Chambon, Jean-Benoit Delbrouck, Rogier van der Sluijs, Małgorzata Połacin, Juan Manuel Zambrano Chaves, Tanishq Mathew Abraham, Shivanshu Purohit, Curtis P Langlotz, and Akshay S Chaudhari. A vision-language foundation model for the generation of realistic chest x-ray images. Nature Biomedical Engineering, pages 1-13, 2024. [448]Jinxi Xiang, Xiyue Wang, Xiaoming Zhang, Yinghua Xi, Feyisope Eweje, Yijiang Chen, Yuchen Li, Colin Bergstrom, Matthew Gopaulchan, Ted Kim, et al. A vision-language foundation model for precision oncology. Nature, pages 1-10, 2025. [449]Eugene Vorontsov, Alican Bozkurt, Adam Casson, George Shaikovski, Michal Zelechowski, Kristen Severson, Eric Zimmermann, James Hall, Neil Tenenholtz, Nicolo Fusi, et al. A foundation model for clinical-grade computational pathology and rare cancers detection. Nature medicine, pages 1-12, 2024. [450]Xiyue Wang, Junhan Zhao, Eliana Marostica, Wei Yuan, Jietian Jin, Jiayu Zhang, Ruijiang Li, Hongping Tang, Kan- ran Wang, Yu Li, et al. A pathology foundation model for cancer diagnosis and prognosis prediction. Nature, 634(8035):970-978, 2024. [451]Nadieh Khalili and Francesco Ciompi. Scaling data toward pan-cancer foundation models. Trends in Cancer, 2024. [452]Hugo Dalla-Torre, Liam Gonzalez, Javier Mendoza-Revilla, Nicolas Lopez Carranza, Adam Henryk Grzywaczewski, Francesco Oteri, Christian Dallago, Evan Trop, Bernardo P de Almeida, Hassan Sirelkhatim, et al. Nucleotide trans- former: building and evaluating robust foundation models for human genomics. Nature Methods, pages 1-11, 2024. [453]Haotian Cui, Chloe Wang, Hassaan Maan, Kuan Pang, Fengning Luo, Nan Duan, and Bo Wang. scgpt: toward building a foundation model for single-cell multi-omics using generative ai. Nature Methods, pages 1-11, 2024. [454]Xi Fu, Shentong Mo, Alejandro Buendia, Anouchka P Laurent, Anqi Shao, Maria del Mar AlvarezTorres, Tianji Yu, Jimin Tan, Jiayu Su, Romella Sagatelian, et al. A foundation model of transcription across human cell types. Nature, pages 1-9, 2025. [455]Pratik Ramprasad, Nidhi Pai, and Wei Pan. Enhancing personalized gene expression prediction from dna sequences using genomic foundation models. Human Genetics and Genomics Advances, 5(4), 2024. [456]Lavender Yao Jiang, Xujin Chris Liu, Nima Pour Nejatian, Mustafa Nasir-Moin, Duo Wang, Anas Abidin, Kevin Eaton, Howard Antony Riina, Ilya Laufer, Paawan Punjabi, et al. Health systemscale language models are all-purpose prediction engines. Nature, 619(7969):357-362, 2023. [457]Aaron Boussina, Rishivardhan Krishnamoorthy, Kimberly Quintero, Shreyansh Joshi, Gabriel Wardi, Hayden Pour, Nicholas Hilbert, Atul Malhotra, Michael Hogarth, Amy M Sitapati, et al. Large language models for more efficient reporting of hospital quality measures. NEJM AI, 1(11):AIcs2400420, 2024. [458]Xi Yang, Aokun Chen, Nima PourNejatian, Hoo Chang Shin, Kaleb E Smith, Christopher Parisien, Colin Compas, Cheryl Martin, Anthony B Costa, Mona G Flores, et al. A large language model for electronic health records. npj Digital Medicine, 5(1):194, 2022. [459]Akhil Vaid, Isotta Landi, Girish Nadkarni, and Ismail Nabeel. Using fine-tuned large language models to parse clinical notes in musculoskeletal pain disorders. The Lancet Digital Health, 5(12):e855-e858, 2023. [460]Dave Van Veen, Cara Van Uden, Louis Blankemeier, Jean-Benoit Delbrouck, Asad Aali, Christian Bluethgen, Anuj Pareek, Malgorzata Polacin, Eduardo Pontes Reis, Anna Seehofnerova', et al. Adapted large language models can outperform medical experts in clinical text summarization. Nature medicine, 30(4):1134-1142, 2024. [461]Hanzhou Li, John T Moon, Saptarshi Purkayastha, Leo Anthony Celi, Hari Trivedi, and Judy W Gichoya. Ethics of large language models in medicine and medical research. The Lancet Digital Health, 5(6):e333-e335, 2023. [462]Zhuxin Xiong, Xiaofei Wang, Yukun Zhou, Pearse A. Keane, Yih Chung Tham, Ya Xing Wang, and Tien Yin Wong. How generalizable are foundation models when applied to different demographic groups and settings? NEJM AI, 0(0):AIcs2400497, 2024. [463]Paul Hager, Friederike Jungmann, Robbie Holland, Kunal Bhagat, Inga Hubrecht, Manuel Knauer, Jakob Vielhauer, Marcus Makowski, Rickmer Braren, Georgios Kaissis, et al. Evaluation and mitigation of the limitations of large language models in clinical decision-making. Nature medicine, 30(9):2613-2622, 2024. [464]Yinghao Zhu, Junyi Gao, Zixiang Wang, Weibin Liao, Xiaochen Zheng, Lifang Liang, Yasha Wang, Chengwei Pan, Ewen M Harrison, and Liantao Ma. Is larger always better? evaluating and prompting large language models for non-generative medical tasks. arXiv preprint arXiv:2407.18525, 2024. [465]Agustina D Saenz, Zach Harned, Oishi Banerjee, Michael D Abra`moff, and Pranav Rajpurkar. Autonomous ai systems in the face of liability, regulations and costs. npj Digital Medicine, 6(1):185, 2023.
-[466]Krishnamurthy Dvijotham, Jim Winkens, Melih Barsbey, Sumedh Ghaisas, Robert Stanforth, Nick Pawlowski, Patricia Strachan, Zahra Ahmed, Shekoofeh Azizi, Yoram Bachrach, et al. Enhancing the reliability and accuracy of ai-enabled diagnosis via complementarity-driven deferral to clinicians. Nature Medicine, 29(7):1814-1820, 2023.
-[467]Shreya Johri, Jaehwan Jeong, Benjamin A Tran, Daniel I Schlessinger, Shannon Wongvibulsin, Leandra A Barnes, Hong-Yu Zhou, Zhuo Ran Cai, Eliezer M Van Allen, David Kim, et al. An evaluation framework for clinical use of large language models in patient interaction tasks. Nature Medicine, pages 1-10, 2025.
-[468]Yuting He, Fuxiang Huang, Xinrui Jiang, Yuxiang Nie, Minghao Wang, Jiguang Wang, and Hao Chen. Foundation model for advancing healthcare: Challenges, opportunities, and future directions. arXiv preprint arXiv:2404.03264, 2024.
-[469]Arun James Thirunavukarasu, Darren Shu Jeng Ting, Kabilan Elangovan, Laura Gutierrez, Ting Fang Tan, and Daniel Shu Wei Ting. Large language models in medicine. Nature medicine, 29(8):1930-1940, 2023.
-[470]Zhao Wang, Chang Liu, Shaoting Zhang, and Qi Dou. Foundation model for endoscopy video analysis via large- scale self-supervised pre-train. In International Conference on Medical Image Computing and Computer-Assisted Intervention, pages 101-111. Springer, 2023.
-[471]Hugo Dalla-Torre, Liam Gonzalez, Javier Mendoza-Revilla, Nicolas Lopez Carranza, Adam Henryk Grzywaczewski, Francesco Oteri, Christian Dallago, Evan Trop, Bernardo P de Almeida, Hassan Sirelkhatim, et al. Nucleotide trans- former: building and evaluating robust foundation models for human genomics. Nature Methods, pages 1-11, 2024.
-[472]Nadav Brandes, Dan Ofer, Yam Peleg, Nadav Rappoport, and Michal Linial. Proteinbert: a universal deep-learning model of protein sequence and function. Bioinformatics, 38(8):2102-2110, 2022.
-[473]Kai Zhang, Jun Yu, Eashan Adhikarla, Rong Zhou, Zhiling Yan, Yixin Liu, Zhengliang Liu, Lifang He, Brian Davison, Xiang Li, et al. Biomedgpt: A unified and generalist biomedical generative pretrained transformer for vision, language, and multimodal tasks. arXiv e-prints, pages arXiv-2305,
-2023.
-[474]Bobby Azad, Reza Azad, Sania Eskandari, Afshin Bozorgpour, Amirhossein Kazerouni, Islem Rekik, and Dorit Merhof. Foundational models in medical imaging: A comprehensive survey and future vision. CoRR, 2023.
-[475]Glyn Elwyn, Dominick Frosch, Richard Thomson, Natalie Joseph-Williams, Amy Lloyd, Paul Kinnersley, Emma Cord- ing, Dave Tomson, Carole Dodd, Stephen Rollnick, et al. Shared decision making: a model for clinical practice. Journal of general internal medicine, 27:1361-1367, 2012.
-[476]Hongjian Zhou, Fenglin Liu, Boyang Gu, Xinyu Zou, Jinfa Huang, Jinge Wu, Yiru Li, Sam S Chen, Peilin Zhou, Junling Liu, et al. A survey of large language models in medicine: Progress, application, and challenge. arXiv preprint arXiv:2311.05112, 2023.
-[477]Guangyu Wang, Guoxing Yang, Zongxin Du, Longjun Fan, and Xiaohu Li. Clinicalgpt: large language models finetuned with diverse medical data and comprehensive evaluation. arXiv preprint arXiv:2306.09968, 2023.
-[478]Weihao Gao, Zhuo Deng, Zhiyuan Niu, Fuju Rong, Chucheng Chen, Zheng Gong, Wenze Zhang, Daimin Xiao, Fang Li, Zhenjie Cao, et al. Ophglm: Training an ophthalmology large language-and-vision assistant based on instructions and dialogue. arXiv preprint arXiv:2306.12174, 2023.
-[479]Masoumeh Farhadi Nia, Mohsen Ahmadi, and Elyas Irankhah. Transforming dental diagnostics with artificial intelli- gence: Advanced integration of chatgpt and large language models for patient care. arXiv preprint arXiv:2406.06616, 2024.
-[480]Ana Sua'rez, Jaime Jime'nez, Mar'ıa Llorente de Pedro, Cristina Andreu-Va'zquez, V'ıctor D'ıazFlores Garc'ia, Mar- garita Go'mez Sa'nchez, and Yolanda Freire. Beyond the scalpel: Assessing chatgpt's potential as an auxiliary intelligent virtual assistant in oral surgery. Computational and Structural Biotechnology Journal, 24:46-52, 2024.
-[481]Hossein Mohammad-Rahimi, Saeed Reza Motamedian, Mohammad Hossein Rohban, Joachim Krois, Sergio E Uribe, Erfan Mahmoudinia, Rata Rokhshad, Mohadeseh Nadimi, and Falk Schwendicke. Deep learning for caries detection: A systematic review. Journal of Dentistry, 122:104115, 2022.
-[482]Marta Revilla-Leo'n, Miguel Go'mez-Polo, Abdul B Barmak, Wardah Inam, Joseph YK Kan, John C Kois, and Orhan Akal. Artificial intelligence models for diagnosing gingivitis and periodontal disease: A systematic review. The Journal of Prosthetic Dentistry, 130(6):816-824, 2023.
-[483]Pongsapak Wongratwanich, Kiichi Shimabukuro, Masaru Konishi, Toshikazu Nagasaki, Masahiko Ohtsuka, Yoshikazu Suei, Takashi Nakamoto, Rinus G Verdonschot, Tomohiko Kanesaki, Pipop Sutthiprapaporn, et al. Do various imaging modalities provide potential early detection and diagnosis of medication-related osteonecrosis of the jaw? a review. Dentomaxillofacial Radiology, 50(6):20200417, 2021.
-[484]Rasheed Omobolaji Alabi, Omar Youssef, Matti Pirinen, Mohammed Elmusrati, Antti A Ma"kitie, Ilmo Leivo, and Alhadi Almangush. Machine learning in oral squamous cell carcinoma: Current status, clinical concerns and prospects for future-a systematic review. Artificial intelligence in
-medicine, 115:102060, 2021.
-[485]Kritsasith Warin, Wasit Limprasert, Siriwan Suebnukarn, Teerawat Paipongna, Patcharapon Jantana, and Sothana Vicharueang. Maxillofacial fracture detection and classification in computed tomography images using convolutional neural network-based models. Scientific reports, 13(1):3434, 2023.
-[486]Nayansi Jha, Kwang-Sig Lee, and Yoon-Ji Kim. Diagnosis of temporomandibular disorders using artificial intelligence technologies: A systematic review and meta-analysis. PLoS One, 17(8):e0272715, 2022.
-[487]Duy MH Nguyen, Hoang Nguyen, Nghiem Diep, Tan Ngoc Pham, Tri Cao, Binh Nguyen, Paul Swoboda, Nhat Ho, Shadi Albarqouni, Pengtao Xie, et al. Lvm-med: Learning large-scale selfsupervised vision models for medical imag- ing via second-order graph matching. Advances in Neural Information Processing Systems, 36, 2024.
-[488]Weijia Feng, Lingting Zhu, and Lequan Yu. Cheap lunch for medical image segmentation by finetuning sam on few exemplars. In International MICCAI Brainlesion Workshop, pages 13-22. Springer, 2023.
-[489]Anirudh Shankar, TR Monisha, Skanda S Kumar, Aishwary Anurag, Ashwath Narayan, et al. Advancements in ai- driven dentistry: Tooth genai's impact on dental diagnosis and treatment planning. In 2024 2nd International Conference on Networking, Embedded and Wireless Systems (ICNEWS), pages 1-7. IEEE, 2024.
-[490]Wenxi Yue, Jing Zhang, Kun Hu, Qiuxia Wu, Zongyuan Ge, Yong Xia, Jiebo Luo, and Zhiyong Wang. Part to whole: Collaborative prompting for surgical instrument segmentation. arXiv preprint arXiv:2312.14481, 2023.
-[491]Hsun-Liang Chan, Kelly Misch, and Hom-Lay Wang. Dental imaging in implant treatment planning. Implant dentistry, 19(4):288-298, 2010.
-[492]Yuepeng Wu, Yukang Zhang, Mei Xu, Yuchen Zheng, et al. Effectiveness of various general large language models in clinical consensus and case analysis in dental implantology: A comparative study. 2024.
-[493]Bahaaeldeen M Elgarba, Rocharles Cavalcante Fontenele, Mihai Tarce, and Reinhilde Jacobs. Artificial intelligence serving pre-surgical digital implant planning: A scoping review. Journal of Dentistry, page 104862, 2024.
-[494]Sheldon Baumrind, Edward L Korn, Robert L Boyd, and Raymond Maxwell. The decision to extract: part ii. analysis of clinicians' stated reasons for extraction. American Journal of Orthodontics and Dentofacial Orthopedics, 109(4):393-402, 1996.
-[495]Ye-Hyun Kim, Jae-Bong Park, Min-Seok Chang, Jae-Jun Ryu, Won Hee Lim, and Seok-Ki Jung. Influence of the depth of the convolutional neural networks on an artificial intelligence model for diagnosis of orthognathic surgery. Journal of Personalized Medicine, 11(5):356, 2021.
-[496]WooSang Shin, Han-Gyeol Yeom, Ga Hyung Lee, Jong Pil Yun, Seung Hyun Jeong, Jong Hyun Lee, Hwi Kang Kim, and Bong Chul Kim. Deep learning based prediction of necessity for
-orthognathic surgery of skeletal malocclusion using cephalogram in korean individuals. BMC Oral Health, 21:1-7, 2021.
-[497]Hyuk-Il Choi, Seok-Ki Jung, Seung-Hak Baek, Won Hee Lim, Sug-Joon Ahn, Il-Hyung Yang, and Tae-Woo Kim. Artificial intelligent model with neural network machine learning for the diagnosis of orthognathic surgery. Journal of Craniofacial Surgery, 30(7):1986-1989, 2019.
-[498]Sreekanth Kumar Mallineni, Mallika Sethi, Dedeepya Punugoti, Sunil Babu Kotha, Zikra Alkhayal, Sarah Mubaraki, Fatmah Nasser Almotawah, Sree Lalita Kotha, Rishitha Sajja, Venkatesh Nettam, et al. Artificial intelligence in den- tistry: A descriptive review. Bioengineering, 11(12):1267, 2024.
-[499]Hao Ding, Jiamin Wu, Wuyuan Zhao, Jukka P Matinlinna, Michael F Burrow, and James KH Tsoi. Artificial intelligence in dentistry—a review. Frontiers in Dental Medicine, 4:1085251, 2023.
-[500]Dianhao Wu, Jingang Jiang, Jie Pan, Kun Qian, and Zhonghao Xue. Root canal preparation robot based on guiding strat- egy for safe remote therapy: System design and feasibility study (2023). IEEE/ASME Transactions on Mechatronics, 2024.
-[501]T Shan, FR Tay, and L Gu. Application of artificial intelligence in dentistry. Journal of dental research, 100(3):232-244, 2021.
-[502]Fet al Schwendicke, W Samek, and J Krois. Artificial intelligence in dentistry: chances and challenges. Journal of dental research, 99(7):769-774, 2020.
-[503]Sergio Salerno, Andrea Laghi, Marie-Claire Cantone, Paolo Sartori, Antonio Pinto, and Guy Frija. Overdiagnosis and overimaging: an ethical issue for radiological protection. La radiologia medica, 124:714-720, 2019.
-[504]Mikhail Kulyabin, Aleksei Zhdanov, Andrey Pershin, Gleb Sokolov, Anastasia Nikiforova, Mikhail Ronkin, Vasilii Borisov, and Andreas Maier. Segment anything in optical coherence tomography: Sam 2 for volumetric segmentation of retinal biomarkers. Bioengineering, 11(9):940, 2024.
-[505]Jie Zhang and Zong-ming Zhang. Ethics and governance of trustworthy medical artificial intelligence. BMC medical informatics and decision making, 23(1):7, 2023.
-[506]Yi-Da Tang, Er-Dan Dong, and Wen Gao. Llms in medicine: The need for advanced evaluation systems for disruptive technologies. The Innovation, 5(3), 2024.
-[507]Yin Yang, Shuangbin Xu, Yifan Hong, Yantong Cai, Wenli Tang, Jiao Wang, Bairong Shen, Hui Zong, and Guangchuang Yu. Computational modeling for medical data: From data collection to knowledge discovery. The Innovation Life, 2(3):100079-1, 2024.
-[508]Hao Guan and Mingxia Liu. Domain adaptation for medical image analysis: a survey. IEEE Transactions on Biomedical Engineering, 69(3):1173-1185, 2021.
-[509]Weijia Zhang, Jindong Han, Zhao Xu, Hang Ni, Hao Liu, and Hui Xiong. Towards urban general intelligence: A review and outlook of urban foundation models. arXiv preprint arXiv:2402.01749, 2024.
-[510]Yuxuan Liang, Haomin Wen, Yuqi Nie, Yushan Jiang, Ming Jin, Dongjin Song, Shirui Pan, and
+[323] Mohamed Amine Ben Rabia and Adil Bellabdaoui. Simulation-based analytics: A systematic literature review. Simu- lation Modelling Practice and Theory, 117:102511, 2022.
 
-Qingsong Wen. Foun- dation models for time series analysis: A tutorial and survey. In Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining, pages 65556565, 2024.
-[511]Sarah Alnegheimish, Linh Nguyen, Laure Berti-Equille, and Kalyan Veeramachaneni. Large language models can be zero-shot anomaly detectors for time series? arXiv preprint arXiv:2405.14755, 2024.
-[512]Tian Zhou, Peisong Niu, Liang Sun, Rong Jin, et al. One fits all: Power general time series analysis by pretrained lm. Advances in neural information processing systems, 36:43322-43355, 2023.
-[513]Qingxiang Liu, Xu Liu, Chenghao Liu, Qingsong Wen, and Yuxuan Liang. Time-ffm: Towards lm-empowered federated foundation model for time series forecasting. arXiv preprint arXiv:2405.14252, 2024.
-[514]Zhonghang Li, Lianghao Xia, Jiabin Tang, Yong Xu, Lei Shi, Long Xia, Dawei Yin, and Chao Huang. Urbangpt: Spatio- temporal large language models. In Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining, pages 5351-5362, 2024.
-[515]Chenxi Liu, Sun Yang, Qianxiong Xu, Zhishuai Li, Cheng Long, Ziyue Li, and Rui Zhao. Spatialtemporal large language model for traffic prediction. arXiv preprint arXiv:2401.10134, 2024.
-[516]Abdul Fatir Ansari, Lorenzo Stella, Caner Turkmen, Xiyuan Zhang, Pedro Mercado, Huibin Shen, Oleksandr Shchur, Syama Sundar Rangapuram, Sebastian Pineda Arango, Shubham Kapoor, et al. Chronos: Learning the language of time series. arXiv preprint arXiv:2403.07815, 2024.
-[517]Yuan Yuan, Jingtao Ding, Jie Feng, Depeng Jin, and Yong Li. Unist: A prompt-empowered universal model for urban spatio-temporal prediction. In Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining, pages 4095-4106, 2024.
-[518]Yan Lin, Tonglong Wei, Zeyu Zhou, Haomin Wen, Jilin Hu, Shengnan Guo, Youfang Lin, and Huaiyu Wan. Trajfm: A vehicle trajectory foundation model for region and task transferability. arXiv preprint arXiv:2408.15251, 2024.
-[519]Yuanshao Zhu, James Jianqiao Yu, Xiangyu Zhao, Xuetao Wei, and Yuxuan Liang. Unitraj: Universal human trajectory modeling from billion-scale worldwide traces. arXiv preprint arXiv:2411.03859, 2024.
-[520]Xixuan Hao, Wei Chen, Yibo Yan, Siru Zhong, Kun Wang, Qingsong Wen, and Yuxuan Liang. Urbanvlp: A multi-granularity vision-language pre-trained foundation model for urban indicator prediction. arXiv preprint arXiv:2403.16831, 2024.
-[521]Congxi Xiao, Jingbo Zhou, Yixiong Xiao, Jizhou Huang, and Hui Xiong. Refound: Crafting a foundation model for urban region understanding upon language and visual foundations. In Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining, pages 3527-3538, 2024.
-[522]Siqi Lai, Zhao Xu, Weijia Zhang, Hao Liu, and Hui Xiong. Large language models as traffic signal control agents: Capacity and opportunity. arXiv preprint arXiv:2312.16044, 2023.
-[523]Zhilun Zhou, Yuming Lin, Depeng Jin, and Yong Li. Large language model for participatory urban
-planning. arXiv preprint arXiv:2402.17161, 2024.
-[524]Lincan Li, Jiaqi Li, Catherine Chen, Fred Gui, Hongjia Yang, Chenxiao Yu, Zhengguang Wang, Jianing Cai, Jun- long Aaron Zhou, Bolin Shen, et al. Political-llm: Large language models in political science. arXiv preprint arXiv:2412.06864, 2024.
-[525]Menglin Liu and Ge Shi. Poliprompt: A high-performance cost-effective llm-based text classification framework for political science. arXiv preprint arXiv:2409.01466, 2024.
-[526]Albaaji G F. SS V C, Hareendran A. Precision farming for sustainability: An agricultural intelligence model. Computers and Electronics in Agriculture, 2024.
-[527]Jiajia Li, Mingle Xu, Lirong Xiang, Dong Chen, Weichao Zhuang, Xunyuan Yin, and Zhaojian Li. Foundation models in smart agriculture: Basics, opportunities, and challenges. Computers and Electronics in Agriculture, 222:109032, 2024.
-[528]Zhiyu Zhang, Wenjian Ni, Shaun Quegan, Jingming Chen, Peng Gong, Luiz Carlos Estraviz Rodriguez, Huadong Guo, Jiancheng Shi, Liangyun Liu, Zengyuan Li, et al. Deforestation in latin america in the 2000s predominantly occurred outside of typical mature forests. The Innovation, 5(3), 2024.
-[529]Matheus Thomas Kuska, Mirwaes Wahabzada, and Stefan Paulus. Ai for crop production-where can large language models (llms) provide substantial value? Computers and Electronics in Agriculture, 221:108924, 2024.
-[530]Keong Tan. Large language models for crop yield prediction. 2024.
-[531]Yujiao Lyu, Pengxin Wang, Xueyuan Bai, Xuecao Li, Xin Ye, Yuchen Hu, and Jie Zhang. Machine learning techniques and interpretability for maize yield estimation using time-series images of modis and multi-source data. Computers and Electronics in Agriculture, 222:109063, 2024.
-[532]Federico Pallottino, Simona Violino, Simone Figorilli, Catello Pane, Jacopo Aguzzi, Giacomo Colle, Eugenio Nerio Nemmi, Alessandro Montaghi, Damianos Chatzievangelou, Francesca Antonucci, et al. Applications and perspectives of generative artificial intelligence in agriculture. Computers and Electronics in Agriculture, 230:109919, 2025.
-[533]Hongyan Zhu, Shuai Qin, Min Su, Chengzhi Lin, Anjie Li, and Junfeng Gao. Harnessing large vision and language models in agriculture: A review. arXiv preprint arXiv:2407.19679, 2024.
-[534]Yueyue Zhou, Hongping Yan, Kun Ding, Tingting Cai, and Yan Zhang. Few-shot image classification of crop diseases based on vision-language models. Sensors, 24(18):6109, 2024.
-[535]Xutong Wu, Bojie Fu, Shuai Wang, Yanxu Liu, Ying Yao, Yingjie Li, Zhenci Xu, and Jianguo Liu. Three main dimensions reflected by national sdg performance. The innovation, 4(6), 2023.
-[536]Wanchao Zhu, Weifu Li, Hongwei Zhang, and Lin Li. Big data and artificial intelligence-aided crop breeding: Progress and prospects. Journal of Integrative Plant Biology, 2024.
-[537]Muhammad Amjad Farooq, Shang Gao, Muhammad Adeel Hassan, Zhangping Huang, Awais Rasheed, Sarah Hearne, Boddupalli Prasanna, Xinhai Li, and Huihui Li. Artificial intelligence in plant breeding. Trends in Genetics, 2024.
-[538]Gengchen Mai, Weiming Huang, Jin Sun, Suhang Song, Deepak Mishra, Ninghao Liu, Song Gao,
+[324] Bin Chen, Runkang Guo, Zhengqiu Zhu, Yong Zhao, Yatai Ji, Aiguo Chen, and Guangquan Cheng. A novel research pattern for the simulation of complex systems sigd. Journal of System Simulation, 36(12):2993, 2024.
 
-Tianming Liu, Gao Cong, Yingjie Hu, et al. On the opportunities and challenges of foundation models for geospatial artificial intelligence. arXiv preprint arXiv:2304.06798, 2023.
-[539]Junnan Li, Dongxu Li, Caiming Xiong, and Steven Hoi. Blip: Bootstrapping language-image pretraining for unified vision-language understanding and generation. In International conference on machine learning, pages 12888-12900. PMLR, 2022.
-[540]Guarino M. Tullo E, Finzi A. Environmental impact of livestock farming and precision livestock farming as a mitigation strategy. Science of the total environment, 2019.
-[541]Xiao Yang, Haixing Dai, Zihao Wu, Ramesh Bist, Sachin Subedi, Jin Sun, Guoyu Lu, Changying Li, Tianming Liu, and Lilong Chai. Sam for poultry science. arXiv preprint arXiv:2305.10254, 2023.
-[542]Xie Q. Bao J. Artificial intelligence in animal farming: A systematic literature review. Journal of Cleaner Production, 2022.
-[543]Na Liu, Jingwei Qi, Xiaoping An, and Yuan Wang. A review on information technologies applicable to precision dairy farming: Focus on behavior, health monitoring, and the precise feeding of dairy cows. Agriculture, 13(10):1858, 2023.
-[544]Wenjie Sun, Jie Zhang, Yujie Lei, and Danfeng Hong. Rsprotoseg: High spatial resolution remote sensing images segmentation based on non-learnable prototypes. IEEE Transactions on Geoscience and Remote Sensing, 2024.
-[545]Sheik Arafat, C Priya, R Premkumar, Haji Nishath SM, et al. Real time cattle health monitoring and early disease detection using iot and machine learning. In 2024 5th International Conference on Electronics and Sustainable Com- munication Systems (ICESC), pages 450-455. IEEE, 2024.
-[546]Md Mahfujul Islam, Shaharya Sourov Tonmoy, Sazzad Quayum, Al Russel Sarker, Sumaiya Umme Hani, and Moham- mad Abdul Mannan. Smart poultry farm incorporating gsm and iot. In 2019 International Conference on Robotics, Electrical and Signal Processing Techniques (ICREST), pages 277-280. IEEE, 2019.
-[547]Rishi Bommasani, Drew A Hudson, Ehsan Adeli, Russ Altman, Simran Arora, Sydney von Arx, Michael S Bernstein, Jeannette Bohg, Antoine Bosselut, Emma Brunskill, et al. On the opportunities and risks of foundation models. arXiv preprint arXiv:2108.07258, 2021.
-[548]Y Nie, Y Kong, X Dong, et al. A survey of large language models for financial applications: Progress, prospects and challenges. arXiv preprint arXiv:2406.11903, 2024.
-[549]E Brynjolfsson and A McAfee. The second machine age: Work, progress, and prosperity in a time of brilliant technolo- gies. WW Norton & company, 2014.
-[550]Wenhua Xu and Yuanqi Feng. Does fintech promote green economic growth in chinese cities? In 2024 7th International Conference on Humanities Education and Social Sciences (ICHESS 2024), pages 942-948. Atlantis Press, 2024.
-[551]AM Qatawneh, A Lutfi, and T Al Barrak. Effect of artificial intelligence (ai) on financial decisionmaking: Mediating role of financial technologies (fin-tech). HighTech and Innovation Journal, 5(3):759-773, 2024.
-[552]J Kriebel and L Stitz. Credit default prediction from user-generated text in peer-to-peer lending using deep learning. European Journal of Operational Research, 302(1):309-323, 2022.
-[553]DW Arner, DA Zetzsche, RP Buckley, et al. Fintech and regtech: Enabling innovation while preserving financial stability. Georgetown Journal of International Affairs, pages 47-58, 2017.
-[554]D Mhlanga. Financial inclusion in emerging economies: The application of machine learning and artificial intelligence in credit risk assessment. International journal of financial studies, 9(3):39, 2021.
-[555]J Duarte, S Siegel, and L Young. Trust and credit: The role of appearance in peer-to-peer lending. The Review of Financial Studies, 25(8):2455-2484, 2012.
-[556]Chunxiao Li, Hongchang Wang, Songtao Jiang, and Bin Gu. The effect of ai-enabled credit scoring on financial inclusion: Evidence from an underserved population of over one million. MIS Quarterly, 48(4), 2024.
-[557]T Chen and C Guestrin. Xgboost: A scalable tree boosting system. In Proceedings of the 22nd acm sigkdd international conference on knowledge discovery and data mining, pages 785-794, 2016.
-[558]J Delgadillo, J Kinyua, and C Mutigwe. Finsosent: Advancing financial market sentiment analysis through pretrained large language models. Big Data and Cognitive Computing, 8(8):87, 2024.
-[559]B Li and C Duan. Construction and optimization of macroeconomic data forecasting model based on machine learning. Journal of Electrical Systems, 20(3s):436-447, 2024.
-[560]S Takahashi, Y Chen, and K Tanaka-Ishii. Modeling financial time-series with generative adversarial networks. Physica A: Statistical Mechanics and its Applications, 527:121261, 2019.
-[561]P Hajek and R Henriques. Mining corporate annual reports for intelligent detection of financial statement fraud-a comparative study of machine learning methods. Knowledge-Based Systems, 128:139-152, 2017.
-[562]R Avacharmal. Leveraging supervised machine learning algorithms for enhanced anomaly detection in anti-money laundering (aml) transaction monitoring systems: A comparative analysis of performance and explainability. African Journal of Artificial Intelligence and Sustainable Development, 1(2):68-85, 2021.
-[563]F Teichmann, S Boticiu, and BS Sergi. Regtech-potential benefits and challenges for businesses. Technology in Society, 72:102150, 2023.
-[564]D Tapscott and A Tapscott. Blockchain Revolution: How the Technology Behind Bitcoin and Other Cryptocurrencies is Changing the World. Portfolio, 2017.
-[565]LW Cong, Z He, and J Li. Decentralized mining in centralized pools. The Review of Financial Studies, 34(3):1191-1235, 2021.
-[566]Q Yang, Y Liu, T Chen, et al. Federated machine learning: Concept and applications. ACM Transactions on Intelligent Systems and Technology (TIST), 10(2):1-19, 2019.
-[567]BD Mittelstadt, P Allo, M Taddeo, et al. The ethics of algorithms: Mapping the debate. Big Data & Society, 3(2):2053951716679679, 2016.
-[568]Luciano Floridi, Josh Cowls, Monica Beltrametti, Raja Chatila, Patrice Chazerand, Virginia
+[325] Xiao Xue, Xiangning Yu, and Fei-Yue Wang. Chatgpt chats on computational experiments: From interactive intelli- gence to imaginative intelligence for design of artificial societies and optimization of foundational models. IEEE/CAA Journal of Automatica Sinica, 10(6):1357-1360, 2023.
 
-Dignum, Christoph Luetge, Robert Madelin, Ugo Pagallo, Francesca Rossi, et al. Ai4people-an ethical framework for a good ai society: opportu- nities, risks, principles, and recommendations. Minds and machines, 28:689-707, 2018.
-[569]MT Ribeiro, S Singh, and C Guestrin. Why should i trust you? explaining the predictions of any classifier. In Proceedings of the 22nd ACM SIGKDD international conference on knowledge discovery and data mining, pages 1135-1144, 2016.
-[570]Hung Chau, Igor Labutov, Khushboo Thaker, Daqing He, and Peter Brusilovsky. Automatic concept extraction for domain and student modeling in adaptive textbooks. International Journal of Artificial Intelligence in Education, 31:820-846, 2021.
-[571]Qingtang Liu, Xinxin Zheng, Yaoyao Liu, Linjing Wu, Si Zhang, Ni Zhang, and Qiyun Wang. Exploration of the characteristics of teachers' multimodal behaviours in problem-oriented teaching activities with different response levels. British Journal of Educational Technology, 55(1):181207, 2024.
-[572]Tunde Toyese Oyedokun. Assistive technology and accessibility tools in enhancing adaptive education. In Advancing Adaptive Education: Technological Innovations for Disability Support, pages 125-162. IGI Global Scientific Publish- ing, 2025.
-[573]Wadim Strielkowski, Veronika Grebennikova, Alexander Lisovskiy, Guzalbegim Rakhimova, and Tatiana Vasileva. Ai-driven adaptive learning for sustainable educational transformation. Sustainable Development, 2024.
-[574]Tiffanie Zaugg. Future innovations for assistive technology and universal design for learning. Assistive Technology and Universal Design for Learning: Toolkits for Inclusive Instruction, page 275, 2024.
-[575]Ismail Celik, Muhterem Dindar, Hanni Muukkonen, and Sanna Ja"rvela". The promises and challenges of artificial intelligence for teachers: A systematic review of research. TechTrends, 66(4):616-630, 2022.
-[576]Hanrong Zhang, Jingyuan Huang, Kai Mei, Yifei Yao, Zhenting Wang, Chenlu Zhan, Hongwei Wang, and Yongfeng Zhang. Agent security bench (ASB): formalizing and benchmarking attacks and defenses in llm-based agents. CoRR, abs/2410.02644, 2024.
-[577]Matthieu Meeus, Shubham Jain, Marek Rei, and Yves-Alexandre de Montjoye. Did the neurons read your book? document-level membership inference for large language models. In Davide Balzarotti and Wenyuan Xu, editors, 33rd USENIX Security Symposium, USENIX Security 2024, Philadelphia, PA, USA, August 14-16, 2024. USENIX Association, 2024.
-[578]Nishant Vishwamitra, Keyan Guo, Farhan Tajwar Romit, Isabelle Ondracek, Long Cheng, Ziming Zhao, and Hongxin Hu. Moderating new waves of online hate with chain-of-thought reasoning in large language models. In IEEE Sympo- sium on Security and Privacy, SP 2024, San Francisco, CA, USA, May 19-23, 2024, pages 788-806. IEEE, 2024.
-[579]Xueqi Cheng, Wei Chen, Huawei Shen, Shiguang Shan, Xilin Chen, and Guojie Li. Intelligent algorithm safety: Concepts, scientific problems and prospects. Bulletin of Chinese Academy of
+[326] Yong Zhao, Zhengqiu Zhu, Bin Chen, Sihang Qiu, Jincai Huang, Xin Lu, Weiyi Yang, Chuan Ai, Kuihua Huang, Cheng He, et al. Towards parallel intelligence: An interdisciplinary solution for complex systems. The Innovation, 2023.
 
-Sciences, 39, 2024.
-[580]Fa'bio Perez and Ian Ribeiro. Ignore previous prompt: Attack techniques for language models. CoRR, abs/2211.09527, 2022.
-[581]Xuchen Suo. Signed-prompt: A new approach to prevent prompt injection attacks against llmintegrated applications. CoRR, abs/2401.07612, 2024.
-[582]Yupei Liu, Yuqi Jia, Runpeng Geng, Jinyuan Jia, and Neil Zhenqiang Gong. Formalizing and benchmarking prompt injection attacks and defenses. In Davide Balzarotti and Wenyuan Xu, editors, 33rd USENIX Security Symposium, USENIX Security 2024, Philadelphia, PA, USA, August 14-16, 2024. USENIX Association, 2024.
-[583]Sahar Abdelnabi, Kai Greshake, Shailesh Mishra, Christoph Endres, Thorsten Holz, and Mario Fritz. Not what you've signed up for: Compromising real-world llm-integrated applications with indirect prompt injection. In Maura Pin- tor, Xinyun Chen, and Florian Trame`r, editors, Proceedings of the 16th ACM Workshop on Artificial Intelligence and Security, AISec 2023, Copenhagen, Denmark, 30 November 2023, pages 79-90. ACM, 2023.
-[584]Jingwei Yi, Yueqi Xie, Bin Zhu, Keegan Hines, Emre Kiciman, Guangzhong Sun, Xing Xie, and Fangzhao Wu. Bench- marking and defending against indirect prompt injection attacks on large language models. CoRR, abs/2312.14197, 2023.
-[585]Chong Xiang, Tong Wu, Zexuan Zhong, David A. Wagner, Danqi Chen, and Prateek Mittal. Certifiably robust RAG against retrieval corruption. CoRR, abs/2405.15556, 2024.
-[586]Zhaorun Chen, Zhen Xiang, Chaowei Xiao, Dawn Song, and Bo Li. Agentpoison: Red-teaming LLM agents via poisoning memory or knowledge bases. CoRR, abs/2407.12784, 2024.
-[587]Yifei Wang, Dizhan Xue, Shengjie Zhang, and Shengsheng Qian. Badagent: Inserting and activating backdoor attacks in LLM agents. In Lun-Wei Ku, Andre Martins, and Vivek Srikumar, editors, Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers), ACL 2024, Bangkok, Thailand, August 11-16, 2024, pages 9811-9827. Association for Computational Linguistics, 2024.
-[588]Wenkai Yang, Xiaohan Bi, Yankai Lin, Sishuo Chen, Jie Zhou, and Xu Sun. Watch out for your agents! investigating backdoor threats to llm-based agents. CoRR, abs/2402.11208, 2024.
-[589]Tian Dong, Minhui Xue, Guoxing Chen, Rayne Holland, Yan Meng, Shaofeng Li, Zhen Liu, and Haojin Zhu. The philosopher's stone: Trojaning plugins of large language models. In Network and Distributed System Security Sympo- sium, NDSS 2025. The Internet Society, 2025.
-[590]Evan Hubinger, Carson Denison, Jesse Mu, Mike Lambert, Meg Tong, Monte MacDiarmid, Tamera Lanham, Daniel M. Ziegler, Tim Maxwell, Newton Cheng, Adam S. Jermyn, Amanda Askell, Ansh Radhakrishnan, Cem Anil, David Duvenaud, Deep Ganguli, Fazl Barez, Jack Clark, Kamal Ndousse, Kshitij Sachan, Michael Sellitto, Mrinank Sharma, Nova DasSarma, Roger Grosse, Shauna Kravec, Yuntao Bai, Zachary Witten, Marina Favaro, Jan Brauner, Holden Karnofsky, Paul F. Christiano, Samuel R. Bowman, Logan Graham, Jared Kaplan, So"ren Mindermann, Ryan Greenblatt, Buck Shlegeris, Nicholas Schiefer, and Ethan Perez. Sleeper
-agents: Training deceptive llms that persist through safety training. CoRR, abs/2401.05566, 2024.
-[591]Zhiyuan Yu, Xiaogeng Liu, Shunning Liang, Zach Cameron, Chaowei Xiao, and Ning Zhang. Don't listen to me: Understanding and exploring jailbreak prompts of large language models. In Davide Balzarotti and Wenyuan Xu, edi- tors, 33rd USENIX Security Symposium, USENIX Security 2024, Philadelphia, PA, USA, August 14-16, 2024. USENIX Association, 2024.
-[592]Jiahao Yu, Xingwei Lin, Zheng Yu, and Xinyu Xing. Llm-fuzzer: Scaling assessment of large language model jail- breaks. In Davide Balzarotti and Wenyuan Xu, editors, 33rd USENIX Security Symposium, USENIX Security 2024, Philadelphia, PA, USA, August 14-16, 2024. USENIX Association, 2024.
-[593]Yi Liu, Gelei Deng, Zhengzi Xu, Yuekang Li, Yaowen Zheng, Ying Zhang, Lida Zhao, Tianwei Zhang, and Yang Liu. Jailbreaking chatgpt via prompt engineering: An empirical study. CoRR, abs/2305.13860, 2023.
-[594]Alexander Wei, Nika Haghtalab, and Jacob Steinhardt. Jailbroken: How does LLM safety training fail? In Alice Oh, Tristan Naumann, Amir Globerson, Kate Saenko, Moritz Hardt, and Sergey Levine, editors, Advances in Neural Information Processing Systems 36: Annual Conference on Neural Information Processing Systems 2023, NeurIPS 2023, New Orleans, LA, USA, December 10-16, 2023, 2023.
-[595]Zhuo Zhang, Guangyu Shen, Guanhong Tao, Siyuan Cheng, and Xiangyu Zhang. On large language models' resilience to coercive interrogation. In IEEE Symposium on Security and Privacy, SP 2024, San Francisco, CA, USA, May 19-23, 2024, pages 826-844. IEEE, 2024.
-[596]Jiashu Xu, Mingyu Derek Ma, Fei Wang, Chaowei Xiao, and Muhao Chen. Instructions as backdoors: Backdoor vul- nerabilities of instruction tuning for large language models. In Kevin Duh, Helena Go'mez-Adorno, and Steven Bethard, editors, Proceedings of the 2024 Conference of the North American Chapter of the Association for Computational Lin- guistics: Human Language Technologies (Volume 1: Long Papers), NAACL 2024, Mexico City, Mexico, June 1621, 2024, pages 3111-3126. Association for Computational Linguistics, 2024.
-[597]Shuai Zhao, Jinming Wen, Anh Tuan Luu, Junbo Zhao, and Jie Fu. Prompt as triggers for backdoor attack: Examining the vulnerability in language models. In Houda Bouamor, Juan Pino, and Kalika Bali, editors, Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing, EMNLP 2023, Singapore, December 6-10, 2023, pages 12303-12317. Association for Computational Linguistics, 2023.
-[598]Xiangrui Cai, Haidong Xu, Sihan Xu, Ying Zhang, and Xiaojie Yuan. Badprompt: Backdoor attacks on continuous prompts. In Sanmi Koyejo, S. Mohamed, A. Agarwal, Danielle Belgrave, K. Cho, and A. Oh, editors, Advances in Neural Information Processing Systems 35: Annual Conference on Neural Information Processing Systems 2022, NeurIPS 2022, New Orleans, LA, USA, November 28 - December 9, 2022, 2022.
-[599]Yanzhou Li, Tianlin Li, Kangjie Chen, Jian Zhang, Shangqing Liu, Wenhan Wang, Tianwei Zhang, and Yang Liu. Badedit: Backdooring large language models by model editing. In The Twelfth
+[327] Tianyuan Dai, Josiah Wong, Yunfan Jiang, Chen Wang, Cem Gokmen, Ruohan Zhang, Jiajun Wu, and Li Fei-Fei. Automated creation of digital cousins for robust policy learning. arXiv preprint arXiv:2410.07408, 2024.
 
-International Conference on Learning Representations, ICLR 2024, Vienna, Austria, May 7-11, 2024. OpenReview.net, 2024.
-[600]Neel Jain, Avi Schwarzschild, Yuxin Wen, Gowthami Somepalli, John Kirchenbauer, Ping-yeh Chiang, Micah Gold- blum, Aniruddha Saha, Jonas Geiping, and Tom Goldstein. Baseline defenses for adversarial attacks against aligned language models. CoRR, abs/2309.00614, 2023.
-[601]Xinxin Fan, Mengfan Li, Jia Zhou, Quanliang Jing, Chi Lin, Yunfeng Lu, and Jingping Bi. GCSA: A new adversarial example-generating scheme toward black-box adversarial attacks. IEEE Trans. Consumer Electron., 70(1):2038-2048, 2024.
-[602]Baoli Wang, Xinxin Fan, Quanliang Jing, Yueyang Su, Jingwei Li, and Jingping Bi. GTAT: adversarial training with generated triplets. In International Joint Conference on Neural Networks, IJCNN 2022, Padua, Italy, July 18-23, 2022, pages 1-8. IEEE, 2022.
-[603]Quanliang Jing, Shuo Liu, Xinxin Fan, Jingwei Li, Di Yao, Baoli Wang, and Jingping Bi. Can adversarial training benefit trajectory representation?: An investigation on robustness for trajectory similarity computation. In Mohammad Al Hasan and Li Xiong, editors, Proceedings of the 31st ACM International Conference on Information & Knowledge Management, Atlanta, GA, USA, October 17-21, 2022, pages 905-914. ACM, 2022.
-[604]Tong Liu, Yingjie Zhang, Zhe Zhao, Yinpeng Dong, Guozhu Meng, and Kai Chen. Making them ask and answer: Jailbreaking large language models in few queries via disguise and reconstruction. In Davide Balzarotti and Wenyuan Xu, editors, 33rd USENIX Security Symposium, USENIX Security 2024, Philadelphia, PA, USA, August 14-16, 2024. USENIX Association, 2024.
-[605]Ziwei Ji, Nayeon Lee, Rita Frieske, Tiezheng Yu, Dan Su, Yan Xu, Etsuko Ishii, Yejin Bang, Andrea Madotto, and Pascale Fung. Survey of hallucination in natural language generation. ACM Comput. Surv., 55(12):248:1-248:38, 2023.
-[606]Yue Zhang, Yafu Li, Leyang Cui, Deng Cai, Lemao Liu, Tingchen Fu, Xinting Huang, Enbo Zhao, Yu Zhang, Yulong Chen, Longyue Wang, Anh Tuan Luu, Wei Bi, Freda Shi, and Shuming Shi. Siren's song in the AI ocean: A survey on hallucination in large language models. CoRR, abs/2309.01219, 2023.
-[607]Nelson F. Liu, Kevin Lin, John Hewitt, Ashwin Paranjape, Michele Bevilacqua, Fabio Petroni, and Percy Liang. Lost in the middle: How language models use long contexts. Trans. Assoc. Comput. Linguistics, 12:157-173, 2024.
-[608]Guilherme Penedo, Quentin Malartic, Daniel Hesslow, Ruxandra Cojocaru, Hamza Alobeidli, Alessandro Cappelli, Baptiste Pannier, Ebtesam Almazrouei, and Julien Launay. The refinedweb dataset for falcon LLM: outperforming curated corpora with web data only. In Alice Oh, Tristan Naumann, Amir Globerson, Kate Saenko, Moritz Hardt, and Sergey Levine, editors, Advances in Neural Information Processing Systems 36: Annual Conference on Neural Information Processing Systems 2023, NeurIPS 2023, New Orleans, LA, USA, December 10-16, 2023, 2023.
-[609]Shaobo Li, Xiaoguang Li, Lifeng Shang, Zhenhua Dong, Chengjie Sun, Bingquan Liu, Zhenzhou Ji, Xin Jiang, and Qun Liu. How pre-trained language models capture factual knowledge? A causal-
-inspired analysis. In Smaranda Muresan, Preslav Nakov, and Aline Villavicencio, editors, Findings of the Association for Computational Linguistics: ACL 2022, Dublin, Ireland, May 22-27, 2022, pages 1720-1732. Association for Computational Linguistics, 2022.
-[610]Nick McKenna, Tianyi Li, Liang Cheng, Mohammad Javad Hosseini, Mark Johnson, and Mark Steedman. Sources of hallucination by large language models on inference tasks. In Houda Bouamor, Juan Pino, and Kalika Bali, editors, Findings of the Association for Computational Linguistics: EMNLP 2023, Singapore, December 6-10, 2023, pages 2758-2774. Association for Computational Linguistics, 2023.
-[611]Saurav Kadavath, Tom Conerly, Amanda Askell, Tom Henighan, Dawn Drain, Ethan Perez, Nicholas Schiefer, Zac Hatfield-Dodds, Nova DasSarma, Eli Tran-Johnson, Scott Johnston, Sheer El Showk, Andy Jones, Nelson Elhage, Tristan Hume, Anna Chen, Yuntao Bai, Sam Bowman, Stanislav Fort, Deep Ganguli, Danny Hernandez, Josh Jacobson, Jackson Kernion, Shauna Kravec, Liane Lovitt, Kamal Ndousse, Catherine Olsson, Sam Ringer, Dario Amodei, Tom Brown, Jack Clark, Nicholas Joseph, Ben Mann, Sam McCandlish, Chris Olah, and Jared Kaplan. Language models (mostly) know what they know. CoRR, abs/2207.05221, 2022.
-[612]Zhangyue Yin, Qiushi Sun, Qipeng Guo, Jiawen Wu, Xipeng Qiu, and Xuanjing Huang. Do large language models know what they don't know? In Anna Rogers, Jordan L. Boyd-Graber, and Naoaki Okazaki, editors, Findings of the As- sociation for Computational Linguistics: ACL 2023, Toronto, Canada, July 9-14, 2023, pages 8653-8665. Association for Computational Linguistics, 2023.
-[613]Claire Gardent, Anastasia Shimorina, Shashi Narayan, and Laura Perez-Beltrachini. Creating training corpora for NLG micro-planners. In Regina Barzilay and Min-Yen Kan, editors, Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics, ACL 2017, Vancouver, Canada, July 30 - August 4, Volume 1: Long Papers, pages 179-188. Association for Computational Linguistics, 2017.
-[614]Stephanie Lin, Jacob Hilton, and Owain Evans. Truthfulqa: Measuring how models mimic human falsehoods. In Smaranda Muresan, Preslav Nakov, and Aline Villavicencio, editors, Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers), ACL 2022, Dublin, Ireland, May 22-27, 2022, pages 3214-3252. Association for Computational Linguistics, 2022.
-[615]Sina Zarrieß, Henrik Voigt, and Simeon Schu"z. Decoding methods in neural language generation: A survey. Inf., 12(9):355, 2021.
-[616]Nayeon Lee, Wei Ping, Peng Xu, Mostofa Patwary, Pascale Fung, Mohammad Shoeybi, and Bryan Catanzaro. Factu- ality enhanced language models for open-ended text generation. In Sanmi Koyejo, S. Mohamed, A. Agarwal, Danielle Belgrave, K. Cho, and A. Oh, editors, Advances in Neural Information Processing Systems 35: Annual Conference on Neural Information Processing Systems 2022, NeurIPS 2022, New Orleans, LA, USA, November 28 - December 9, 2022, 2022.
-[617]Shehzaad Dhuliawala, Mojtaba Komeili, Jing Xu, Roberta Raileanu, Xian Li, Asli Celikyilmaz,
-and Jason Weston. Chain-of-verification reduces hallucination in large language models. In LunWei Ku, Andre Martins, and Vivek Sriku- mar, editors, Findings of the Association for Computational Linguistics, ACL 2024, Bangkok, Thailand and virtual meeting, August 11-16, 2024, pages 3563-3578. Association for Computational Linguistics, 2024.
-[618]Kenneth Li, Oam Patel, Fernanda B. Vie'gas, Hanspeter Pfister, and Martin Wattenberg. Inferencetime intervention: Eliciting truthful answers from a language model. In Alice Oh, Tristan Naumann, Amir Globerson, Kate Saenko, Moritz Hardt, and Sergey Levine, editors, Advances in Neural Information Processing Systems 36: Annual Conference on Neural Information Processing Systems 2023, NeurIPS 2023, New Orleans, LA, USA, December 10-16, 2023, 2023.
-[619]Miao Xiong, Zhiyuan Hu, Xinyang Lu, YIFEI LI, Jie Fu, Junxian He, and Bryan Hooi. Can llms express their uncer- tainty? an empirical evaluation of confidence elicitation in llms. In The Twelfth International Conference on Learning Representations, 2024.
-[620]Reza Shokri, Marco Stronati, Congzheng Song, and Vitaly Shmatikov. Membership inference attacks against machine learning models. In 2017 IEEE symposium on security and privacy (SP), pages 3-18, 2017.
-[621]Nicholas Carlini, Florian Trame`r, Eric Wallace, Matthew Jagielski, Ariel Herbert-Voss, Katherine Lee, Adam Roberts, Tom B. Brown, Dawn Song, Ú lfar Erlingsson, Alina Oprea, and Colin Raffel. Extracting training data from large language models. In Michael D. Bailey and Rachel Greenstadt, editors, 30th USENIX Security Symposium, USENIX Security 2021, August 11-13, 2021, pages 2633-2650. USENIX Association, 2021.
-[622]Justus Mattern, Fatemehsadat Mireshghallah, Zhijing Jin, Bernhard Scho"lkopf, Mrinmaya Sachan, and Taylor Berg- Kirkpatrick. Membership inference attacks against language models via neighbourhood comparison. In Anna Rogers, Jordan L. Boyd-Graber, and Naoaki Okazaki, editors, Findings of the Association for Computational Linguistics: ACL 2023, Toronto, Canada, July 914, 2023, pages 11330-11343. Association for Computational Linguistics, 2023.
-[623]Boxin Wang, Weixin Chen, Hengzhi Pei, Chulin Xie, Mintong Kang, Chenhui Zhang, Chejian Xu, Zidi Xiong, Ritik Dutta, Rylan Schaeffer, Sang T. Truong, Simran Arora, Mantas Mazeika, Dan Hendrycks, Zinan Lin, Yu Cheng, Sanmi Koyejo, Dawn Song, and Bo Li. Decodingtrust: A comprehensive assessment of trustworthiness in GPT models. In Alice Oh, Tristan Naumann, Amir Globerson, Kate Saenko, Moritz Hardt, and Sergey Levine, editors, Advances in Neural Information Processing Systems 36: Annual Conference on Neural Information Processing Systems 2023, NeurIPS 2023, New Orleans, LA, USA, December 10-16, 2023, 2023.
-[624]Dan Hendrycks, Collin Burns, Steven Basart, Andrew Critch, Jerry Li, Dawn Song, and Jacob Steinhardt. Aligning AI with shared human values. In 9th International Conference on Learning Representations, ICLR 2021, Virtual Event, Austria, May 3-7, 2021. OpenReview.net, 2021.
-[625]Yi Liu, Gelei Deng, Zhengzi Xu, Yuekang Li, Yaowen Zheng, Ying Zhang, Lida Zhao, Tianwei Zhang, and Yang Liu. Jailbreaking chatgpt via prompt engineering: An empirical study. CoRR, abs/2305.13860, 2023.
-[626]Zhijing Jin, Sydney Levine, Fernando Gonzalez Adauto, Ojasv Kamal, Maarten Sap, Mrinmaya Sachan, Rada Mihalcea, Josh Tenenbaum, and Bernhard Scho"lkopf. When to make exceptions: Exploring language models as accounts of human moral judgment. In Sanmi Koyejo, S. Mohamed, A. Agarwal, Danielle Belgrave, K. Cho, and A. Oh, editors, Advances in Neural Information Processing Systems 35: Annual Conference on Neural Information Processing Systems 2022, NeurIPS 2022, New Orleans, LA, USA, November 28 - December 9, 2022, 2022.
-[627]Kexin Huang, Xiangyang Liu, Qianyu Guo, Tianxiang Sun, Jiawei Sun, Yaru Wang, Zeyang Zhou, Yixu Wang, Yan Teng, Xipeng Qiu, Yingchun Wang, and Dahua Lin. Flames: Benchmarking value alignment of llms in chinese. In Kevin Duh, Helena Go'mez-Adorno, and Steven Bethard, editors, Proceedings of the 2024 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies (Volume 1: Long Papers), NAACL 2024, Mexico City, Mexico, June 16-21, 2024, pages 4551-4591. Association for Computational Linguistics, 2024.
-[628]Jingnan Zheng, Han Wang, An Zhang, Tai D. Nguyen, Jun Sun, and Tat-Seng Chua. Ali-agent: Assessing llms’ align- ment with human values via agent-based evaluation. In Amir Globersons, Lester Mackey, Danielle Belgrave, Angela Fan, Ulrich Paquet, Jakub M. Tomczak, and Cheng Zhang, editors, Advances in Neural Information Processing Sys- tems 38: Annual Conference on Neural Information Processing Systems 2024, NeurIPS 2024, Vancouver, BC, Canada, December 10-15, 2024, 2024.
-[629]Jiyoung Lee, Minwoo Kim, Seungho Kim, Junghwan Kim, Seunghyun Won, Hwaran Lee, and Edward Choi. Kornat: LLM alignment benchmark for korean social values and common knowledge. In Lun-Wei Ku, Andre Martins, and Vivek Srikumar, editors, Findings of the Association for Computational Linguistics, ACL 2024, Bangkok, Thailand and virtual meeting, August 11-16, 2024, pages 11177-11213. Association for Computational Linguistics, 2024.
-[630]Fan Bu, Zheng Wang, Siyi Wang, and Ziyao Liu. An investigation into value misalignment in llmgenerated texts for cultural heritage. CoRR, abs/2501.02039, 2025.
-[631]Soroush Vosoughi, Deb Roy, and Sinan Aral. The spread of true and false news online. science, 359(6380):1146-1151, 2018.
-[632]Yizhou Zhang, Karishma Sharma, Lun Du, and Yan Liu. Toward mitigating misinformation and social media manipu- lation in llm era. In Companion Proceedings of the ACM on Web Conference 2024, pages 1302-1305, 2024.
-[633]Adam DI Kramer, Jamie E Guillory, and Jeffrey T Hancock. Experimental evidence of massivescale emotional conta- gion through social networks. Proceedings of the National Academy of Sciences, 111(24):8788-8790, 2014.
-[634]Karan Singhal, Tao Tu, Juraj Gottweis, Rory Sayres, Ellery Wulczyn, Mohamed Amin, Le Hou, Kevin Clark, Stephen R Pfohl, Heather Cole-Lewis, et al. Toward expert-level medical question answering with large language models. Nature Medicine, pages 1-8, 2025.
-[635]Yikai Chen, Xiujie Huang, Fangjie Yang, Haiming Lin, Haoyu Lin, Zhuoqun Zheng, Qifeng Liang,
+[328] Thomas Allen. Us department of defense modeling and simulation: new approaches and initiatives. Information & Security an International Journal, 23(23):32-48, 2009.
 
-Jinhai Zhang, and Xinxin Li. Performance of chatgpt and bard on the medical licensing examinations varies across different cultures: a comparison study. BMC Medical Education, 24(1):1372, 2024.
-[636]Jiaming Ji, Tianyi Qiu, Boyuan Chen, Borong Zhang, Hantao Lou, Kaile Wang, Yawen Duan, Zhonghao He, Jiayi Zhou, Zhaowei Zhang, et al. Ai alignment: A comprehensive survey. arXiv preprint arXiv:2310.19852, 2023.
-[637]Jing Yao, Xiaoyuan Yi, Shitong Duan, Jindong Wang, Yuzhuo Bai, Muhua Huang, Peng Zhang, Tun Lu, Zhicheng Dou, Maosong Sun, et al. Value compass leaderboard: A platform for fundamental and validated evaluation of llms values. arXiv preprint arXiv:2501.07071, 2025.
-[638]Shalom H Schwartz. An overview of the schwartz theory of basic values. Online readings in Psychology and Culture, 2(1):11, 2012.
+[329] Xinyi Mou, Xuanwen Ding, Qi He, Liang Wang, Jingcong Liang, Xinnong Zhang, Libo Sun, Jiayu Lin, Jie Zhou, Xuanjing Huang, et al. From individual to society: A survey on social simulation driven by large language model-based agents. arXiv preprint arXiv:2412.03563, 2024.
+
+[330] Alexander Lavin, David Krakauer, Hector Zenil, Justin Gottschlich, Tim Mattson, Johann Brehmer, Anima Anandku- mar, Sanjay Choudry, Kamil Rocki, Atılım Gu"nes, Baydin, et al. Simulation intelligence: Towards a new generation of scientific methods. arXiv preprint arXiv:2112.03235, 2021.
+
+[331] Lin Wu, Lizhe Wang, Nan Li, Tao Sun, Tangwen Qian, Yu Jiang, Fei Wang, and Yongjun Xu. Modeling the covid-19 outbreak in china through multi-source information fusion. The Innovation, 1(2), 2020.
+
+[332] Zhengqiu Zhu, Bin Chen, Hailiang Chen, Sihang Qiu, Changjun Fan, Yong Zhao, Runkang Guo, Chuan Ai, Zhong Liu, Zhiming Zhao, et al. Strategy evaluation and optimization with an artificial society toward a pareto optimum. The Innovation, 3(5), 2022.
+
+[333] Bin Chen, Runkang Guo, Zhengqiu Zhu, Chuan Ai, and Xiaogang Qiu. Simulation of covid-19 outbreak in nanjing lukou airport based on complex dynamical networks. Complex System Modeling and Simulation, 3(1):71-82, 2023.
+
+[334] Aleksei Petrenko, Erik Wijmans, Brennan Shacklett, and Vladlen Koltun. Megaverse: Simulating embodied agents at one million experiences per second. In International Conference on Machine Learning, pages 8556-8566. PMLR, 2021.
+
+[335] Yandan Yang, Baoxiong Jia, Peiyuan Zhi, and Siyuan Huang. Physcene: Physically interactable 3d scene synthesis for embodied ai. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 16262-16272, 2024.
+
+[336] Marcelo Jacinto, Joa~o Pinto, Jay Patrikar, John Keller, Rita Cunha, Sebastian Scherer, and António Pascoal. Pega- sus simulator: An isaac sim framework for multiple aerial vehicles simulation. In 2024 International Conference on Unmanned Aircraft Systems (ICUAS), pages 917922. IEEE, 2024.
+
+[337] Kanishka Rao, Chris Harris, Alex Irpan, Sergey Levine, Julian Ibarz, and Mohi Khansari. Rlcyclegan: Reinforce- ment learning aware simulation-to-real. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 11157-11166, 2020.
+
+[338] Kaiqu Liang, Haimin Hu, Ryan Liu, Thomas L Griffiths, and Jaime Ferna'ndez Fisac. Rlhs: Mitigating misalignment in rlhf with hindsight simulation. arXiv preprint arXiv:2501.08617, 2025.
+
+[339] Jason Wei, Yi Tay, Rishi Bommasani, Colin Raffel, Barret Zoph, Sebastian Borgeaud, Dani Yogatama, Maarten Bosma, Denny Zhou, Donald Metzler, et al. Emergent abilities of large language models. arXiv preprint arXiv:2206.07682, 2022.
+
+[340] Anthony Brohan, Noah Brown, Justice Carbajal, Yevgen Chebotar, Joseph Dabis, Chelsea Finn, Keerthana Gopalakr- ishnan, Karol Hausman, Alex Herzog, Jasmine Hsu, et al. Rt-1: Robotics transformer for real-world control at scale. arXiv preprint arXiv:2212.06817, 2022.
+
+[341] Trevor Strohman, Donald Metzler, Howard Turtle, and W Bruce Croft. Indri: A language modelbased search engine for complex queries. In Proceedings of the international conference on intelligent analysis, pages 2-6. Washington, DC., 2005.
+
+[342] David Silver, Thomas Hubert, Julian Schrittwieser, Ioannis Antonoglou, Matthew Lai, Arthur Guez, Marc Lanctot, Laurent Sifre, Dharshan Kumaran, Thore Graepel, et al. Mastering chess and shogi by self-play with a general rein- forcement learning algorithm. arXiv preprint arXiv:1712.01815, 2017.
+
+[343] Gerald Tesauro. Td-gammon, a self-teaching backgammon program, achieves master-level play. Neural computation, 6(2):215-219, 1994.
+
+[344] Dmitry Kalashnikov, Alex Irpan, Peter Pastor, Julian Ibarz, Alexander Herzog, Eric Jang, Deirdre Quillen, Ethan Holly, Mrinal Kalakrishnan, Vincent Vanhoucke, et al. Scalable deep reinforcement learning for vision-based robotic manip- ulation. In Conference on robot learning, pages 651-673. PMLR, 2018.
+
+[345] Ilge Akkaya, Marcin Andrychowicz, Maciek Chociej, Mateusz Litwin, Bob McGrew, Arthur Petron, Alex Paino, Matthias Plappert, Glenn Powell, Raphael Ribas, et al. Solving rubik's cube with a robot hand. arXiv preprint arXiv:1910.07113, 2019.
+
+[346] Jiankai Sun, De-An Huang, Bo Lu, Yun-Hui Liu, Bolei Zhou, and Animesh Garg. Plate: Visuallygrounded planning with transformers in procedural tasks. IEEE Robotics and Automation Letters, 7(2):4924-4930, 2022.
+
+[347] Wenjie Liu, Jian Sun, Gang Wang, Francesco Bullo, and Jie Chen. Data-driven resilient predictive control under denial- of-service. IEEE Transactions on Automatic Control, 68(8):4722-4737, August 2023.
+
+[348] Dingyuan Zhang, Dingkang Liang, Hongcheng Yang, Zhikang Zou, Xiaoqing Ye, Zhe Liu, and Xiang Bai. Sam3d: Zero-shot 3d object detection via segment anything model. arXiv preprint arXiv:2306.02245, 2023.
+
+[349] Yining Hong, Haoyu Zhen, Peihao Chen, Shuhong Zheng, Yilun Du, Zhenfang Chen, and Chuang Gan. 3d-llm: Injecting the 3d world into large language models. Advances in Neural Information Processing Systems, 36:20482-20494, 2023.
+
+[350] William Chen, Siyi Hu, Rajat Talak, and Luca Carlone. Leveraging large language models for robot 3d scene under- standing. arXiv preprint arXiv:2209.05629, 2022.
+
+[351] Weipu Zhang, Gang Wang, Jian Sun, Yetian Yuan, and Gao Huang. STORM: Efficient stochastic transformer based world models for reinforcement learning. Advances in Neural Information Processing Systems, 36, 2024.
+
+[352] Zhaohan Feng, Jie Chen, Wei Xiao, Jian Sun, Bin Xin, and Gang Wang. Learning hybrid policies for MPC with application to drone flight in unknown dynamic environments. Unmanned Systems, 12(02):429-441, 2024.
+
+[353] Ziyu Zhou, Gang Wang, Jian Sun, Jikai Wang, and Jie Chen. Efficient and robust time-optimal trajectory planning and control for agile quadrotor flight. IEEE Robotics and Automation Letters, 8(12):7913-7920, December 2023.
+
+[354] Yetian Yuan, Shuze Wang, Yunpeng Mei, Weipu Zhang, Jian Sun, and Gang Wang. Improving world models for robot arm grasping with backward dynamics prediction. International Journal of Machine Learning and Cybernetics, 15:3879-3891, April 2024.
+
+[355] Yitao Jiang, Luyang Zhao, Alberto Quattrini Li, Muhao Chen, and Devin Balkcom. Exploring spontaneous social interaction swarm robotics powered by large language models.
+
+[356] Zhao Mandi, Homanga Bharadhwaj, Vincent Moens, Shuran Song, Aravind Rajeswaran, and Vikash Kumar. Cacti: A framework for scalable multi-task multi-scene visual imitation learning. arXiv preprint arXiv:2212.05711, 2022.
+
+[357] Norman Di Palo, Arunkumar Byravan, Leonard Hasenclever, Markus Wulfmeier, Nicolas Heess, and Martin Riedmiller. Towards a unified agent with foundation models. arXiv preprint arXiv:2307.09668, 2023.
+
+[358] Minae Kwon, Sang Michael Xie, Kalesha Bullard, and Dorsa Sadigh. Reward design with language models. arXiv preprint arXiv:2303.00001, 2023.
+
+[359] Yifan Du, Junyi Li, Tianyi Tang, Wayne Xin Zhao, and Ji-Rong Wen. Zero-shot visual question answering with language model feedback. arXiv preprint arXiv:2305.17006, 2023.
+
+[360] Ramdane Tami, Boussaad Soualmi, Abdelkrim Doufene, Javier Ibanez, and Justin Dauwels. Machine learning method to ensure robust decision-making of avs. In 2019 IEEE Intelligent Transportation Systems Conference (ITSC), pages 1217-1222. IEEE, 2019.
+
+[361] Shengxi Gui, Shuang Song, Rongjun Qin, and Yang Tang. Remote sensing object detection in the deep learning era—a review. Remote Sensing, 16(2):327, 2024.
+
+[362] Ranganath R Navalgund, V Jayaraman, and PS Roy. Remote sensing applications: An overview. current science, pages 1747-1766, 2007.
+
+[363] Philipe Dias, Abhishek Potnis, Sreelekha Guggilam, Lexie Yang, Aristeidis Tsaris, Henry Medeiros, and Dalton Lunga. An agenda for multimodal foundation models for earth observation. In IGARSS 2023-2023 IEEE International Geo- science and Remote Sensing Symposium, pages 1237-1240. IEEE, 2023.
+
+[364] Yuchi Ma, Shuo Chen, Stefano Ermon, and David B Lobell. Transfer learning in environmental remote sensing. Remote Sensing of Environment, 301:113924, 2024.
+
+[365] Yezhen Cong, Samar Khanna, Chenlin Meng, Patrick Liu, Erik Rozi, Yutong He, Marshall Burke, David Lobell, and Stefano Ermon. Satmae: Pre-training transformers for temporal and multispectral satellite imagery. Advances in Neural Information Processing Systems, 35:197-211, 2022.
+
+[366] Colorado J Reed, Ritwik Gupta, Shufan Li, Sarah Brockman, Christopher Funk, Brian Clipp, Kurt Keutzer, Salvatore Candido, Matt Uyttendaele, and Trevor Darrell. Scale-mae: A scale-aware masked autoencoder for multiscale geospatial representation learning. In Proceedings of the IEEE/CVF International Conference on Computer Vision, pages 4088-4099, 2023.
+
+[367] Xinye Wanyan, Sachith Seneviratne, Shuchang Shen, and Michael Kirley. Extending global-local view alignment for self-supervised learning with remote sensing imagery. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 2443-2453, 2024.
+
+[368] Wade A. Smith and Robert B. Randall. Rolling element bearing diagnostics using the case western reserve university data: A benchmark study. Mechanical Systems and Signal Processing, 64-65:100-131, 2015.
+
+[369] Yuma Koizumi, Shoichiro Saito, Hisashi Uematsu, Noboru Harada, and Keisuke Imoto. Toyadmos: A dataset of miniature-machine operating sounds for anomalous sound detection. In 2019 IEEE Workshop on Applications of Signal Processing to Audio and Acoustics (WASPAA), pages 313-317, 2019.
+
+[370] Yunwei Zhang, Qiaochu Tang, Yao Zhang, Jiabin Wang, Ulrich Stimming, and Alpha Lee. Identifying degradation pat- terns of lithium ion batteries from impedance spectroscopy using machine learning. Nature Communications, 11:1706, 042020.
+
+[371] Yinjiao Xing, Wei He, Michael Pecht, and Kwok Leung Tsui. State of charge estimation of lithiumion batteries using the open-circuit voltage at various ambient temperatures. Applied energy, 113:106-115, 2014.
+
+[372] Erik Jakobsson, Erik Frisk, Mattias Krysander, and Robert Pettersson. A dataset for fault classification in rock drills, a fast oscillating hydraulic system. In Annual Conference of the PHM Society, 2022.
+
+[373] Yuhong Jin, Lei Hou, and Yushu Chen. A time series transformer based method for the rotating machinery fault diagnosis. Neurocomputing, 494:379-395, 2022.
+
+[374] Xiaohong Wang, Xudong Jiang, Henghui Ding, Yuqian Zhao, and Jun Liu. Knowledge-aware deep framework for collaborative skin lesion segmentation and melanoma recognition. Pattern Recognition, 120:108075, 2021.
+
+[375] Qi Li, Jinfeng Huang, Hongliang He, Xinran Zhang, Feibin Zhang, Zhaoye Qin, and Fulei Chu. Vsllava: a pipeline of large multimodal foundation model for industrial vibration signal analysis, 2024.
+
+[376] Arash Ajoudani, Andrea Maria Zanchettin, Serena Ivaldi, Alin Albu-Scha"ffer, Kazuhiro Kosuge, and Oussama Khatib. Progress and prospects of the human-robot collaboration. Autonomous Robots, 42, 062018.
+
+[377] Maximilian Diehl, Chris Paxton, and Karinne Ramirez-Amaro. Automated generation of robotic planning domains from observations. In 2021 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), pages 6732-6738, 2021.
+
+[378] Keisuke Shirai, Cristian C. Beltran-Hernandez, Masashi Hamaya, Atsushi Hashimoto, Shohei Tanaka, Kento Kawa- harazuka, Kazutoshi Tanaka, Yoshitaka Ushiku, and Shinsuke Mori. Visionlanguage interpreter for robot task planning. In 2024 IEEE International Conference on Robotics and Automation (ICRA), pages 2051-2058, 2024.
+
+[379] Meng-Lun Lee, Sara Behdad, Xiao Liang, and Minghui Zheng. Task allocation and planning for product disassembly with human-robot collaboration. Robotics and Computer-Integrated Manufacturing, 76:102306, 2022.
+
+[380] Tian Yu, Jing Huang, and Qing Chang. Optimizing task scheduling in human-robot collaboration with deep multi-agent reinforcement learning. Journal of Manufacturing Systems, 60:487-499, 2021.
+
+[381] Anthony Brohan, Noah Brown, Justice Carbajal, Yevgen Chebotar, Joseph Dabis, Chelsea Finn, Keerthana Gopalakrish- nan, Karol Hausman, Alex Herzog, Jasmine Hsu, Julian Ibarz, Brian Ichter, Alex Irpan, Tomas Jackson, Sally Jesmonth, Nikhil J Joshi, Ryan Julian, Dmitry Kalashnikov, Yuheng Kuang, Isabel Leal, Kuang-Huei Lee, Sergey Levine, Yao Lu, Utsav Malla, Deeksha Manjunath, Igor Mordatch, Ofir Nachum, Carolina Parada, Jodilyn Peralta, Emily Perez, Karl Pertsch, Jornell Quiambao, Kanishka Rao, Michael Ryoo, Grecia Salazar, Pannag Sanketi, Kevin Sayed, Jaspiar Singh, Sumedh Sontakke, Austin Stone, Clayton Tan, Huong Tran, Vincent Vanhoucke, Steve Vega, Quan Vuong, Fei Xia, Ted Xiao, Peng Xu, Sichun Xu, Tianhe Yu, and Brianna Zitkovich. Rt-1: Robotics transformer for real-world control at scale, 2023.
+
+[382] Waleed Ejaz, Shree K. Sharma, Salman Saadat, Muhammad Naeem, Alagan Anpalagan, and N.A. Chughtai. A com- prehensive survey on resource allocation for cran in 5 g and beyond networks. Journal of Network and Computer Applications, 160:102638, 2020.
+
+[383] Gerald Kelechi Ijemaru, Ibrahim Adeyanju, Kehinde Olusuyi, T Ofusori, E Ngharamike, and AA Sobowale. Security challenges of wireless communications networks: a survey. Int. J. Appl. Eng. Res, 13(8):5680-5692, 2018.
+
+[384] Yifei Xu, Yuning Chen, Xumiao Zhang, Xianshang Lin, Pan Hu, Yunfei Ma, Songwu Lu, Wan Du, Zhuoqing Mao, Ennan Zhai, and Dennis Cai. Cloudeval-yaml: A practical benchmark for cloud configuration generation. In P. Gibbons, G. Pekhimenko, and C. De Sa, editors, Proceedings of Machine Learning and Systems, volume 6, pages 173-195, 2024.
+
+[385] Zhengfu He, Tianxiang Sun, Kuanning Wang, Xuanjing Huang, and Xipeng Qiu. Diffusionbert: Improving generative masked language models with diffusion models, 2022.
+
+[386] Rajdeep Mondal, Alan Tang, Ryan Beckett, Todd Millstein, and George Varghese. What do llms need to synthesize correct router configurations? In Proceedings of the 22nd ACM Workshop on Hot Topics in Networks, HotNets '23, page 189-195, New York, NY, USA, 2023. Association for Computing Machinery.
+
+[387] Sathiya Kumaran Mani, Yajie Zhou, Kevin Hsieh, Santiago Segarra, Trevor Eberl, Eliran Azulai, Ido Frizler, Ranveer Chandra, and Srikanth Kandula. Enhancing network management using code generated by large language models. In Proceedings of the 22nd ACM Workshop on Hot Topics in Networks, HotNets '23, page 196-204, New York, NY, USA, 2023. Association for Computing Machinery.
+
+[388] Markus Bayer, Philipp Kuehn, Ramin Shanehsaz, and Christian Reuter. Cysecbert: A domainadapted language model for the cybersecurity domain. ACM Transactions on Privacy and Security, 27(2):1-20, 2024.
+
+[389] Ehsan Aghaei, Xi Niu, Waseem Shadid, and Ehab Al-Shaer. Securebert: A domain-specific language model for cy- bersecurity. In International Conference on Security and Privacy in Communication Systems, pages 39-56. Springer, 2022.
+
+[390] Mohamed Amine Ferrag, Mthandazo Ndhlovu, Norbert Tihanyi, Lucas C Cordeiro, Merouane Debbah, Thierry Lestable, and Narinderjit Singh Thandi. Revolutionizing cyber threat detection with large language models: A privacy- preserving bert-based lightweight model for iot/iiot devices. IEEE Access, 2024.
+
+[391] Luiz Rodrigues, Filipe Dwan Pereira, Luciano Cabral, Dragan Gas`evic', Geber Ramalho, and Rafael Ferreira Mello. As- sessing the quality of automatic-generated short answers using gpt-4. Computers and Education: Artificial Intelligence, 7:100248, 2024.
+
+[392] Nan Wu, Jun Xu, Jinqing Linghu, and Jie Huang. Real-time optimal control and dispatching strategy of multi-microgrid energy based on storage collaborative. International Journal of Electrical Power & Energy Systems, 160:110063, 2024.
+
+[393] L Huang. "big watt" to promote the application of power ai in the future., 2024.
+
+[394] Tanveer Ahmad, Hongyu Zhu, Dongdong Zhang, Rasikh Tariq, A Bassam, Fasee Ullah, Ahmed S AlGhamdi, and Sultan S Alshamrani. Energetics systems and artificial intelligence: Applications of industry 4.0. Energy Reports, 8:334-361, 2022.
+
+[395] Nils H van der Blij, Laura M Ramirez-Elizondo, Matthijs TJ Spaan, and Pavol Bauer. Grid sense multiple access: A decentralized control algorithm for dc grids. International Journal of Electrical Power & Energy Systems, 119:105818, 2020.
+
+[396] Zohaib Jan, Farhad Ahamed, Wolfgang Mayer, Niki Patel, Georg Grossmann, Markus Stumptner, and Ana Kuusk. Artificial intelligence for industry 4.0: Systematic review of applications, challenges, and opportunities. Expert Systems with Applications, 216:119456, 2023.
+
+[397] Tingting Chen, Vignesh Sampath, Marvin Carl May, Shuo Shan, Oliver Jonas Jorg, Juan Jose' Aguilar Mart'ın, Florian Stamer, Gualtiero Fantoni, Guido Tosello, and Matteo Calaon. Machine learning in manufacturing towards industry 4.0: From 'for now' to 'four-know'. Applied Sciences, 13(3), 2023.
+
+[398] Senthil Kumar Jagatheesaperumal, Mohamed Rahouti, Kashif Ahmad, Ala Al-Fuqaha, and Mohsen Guizani. The duo of artificial intelligence and big data for industry 4.0: Applications, techniques, challenges, and future research directions. IEEE Internet of Things Journal, 9(15):12861-12885, 2022.
+
+[399] National Research Council, Division on Engineering, Physical Sciences, Board on Mathematical Sciences, Their Ap- plications, Committee on Mathematical Foundations of Verification, and Uncertainty Quantification. Assessing the reliability of complex models: mathematical and statistical foundations of verification, validation, and uncertainty quantification. National Academies Press, 2012.
+
+[400] Charu C Aggarwal, Lagerstrom-Fife Aggarwal, and Lagerstrom-Fife. Linear algebra and optimization for machine learning, volume 156. Springer, 2020.
+
+[401] Guangchuang Yu. Thirteen years of clusterprofiler. The Innovation, 5(6), 2024.
+
+[402] Iman Ahmadianfar, Omid Bozorg-Haddad, and Xuefeng Chu. Gradient-based optimizer: A new metaheuristic opti- mization algorithm. Information Sciences, 540:131-159, 2020.
+
+[403] Haidong Li, Hongchuang Li, Ming Zhang, Chaolin Huang, and Xin Zhou. Direct imaging of pulmonary gas exchange with hyperpolarized xenon mri. The Innovation, 5(6), 2024.
+
+[404] Matthias Seeger, Florian Steinke, and Koji Tsuda. Bayesian inference and optimal design in the sparse linear model. In Artificial Intelligence and Statistics, pages 444-451. PMLR, 2007.
+
+[405] Kellie J Archer, Han Fu, Krzysztof Mro'zek, Deedra Nicolet, Alice S Mims, Geoffrey L Uy, Wendy Stock, John C Byrd, Wolfgang Hiddemann, Klaus H Metzeler, et al. Improving risk stratification for 2022 european leukemianet favorable-risk patients with acute myeloid leukemia. The Innovation, 5(6), 2024.
+
+[406] Christof Koch and Idan Segev. The role of single neurons in information processing. Nature neuroscience, 3(11):1171-1177, 2000.
+
+[407] Changyong Dou, Yunwei Tang, Nijun Jiang, Lin Yan, and Haifeng Ding. Analysis of sichuan wildfire based on the first synergetic observation from three payloads of sdgsat-1. The Innovation, 5(6), 2024.
+
+[408] Simon Haykin and Neural Network. A comprehensive foundation. Neural networks, 2(2004):41, 2004.
+
+[409] Salman Khan, Muzammal Naseer, Munawar Hayat, Syed Waqas Zamir, Fahad Shahbaz Khan, and Mubarak Shah. Transformers in vision: A survey. ACM computing surveys (CSUR), 54(10s):141, 2022.
+
+[410] Yi Tay, Dara Bahri, Donald Metzler, Da-Cheng Juan, Zhe Zhao, and Che Zheng. Synthesizer: Rethinking self-attention for transformer models. In International conference on machine learning, pages 10183-10192. PMLR, 2021.
+
+[411] Dandan Ma, Yuzhe Ma, Jinfu Ma, Qun Yang, Claudia Felser, and Guowei Li. Energy conversion materials need phonons. The Innovation, 5(6), 2024.
+
+[412] Karl Cobbe, Vineet Kosaraju, Mohammad Bavarian, Mark Chen, Heewoo Jun, Lukasz Kaiser, Matthias Plappert, Jerry Tworek, Jacob Hilton, Reiichiro Nakano, et al. Training verifiers to solve math word problems. arXiv preprint arXiv:2110.14168, 2021.
+
+[413] Le'on Bottou. Stochastic gradient descent tricks. In Neural Networks: Tricks of the Trade: Second Edition, pages 421-436. Springer, 2012.
+
+[414] Yali Cui, Yi Wu, and Yingjin Yuan. Amplification editing empowers in situ large-scale dna duplication. The Innovation, 5(6), 2024.
+
+[415] Peng Xiao, Yongfeng Yin, Bin Liu, Bo Jiang, and Yashwant K Malaiya. Adaptive testing based on moment estimation. IEEE Transactions on Systems, Man, and Cybernetics: Systems, 50(3):911922, 2017.
+
+[416] Sujuan Xu, Runzhou Chen, Xinqi Zhang, Yufeng Wu, Liuyan Yang, Zongyi Sun, Zhitao Zhu, Aiping Song, Ze Wu, Ting Li, et al. The evolutionary tale of lilies: Giant genomes derived from transposon insertions and polyploidization. The Innovation, 5(6), 2024.
+
+[417] George Em Karniadakis, Ioannis G Kevrekidis, Lu Lu, Paris Perdikaris, Sifan Wang, and Liu Yang. Physics-informed machine learning. Nature Reviews Physics, 3(6):422-440, 2021.
+
+[418] Angran Li, Ruijia Chen, Amir Barati Farimani, and Yongjie Jessica Zhang. Reaction diffusion system prediction based on convolutional neural network. Scientific reports, 10(1):3894, 2020.
+
+[419] Stephan Rasp, Michael S Pritchard, and Pierre Gentine. Deep learning to represent subgrid processes in climate models. Proceedings of the national academy of sciences, 115(39):9684-9689, 2018.
+
+[420] Kamal Choudhary, Brian DeCost, Chi Chen, Anubhav Jain, Francesca Tavazza, Ryan Cohn, Cheol Woo Park, Alok Choudhary, Ankit Agrawal, Simon JL Billinge, et al. Recent advances and applications of deep learning methods in materials science. npj Computational Materials, 8(1):59, 2022.
+
+[421] Nan Xu, Wenyu Li, Peng Gong, and Hui Lu. Satellite altimeter observed surface water increase across lake-rich regions of the arctic. The Innovation, 5(6), 2024.
+
+[422] Samuel Kim, Peter Y Lu, Srijon Mukherjee, Michael Gilbert, Li Jing, Vladimir C` eperic', and Marin Soljac`ic'. Integration of neural network-based symbolic regression in deep learning for scientific discovery. IEEE transactions on neural networks and learning systems, 32(9):4166-4177, 2020.
+
+[423] Guillaume Lample and Franc, ois Charton. Deep learning for symbolic mathematics. International Conference on Learning Representations, 2019.
+
+[424] Jakub Voznica, Anna Zhukova, Veronika Boskova, E Saulnier, F Lemoine, Mathieu MoslonkaLefebvre, and Olivier Gascuel. Deep learning from phylogenies to uncover the epidemiological dynamics of outbreaks. Nature Communica- tions, 13(1):3896, 2022.
+
+[425] Ahmet Murat Ozbayoglu, Mehmet Ugur Gudelek, and Omer Berat Sezer. Deep learning for financial applications: A survey. Applied soft computing, 93:106384, 2020.
+
+[426] Eric Edelman, Fabian Tijssen, Popke Rein Munniksma, Wim Bast, Harold Ten Bohmer, Nicole van Eldik, Marieke Spreeuwenberg, Wolfgang Buhre, and Frits van Merode. Clinical knowledge modeling: An essential step in the digital transformation of healthcare. The Innovation, 5(6), 2024.
+
+[427] Xiyi Yang, Jia Jia, Xiaoyu Zhou, and Shouyang Wang. The future of artificial intelligence: Time to embrace more international collaboration. The Innovation, 5(6), 2024.
+
+[428] Muning Wen, Runji Lin, Hanjing Wang, Yaodong Yang, Ying Wen, Luo Mai, Jun Wang, Haifeng Zhang, and Weinan Zhang. Large sequence models for sequential decision-making: a survey. Frontiers of Computer Science, 17(6):176349, 2023.
+
+[429] Weinan. Zhang. Large decision models. International Joint Conferences on Artificial Intelligence, pages 7062-7067, 2023.
+
+[430] Xu Wang, Sen Wang, Xingxing Liang, Dawei Zhao, Jincai Huang, Xin Xu, Bin Dai, and Qiguang Miao. Deep re- inforcement learning: A survey. IEEE Transactions on Neural Networks and Learning Systems, 35(4):5064-5078, 2022.
+
+[431] Emre Oral, Ria Chawla, Michel Wijkstra, Narges Mahyar, and Evanthia Dimara. From information to choice: A critical inquiry into visualization tools for decision making. IEEE Transactions on Visualization and Computer Graphics, 2023.
+
+[432] Zheng Chu, Jingchang Chen, Qianglong Chen, Weijiang Yu, Tao He, Haotian Wang, Weihua Peng, Ming Liu, Bing Qin, and Ting Liu. A survey of chain of thought reasoning: Advances, frontiers and future. arXiv preprint arXiv:2309.15402, 2023.
+
+[433] Tianyang Lin, Yuxin Wang, Xiangyang Liu, and Xipeng Qiu. A survey of transformers. AI open, 3:111-132, 2022.
+
+[434] Tianyu Wu, Shizhu He, Jingping Liu, Siqi Sun, Kang Liu, Qing-Long Han, and Yang Tang. A brief overview of chatgpt: The history, status quo and potential future development. IEEE/CAA Journal of Automatica Sinica, 10(5):1122-1136, 2023.
+
+[435] Michael Moor, Oishi Banerjee, Zahra Shakeri Hossein Abad, Harlan M Krumholz, Jure Leskovec, Eric J Topol, and Pranav Rajpurkar. Foundation models for generalist medical artificial intelligence. Nature, 616(7956):259-265, 2023.
+
+[436] Tao Tu, Shekoofeh Azizi, Danny Driess, Mike Schaekermann, Mohamed Amin, Pi-Chuan Chang, Andrew Carroll, Charles Lau, Ryutaro Tanno, Ira Ktena, et al. Towards generalist biomedical ai. NEJM AI, 1(3):AIoa2300138, 2024.
+
+[437] Karan Singhal, Shekoofeh Azizi, Tao Tu, S Sara Mahdavi, Jason Wei, Hyung Won Chung, Nathan Scales, Ajay Tanwani, Heather Cole-Lewis, Stephen Pfohl, et al. Large language models encode clinical knowledge. Nature, 620(7972):172-180, 2023.
+
+[438] Karan Singhal, Tao Tu, Juraj Gottweis, Rory Sayres, Ellery Wulczyn, Le Hou, Kevin Clark, Stephen Pfohl, Heather Cole-Lewis, Darlene Neal, et al. Towards expert-level medical question answering with large language models. arXiv preprint arXiv:2305.09617, 2023.
+
+[439] Xiaohong Liu, Hao Liu, Guoxing Yang, Zeyu Jiang, Shuguang Cui, Zhaoze Zhang, Huan Wang, Liyuan Tao, Yongchang Sun, Zhu Song, et al. A generalist medical language model for disease diagnosis assistance. Nature Medicine, pages 1-11, 2025.
+
+[440] Nicholas R Rydzewski, Deepak Dinakaran, Shuang G Zhao, Eytan Ruppin, Baris Turkbey, Deborah E Citrin, and Krishnan R Patel. Comparative evaluation of llms in clinical oncology. NEJM AI, 1(5):AIoa2300151, 2024.
+
+[441] Cyril Zakka, Rohan Shad, Akash Chaurasia, Alex R Dalal, Jennifer L Kim, Michael Moor, Robyn Fong, Curran Phillips, Kevin Alexander, Euan Ashley, et al. Almanac-retrieval-augmented language models for clinical medicine. NEJM AI, 1(2):AIoa2300068, 2024.
+
+[442] Ozan Unlu, Jiyeon Shin, Charlotte J Mailly, Michael F Oates, Michela R Tucci, Matthew Varugheese, Kavishwar Wagholikar, Fei Wang, Benjamin M Scirica, Alexander J Blood, et al. Retrieval-augmented generation-enabled gpt-4 for clinical trial screening. NEJM AI, page AIoa2400181, 2024.
+
+[443] Kyle Lam and Jianing Qiu. Foundation models: the future of surgical artificial intelligence? British Journal of Surgery, 111(4):znae090, 2024.
+
+[444] Yuanyuan Peng, Aidi Lin, Meng Wang, Tian Lin, Linna Liu, Jianhua Wu, Ke Zou, Tingkun Shi, Lixia Feng, Zhen Liang, et al. Enhancing ai reliability: A foundation model with uncertainty estimation for optical coherence tomography-based retinal disease diagnosis. Cell Reports Medicine, 2024.
+
+[445] Yuanyuan Tian, Zhiyuan Li, Yanrui Jin, Mengxiao Wang, Xiaoyang Wei, Liqun Zhao, Yunqing Liu, Jinlei Liu, and Chengliang Liu. Foundation model of ecg diagnosis: Diagnostics and explanations of any form and rhythm on ecg. Cell Reports Medicine, 5(12), 2024.
+
+[446] Jun Ma, Yuting He, Feifei Li, Lin Han, Chenyu You, and Bo Wang. Segment anything in medical images. Nature Communications, 15(1):654, 2024.
+
+[447] Christian Bluethgen, Pierre Chambon, Jean-Benoit Delbrouck, Rogier van der Sluijs, Małgorzata Połacin, Juan Manuel Zambrano Chaves, Tanishq Mathew Abraham, Shivanshu Purohit, Curtis P Langlotz, and Akshay S Chaudhari. A vision-language foundation model for the generation of realistic chest x-ray images. Nature Biomedical Engineering, pages 1-13, 2024.
+
+[448] Jinxi Xiang, Xiyue Wang, Xiaoming Zhang, Yinghua Xi, Feyisope Eweje, Yijiang Chen, Yuchen Li, Colin Bergstrom, Matthew Gopaulchan, Ted Kim, et al. A vision-language foundation model for precision oncology. Nature, pages 1-10, 2025.
+
+[449] Eugene Vorontsov, Alican Bozkurt, Adam Casson, George Shaikovski, Michal Zelechowski, Kristen Severson, Eric Zimmermann, James Hall, Neil Tenenholtz, Nicolo Fusi, et al. A foundation model for clinical-grade computational pathology and rare cancers detection. Nature medicine, pages 1-12, 2024.
+
+[450] Xiyue Wang, Junhan Zhao, Eliana Marostica, Wei Yuan, Jietian Jin, Jiayu Zhang, Ruijiang Li, Hongping Tang, Kan- ran Wang, Yu Li, et al. A pathology foundation model for cancer diagnosis and prognosis prediction. Nature, 634(8035):970-978, 2024.
+
+[451] Nadieh Khalili and Francesco Ciompi. Scaling data toward pan-cancer foundation models. Trends in Cancer, 2024.
+
+[452] Hugo Dalla-Torre, Liam Gonzalez, Javier Mendoza-Revilla, Nicolas Lopez Carranza, Adam Henryk Grzywaczewski, Francesco Oteri, Christian Dallago, Evan Trop, Bernardo P de Almeida, Hassan Sirelkhatim, et al. Nucleotide trans- former: building and evaluating robust foundation models for human genomics. Nature Methods, pages 1-11, 2024.
+
+[453] Haotian Cui, Chloe Wang, Hassaan Maan, Kuan Pang, Fengning Luo, Nan Duan, and Bo Wang. scgpt: toward building a foundation model for single-cell multi-omics using generative ai. Nature Methods, pages 1-11, 2024.
+
+[454] Xi Fu, Shentong Mo, Alejandro Buendia, Anouchka P Laurent, Anqi Shao, Maria del Mar AlvarezTorres, Tianji Yu, Jimin Tan, Jiayu Su, Romella Sagatelian, et al. A foundation model of transcription across human cell types. Nature, pages 1-9, 2025.
+
+[455] Pratik Ramprasad, Nidhi Pai, and Wei Pan. Enhancing personalized gene expression prediction from dna sequences using genomic foundation models. Human Genetics and Genomics Advances, 5(4), 2024.
+
+[456] Lavender Yao Jiang, Xujin Chris Liu, Nima Pour Nejatian, Mustafa Nasir-Moin, Duo Wang, Anas Abidin, Kevin Eaton, Howard Antony Riina, Ilya Laufer, Paawan Punjabi, et al. Health systemscale language models are all-purpose prediction engines. Nature, 619(7969):357-362, 2023.
+
+[457] Aaron Boussina, Rishivardhan Krishnamoorthy, Kimberly Quintero, Shreyansh Joshi, Gabriel Wardi, Hayden Pour, Nicholas Hilbert, Atul Malhotra, Michael Hogarth, Amy M Sitapati, et al. Large language models for more efficient reporting of hospital quality measures. NEJM AI, 1(11):AIcs2400420, 2024.
+
+[458] Xi Yang, Aokun Chen, Nima PourNejatian, Hoo Chang Shin, Kaleb E Smith, Christopher Parisien, Colin Compas, Cheryl Martin, Anthony B Costa, Mona G Flores, et al. A large language model for electronic health records. npj Digital Medicine, 5(1):194, 2022.
+
+[459] Akhil Vaid, Isotta Landi, Girish Nadkarni, and Ismail Nabeel. Using fine-tuned large language models to parse clinical notes in musculoskeletal pain disorders. The Lancet Digital Health, 5(12):e855-e858, 2023.
+
+[460] Dave Van Veen, Cara Van Uden, Louis Blankemeier, Jean-Benoit Delbrouck, Asad Aali, Christian Bluethgen, Anuj Pareek, Malgorzata Polacin, Eduardo Pontes Reis, Anna Seehofnerova', et al. Adapted large language models can outperform medical experts in clinical text summarization. Nature medicine, 30(4):1134-1142, 2024.
+
+[461] Hanzhou Li, John T Moon, Saptarshi Purkayastha, Leo Anthony Celi, Hari Trivedi, and Judy W Gichoya. Ethics of large language models in medicine and medical research. The Lancet Digital Health, 5(6):e333-e335, 2023.
+
+[462] Zhuxin Xiong, Xiaofei Wang, Yukun Zhou, Pearse A. Keane, Yih Chung Tham, Ya Xing Wang, and Tien Yin Wong. How generalizable are foundation models when applied to different demographic groups and settings? NEJM AI, 0(0):AIcs2400497, 2024.
+
+[463] Paul Hager, Friederike Jungmann, Robbie Holland, Kunal Bhagat, Inga Hubrecht, Manuel Knauer, Jakob Vielhauer, Marcus Makowski, Rickmer Braren, Georgios Kaissis, et al. Evaluation and mitigation of the limitations of large language models in clinical decision-making. Nature medicine, 30(9):2613-2622, 2024.
+
+[464] Yinghao Zhu, Junyi Gao, Zixiang Wang, Weibin Liao, Xiaochen Zheng, Lifang Liang, Yasha Wang, Chengwei Pan, Ewen M Harrison, and Liantao Ma. Is larger always better? evaluating and prompting large language models for non-generative medical tasks. arXiv preprint arXiv:2407.18525, 2024.
+
+[465] Agustina D Saenz, Zach Harned, Oishi Banerjee, Michael D Abra`moff, and Pranav Rajpurkar. Autonomous ai systems in the face of liability, regulations and costs. npj Digital Medicine, 6(1):185, 2023.
+
+[466] Krishnamurthy Dvijotham, Jim Winkens, Melih Barsbey, Sumedh Ghaisas, Robert Stanforth, Nick Pawlowski, Patricia Strachan, Zahra Ahmed, Shekoofeh Azizi, Yoram Bachrach, et al. Enhancing the reliability and accuracy of ai-enabled diagnosis via complementarity-driven deferral to clinicians. Nature Medicine, 29(7):1814-1820, 2023.
+
+[467] Shreya Johri, Jaehwan Jeong, Benjamin A Tran, Daniel I Schlessinger, Shannon Wongvibulsin, Leandra A Barnes, Hong-Yu Zhou, Zhuo Ran Cai, Eliezer M Van Allen, David Kim, et al. An evaluation framework for clinical use of large language models in patient interaction tasks. Nature Medicine, pages 1-10, 2025.
+
+[468] Yuting He, Fuxiang Huang, Xinrui Jiang, Yuxiang Nie, Minghao Wang, Jiguang Wang, and Hao Chen. Foundation model for advancing healthcare: Challenges, opportunities, and future directions. arXiv preprint arXiv:2404.03264, 2024.
+
+[469] Arun James Thirunavukarasu, Darren Shu Jeng Ting, Kabilan Elangovan, Laura Gutierrez, Ting Fang Tan, and Daniel Shu Wei Ting. Large language models in medicine. Nature medicine, 29(8):1930-1940, 2023.
+
+[470] Zhao Wang, Chang Liu, Shaoting Zhang, and Qi Dou. Foundation model for endoscopy video analysis via large- scale self-supervised pre-train. In International Conference on Medical Image Computing and Computer-Assisted Intervention, pages 101-111. Springer, 2023.
+
+[471] Hugo Dalla-Torre, Liam Gonzalez, Javier Mendoza-Revilla, Nicolas Lopez Carranza, Adam Henryk Grzywaczewski, Francesco Oteri, Christian Dallago, Evan Trop, Bernardo P de Almeida, Hassan Sirelkhatim, et al. Nucleotide trans- former: building and evaluating robust foundation models for human genomics. Nature Methods, pages 1-11, 2024.
+
+[472] Nadav Brandes, Dan Ofer, Yam Peleg, Nadav Rappoport, and Michal Linial. Proteinbert: a universal deep-learning model of protein sequence and function. Bioinformatics, 38(8):2102-2110, 2022.
+
+[473] Kai Zhang, Jun Yu, Eashan Adhikarla, Rong Zhou, Zhiling Yan, Yixin Liu, Zhengliang Liu, Lifang He, Brian Davison, Xiang Li, et al. Biomedgpt: A unified and generalist biomedical generative pretrained transformer for vision, language, and multimodal tasks. arXiv e-prints, pages arXiv-2305, 2023.
+
+[474] Bobby Azad, Reza Azad, Sania Eskandari, Afshin Bozorgpour, Amirhossein Kazerouni, Islem Rekik, and Dorit Merhof. Foundational models in medical imaging: A comprehensive survey and future vision. CoRR, 2023.
+
+[475] Glyn Elwyn, Dominick Frosch, Richard Thomson, Natalie Joseph-Williams, Amy Lloyd, Paul Kinnersley, Emma Cord- ing, Dave Tomson, Carole Dodd, Stephen Rollnick, et al. Shared decision making: a model for clinical practice. Journal of general internal medicine, 27:1361-1367, 2012.
+
+[476] Hongjian Zhou, Fenglin Liu, Boyang Gu, Xinyu Zou, Jinfa Huang, Jinge Wu, Yiru Li, Sam S Chen, Peilin Zhou, Junling Liu, et al. A survey of large language models in medicine: Progress, application, and challenge. arXiv preprint arXiv:2311.05112, 2023.
+
+[477] Guangyu Wang, Guoxing Yang, Zongxin Du, Longjun Fan, and Xiaohu Li. Clinicalgpt: large language models finetuned with diverse medical data and comprehensive evaluation. arXiv preprint arXiv:2306.09968, 2023.
+
+[478] Weihao Gao, Zhuo Deng, Zhiyuan Niu, Fuju Rong, Chucheng Chen, Zheng Gong, Wenze Zhang, Daimin Xiao, Fang Li, Zhenjie Cao, et al. Ophglm: Training an ophthalmology large language-and-vision assistant based on instructions and dialogue. arXiv preprint arXiv:2306.12174, 2023.
+
+[479] Masoumeh Farhadi Nia, Mohsen Ahmadi, and Elyas Irankhah. Transforming dental diagnostics with artificial intelli- gence: Advanced integration of chatgpt and large language models for patient care. arXiv preprint arXiv:2406.06616, 2024.
+
+[480] Ana Sua'rez, Jaime Jime'nez, Mar'ıa Llorente de Pedro, Cristina Andreu-Va'zquez, V'ıctor D'ıazFlores Garc'ia, Mar- garita Go'mez Sa'nchez, and Yolanda Freire. Beyond the scalpel: Assessing chatgpt's potential as an auxiliary intelligent virtual assistant in oral surgery. Computational and Structural Biotechnology Journal, 24:46-52, 2024.
+
+[481] Hossein Mohammad-Rahimi, Saeed Reza Motamedian, Mohammad Hossein Rohban, Joachim Krois, Sergio E Uribe, Erfan Mahmoudinia, Rata Rokhshad, Mohadeseh Nadimi, and Falk Schwendicke. Deep learning for caries detection: A systematic review. Journal of Dentistry, 122:104115, 2022.
+
+[482] Marta Revilla-Leo'n, Miguel Go'mez-Polo, Abdul B Barmak, Wardah Inam, Joseph YK Kan, John C Kois, and Orhan Akal. Artificial intelligence models for diagnosing gingivitis and periodontal disease: A systematic review. The Journal of Prosthetic Dentistry, 130(6):816-824, 2023.
+
+[483] Pongsapak Wongratwanich, Kiichi Shimabukuro, Masaru Konishi, Toshikazu Nagasaki, Masahiko Ohtsuka, Yoshikazu Suei, Takashi Nakamoto, Rinus G Verdonschot, Tomohiko Kanesaki, Pipop Sutthiprapaporn, et al. Do various imaging modalities provide potential early detection and diagnosis of medication-related osteonecrosis of the jaw? a review. Dentomaxillofacial Radiology, 50(6):20200417, 2021.
+
+[484] Rasheed Omobolaji Alabi, Omar Youssef, Matti Pirinen, Mohammed Elmusrati, Antti A Ma"kitie, Ilmo Leivo, and Alhadi Almangush. Machine learning in oral squamous cell carcinoma: Current status, clinical concerns and prospects for future-a systematic review. Artificial intelligence in medicine, 115:102060, 2021.
+
+[485] Kritsasith Warin, Wasit Limprasert, Siriwan Suebnukarn, Teerawat Paipongna, Patcharapon Jantana, and Sothana Vicharueang. Maxillofacial fracture detection and classification in computed tomography images using convolutional neural network-based models. Scientific reports, 13(1):3434, 2023.
+
+[486] Nayansi Jha, Kwang-Sig Lee, and Yoon-Ji Kim. Diagnosis of temporomandibular disorders using artificial intelligence technologies: A systematic review and meta-analysis. PLoS One, 17(8):e0272715, 2022.
+
+[487] Duy MH Nguyen, Hoang Nguyen, Nghiem Diep, Tan Ngoc Pham, Tri Cao, Binh Nguyen, Paul Swoboda, Nhat Ho, Shadi Albarqouni, Pengtao Xie, et al. Lvm-med: Learning large-scale selfsupervised vision models for medical imag- ing via second-order graph matching. Advances in Neural Information Processing Systems, 36, 2024.
+
+[488] Weijia Feng, Lingting Zhu, and Lequan Yu. Cheap lunch for medical image segmentation by finetuning sam on few exemplars. In International MICCAI Brainlesion Workshop, pages 13-22. Springer, 2023.
+
+[489] Anirudh Shankar, TR Monisha, Skanda S Kumar, Aishwary Anurag, Ashwath Narayan, et al. Advancements in ai- driven dentistry: Tooth genai's impact on dental diagnosis and treatment planning. In 2024 2nd International Conference on Networking, Embedded and Wireless Systems (ICNEWS), pages 1-7. IEEE, 2024.
+
+[490] Wenxi Yue, Jing Zhang, Kun Hu, Qiuxia Wu, Zongyuan Ge, Yong Xia, Jiebo Luo, and Zhiyong Wang. Part to whole: Collaborative prompting for surgical instrument segmentation. arXiv preprint arXiv:2312.14481, 2023.
+
+[491] Hsun-Liang Chan, Kelly Misch, and Hom-Lay Wang. Dental imaging in implant treatment planning. Implant dentistry, 19(4):288-298, 2010.
+
+[492] Yuepeng Wu, Yukang Zhang, Mei Xu, Yuchen Zheng, et al. Effectiveness of various general large language models in clinical consensus and case analysis in dental implantology: A comparative study. 2024.
+
+[493] Bahaaeldeen M Elgarba, Rocharles Cavalcante Fontenele, Mihai Tarce, and Reinhilde Jacobs. Artificial intelligence serving pre-surgical digital implant planning: A scoping review. Journal of Dentistry, page 104862, 2024.
+
+[494] Sheldon Baumrind, Edward L Korn, Robert L Boyd, and Raymond Maxwell. The decision to extract: part ii. analysis of clinicians' stated reasons for extraction. American Journal of Orthodontics and Dentofacial Orthopedics, 109(4):393-402, 1996.
+
+[495] Ye-Hyun Kim, Jae-Bong Park, Min-Seok Chang, Jae-Jun Ryu, Won Hee Lim, and Seok-Ki Jung. Influence of the depth of the convolutional neural networks on an artificial intelligence model for diagnosis of orthognathic surgery. Journal of Personalized Medicine, 11(5):356, 2021.
+
+[496] WooSang Shin, Han-Gyeol Yeom, Ga Hyung Lee, Jong Pil Yun, Seung Hyun Jeong, Jong Hyun Lee, Hwi Kang Kim, and Bong Chul Kim. Deep learning based prediction of necessity for orthognathic surgery of skeletal malocclusion using cephalogram in korean individuals. BMC Oral Health, 21:1-7, 2021.
+
+[497] Hyuk-Il Choi, Seok-Ki Jung, Seung-Hak Baek, Won Hee Lim, Sug-Joon Ahn, Il-Hyung Yang, and Tae-Woo Kim. Artificial intelligent model with neural network machine learning for the diagnosis of orthognathic surgery. Journal of Craniofacial Surgery, 30(7):1986-1989, 2019.
+
+[498] Sreekanth Kumar Mallineni, Mallika Sethi, Dedeepya Punugoti, Sunil Babu Kotha, Zikra Alkhayal, Sarah Mubaraki, Fatmah Nasser Almotawah, Sree Lalita Kotha, Rishitha Sajja, Venkatesh Nettam, et al. Artificial intelligence in den- tistry: A descriptive review. Bioengineering, 11(12):1267, 2024.
+
+[499] Hao Ding, Jiamin Wu, Wuyuan Zhao, Jukka P Matinlinna, Michael F Burrow, and James KH Tsoi. Artificial intelligence in dentistry—a review. Frontiers in Dental Medicine, 4:1085251, 2023.
+
+[500] Dianhao Wu, Jingang Jiang, Jie Pan, Kun Qian, and Zhonghao Xue. Root canal preparation robot based on guiding strat- egy for safe remote therapy: System design and feasibility study (2023). IEEE/ASME Transactions on Mechatronics, 2024.
+
+[501] T Shan, FR Tay, and L Gu. Application of artificial intelligence in dentistry. Journal of dental research, 100(3):232-244, 2021.
+
+[502] Fet al Schwendicke, W Samek, and J Krois. Artificial intelligence in dentistry: chances and challenges. Journal of dental research, 99(7):769-774, 2020.
+
+[503] Sergio Salerno, Andrea Laghi, Marie-Claire Cantone, Paolo Sartori, Antonio Pinto, and Guy Frija. Overdiagnosis and overimaging: an ethical issue for radiological protection. La radiologia medica, 124:714-720, 2019.
+
+[504] Mikhail Kulyabin, Aleksei Zhdanov, Andrey Pershin, Gleb Sokolov, Anastasia Nikiforova, Mikhail Ronkin, Vasilii Borisov, and Andreas Maier. Segment anything in optical coherence tomography: Sam 2 for volumetric segmentation of retinal biomarkers. Bioengineering, 11(9):940, 2024.
+
+[505] Jie Zhang and Zong-ming Zhang. Ethics and governance of trustworthy medical artificial intelligence. BMC medical informatics and decision making, 23(1):7, 2023.
+
+[506] Yi-Da Tang, Er-Dan Dong, and Wen Gao. Llms in medicine: The need for advanced evaluation systems for disruptive technologies. The Innovation, 5(3), 2024.
+
+[507] Yin Yang, Shuangbin Xu, Yifan Hong, Yantong Cai, Wenli Tang, Jiao Wang, Bairong Shen, Hui Zong, and Guangchuang Yu. Computational modeling for medical data: From data collection to knowledge discovery. The Innovation Life, 2(3):100079-1, 2024.
+
+[508] Hao Guan and Mingxia Liu. Domain adaptation for medical image analysis: a survey. IEEE Transactions on Biomedical Engineering, 69(3):1173-1185, 2021.
+
+[509] Weijia Zhang, Jindong Han, Zhao Xu, Hang Ni, Hao Liu, and Hui Xiong. Towards urban general intelligence: A review and outlook of urban foundation models. arXiv preprint arXiv:2402.01749, 2024.
+
+[510] Yuxuan Liang, Haomin Wen, Yuqi Nie, Yushan Jiang, Ming Jin, Dongjin Song, Shirui Pan, and Qingsong Wen. Foun- dation models for time series analysis: A tutorial and survey. In Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining, pages 65556565, 2024.
+
+[511] Sarah Alnegheimish, Linh Nguyen, Laure Berti-Equille, and Kalyan Veeramachaneni. Large language models can be zero-shot anomaly detectors for time series? arXiv preprint arXiv:2405.14755, 2024.
+
+[512] Tian Zhou, Peisong Niu, Liang Sun, Rong Jin, et al. One fits all: Power general time series analysis by pretrained lm. Advances in neural information processing systems, 36:43322-43355, 2023.
+
+[513] Qingxiang Liu, Xu Liu, Chenghao Liu, Qingsong Wen, and Yuxuan Liang. Time-ffm: Towards lm-empowered federated foundation model for time series forecasting. arXiv preprint arXiv:2405.14252, 2024.
+
+[514] Zhonghang Li, Lianghao Xia, Jiabin Tang, Yong Xu, Lei Shi, Long Xia, Dawei Yin, and Chao Huang. Urbangpt: Spatio- temporal large language models. In Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining, pages 5351-5362, 2024.
+
+[515] Chenxi Liu, Sun Yang, Qianxiong Xu, Zhishuai Li, Cheng Long, Ziyue Li, and Rui Zhao. Spatialtemporal large language model for traffic prediction. arXiv preprint arXiv:2401.10134, 2024.
+
+[516] Abdul Fatir Ansari, Lorenzo Stella, Caner Turkmen, Xiyuan Zhang, Pedro Mercado, Huibin Shen, Oleksandr Shchur, Syama Sundar Rangapuram, Sebastian Pineda Arango, Shubham Kapoor, et al. Chronos: Learning the language of time series. arXiv preprint arXiv:2403.07815, 2024.
+
+[517] Yuan Yuan, Jingtao Ding, Jie Feng, Depeng Jin, and Yong Li. Unist: A prompt-empowered universal model for urban spatio-temporal prediction. In Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining, pages 4095-4106, 2024.
+
+[518] Yan Lin, Tonglong Wei, Zeyu Zhou, Haomin Wen, Jilin Hu, Shengnan Guo, Youfang Lin, and Huaiyu Wan. Trajfm: A vehicle trajectory foundation model for region and task transferability. arXiv preprint arXiv:2408.15251, 2024.
+
+[519] Yuanshao Zhu, James Jianqiao Yu, Xiangyu Zhao, Xuetao Wei, and Yuxuan Liang. Unitraj: Universal human trajectory modeling from billion-scale worldwide traces. arXiv preprint arXiv:2411.03859, 2024.
+
+[520] Xixuan Hao, Wei Chen, Yibo Yan, Siru Zhong, Kun Wang, Qingsong Wen, and Yuxuan Liang. Urbanvlp: A multi-granularity vision-language pre-trained foundation model for urban indicator prediction. arXiv preprint arXiv:2403.16831, 2024.
+
+[521] Congxi Xiao, Jingbo Zhou, Yixiong Xiao, Jizhou Huang, and Hui Xiong. Refound: Crafting a foundation model for urban region understanding upon language and visual foundations. In Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining, pages 3527-3538, 2024.
+
+[522] Siqi Lai, Zhao Xu, Weijia Zhang, Hao Liu, and Hui Xiong. Large language models as traffic signal control agents: Capacity and opportunity. arXiv preprint arXiv:2312.16044, 2023.
+
+[523] Zhilun Zhou, Yuming Lin, Depeng Jin, and Yong Li. Large language model for participatory urban planning. arXiv preprint arXiv:2402.17161, 2024.
+
+[524] Lincan Li, Jiaqi Li, Catherine Chen, Fred Gui, Hongjia Yang, Chenxiao Yu, Zhengguang Wang, Jianing Cai, Jun- long Aaron Zhou, Bolin Shen, et al. Political-llm: Large language models in political science. arXiv preprint arXiv:2412.06864, 2024.
+
+[525] Menglin Liu and Ge Shi. Poliprompt: A high-performance cost-effective llm-based text classification framework for political science. arXiv preprint arXiv:2409.01466, 2024.
+
+[526] Albaaji G F. SS V C, Hareendran A. Precision farming for sustainability: An agricultural intelligence model. Computers and Electronics in Agriculture, 2024.
+
+[527] Jiajia Li, Mingle Xu, Lirong Xiang, Dong Chen, Weichao Zhuang, Xunyuan Yin, and Zhaojian Li. Foundation models in smart agriculture: Basics, opportunities, and challenges. Computers and Electronics in Agriculture, 222:109032, 2024.
+
+[528] Zhiyu Zhang, Wenjian Ni, Shaun Quegan, Jingming Chen, Peng Gong, Luiz Carlos Estraviz Rodriguez, Huadong Guo, Jiancheng Shi, Liangyun Liu, Zengyuan Li, et al. Deforestation in latin america in the 2000s predominantly occurred outside of typical mature forests. The Innovation, 5(3), 2024.
+
+[529] Matheus Thomas Kuska, Mirwaes Wahabzada, and Stefan Paulus. Ai for crop production-where can large language models (llms) provide substantial value? Computers and Electronics in Agriculture, 221:108924, 2024.
+
+[530] Keong Tan. Large language models for crop yield prediction. 2024.
+
+[531] Yujiao Lyu, Pengxin Wang, Xueyuan Bai, Xuecao Li, Xin Ye, Yuchen Hu, and Jie Zhang. Machine learning techniques and interpretability for maize yield estimation using time-series images of modis and multi-source data. Computers and Electronics in Agriculture, 222:109063, 2024.
+
+[532] Federico Pallottino, Simona Violino, Simone Figorilli, Catello Pane, Jacopo Aguzzi, Giacomo Colle, Eugenio Nerio Nemmi, Alessandro Montaghi, Damianos Chatzievangelou, Francesca Antonucci, et al. Applications and perspectives of generative artificial intelligence in agriculture. Computers and Electronics in Agriculture, 230:109919, 2025.
+
+[533] Hongyan Zhu, Shuai Qin, Min Su, Chengzhi Lin, Anjie Li, and Junfeng Gao. Harnessing large vision and language models in agriculture: A review. arXiv preprint arXiv:2407.19679, 2024.
+
+[534] Yueyue Zhou, Hongping Yan, Kun Ding, Tingting Cai, and Yan Zhang. Few-shot image classification of crop diseases based on vision-language models. Sensors, 24(18):6109, 2024.
+
+[535] Xutong Wu, Bojie Fu, Shuai Wang, Yanxu Liu, Ying Yao, Yingjie Li, Zhenci Xu, and Jianguo Liu. Three main dimensions reflected by national sdg performance. The innovation, 4(6), 2023.
+
+[536] Wanchao Zhu, Weifu Li, Hongwei Zhang, and Lin Li. Big data and artificial intelligence-aided crop breeding: Progress and prospects. Journal of Integrative Plant Biology, 2024.
+
+[537] Muhammad Amjad Farooq, Shang Gao, Muhammad Adeel Hassan, Zhangping Huang, Awais Rasheed, Sarah Hearne, Boddupalli Prasanna, Xinhai Li, and Huihui Li. Artificial intelligence in plant breeding. Trends in Genetics, 2024.
+
+[538] Gengchen Mai, Weiming Huang, Jin Sun, Suhang Song, Deepak Mishra, Ninghao Liu, Song Gao, Tianming Liu, Gao Cong, Yingjie Hu, et al. On the opportunities and challenges of foundation models for geospatial artificial intelligence. arXiv preprint arXiv:2304.06798, 2023.
+
+[539] Junnan Li, Dongxu Li, Caiming Xiong, and Steven Hoi. Blip: Bootstrapping language-image pretraining for unified vision-language understanding and generation. In International conference on machine learning, pages 12888-12900. PMLR, 2022.
+
+[540] Guarino M. Tullo E, Finzi A. Environmental impact of livestock farming and precision livestock farming as a mitigation strategy. Science of the total environment, 2019.
+
+[541] Xiao Yang, Haixing Dai, Zihao Wu, Ramesh Bist, Sachin Subedi, Jin Sun, Guoyu Lu, Changying Li, Tianming Liu, and Lilong Chai. Sam for poultry science. arXiv preprint arXiv:2305.10254, 2023.
+
+[542] Xie Q. Bao J. Artificial intelligence in animal farming: A systematic literature review. Journal of Cleaner Production, 2022.
+
+[543] Na Liu, Jingwei Qi, Xiaoping An, and Yuan Wang. A review on information technologies applicable to precision dairy farming: Focus on behavior, health monitoring, and the precise feeding of dairy cows. Agriculture, 13(10):1858, 2023.
+
+[544] Wenjie Sun, Jie Zhang, Yujie Lei, and Danfeng Hong. Rsprotoseg: High spatial resolution remote sensing images segmentation based on non-learnable prototypes. IEEE Transactions on Geoscience and Remote Sensing, 2024.
+
+[545] Sheik Arafat, C Priya, R Premkumar, Haji Nishath SM, et al. Real time cattle health monitoring and early disease detection using iot and machine learning. In 2024 5th International Conference on Electronics and Sustainable Com- munication Systems (ICESC), pages 450-455. IEEE, 2024.
+
+[546] Md Mahfujul Islam, Shaharya Sourov Tonmoy, Sazzad Quayum, Al Russel Sarker, Sumaiya Umme Hani, and Moham- mad Abdul Mannan. Smart poultry farm incorporating gsm and iot. In 2019 International Conference on Robotics, Electrical and Signal Processing Techniques (ICREST), pages 277-280. IEEE, 2019.
+
+[547] Rishi Bommasani, Drew A Hudson, Ehsan Adeli, Russ Altman, Simran Arora, Sydney von Arx, Michael S Bernstein, Jeannette Bohg, Antoine Bosselut, Emma Brunskill, et al. On the opportunities and risks of foundation models. arXiv preprint arXiv:2108.07258, 2021.
+
+[548] Y Nie, Y Kong, X Dong, et al. A survey of large language models for financial applications: Progress, prospects and challenges. arXiv preprint arXiv:2406.11903, 2024.
+
+[549] E Brynjolfsson and A McAfee. The second machine age: Work, progress, and prosperity in a time of brilliant technolo- gies. WW Norton & company, 2014.
+
+[550] Wenhua Xu and Yuanqi Feng. Does fintech promote green economic growth in chinese cities? In 2024 7th International Conference on Humanities Education and Social Sciences (ICHESS 2024), pages 942-948. Atlantis Press, 2024.
+
+[551] AM Qatawneh, A Lutfi, and T Al Barrak. Effect of artificial intelligence (ai) on financial decisionmaking: Mediating role of financial technologies (fin-tech). HighTech and Innovation Journal, 5(3):759-773, 2024.
+
+[552] J Kriebel and L Stitz. Credit default prediction from user-generated text in peer-to-peer lending using deep learning. European Journal of Operational Research, 302(1):309-323, 2022.
+
+[553] DW Arner, DA Zetzsche, RP Buckley, et al. Fintech and regtech: Enabling innovation while preserving financial stability. Georgetown Journal of International Affairs, pages 47-58, 2017.
+
+[554] D Mhlanga. Financial inclusion in emerging economies: The application of machine learning and artificial intelligence in credit risk assessment. International journal of financial studies, 9(3):39, 2021.
+
+[555] J Duarte, S Siegel, and L Young. Trust and credit: The role of appearance in peer-to-peer lending. The Review of Financial Studies, 25(8):2455-2484, 2012.
+
+[556] Chunxiao Li, Hongchang Wang, Songtao Jiang, and Bin Gu. The effect of ai-enabled credit scoring on financial inclusion: Evidence from an underserved population of over one million. MIS Quarterly, 48(4), 2024.
+
+[557] T Chen and C Guestrin. Xgboost: A scalable tree boosting system. In Proceedings of the 22nd acm sigkdd international conference on knowledge discovery and data mining, pages 785-794, 2016.
+
+[558] J Delgadillo, J Kinyua, and C Mutigwe. Finsosent: Advancing financial market sentiment analysis through pretrained large language models. Big Data and Cognitive Computing, 8(8):87, 2024.
+
+[559] B Li and C Duan. Construction and optimization of macroeconomic data forecasting model based on machine learning. Journal of Electrical Systems, 20(3s):436-447, 2024.
+
+[560] S Takahashi, Y Chen, and K Tanaka-Ishii. Modeling financial time-series with generative adversarial networks. Physica A: Statistical Mechanics and its Applications, 527:121261, 2019.
+
+[561] P Hajek and R Henriques. Mining corporate annual reports for intelligent detection of financial statement fraud-a comparative study of machine learning methods. Knowledge-Based Systems, 128:139-152, 2017.
+
+[562] R Avacharmal. Leveraging supervised machine learning algorithms for enhanced anomaly detection in anti-money laundering (aml) transaction monitoring systems: A comparative analysis of performance and explainability. African Journal of Artificial Intelligence and Sustainable Development, 1(2):68-85, 2021.
+
+[563] F Teichmann, S Boticiu, and BS Sergi. Regtech-potential benefits and challenges for businesses. Technology in Society, 72:102150, 2023.
+
+[564] D Tapscott and A Tapscott. Blockchain Revolution: How the Technology Behind Bitcoin and Other Cryptocurrencies is Changing the World. Portfolio, 2017.
+
+[565] LW Cong, Z He, and J Li. Decentralized mining in centralized pools. The Review of Financial Studies, 34(3):1191-1235, 2021.
+
+[566] Q Yang, Y Liu, T Chen, et al. Federated machine learning: Concept and applications. ACM Transactions on Intelligent Systems and Technology (TIST), 10(2):1-19, 2019.
+
+[567] BD Mittelstadt, P Allo, M Taddeo, et al. The ethics of algorithms: Mapping the debate. Big Data & Society, 3(2):2053951716679679, 2016.
+
+[568] Luciano Floridi, Josh Cowls, Monica Beltrametti, Raja Chatila, Patrice Chazerand, Virginia Dignum, Christoph Luetge, Robert Madelin, Ugo Pagallo, Francesca Rossi, et al. Ai4people-an ethical framework for a good ai society: opportu- nities, risks, principles, and recommendations. Minds and machines, 28:689-707, 2018.
+
+[569] MT Ribeiro, S Singh, and C Guestrin. Why should i trust you? explaining the predictions of any classifier. In Proceedings of the 22nd ACM SIGKDD international conference on knowledge discovery and data mining, pages 1135-1144, 2016.
+
+[570] Hung Chau, Igor Labutov, Khushboo Thaker, Daqing He, and Peter Brusilovsky. Automatic concept extraction for domain and student modeling in adaptive textbooks. International Journal of Artificial Intelligence in Education, 31:820-846, 2021.
+
+[571] Qingtang Liu, Xinxin Zheng, Yaoyao Liu, Linjing Wu, Si Zhang, Ni Zhang, and Qiyun Wang. Exploration of the characteristics of teachers' multimodal behaviours in problem-oriented teaching activities with different response levels. British Journal of Educational Technology, 55(1):181207, 2024.
+
+[572] Tunde Toyese Oyedokun. Assistive technology and accessibility tools in enhancing adaptive education. In Advancing Adaptive Education: Technological Innovations for Disability Support, pages 125-162. IGI Global Scientific Publish- ing, 2025.
+
+[573] Wadim Strielkowski, Veronika Grebennikova, Alexander Lisovskiy, Guzalbegim Rakhimova, and Tatiana Vasileva. Ai-driven adaptive learning for sustainable educational transformation. Sustainable Development, 2024.
+
+[574] Tiffanie Zaugg. Future innovations for assistive technology and universal design for learning. Assistive Technology and Universal Design for Learning: Toolkits for Inclusive Instruction, page 275, 2024.
+
+[575] Ismail Celik, Muhterem Dindar, Hanni Muukkonen, and Sanna Ja"rvela". The promises and challenges of artificial intelligence for teachers: A systematic review of research. TechTrends, 66(4):616-630, 2022.
+
+[576] Hanrong Zhang, Jingyuan Huang, Kai Mei, Yifei Yao, Zhenting Wang, Chenlu Zhan, Hongwei Wang, and Yongfeng Zhang. Agent security bench (ASB): formalizing and benchmarking attacks and defenses in llm-based agents. CoRR, abs/2410.02644, 2024.
+
+[577] Matthieu Meeus, Shubham Jain, Marek Rei, and Yves-Alexandre de Montjoye. Did the neurons read your book? document-level membership inference for large language models. In Davide Balzarotti and Wenyuan Xu, editors, 33rd USENIX Security Symposium, USENIX Security 2024, Philadelphia, PA, USA, August 14-16, 2024. USENIX Association, 2024.
+
+[578] Nishant Vishwamitra, Keyan Guo, Farhan Tajwar Romit, Isabelle Ondracek, Long Cheng, Ziming Zhao, and Hongxin Hu. Moderating new waves of online hate with chain-of-thought reasoning in large language models. In IEEE Sympo- sium on Security and Privacy, SP 2024, San Francisco, CA, USA, May 19-23, 2024, pages 788-806. IEEE, 2024.
+
+[579] Xueqi Cheng, Wei Chen, Huawei Shen, Shiguang Shan, Xilin Chen, and Guojie Li. Intelligent algorithm safety: Concepts, scientific problems and prospects. Bulletin of Chinese Academy of Sciences, 39, 2024.
+
+[580] Fa'bio Perez and Ian Ribeiro. Ignore previous prompt: Attack techniques for language models. CoRR, abs/2211.09527, 2022.
+
+[581] Xuchen Suo. Signed-prompt: A new approach to prevent prompt injection attacks against llmintegrated applications. CoRR, abs/2401.07612, 2024.
+
+[582] Yupei Liu, Yuqi Jia, Runpeng Geng, Jinyuan Jia, and Neil Zhenqiang Gong. Formalizing and benchmarking prompt injection attacks and defenses. In Davide Balzarotti and Wenyuan Xu, editors, 33rd USENIX Security Symposium, USENIX Security 2024, Philadelphia, PA, USA, August 14-16, 2024. USENIX Association, 2024.
+
+[583] Sahar Abdelnabi, Kai Greshake, Shailesh Mishra, Christoph Endres, Thorsten Holz, and Mario Fritz. Not what you've signed up for: Compromising real-world llm-integrated applications with indirect prompt injection. In Maura Pin- tor, Xinyun Chen, and Florian Trame`r, editors, Proceedings of the 16th ACM Workshop on Artificial Intelligence and Security, AISec 2023, Copenhagen, Denmark, 30 November 2023, pages 79-90. ACM, 2023.
+
+[584] Jingwei Yi, Yueqi Xie, Bin Zhu, Keegan Hines, Emre Kiciman, Guangzhong Sun, Xing Xie, and Fangzhao Wu. Bench- marking and defending against indirect prompt injection attacks on large language models. CoRR, abs/2312.14197, 2023.
+
+[585] Chong Xiang, Tong Wu, Zexuan Zhong, David A. Wagner, Danqi Chen, and Prateek Mittal. Certifiably robust RAG against retrieval corruption. CoRR, abs/2405.15556, 2024.
+
+[586] Zhaorun Chen, Zhen Xiang, Chaowei Xiao, Dawn Song, and Bo Li. Agentpoison: Red-teaming LLM agents via poisoning memory or knowledge bases. CoRR, abs/2407.12784, 2024.
+
+[587] Yifei Wang, Dizhan Xue, Shengjie Zhang, and Shengsheng Qian. Badagent: Inserting and activating backdoor attacks in LLM agents. In Lun-Wei Ku, Andre Martins, and Vivek Srikumar, editors, Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers), ACL 2024, Bangkok, Thailand, August 11-16, 2024, pages 9811-9827. Association for Computational Linguistics, 2024.
+
+[588] Wenkai Yang, Xiaohan Bi, Yankai Lin, Sishuo Chen, Jie Zhou, and Xu Sun. Watch out for your agents! investigating backdoor threats to llm-based agents. CoRR, abs/2402.11208, 2024.
+
+[589] Tian Dong, Minhui Xue, Guoxing Chen, Rayne Holland, Yan Meng, Shaofeng Li, Zhen Liu, and Haojin Zhu. The philosopher's stone: Trojaning plugins of large language models. In Network and Distributed System Security Sympo- sium, NDSS 2025. The Internet Society, 2025.
+
+[590] Evan Hubinger, Carson Denison, Jesse Mu, Mike Lambert, Meg Tong, Monte MacDiarmid, Tamera Lanham, Daniel M. Ziegler, Tim Maxwell, Newton Cheng, Adam S. Jermyn, Amanda Askell, Ansh Radhakrishnan, Cem Anil, David Duvenaud, Deep Ganguli, Fazl Barez, Jack Clark, Kamal Ndousse, Kshitij Sachan, Michael Sellitto, Mrinank Sharma, Nova DasSarma, Roger Grosse, Shauna Kravec, Yuntao Bai, Zachary Witten, Marina Favaro, Jan Brauner, Holden Karnofsky, Paul F. Christiano, Samuel R. Bowman, Logan Graham, Jared Kaplan, So"ren Mindermann, Ryan Greenblatt, Buck Shlegeris, Nicholas Schiefer, and Ethan Perez. Sleeper agents: Training deceptive llms that persist through safety training. CoRR, abs/2401.05566, 2024.
+
+[591] Zhiyuan Yu, Xiaogeng Liu, Shunning Liang, Zach Cameron, Chaowei Xiao, and Ning Zhang. Don't listen to me: Understanding and exploring jailbreak prompts of large language models. In Davide Balzarotti and Wenyuan Xu, edi- tors, 33rd USENIX Security Symposium, USENIX Security 2024, Philadelphia, PA, USA, August 14-16, 2024. USENIX Association, 2024.
+
+[592] Jiahao Yu, Xingwei Lin, Zheng Yu, and Xinyu Xing. Llm-fuzzer: Scaling assessment of large language model jail- breaks. In Davide Balzarotti and Wenyuan Xu, editors, 33rd USENIX Security Symposium, USENIX Security 2024, Philadelphia, PA, USA, August 14-16, 2024. USENIX Association, 2024.
+
+[593] Yi Liu, Gelei Deng, Zhengzi Xu, Yuekang Li, Yaowen Zheng, Ying Zhang, Lida Zhao, Tianwei Zhang, and Yang Liu. Jailbreaking chatgpt via prompt engineering: An empirical study. CoRR, abs/2305.13860, 2023.
+
+[594] Alexander Wei, Nika Haghtalab, and Jacob Steinhardt. Jailbroken: How does LLM safety training fail? In Alice Oh, Tristan Naumann, Amir Globerson, Kate Saenko, Moritz Hardt, and Sergey Levine, editors, Advances in Neural Information Processing Systems 36: Annual Conference on Neural Information Processing Systems 2023, NeurIPS 2023, New Orleans, LA, USA, December 10-16, 2023, 2023.
+
+[595] Zhuo Zhang, Guangyu Shen, Guanhong Tao, Siyuan Cheng, and Xiangyu Zhang. On large language models' resilience to coercive interrogation. In IEEE Symposium on Security and Privacy, SP 2024, San Francisco, CA, USA, May 19-23, 2024, pages 826-844. IEEE, 2024.
+
+[596] Jiashu Xu, Mingyu Derek Ma, Fei Wang, Chaowei Xiao, and Muhao Chen. Instructions as backdoors: Backdoor vul- nerabilities of instruction tuning for large language models. In Kevin Duh, Helena Go'mez-Adorno, and Steven Bethard, editors, Proceedings of the 2024 Conference of the North American Chapter of the Association for Computational Lin- guistics: Human Language Technologies (Volume 1: Long Papers), NAACL 2024, Mexico City, Mexico, June 1621, 2024, pages 3111-3126. Association for Computational Linguistics, 2024.
+
+[597] Shuai Zhao, Jinming Wen, Anh Tuan Luu, Junbo Zhao, and Jie Fu. Prompt as triggers for backdoor attack: Examining the vulnerability in language models. In Houda Bouamor, Juan Pino, and Kalika Bali, editors, Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing, EMNLP 2023, Singapore, December 6-10, 2023, pages 12303-12317. Association for Computational Linguistics, 2023.
+
+[598] Xiangrui Cai, Haidong Xu, Sihan Xu, Ying Zhang, and Xiaojie Yuan. Badprompt: Backdoor attacks on continuous prompts. In Sanmi Koyejo, S. Mohamed, A. Agarwal, Danielle Belgrave, K. Cho, and A. Oh, editors, Advances in Neural Information Processing Systems 35: Annual Conference on Neural Information Processing Systems 2022, NeurIPS 2022, New Orleans, LA, USA, November 28 - December 9, 2022, 2022.
+
+[599] Yanzhou Li, Tianlin Li, Kangjie Chen, Jian Zhang, Shangqing Liu, Wenhan Wang, Tianwei Zhang, and Yang Liu. Badedit: Backdooring large language models by model editing. In The Twelfth International Conference on Learning Representations, ICLR 2024, Vienna, Austria, May 7-11, 2024. OpenReview.net, 2024.
+
+[600] Neel Jain, Avi Schwarzschild, Yuxin Wen, Gowthami Somepalli, John Kirchenbauer, Ping-yeh Chiang, Micah Gold- blum, Aniruddha Saha, Jonas Geiping, and Tom Goldstein. Baseline defenses for adversarial attacks against aligned language models. CoRR, abs/2309.00614, 2023.
+
+[601] Xinxin Fan, Mengfan Li, Jia Zhou, Quanliang Jing, Chi Lin, Yunfeng Lu, and Jingping Bi. GCSA: A new adversarial example-generating scheme toward black-box adversarial attacks. IEEE Trans. Consumer Electron., 70(1):2038-2048, 2024.
+
+[602] Baoli Wang, Xinxin Fan, Quanliang Jing, Yueyang Su, Jingwei Li, and Jingping Bi. GTAT: adversarial training with generated triplets. In International Joint Conference on Neural Networks, IJCNN 2022, Padua, Italy, July 18-23, 2022, pages 1-8. IEEE, 2022.
+
+[603] Quanliang Jing, Shuo Liu, Xinxin Fan, Jingwei Li, Di Yao, Baoli Wang, and Jingping Bi. Can adversarial training benefit trajectory representation?: An investigation on robustness for trajectory similarity computation. In Mohammad Al Hasan and Li Xiong, editors, Proceedings of the 31st ACM International Conference on Information & Knowledge Management, Atlanta, GA, USA, October 17-21, 2022, pages 905-914. ACM, 2022.
+
+[604] Tong Liu, Yingjie Zhang, Zhe Zhao, Yinpeng Dong, Guozhu Meng, and Kai Chen. Making them ask and answer: Jailbreaking large language models in few queries via disguise and reconstruction. In Davide Balzarotti and Wenyuan Xu, editors, 33rd USENIX Security Symposium, USENIX Security 2024, Philadelphia, PA, USA, August 14-16, 2024. USENIX Association, 2024.
+
+[605] Ziwei Ji, Nayeon Lee, Rita Frieske, Tiezheng Yu, Dan Su, Yan Xu, Etsuko Ishii, Yejin Bang, Andrea Madotto, and Pascale Fung. Survey of hallucination in natural language generation. ACM Comput. Surv., 55(12):248:1-248:38, 2023.
+
+[606] Yue Zhang, Yafu Li, Leyang Cui, Deng Cai, Lemao Liu, Tingchen Fu, Xinting Huang, Enbo Zhao, Yu Zhang, Yulong Chen, Longyue Wang, Anh Tuan Luu, Wei Bi, Freda Shi, and Shuming Shi. Siren's song in the AI ocean: A survey on hallucination in large language models. CoRR, abs/2309.01219, 2023.
+
+[607] Nelson F. Liu, Kevin Lin, John Hewitt, Ashwin Paranjape, Michele Bevilacqua, Fabio Petroni, and Percy Liang. Lost in the middle: How language models use long contexts. Trans. Assoc. Comput. Linguistics, 12:157-173, 2024.
+
+[608] Guilherme Penedo, Quentin Malartic, Daniel Hesslow, Ruxandra Cojocaru, Hamza Alobeidli, Alessandro Cappelli, Baptiste Pannier, Ebtesam Almazrouei, and Julien Launay. The refinedweb dataset for falcon LLM: outperforming curated corpora with web data only. In Alice Oh, Tristan Naumann, Amir Globerson, Kate Saenko, Moritz Hardt, and Sergey Levine, editors, Advances in Neural Information Processing Systems 36: Annual Conference on Neural Information Processing Systems 2023, NeurIPS 2023, New Orleans, LA, USA, December 10-16, 2023, 2023.
+
+[609] Shaobo Li, Xiaoguang Li, Lifeng Shang, Zhenhua Dong, Chengjie Sun, Bingquan Liu, Zhenzhou Ji, Xin Jiang, and Qun Liu. How pre-trained language models capture factual knowledge? A causal-inspired analysis. In Smaranda Muresan, Preslav Nakov, and Aline Villavicencio, editors, Findings of the Association for Computational Linguistics: ACL 2022, Dublin, Ireland, May 22-27, 2022, pages 1720-1732. Association for Computational Linguistics, 2022.
+
+[610] Nick McKenna, Tianyi Li, Liang Cheng, Mohammad Javad Hosseini, Mark Johnson, and Mark Steedman. Sources of hallucination by large language models on inference tasks. In Houda Bouamor, Juan Pino, and Kalika Bali, editors, Findings of the Association for Computational Linguistics: EMNLP 2023, Singapore, December 6-10, 2023, pages 2758-2774. Association for Computational Linguistics, 2023.
+
+[611] Saurav Kadavath, Tom Conerly, Amanda Askell, Tom Henighan, Dawn Drain, Ethan Perez, Nicholas Schiefer, Zac Hatfield-Dodds, Nova DasSarma, Eli Tran-Johnson, Scott Johnston, Sheer El Showk, Andy Jones, Nelson Elhage, Tristan Hume, Anna Chen, Yuntao Bai, Sam Bowman, Stanislav Fort, Deep Ganguli, Danny Hernandez, Josh Jacobson, Jackson Kernion, Shauna Kravec, Liane Lovitt, Kamal Ndousse, Catherine Olsson, Sam Ringer, Dario Amodei, Tom Brown, Jack Clark, Nicholas Joseph, Ben Mann, Sam McCandlish, Chris Olah, and Jared Kaplan. Language models (mostly) know what they know. CoRR, abs/2207.05221, 2022.
+
+[612] Zhangyue Yin, Qiushi Sun, Qipeng Guo, Jiawen Wu, Xipeng Qiu, and Xuanjing Huang. Do large language models know what they don't know? In Anna Rogers, Jordan L. Boyd-Graber, and Naoaki Okazaki, editors, Findings of the As- sociation for Computational Linguistics: ACL 2023, Toronto, Canada, July 9-14, 2023, pages 8653-8665. Association for Computational Linguistics, 2023.
+
+[613] Claire Gardent, Anastasia Shimorina, Shashi Narayan, and Laura Perez-Beltrachini. Creating training corpora for NLG micro-planners. In Regina Barzilay and Min-Yen Kan, editors, Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics, ACL 2017, Vancouver, Canada, July 30 - August 4, Volume 1: Long Papers, pages 179-188. Association for Computational Linguistics, 2017.
+
+[614] Stephanie Lin, Jacob Hilton, and Owain Evans. Truthfulqa: Measuring how models mimic human falsehoods. In Smaranda Muresan, Preslav Nakov, and Aline Villavicencio, editors, Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers), ACL 2022, Dublin, Ireland, May 22-27, 2022, pages 3214-3252. Association for Computational Linguistics, 2022.
+
+[615] Sina Zarrieß, Henrik Voigt, and Simeon Schu"z. Decoding methods in neural language generation: A survey. Inf., 12(9):355, 2021.
+
+[616] Nayeon Lee, Wei Ping, Peng Xu, Mostofa Patwary, Pascale Fung, Mohammad Shoeybi, and Bryan Catanzaro. Factu- ality enhanced language models for open-ended text generation. In Sanmi Koyejo, S. Mohamed, A. Agarwal, Danielle Belgrave, K. Cho, and A. Oh, editors, Advances in Neural Information Processing Systems 35: Annual Conference on Neural Information Processing Systems 2022, NeurIPS 2022, New Orleans, LA, USA, November 28 - December 9, 2022, 2022.
+
+[617] Shehzaad Dhuliawala, Mojtaba Komeili, Jing Xu, Roberta Raileanu, Xian Li, Asli Celikyilmaz, and Jason Weston. Chain-of-verification reduces hallucination in large language models. In LunWei Ku, Andre Martins, and Vivek Sriku- mar, editors, Findings of the Association for Computational Linguistics, ACL 2024, Bangkok, Thailand and virtual meeting, August 11-16, 2024, pages 3563-3578. Association for Computational Linguistics, 2024.
+
+[618] Kenneth Li, Oam Patel, Fernanda B. Vie'gas, Hanspeter Pfister, and Martin Wattenberg. Inferencetime intervention: Eliciting truthful answers from a language model. In Alice Oh, Tristan Naumann, Amir Globerson, Kate Saenko, Moritz Hardt, and Sergey Levine, editors, Advances in Neural Information Processing Systems 36: Annual Conference on Neural Information Processing Systems 2023, NeurIPS 2023, New Orleans, LA, USA, December 10-16, 2023, 2023.
+
+[619] Miao Xiong, Zhiyuan Hu, Xinyang Lu, YIFEI LI, Jie Fu, Junxian He, and Bryan Hooi. Can llms express their uncer- tainty? an empirical evaluation of confidence elicitation in llms. In The Twelfth International Conference on Learning Representations, 2024.
+
+[620] Reza Shokri, Marco Stronati, Congzheng Song, and Vitaly Shmatikov. Membership inference attacks against machine learning models. In 2017 IEEE symposium on security and privacy (SP), pages 3-18, 2017.
+
+[621] Nicholas Carlini, Florian Trame`r, Eric Wallace, Matthew Jagielski, Ariel Herbert-Voss, Katherine Lee, Adam Roberts, Tom B. Brown, Dawn Song, Ú lfar Erlingsson, Alina Oprea, and Colin Raffel. Extracting training data from large language models. In Michael D. Bailey and Rachel Greenstadt, editors, 30th USENIX Security Symposium, USENIX Security 2021, August 11-13, 2021, pages 2633-2650. USENIX Association, 2021.
+
+[622] Justus Mattern, Fatemehsadat Mireshghallah, Zhijing Jin, Bernhard Scho"lkopf, Mrinmaya Sachan, and Taylor Berg- Kirkpatrick. Membership inference attacks against language models via neighbourhood comparison. In Anna Rogers, Jordan L. Boyd-Graber, and Naoaki Okazaki, editors, Findings of the Association for Computational Linguistics: ACL 2023, Toronto, Canada, July 914, 2023, pages 11330-11343. Association for Computational Linguistics, 2023.
+
+[623] Boxin Wang, Weixin Chen, Hengzhi Pei, Chulin Xie, Mintong Kang, Chenhui Zhang, Chejian Xu, Zidi Xiong, Ritik Dutta, Rylan Schaeffer, Sang T. Truong, Simran Arora, Mantas Mazeika, Dan Hendrycks, Zinan Lin, Yu Cheng, Sanmi Koyejo, Dawn Song, and Bo Li. Decodingtrust: A comprehensive assessment of trustworthiness in GPT models. In Alice Oh, Tristan Naumann, Amir Globerson, Kate Saenko, Moritz Hardt, and Sergey Levine, editors, Advances in Neural Information Processing Systems 36: Annual Conference on Neural Information Processing Systems 2023, NeurIPS 2023, New Orleans, LA, USA, December 10-16, 2023, 2023.
+
+[624] Dan Hendrycks, Collin Burns, Steven Basart, Andrew Critch, Jerry Li, Dawn Song, and Jacob Steinhardt. Aligning AI with shared human values. In 9th International Conference on Learning Representations, ICLR 2021, Virtual Event, Austria, May 3-7, 2021. OpenReview.net, 2021.
+
+[625] Yi Liu, Gelei Deng, Zhengzi Xu, Yuekang Li, Yaowen Zheng, Ying Zhang, Lida Zhao, Tianwei Zhang, and Yang Liu. Jailbreaking chatgpt via prompt engineering: An empirical study. CoRR, abs/2305.13860, 2023.
+
+[626] Zhijing Jin, Sydney Levine, Fernando Gonzalez Adauto, Ojasv Kamal, Maarten Sap, Mrinmaya Sachan, Rada Mihalcea, Josh Tenenbaum, and Bernhard Scho"lkopf. When to make exceptions: Exploring language models as accounts of human moral judgment. In Sanmi Koyejo, S. Mohamed, A. Agarwal, Danielle Belgrave, K. Cho, and A. Oh, editors, Advances in Neural Information Processing Systems 35: Annual Conference on Neural Information Processing Systems 2022, NeurIPS 2022, New Orleans, LA, USA, November 28 - December 9, 2022, 2022.
+
+[627] Kexin Huang, Xiangyang Liu, Qianyu Guo, Tianxiang Sun, Jiawei Sun, Yaru Wang, Zeyang Zhou, Yixu Wang, Yan Teng, Xipeng Qiu, Yingchun Wang, and Dahua Lin. Flames: Benchmarking value alignment of llms in chinese. In Kevin Duh, Helena Go'mez-Adorno, and Steven Bethard, editors, Proceedings of the 2024 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies (Volume 1: Long Papers), NAACL 2024, Mexico City, Mexico, June 16-21, 2024, pages 4551-4591. Association for Computational Linguistics, 2024.
+
+[628] Jingnan Zheng, Han Wang, An Zhang, Tai D. Nguyen, Jun Sun, and Tat-Seng Chua. Ali-agent: Assessing llms’ align- ment with human values via agent-based evaluation. In Amir Globersons, Lester Mackey, Danielle Belgrave, Angela Fan, Ulrich Paquet, Jakub M. Tomczak, and Cheng Zhang, editors, Advances in Neural Information Processing Sys- tems 38: Annual Conference on Neural Information Processing Systems 2024, NeurIPS 2024, Vancouver, BC, Canada, December 10-15, 2024, 2024.
+
+[629] Jiyoung Lee, Minwoo Kim, Seungho Kim, Junghwan Kim, Seunghyun Won, Hwaran Lee, and Edward Choi. Kornat: LLM alignment benchmark for korean social values and common knowledge. In Lun-Wei Ku, Andre Martins, and Vivek Srikumar, editors, Findings of the Association for Computational Linguistics, ACL 2024, Bangkok, Thailand and virtual meeting, August 11-16, 2024, pages 11177-11213. Association for Computational Linguistics, 2024.
+
+[630] Fan Bu, Zheng Wang, Siyi Wang, and Ziyao Liu. An investigation into value misalignment in llmgenerated texts for cultural heritage. CoRR, abs/2501.02039, 2025.
+
+[631] Soroush Vosoughi, Deb Roy, and Sinan Aral. The spread of true and false news online. science, 359(6380):1146-1151, 2018.
+
+[632] Yizhou Zhang, Karishma Sharma, Lun Du, and Yan Liu. Toward mitigating misinformation and social media manipu- lation in llm era. In Companion Proceedings of the ACM on Web Conference 2024, pages 1302-1305, 2024.
+
+[633] Adam DI Kramer, Jamie E Guillory, and Jeffrey T Hancock. Experimental evidence of massivescale emotional conta- gion through social networks. Proceedings of the National Academy of Sciences, 111(24):8788-8790, 2014.
+
+[634] Karan Singhal, Tao Tu, Juraj Gottweis, Rory Sayres, Ellery Wulczyn, Mohamed Amin, Le Hou, Kevin Clark, Stephen R Pfohl, Heather Cole-Lewis, et al. Toward expert-level medical question answering with large language models. Nature Medicine, pages 1-8, 2025.
+
+[635] Yikai Chen, Xiujie Huang, Fangjie Yang, Haiming Lin, Haoyu Lin, Zhuoqun Zheng, Qifeng Liang, Jinhai Zhang, and Xinxin Li. Performance of chatgpt and bard on the medical licensing examinations varies across different cultures: a comparison study. BMC Medical Education, 24(1):1372, 2024.
+
+[636] Jiaming Ji, Tianyi Qiu, Boyuan Chen, Borong Zhang, Hantao Lou, Kaile Wang, Yawen Duan, Zhonghao He, Jiayi Zhou, Zhaowei Zhang, et al. Ai alignment: A comprehensive survey. arXiv preprint arXiv:2310.19852, 2023.
+
+[637] Jing Yao, Xiaoyuan Yi, Shitong Duan, Jindong Wang, Yuzhuo Bai, Muhua Huang, Peng Zhang, Tun Lu, Zhicheng Dou, Maosong Sun, et al. Value compass leaderboard: A platform for fundamental and validated evaluation of llms values. arXiv preprint arXiv:2501.07071, 2025.
+
+[638] Shalom H Schwartz. An overview of the schwartz theory of basic values. Online readings in Psychology and Culture, 2(1):11, 2012.
 
 
