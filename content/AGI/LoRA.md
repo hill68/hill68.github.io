@@ -19,7 +19,7 @@ summary= "对论文《LoRA: Low-Rank Adaptation of Large Language Models》的�
 * **Adapter 方法增加推理时延**：在 Transformer 层间插入一个小规模的瓶颈层（Adapter），虽参数量少，但必须在正向推理时进行额外计算，在线推理时（尤其 Batch Size=1 情况下）延迟不容忽视。
 * **Prompt/Prefix 方法难以优化且占用输入长度**：这类方法通过在输入序列中插入特殊标记，使模型在前向时多处理一段“可训练”激活；但随着特殊标记数目增多，性能提升并不稳定，而且会减少可用于下游任务的实际 Token 数。
 
-鉴于此，论文提出一种新的**低秩适配(LoRA，Low-Rank Adaptation)**策略：在保持预训练权重不变的前提下，通过向每层注入低秩分解矩阵来进行微调，从而在不增加推理时延、不缩减序列长度的情况下，大幅降低可训练参数量和显存占用。
+鉴于此，论文提出一种新的 **低秩适配(LoRA, Low-Rank Adaptation)** 策略：在保持预训练权重不变的前提下，通过向每层注入低秩分解矩阵来进行微调，从而在不增加推理时延、不缩减序列长度的情况下，大幅降低可训练参数量和显存占用。
 
 ---
 
@@ -28,7 +28,7 @@ summary= "对论文《LoRA: Low-Rank Adaptation of Large Language Models》的�
 假设已得到一个预训练的自回归语言模型 $P_\Phi(y\mid x)$，其参数为 $\Phi_0$。在下游任务中，往往通过最大化条件语言建模目标进行全量微调：
 
 $$
-\max_{\Phi}\sum_{(x,y)\in \mathcal{Z}}\sum_{t=1}^{|y|} \log P_{\Phi}(y_t)(y_t \mid x, y)
+\max_{\Phi}\sum_{(x,y)\in \mathcal{Z}}\sum_{t=1}^{|y|} \log P_{\Phi}(y_t)(y_t \mid x, y_{t})
 $$
 
 此时需为每个下游任务保存一份 $\Delta \Phi$，且 $|\Delta \Phi| = |\Phi_0|$。当 $\Phi_0$ 较大（如 GPT-3 175B）时，无论是**存储**还是**训练显存**都几近或超出可承受范围。
