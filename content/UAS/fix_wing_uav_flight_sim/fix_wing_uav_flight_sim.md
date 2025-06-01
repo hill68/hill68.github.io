@@ -11,7 +11,7 @@ summary= "为小型固定翼无人机仿真系统提供逼真的飞行动力学�
 本设计文档旨在为小型固定翼无人机仿真系统提供逼真的飞行动力学与飞行控制方案，替代当前的简单PID+运动学模型，指导后续具体实现与集成。文档涵盖系统需求、6-DOF动力学模型、级联控制架构、模块接口、参数标定及实现建议等内容。
 
 
-[C++代码实现](https://github.com/flitai/fix_wing_uav_flight_sim/)
+[C++代码实现](https://github.com/flitai/uav-flight-sim-v1)
 
 ---
 
@@ -189,6 +189,8 @@ summary= "为小型固定翼无人机仿真系统提供逼真的飞行动力学�
 * 日志与可视化：保存关键变量，用于离线分析与调优。
 
 ---
+
+[C++代码实现](https://github.com/flitai/uav-flight-sim-v1)
 
 ## 8. 参考文献
 
