@@ -34,7 +34,7 @@ article h1,
     font-weight: 550 !important;
     text-transform: uppercase !important;  /* 转为大写 */
     /*letter-spacing: 2px !important;  /* 字母间距 */
-    /*color: #0959aa !important;  改变颜色 */ 
+    color: #2d2d2e !important;  /*改变颜色 */ 
 }
 
 /* H2 使用 HeadingFont */
