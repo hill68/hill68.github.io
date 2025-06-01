@@ -39,7 +39,7 @@ article h1,
 
 /* 暗色模式 */
 @media (prefers-color-scheme: dark) {
-    .body #body-inner h1,
+     .body #body-inner h1,
     #body #body-inner h1,
     article h1,
     .content h1 {
