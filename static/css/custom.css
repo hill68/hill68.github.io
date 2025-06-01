@@ -43,7 +43,7 @@ article h1,
     #body #body-inner h1,
     article h1,
     .content h1 {
-        color: #e9e9eb !important; /* 浅色文字 */
+        color: #a1a1a2 !important; /* 浅色文字 */
 }
 
 /* H2 使用 HeadingFont */
