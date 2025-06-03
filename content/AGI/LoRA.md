@@ -28,7 +28,7 @@ summary= "对论文《LoRA: Low-Rank Adaptation of Large Language Models》的�
 假设已得到一个预训练的自回归语言模型 $P_\Phi(y\mid x)$，其参数为 $\Phi_0$。在下游任务中，往往通过最大化条件语言建模目标进行全量微调：
 
 $$
-\max_{\Phi}\sum_{(x,y)\in \mathcal{Z}}\sum_{t=1}^{|y|} \log P_{\Phi}(y_t)(y_t \mid x, y_{<})
+\max_{\Phi}\sum_{(x,y)\in \mathcal{Z}}\sum_{t=1}^{|y|} \log P_{\Phi}(y_t)(y_t \mid x, y_{< t})
 $$
 
 此时需为每个下游任务保存一份 $\Delta \Phi$，且 $|\Delta \Phi| = |\Phi_0|$。当 $\Phi_0$ 较大（如 GPT-3 175B）时，无论是**存储**还是**训练显存**都几近或超出可承受范围。
