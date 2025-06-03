@@ -34,7 +34,7 @@ summary= "针对轨迹规划问题，详细阐述了如何利用三次多项式�
 
 给定 $\mathrm{n}+1$ 个点 $\left(\mathrm{t}_{\mathrm{i}}, \mathrm{q}_{\mathrm{i}}\right), \mathrm{i}=0,1, \ldots, \mathrm{n}$ ，求解 n 段三次多项式 $\mathrm{q}_{\mathrm{k}}(\mathrm{t})$ ，使得拼接而成的三次样条曲线 $\mathrm{s}(\mathrm{t})$ 经过所有给定点，而且二阶连续。三次样条曲线 $\mathrm{s}(\mathrm{t})$ 定义如下：
 
-<img src="https://cdn.mathpix.com/snip/images/9lbuJx1WtYE0aso-mtHaXo1ryCnMf6Vrh7LO4WLWhwY.original.fullsize.png" />
+<img src="https://cdn.mathpix.com/snip/images/9lbuJx1WtYE0aso-mtHaXo1ryCnMf6Vrh7LO4WLWhwY.original.fullsize.png" width=500/>
 
 
 
