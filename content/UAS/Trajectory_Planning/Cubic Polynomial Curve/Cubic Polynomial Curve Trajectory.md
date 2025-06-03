@@ -276,8 +276,13 @@ ylabel('acc')
 
 ```
 
-<img src="https://i-blog.csdnimg.cn/blog_migrate/7615051c502f5b3b5396361f2676c69a.png " />
 
+<img
+  src="https://i-blog.csdnimg.cn/blog_migrate/7615051c502f5b3b5396361f2676c69a.png "  
+  alt="fig y"
+  width="500"
+  style="height: auto;"
+/>
 
 
 #### 在线验证计算器
@@ -468,7 +473,13 @@ ylabel('acc')
 
 ```
 
-<img src="https://i-blog.csdnimg.cn/blog_migrate/3ed21d74631c328d2464b0e3ca790cd7.png" width=400/>
+<img
+  src="https://i-blog.csdnimg.cn/blog_migrate/3ed21d74631c328d2464b0e3ca790cd7.png" 
+  alt="fig x"
+  width="500"
+  style="height: auto;"
+/>
+
 
 ### 3、两种计算方法的比较
 
@@ -669,7 +680,15 @@ ylabel('acc')
 
 ```
 
-<img src="https://i-blog.csdnimg.cn/blog_migrate/9b9b6d7511db01a8e175660daf44c3dc.png" />
+
+<img
+  src="https://i-blog.csdnimg.cn/blog_migrate/9b9b6d7511db01a8e175660daf44c3dc.png"
+  alt="fig z"
+  width="500"
+  style="height: auto;"
+/>
+
+
 
 ## 四、给定约束：给定起始速度 $\mathrm{v}_0$ 、结束速度 $\mathrm{v}_{\mathrm{n}}$ ，起始加速度 $\mathrm{a}_0$ 、结束加速度 $\mathrm{a}_{\mathrm{n}}$
 
