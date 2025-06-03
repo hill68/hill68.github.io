@@ -209,7 +209,7 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "FlitSoft Docs \u003e  UAS \u003e  Trajectory Planning \u003e  Cubic Polynomial Curve",
-    "content": "用于轨迹规划的三次样条插值 摘要：",
+    "content": "11111\n用于轨迹规划的三次样条插值 摘要：",
     "description": "针对轨迹规划问题，详细阐述了如何利用三次多项式样条插值构造一条平滑连续的轨迹曲线。",
     "tags": [],
     "title": "三次多项式样条轨迹",
