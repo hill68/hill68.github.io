@@ -36,7 +36,7 @@ $$
 论文改写该问题为：寻找一个仅依赖于少量参数 $\Theta$ 的更新映射 $\Delta \Phi(\Theta)$ 使得
 
 $$
-\max_{\Theta}\sum_{(x,y)\in \mathcal{Z}}\sum_{t=1}^{|y|} \log P_{\Phi_0 + \Delta \Phi(\Theta)}(y_t \mid x, y_{< t}), |\Theta| \ll |\Phi_0|.
+\max_{\Theta}\sum_{(x,y)\in \mathcal{Z}}\sum_{t=1}^{|y|} \log P_{\Phi_0 + \Delta \Phi(\Theta)}(y_t \mid x, y_{< t}) \quad,\quad |\Theta| \ll |\Phi_0|.
 $$
 
 最终目标是在**显存占用**与**可训练参数量**大幅下降的同时，仍保持或超越全量微调的模型性能。
