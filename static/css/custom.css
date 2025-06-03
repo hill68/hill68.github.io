@@ -64,6 +64,15 @@ article h3,
     font-size: 1.2rem !important;
 }
 
+/* H4 也使用 HeadingFont */
+.body #body-inner h4,
+#body #body-inner h4,
+article h4,
+.content h4 {
+    font-family: 'HeadingFont', "Helvetica Neue", Arial, sans-serif !important;
+    font-size: 1.0rem !important;
+}
+
 /* 页面主标题使用 TitleFont */
 #body h1:first-child,
 .content > h1:first-child {
