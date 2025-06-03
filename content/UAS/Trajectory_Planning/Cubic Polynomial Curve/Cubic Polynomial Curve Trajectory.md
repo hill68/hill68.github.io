@@ -468,7 +468,7 @@ ylabel('acc')
 
 ```
 
-<img src="https://i-blog.csdnimg.cn/blog_migrate/3ed21d74631c328d2464b0e3ca790cd7.png" />
+<img src="https://i-blog.csdnimg.cn/blog_migrate/3ed21d74631c328d2464b0e3ca790cd7.png" width=400/>
 
 ### 3、两种计算方法的比较
 
