@@ -278,7 +278,7 @@ ylabel('acc')
 
 
 <img
-  src="https://i-blog.csdnimg.cn/blog_migrate/7615051c502f5b3b5396361f2676c69a.png "  
+  src="https://cdn.mathpix.com/snip/images/lxebM-8nEo_GiZ-saOddPV0SHQ9bmvvIUDCLost6nwU.original.fullsize.png "  
   alt="fig y"
   width="500"
   style="height: auto;"
@@ -474,7 +474,7 @@ ylabel('acc')
 ```
 
 <img
-  src="https://i-blog.csdnimg.cn/blog_migrate/3ed21d74631c328d2464b0e3ca790cd7.png" 
+  src="https://cdn.mathpix.com/snip/images/Ho-0Tp3Be9-KCEtLgRZ_O1vW4QahJPGUYGkcZVD0_2k.original.fullsize.png" 
   alt="fig x"
   width="500"
   style="height: auto;"
@@ -682,7 +682,7 @@ ylabel('acc')
 
 
 <img
-  src="https://i-blog.csdnimg.cn/blog_migrate/9b9b6d7511db01a8e175660daf44c3dc.png"
+  src="https://cdn.mathpix.com/snip/images/3rovKvFqWLEv_gTpFPGyi-WAIYT1MMWTKoniFPMmkAc.original.fullsize.png"
   alt="fig z"
   width="500"
   style="height: auto;"
@@ -860,7 +860,14 @@ ylabel('acc')
 
 ```
 
-<img src="https://i-blog.csdnimg.cn/blog_migrate/a6c7a71ad4272f430d10c71e032848f2.png"/>
+
+<img
+  src="https://cdn.mathpix.com/snip/images/i0BR4rg3x9bojg9Ss-biAlxqCOglplh5SlQiZvRg-QE.original.fullsize.png"
+  alt="fig z"
+  width="500"
+  style="height: auto;"
+/>
+
 
 ## 五、参考文献
 
