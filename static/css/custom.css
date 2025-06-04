@@ -45,6 +45,7 @@ article h1,
     .content h1 {
         color: #a1a1a2 !important; /* 浅色文字 */
 }
+}
 
 /* H2 使用 HeadingFont */
 .body #body-inner h2,
@@ -81,11 +82,12 @@ article h4,
 }
 
 /* 如果想给正文也设置字体 */
+/* 正文使用 BodyFont */
 /*
 .body #body-inner p,
 article p,
 .content p {
   font-family:  'BodyFont', "Helvetica Neue", Arial, sans-serif !important;
-  color: #1e76ce !important;  /* 改变颜色 */
+  color: #1e76ce !important;  
 }
 */
