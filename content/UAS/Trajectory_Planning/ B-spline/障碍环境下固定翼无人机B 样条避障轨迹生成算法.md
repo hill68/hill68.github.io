@@ -7,6 +7,8 @@ summary= "一种针对固定翼无人机B样条避障轨迹生成算法"
 
 ## 障碍环境下固定翼无人机B 样条避障轨迹生成算法
 
+[C++代码实现](https://github.com/flitai/fixed-wing-bspline-trajectory)
+
 ---
 
 ## 一、输入与预备工作
@@ -828,3 +830,6 @@ summary= "一种针对固定翼无人机B样条避障轨迹生成算法"
 **综合结论**：
 
 > 对于固定翼 B 样条避障，**最推荐的方案**是基于 **成熟非线性优化库（IPOPT、SNOPT、KNITRO 等）**，因为它能自动处理所有约束（硬约束与软惩罚并存），具有较好收敛性与工程可靠性。若项目对实时性要求更高，可在此基础上引入稀疏 SQP 或分段交替最小二乘等策略，将“全局严格优化”与“在线快速修正”相结合。
+
+
+[C++代码实现](https://github.com/flitai/fixed-wing-bspline-trajectory)

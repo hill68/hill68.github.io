@@ -5,6 +5,7 @@ title = '用于轨迹规划的三次样条插值'
 summary= "针对轨迹规划问题，详细阐述了如何利用三次多项式样条插值构造一条平滑连续的轨迹曲线。"
 +++
 
+[C++实现代码](https://github.com/flitai/Cubic-Polynomial-Spline-Trajectory)
 
 ## **摘要：**
 
