@@ -7,9 +7,7 @@ summary= "为对论文 Robust and efficient quadrotor trajectory generation for 
 
 
 
-以下为对论文  [Robust and
-efficient quadrotor trajectory generation for fast autonomous
-flight ](https://arxiv.org/abs/1907.01531) 提出的B样条避障轨迹方法的综合分析
+以下为对论文 [Zhou, B., Gao, F., Wang, L., Liu, C., & Shen, S. (2019). Robust and efficient quadrotor trajectory generation for fast autonomous flight. IEEE Robotics and Automation Letters, 4(4), 3529-3536.  ](https://arxiv.org/abs/1907.01531) 提出的B样条避障轨迹方法的综合分析
 
 ## 控制点的生成过程
 
