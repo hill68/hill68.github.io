@@ -1,7 +1,7 @@
 +++
-title = "Cubic Polynomial Spline"
+title = "B-Spline"
 type = "chapter"
-weight = 2
+weight = 3
 +++
 
 {{% children description="true" %}}
