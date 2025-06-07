@@ -2,7 +2,7 @@
 date = '2025-05-21T17:07:50+08:00'
 draft = false
 title = '障碍环境下B样条轨迹问题解析'
-summary= "为对论文 Robust and efficient quadrotor trajectory generation for fast autonomous flight 提出的B样条避障轨迹方法的综合分析"
+summary= "对论文【 Robust and efficient quadrotor trajectory generation for fast autonomous flight】提出的B样条避障轨迹方法的综合分析"
 +++
 
 
