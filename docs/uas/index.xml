@@ -7,5 +7,5 @@ JSBSim Quickstart旨在让用户和开发者了解JSBSim软件的所有功能。
 等长轨迹κ求解算法设计一种基于二分查找的数值方法，用以求解参数 κ，从而使得生成的 κ-轨迹路径长度与原始航路点路径长度完全一致。
 Cubic Polynomial Spline 用于轨迹规划的三次样条插值针对轨迹规划问题，详细阐述了如何利用三次多项式样条插值构造一条平滑连续的轨迹曲线。
 B-Spline 固定翼无人机B 样条避障轨迹生成一种针对固定翼无人机B样条避障轨迹生成算法
-障碍环境下B样条轨迹问题解析为对论文 Robust and efficient quadrotor trajectory generation for fast autonomous flight 提出的B样条避障轨迹方法的综合分析
+障碍环境下B样条轨迹问题解析对论文【 Robust and efficient quadrotor trajectory generation for fast autonomous flight】提出的B样条避障轨迹方法的综合分析
 轨迹管理的几个关键问题针对不同类型规划路径对轨迹管理的基本要求</description></item></channel></rss>
