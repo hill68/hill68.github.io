@@ -4,6 +4,7 @@ date = '2025-05-21T17:07:50+08:00'
 draft = false
 title = '无人机实时动态轨迹平滑'
 summary= "一种实时、可行的轨迹生成算法，用于无人机通过一系列航路点飞行。 特别地，算法可配置为动态可行轨迹与直线航路点路径具有相同的路径长度。 该文还详细描述了与算法相关的实现问题。 "
+weight = 1
 +++
 
 ### Real-time dynamic trajectory smoothing for unmanned air vehicles
