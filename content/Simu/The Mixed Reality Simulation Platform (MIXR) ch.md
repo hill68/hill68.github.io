@@ -6,7 +6,7 @@ summary= "混合现实仿真平台（MIXR, The Mixed Reality Simulation Platform
 +++
 
 
-# 混合现实仿真平台（MIXR）
+# 混合现实仿真平台（The Mixed Reality Simulation Platform）
 
 Douglas D. Hodson , David P. Gehl 
 
