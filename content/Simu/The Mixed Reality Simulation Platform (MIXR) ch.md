@@ -14,9 +14,9 @@ Air Force Institute of Technology, WPAFB, OH, USA
 
 [Int'l Conf. Scientific Computing | CSC'18 |](https://www.sce.carleton.ca/faculty/wainer/papers/CSC9033.pdf)
 
-其最新版本可见 https://www.mixr.dev/
+[Latest Version]( https://www.mixr.dev/)
 
-Git：https://github.com/doughodson/mixr
+[Code Repository](https://github.com/doughodson/mixr)
 
 
 #### 摘要

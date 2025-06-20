@@ -1,7 +1,7 @@
 +++
 date = '2025-06-19T17:07:50+08:00'
 draft = false
-title = 'HIL Swarm Simulation Framework '
+title = 'HIL Swarm Simulation'
 summary= "一个用于硬件在环蜂群仿真的OpenEaagles框架扩展"
 +++
 
