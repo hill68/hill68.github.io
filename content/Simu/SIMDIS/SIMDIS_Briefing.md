@@ -29,8 +29,6 @@ SIMDIS已经由美国海军作战测试与评估司令部（COMOPTEVFOR）独立
 除了美国国防部之外，SIMDIS也已在其他美国和外国机构中得到广泛认可和应用。
 
 
-
-
 <iframe
   src="/pdf/SIMDIS_Briefing.pdf"
   width="100%"
