@@ -1,6 +1,7 @@
 +++
 date = '2025-06-18T17:07:50+08:00'
 draft = false
+weight = 1
 title = 'SIMDIS_Briefing'
 summary= "SIMDIS 概要"
 +++

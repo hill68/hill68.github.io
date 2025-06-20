@@ -1,6 +1,7 @@
 +++
 date = '2025-06-18T17:07:50+08:00'
 draft = false
+weight = 2
 title = 'SIMDIS SDK'
 summary= "SIMDIS 软件开发套件（SDK）架构分析报告"
 +++
