@@ -1,5 +1,13 @@
 var relearn_searchindex = [
   {
+    "breadcrumb": "FlitSoft Docs \u003e  Simulation",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "SIMDIS",
+    "uri": "/simu/simdis/index.html"
+  },
+  {
     "breadcrumb": "FlitSoft Docs \u003e  UAS",
     "content": "小型固定翼无人机飞行动力学模型为小型固定翼无人机仿真系统提供逼真的飞行动力学与飞行控制方案，替代当前的简单PID+运动学模型。文档涵盖系统需求、6-DOF动力学模型、级联控制架构、模块接口、参数标定及实现建议等内容。\nJSBSim User manual如何使用 JSBSim 进行模拟运行、创建飞行器模型、编写脚本，以及如何执行其他不涉及对 JSBSim 程序代码进行更改的任务。\nJSBSim Quickstart旨在让用户和开发者了解JSBSim软件的所有功能。",
     "description": "小型固定翼无人机飞行动力学模型为小型固定翼无人机仿真系统提供逼真的飞行动力学与飞行控制方案，替代当前的简单PID+运动学模型。文档涵盖系统需求、6-DOF动力学模型、级联控制架构、模块接口、参数标定及实现建议等内容。\nJSBSim User manual如何使用 JSBSim 进行模拟运行、创建飞行器模型、编写脚本，以及如何执行其他不涉及对 JSBSim 程序代码进行更改的任务。\nJSBSim Quickstart旨在让用户和开发者了解JSBSim软件的所有功能。",
@@ -193,7 +201,7 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "FlitSoft Docs",
-    "content": "MIXR混合现实仿真平台（MIXR, The Mixed Reality Simulation Platform）\nOctoMapOctoMap: 基于八叉树的高效概率性三维建图框架",
+    "content": "SIMDIS MIXR混合现实仿真平台（MIXR, The Mixed Reality Simulation Platform）\nOctoMapOctoMap: 基于八叉树的高效概率性三维建图框架",
     "description": "仿真平台与技术新进展",
     "tags": [],
     "title": "Simulation",
