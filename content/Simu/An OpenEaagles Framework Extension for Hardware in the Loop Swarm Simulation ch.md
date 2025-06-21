@@ -202,17 +202,12 @@ OpenEaagles是一个跨平台仿真框架，旨在帮助仿真工程师和软件
 
 OpenEaagles是一个面向对象框架，使用C++编写，遵循模型-视图-控制器（MVC）设计模式。每个仿真实例由多种对象组成，形成树状数据结构（见图7）。模型包括玩家（Player）和系统（System）对象，多种可选图形及I/O接口提供定制视图，站点（Station）对象位于树根部，负责与仿真对象（Simulation）接口，承担仿真控制器功能。
 
-
-
-![](https://cdn.mathpix.com/cropped/2025_06_20_ef2849397a0779e4da2eg-36.jpg?height=762&width=1013&top_left_y=248&top_left_x=556)
-
+<img src="https://cdn.mathpix.com/cropped/2025_06_20_ef2849397a0779e4da2eg-36.jpg?height=762&width=1013&top_left_y=248&top_left_x=556"  width=500/>
 图7. OpenEaagles设计模式[26]。OpenEaagles遵循模型-视图-控制器设计模式。右侧的玩家和系统树提供模型，左侧图形和$I/O$对象提供视图，站点和仿真对象充当控制器。
 
 **模型。** 每个仿真实例拥有一个Simulation对象。Simulation包含Players，Players包含Systems。Players代表被建模实体（如无人机和目标），Systems代表实体使用的设备、工具（如无线电、动力学模型、传感器）。开发者可通过子类化Player和System类实现定制。图8展示了与蜂群相关的无人机系统及其在OpenEaagles中的子类化方式。该简单设计结合继承与多态，支持无限蜂群配置建模。
 
 <img src="https://cdn.mathpix.com/cropped/2025_06_20_ef2849397a0779e4da2eg-37.jpg?height=589&width=1509&top_left_y=248&top_left_x=308"  width=500/>
-
-
 图8. 无人机系统层级。无人机系统和子系统按功能角色分组（图下方圆圈）。OpenEaagles中这些系统通过继承实现父子关系，带来可扩展性和代码复用优势。
 
 此外，每个System拥有名为getOwnship的方法，返回所属Player指针。Player拥有getSimulation方法，Simulation拥有getStation方法。由于Station对象可访问整个树，且每个对象能回溯至Station，任意对象均可直接访问其他对象。这赋予Player和System之间交互能力。
@@ -225,8 +220,7 @@ OpenEaagles是一个面向对象框架，使用C++编写，遵循模型-视图-�
 
 OpenEaagles基于其基类构建（见图9）。所有对象均为Object类型，包含用于内存管理的ref和unref方法。每个Component对象可持有其他组件（子组件），以PairStream列表形式存在。OpenEaagles的树状数据结构利用该组件/子组件关系，实现框架可扩展性。树通过updateTC和updateData方法更新，分别对应前述时间关键和非时间关键线程。这些更新方法从仿真树根调用，再递归调用其子组件的更新方法，直至整棵树更新完成，且更新以指定刷新率循环进行。
 
-![](https://cdn.mathpix.com/cropped/2025_06_20_ef2849397a0779e4da2eg-39.jpg?height=719&width=1012&top_left_y=242&top_left_x=554)
-
+<img src="https://cdn.mathpix.com/cropped/2025_06_20_ef2849397a0779e4da2eg-39.jpg?height=719&width=1012&top_left_y=242&top_left_x=554"  width=500/>
 图9. OpenEaagles基类[26]。OpenEaagles中所有对象均为Object类型。部分对象为Component，可持有PairStream组件，实现子组件树结构。
 
 仿真同步通过帧实现。OpenEaagles中的帧定义为仿真树中所有updateTC方法被调用的周期。单帧时间关键任务必须在前一帧所有时间关键任务完成后开始。每帧最短持续时间由指定帧率决定（如50Hz刷新率对应20ms）。
