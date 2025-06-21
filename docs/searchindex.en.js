@@ -1,5 +1,13 @@
 var relearn_searchindex = [
   {
+    "breadcrumb": "FlitSoft Docs \u003e  UAS",
+    "content": "轻量级飞行动力学模型轻量级的四自由度（4-DOF）飞行动力学模型\n小型固定翼无人机飞行动力学模型为小型固定翼无人机仿真系统提供逼真的飞行动力学与飞行控制方案，替代当前的简单PID+运动学模型。文档涵盖系统需求、6-DOF动力学模型、级联控制架构、模块接口、参数标定及实现建议等内容。\nJSBSim User manual如何使用 JSBSim 进行模拟运行、创建飞行器模型、编写脚本，以及如何执行其他不涉及对 JSBSim 程序代码进行更改的任务。\nJSBSim Quickstart旨在让用户和开发者了解JSBSim软件的所有功能。",
+    "description": "轻量级飞行动力学模型轻量级的四自由度（4-DOF）飞行动力学模型\n小型固定翼无人机飞行动力学模型为小型固定翼无人机仿真系统提供逼真的飞行动力学与飞行控制方案，替代当前的简单PID+运动学模型。文档涵盖系统需求、6-DOF动力学模型、级联控制架构、模块接口、参数标定及实现建议等内容。\nJSBSim User manual如何使用 JSBSim 进行模拟运行、创建飞行器模型、编写脚本，以及如何执行其他不涉及对 JSBSim 程序代码进行更改的任务。\nJSBSim Quickstart旨在让用户和开发者了解JSBSim软件的所有功能。",
+    "tags": [],
+    "title": "Aerodynamics",
+    "uri": "/uas/fix_wing_uav_flight_sim/index.html"
+  },
+  {
     "breadcrumb": "FlitSoft Docs \u003e  Simulation",
     "content": "SIMDIS BriefingSIMDIS 概要\nSIMDIS SDKSIMDIS 软件开发套件（SDK）架构分析报告\nSIMDIS SDK SimCoreSIMDIS SDK SimCore代码库功能分析",
     "description": "美国海军研究实验室（NRL）开发的SIMDIS三维分析与显示工具集",
@@ -14,14 +22,6 @@ var relearn_searchindex = [
     "tags": [],
     "title": "SIMDIS Briefing",
     "uri": "/simu/simdis/simdis_briefing/index.html"
-  },
-  {
-    "breadcrumb": "FlitSoft Docs \u003e  UAS",
-    "content": "小型固定翼无人机飞行动力学模型为小型固定翼无人机仿真系统提供逼真的飞行动力学与飞行控制方案，替代当前的简单PID+运动学模型。文档涵盖系统需求、6-DOF动力学模型、级联控制架构、模块接口、参数标定及实现建议等内容。\nJSBSim User manual如何使用 JSBSim 进行模拟运行、创建飞行器模型、编写脚本，以及如何执行其他不涉及对 JSBSim 程序代码进行更改的任务。\n轻量级飞行动力学模型轻量级的四自由度（4-DOF）飞行动力学模型\nJSBSim Quickstart旨在让用户和开发者了解JSBSim软件的所有功能。",
-    "description": "小型固定翼无人机飞行动力学模型为小型固定翼无人机仿真系统提供逼真的飞行动力学与飞行控制方案，替代当前的简单PID+运动学模型。文档涵盖系统需求、6-DOF动力学模型、级联控制架构、模块接口、参数标定及实现建议等内容。\nJSBSim User manual如何使用 JSBSim 进行模拟运行、创建飞行器模型、编写脚本，以及如何执行其他不涉及对 JSBSim 程序代码进行更改的任务。\n轻量级飞行动力学模型轻量级的四自由度（4-DOF）飞行动力学模型\nJSBSim Quickstart旨在让用户和开发者了解JSBSim软件的所有功能。",
-    "tags": [],
-    "title": "Aerodynamics",
-    "uri": "/uas/fix_wing_uav_flight_sim/index.html"
   },
   {
     "breadcrumb": "FlitSoft Docs \u003e  UAS \u003e  Trajectory Planning",
@@ -185,7 +185,7 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "FlitSoft Docs",
-    "content": "Aerodynamics 小型固定翼无人机飞行动力学模型为小型固定翼无人机仿真系统提供逼真的飞行动力学与飞行控制方案，替代当前的简单PID+运动学模型。文档涵盖系统需求、6-DOF动力学模型、级联控制架构、模块接口、参数标定及实现建议等内容。\nJSBSim User manual如何使用 JSBSim 进行模拟运行、创建飞行器模型、编写脚本，以及如何执行其他不涉及对 JSBSim 程序代码进行更改的任务。\n轻量级飞行动力学模型轻量级的四自由度（4-DOF）飞行动力学模型\nJSBSim Quickstart旨在让用户和开发者了解JSBSim软件的所有功能。\nPath Searching A* Path Searching 基于运动基元的A*算法将基于运动基元的A*算法从四旋翼无人机改进适配到固定翼无人机\nFormation Control 基于非线性模型预测控制的无人机编队飞行在非线性模型预测控制（NMPC）框架下设计了一种分布式、无碰撞的编队飞行控制律。编队构型在虚拟参考点坐标系中确定。通过代价惩罚实现避障，通过代价惩罚结合新的优先级策略实现机间防碰撞。\n无人机集群固定阵型轨迹生成模型生成集群中每个无人机形成固定阵型的期望轨迹\n固定翼无人机阵型变换过渡轨迹生成一种固定翼无人机编队在飞行过程中实现队形变换的轨迹生成算法\nVelocity Planning 三段S曲线速度规划模型旨在为无人机轨迹规划提供一条平滑的 S 曲线速度规划方案。通过先计算变速（过渡）阶段的 S 曲线段，再补充恒速段（定速阶段），最后利用二分查找方法调整期望速度以匹配目标弧长，从而生成一组离散时间点上的速度、加速度和加加速度数据。\nTrajectory Planning kappa-trajectories 无人机实时动态轨迹平滑一种实时、可行的轨迹生成算法，用于无人机通过一系列航路点飞行。 特别地，算法可配置为动态可行轨迹与直线航路点路径具有相同的路径长度。 该文还详细描述了与算法相关的实现问题。\nκ轨迹平滑κ轨迹生成算法。κ=1：轨迹以最短时间过渡到下一个航段；κ=0：轨迹执行一个最小时间过渡，并直接通过航路点；求解κ∈[0,1]使轨迹具有与原始航路点路径等长\n等长轨迹κ求解算法设计一种基于二分查找的数值方法，用以求解参数 κ，从而使得生成的 κ-轨迹路径长度与原始航路点路径长度完全一致。\nκ轨迹点生成代码说明针对模块化的κ轨迹点生成 C++ 代码的详细说明。用于在给定 κ∈ [0,1] 的条件下，在航路点之间生成平滑的 κ-轨迹点。\nCubic Polynomial Spline 用于轨迹规划的三次样条插值针对轨迹规划问题，详细阐述了如何利用三次多项式样条插值构造一条平滑连续的轨迹曲线。\nB-Spline 固定翼无人机B 样条避障轨迹生成一种针对固定翼无人机B样条避障轨迹生成算法\n障碍环境下B样条轨迹问题解析对论文【 Robust and efficient quadrotor trajectory generation for fast autonomous flight】提出的B样条避障轨迹方法的综合分析\n轨迹管理的几个关键问题针对不同类型规划路径对轨迹管理的基本要求",
+    "content": "Aerodynamics 轻量级飞行动力学模型轻量级的四自由度（4-DOF）飞行动力学模型\n小型固定翼无人机飞行动力学模型为小型固定翼无人机仿真系统提供逼真的飞行动力学与飞行控制方案，替代当前的简单PID+运动学模型。文档涵盖系统需求、6-DOF动力学模型、级联控制架构、模块接口、参数标定及实现建议等内容。\nJSBSim User manual如何使用 JSBSim 进行模拟运行、创建飞行器模型、编写脚本，以及如何执行其他不涉及对 JSBSim 程序代码进行更改的任务。\nJSBSim Quickstart旨在让用户和开发者了解JSBSim软件的所有功能。\nPath Searching A* Path Searching 基于运动基元的A*算法将基于运动基元的A*算法从四旋翼无人机改进适配到固定翼无人机\nFormation Control 基于非线性模型预测控制的无人机编队飞行在非线性模型预测控制（NMPC）框架下设计了一种分布式、无碰撞的编队飞行控制律。编队构型在虚拟参考点坐标系中确定。通过代价惩罚实现避障，通过代价惩罚结合新的优先级策略实现机间防碰撞。\n无人机集群固定阵型轨迹生成模型生成集群中每个无人机形成固定阵型的期望轨迹\n固定翼无人机阵型变换过渡轨迹生成一种固定翼无人机编队在飞行过程中实现队形变换的轨迹生成算法\nVelocity Planning 三段S曲线速度规划模型旨在为无人机轨迹规划提供一条平滑的 S 曲线速度规划方案。通过先计算变速（过渡）阶段的 S 曲线段，再补充恒速段（定速阶段），最后利用二分查找方法调整期望速度以匹配目标弧长，从而生成一组离散时间点上的速度、加速度和加加速度数据。\nTrajectory Planning kappa-trajectories 无人机实时动态轨迹平滑一种实时、可行的轨迹生成算法，用于无人机通过一系列航路点飞行。 特别地，算法可配置为动态可行轨迹与直线航路点路径具有相同的路径长度。 该文还详细描述了与算法相关的实现问题。\nκ轨迹平滑κ轨迹生成算法。κ=1：轨迹以最短时间过渡到下一个航段；κ=0：轨迹执行一个最小时间过渡，并直接通过航路点；求解κ∈[0,1]使轨迹具有与原始航路点路径等长\n等长轨迹κ求解算法设计一种基于二分查找的数值方法，用以求解参数 κ，从而使得生成的 κ-轨迹路径长度与原始航路点路径长度完全一致。\nκ轨迹点生成代码说明针对模块化的κ轨迹点生成 C++ 代码的详细说明。用于在给定 κ∈ [0,1] 的条件下，在航路点之间生成平滑的 κ-轨迹点。\nCubic Polynomial Spline 用于轨迹规划的三次样条插值针对轨迹规划问题，详细阐述了如何利用三次多项式样条插值构造一条平滑连续的轨迹曲线。\nB-Spline 固定翼无人机B 样条避障轨迹生成一种针对固定翼无人机B样条避障轨迹生成算法\n障碍环境下B样条轨迹问题解析对论文【 Robust and efficient quadrotor trajectory generation for fast autonomous flight】提出的B样条避障轨迹方法的综合分析\n轨迹管理的几个关键问题针对不同类型规划路径对轨迹管理的基本要求",
     "description": "无人机系统仿真与建模",
     "tags": [],
     "title": "UAS",
@@ -246,6 +246,14 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Log",
     "uri": "/log/index.html"
+  },
+  {
+    "breadcrumb": "FlitSoft Docs \u003e  UAS \u003e  Aerodynamics",
+    "content": "C++代码实现\n1. 问题定义 在许多仿真应用（如游戏、AI行为模拟、训练系统原型）中，需要对飞行器的运动进行模拟。高保真度的物理模型（如基于计算流体动力学的模型）虽然精确，但计算成本高昂，不适用于需要同时运行大量实体或对实时性有极高要求的场景。\nStandaloneLaeroModel 是一个轻量级的四自由度（4-DOF）飞行动力学模型。它的设计目标不是进行高保真的空气动力学仿真（如 JSBSimModel），而是通过简化的运动学方程来快速、高效地模拟飞行器的基本飞行轨迹和姿态变化。它的核心特点是：\n运动学驱动：它不计算复杂的空气动力学力和力矩，而是直接对姿态角速率和机体轴速度进行积分，来更新飞行器的状态。 简化控制律：它内置了简单的比例控制（P-Control）逻辑，可以将高层级的飞行指令（如“飞到指定航向”）转换为底层的姿态变化速率。 高效性：由于计算量远小于高保真模型，它非常适合用于计算资源有限或需要大量简单AI飞机的场景。 本项目旨在设计并实现一个轻量级、实时、指令驱动的飞行动力学模型。该模型旨在解决以下核心问题：\n性能与效率: 提供一个计算高效的动力学解算方案，以满足实时仿真循环的要求。 高层指令控制: 接收“目标高度”、“目标航向”、“目标速度”等指令，无需暴露舵面或力矩等底层输入。 行为可信度: 利用基本运动学与分层控制，使机动（转弯、爬升、加减速）符合飞行常识，使其在视觉上具有可信度。 模块独立性: 作为独立组件，无特殊外部依赖，可嵌入各类自定义应用。 2. 输入输出设计 2.1 输入 初始化状态： 位置$(x_0,y_0,z_0)$ 姿态 $(\\phi_0,\\theta_0,\\psi_0)$ 机体速度 $(u_0,v_0,w_0)$ 周期性更新（每步调用）： 时间步长 $\\Delta t$\n高层指令：\n期望高度 $H_{cmd}$ 期望航向 $\\Psi_{cmd}$ 期望速度 $V_{cmd}$ 2.2 输出 飞机完整状态： 位置 $(x,y,z)$ 姿态 $(\\phi,\\theta,\\psi)$ 机体速度 $(u,v,w)$ 惯性速度 $(V_N,V_E,V_D)$ 角速率 $(p,q,r)$ 3. 模型原理与逻辑 本模型是一个基于运动学的飞行动力学模型，其核心原理是直接对飞行器的角速率和线加速度进行积分来更新姿态和位置，而非通过计算空气动力和力矩来求解。\n3.1 数值积分方法 采用二阶 Adams–Bashforth方法，对状态导数进行积分，该方法利用当前和前一时刻的导数信息来预测下一时刻的状态，以在精度和性能间取得平衡：\n$$ S_{k+1} = S_k + \\frac{\\Delta t}{2} \\bigl(3\\,\\dot S_k - \\dot S_{k-1}\\bigr) $$其中状态向量 $S=[x,y,z,\\phi,\\theta,\\psi,u,v,w]^T$。\n其中 $(x, y, z)$ 为世界坐标系位置，$(\\phi, \\theta, \\psi)$ 为欧拉角，$(u, v, w)$ 为机体坐标系速度。\n3.2 运动学方程 (Equations of Motion) 状态的更新通过对一阶导数进行积分完成。令状态向量的导数为 $\\dot{S}$，在 $k$ 时刻，积分方法为二阶Adams-Bashforth： $$S_{k+1} = S_k + \\frac{\\Delta t}{2} (3 \\dot{S}_k - \\dot{S}_{k-1})$$其中，$\\dot{S}_k$ 的分量由控制律和运动学关系确定：\n位置导数：$(\\dot{x}, \\dot{y}, \\dot{z})^T = \\mathbf{v}_{world} = R_{body \\to world}(\\phi, \\theta, \\psi) \\cdot (u, v, w)^T$ 姿态导数：$(\\dot{\\phi}, \\dot{\\theta}, \\dot{\\psi})^T$ 由低层控制律直接给出。 速度导数：$(\\dot{u}, \\dot{v}, \\dot{w})^T$ 由速度控制律和假设（$\\dot{v}=\\dot{w}=0$）给出。 3.3 分层控制律 (Hierarchical Control Law) 高层控制：\n将高度误差、航向误差、速度误差映射为对应的期望爬升率、转弯率与加速度。它们负责将用户的目标状态（如目标高度）转换为中间层的控制目标（如目标俯仰角）。 中层映射：\n爬升/俯仰耦合：根据期望爬升率 $\\dot H$ 与真空速 $V_{TAS}$，计算俯仰角指令：\n$$ \\theta_{cmd} = \\arcsin\\bigl(\\dot H / V_{TAS}\\bigr) $$ 航向/滚转耦合：根据期望转弯率 $\\dot\\Psi$ 与重力加速度 $g$，计算滚转角指令： $$ \\phi_{cmd} = \\arctan\\bigl(\\dot\\Psi\\,V_{TAS}/g\\bigr) $$ 低层比例控制：它们接收中间目标（如目标俯仰角），并根据一个**带时间常数的比例控制（P-Control）**逻辑，计算出实现该目标所需的角速率。对目标角度与当前角度之间的误差应用带时间常数 $\\tau$ （如俯仰/滚转 $\\tau=1$ s，爬升 $\\tau=4$ s。）的分段 P 控制，生成角速率或加速度指令：\n$$ \\dot x = \\begin{cases} \\mathrm{sign}(e_x)\\,\\dot x_{max}, \u0026 |e_x|\\ge \\dot x_{max}\\,\\tau,\\\\ \\frac{e_x}{\\tau\\,\\dot x_{max}}\\,\\dot x_{max}, \u0026 |e_x|\u003c \\dot x_{max}\\,\\tau. \\end{cases} $$其中 $e_x$ 表示对应通道的角度/速率误差。\n3.4 控制通道耦合 高度–俯仰：将期望爬升率转换为俯仰指令。 航向–滚转：将期望转弯率转换为滚转指令。 速度：直接控制前向线加速度 $u$ 分量。 3.5 坐标系与变换 机体坐标系 (Body)：速度 $(u,v,w)$、角速率 $(p,q,r)$。 惯性坐标系 (NED)：位置更新与惯性速度 $(V_N,V_E,V_D)$。用于表示飞机的位置和全局速度。 方向余弦矩阵 (DCM)：基于欧拉角 $(\\phi,\\theta,\\psi)$ 将机体速度转换为惯性速度。机体系与惯性系两者之间的转换通过基于欧拉角的方向余弦矩阵完成。 世界速度 $\\mathbf{v}_{world}$ 和机体速度 $\\mathbf{v}_{body}$ 的关系： $$\\begin{bmatrix} \\dot{x} \\\\ \\dot{y} \\\\ \\dot{z} \\end{bmatrix} = \\begin{bmatrix} c_\\theta c_\\psi \u0026 s_\\phi s_\\theta c_\\psi - c_\\phi s_\\psi \u0026 c_\\phi s_\\theta c_\\psi + s_\\phi s_\\psi \\\\ c_\\theta s_\\psi \u0026 s_\\phi s_\\theta s_\\psi + c_\\phi c_\\psi \u0026 c_\\phi s_\\theta s_\\psi - s_\\phi c_\\psi \\\\ -s_\\theta \u0026 s_\\phi c_\\theta \u0026 c_\\phi c_\\theta \\end{bmatrix} \\begin{bmatrix} u \\\\ v \\\\ w \\end{bmatrix}$$ 其中 $c_\\alpha = \\cos(\\alpha)$, $s_\\alpha = \\sin(\\alpha)$。\nC++代码实现",
+    "description": "轻量级的四自由度（4-DOF）飞行动力学模型",
+    "tags": [],
+    "title": "轻量级飞行动力学模型",
+    "uri": "/uas/fix_wing_uav_flight_sim/standalonelaeromodel/index.html"
   },
   {
     "breadcrumb": "FlitSoft Docs \u003e  Simulation",
@@ -366,14 +374,6 @@ var relearn_searchindex = [
     "tags": [],
     "title": "JSBSim User manual",
     "uri": "/uas/fix_wing_uav_flight_sim/jsbsim_user_manual/index.html"
-  },
-  {
-    "breadcrumb": "FlitSoft Docs \u003e  UAS \u003e  Aerodynamics",
-    "content": "C++代码实现\n1. 问题定义 在许多仿真应用（如游戏、AI行为模拟、训练系统原型）中，需要对飞行器的运动进行模拟。高保真度的物理模型（如基于计算流体动力学的模型）虽然精确，但计算成本高昂，不适用于需要同时运行大量实体或对实时性有极高要求的场景。\nStandaloneLaeroModel 是一个轻量级的四自由度（4-DOF）飞行动力学模型。它的设计目标不是进行高保真的空气动力学仿真（如 JSBSimModel），而是通过简化的运动学方程来快速、高效地模拟飞行器的基本飞行轨迹和姿态变化。它的核心特点是：\n运动学驱动：它不计算复杂的空气动力学力和力矩，而是直接对姿态角速率和机体轴速度进行积分，来更新飞行器的状态。 简化控制律：它内置了简单的比例控制（P-Control）逻辑，可以将高层级的飞行指令（如“飞到指定航向”）转换为底层的姿态变化速率。 高效性：由于计算量远小于高保真模型，它非常适合用于计算资源有限或需要大量简单AI飞机的场景。 本项目旨在设计并实现一个轻量级、实时、指令驱动的飞行动力学模型。该模型旨在解决以下核心问题：\n性能与效率: 提供一个计算高效的动力学解算方案，以满足实时仿真循环的要求。 高层指令控制: 接收“目标高度”、“目标航向”、“目标速度”等指令，无需暴露舵面或力矩等底层输入。 行为可信度: 利用基本运动学与分层控制，使机动（转弯、爬升、加减速）符合飞行常识，使其在视觉上具有可信度。 模块独立性: 作为独立组件，无特殊外部依赖，可嵌入各类自定义应用。 2. 输入输出设计 2.1 输入 初始化状态： 位置$(x_0,y_0,z_0)$ 姿态 $(\\phi_0,\\theta_0,\\psi_0)$ 机体速度 $(u_0,v_0,w_0)$ 周期性更新（每步调用）： 时间步长 $\\Delta t$\n高层指令：\n期望高度 $H_{cmd}$ 期望航向 $\\Psi_{cmd}$ 期望速度 $V_{cmd}$ 2.2 输出 飞机完整状态： 位置 $(x,y,z)$ 姿态 $(\\phi,\\theta,\\psi)$ 机体速度 $(u,v,w)$ 惯性速度 $(V_N,V_E,V_D)$ 角速率 $(p,q,r)$ 3. 模型原理与逻辑 本模型是一个基于运动学的飞行动力学模型，其核心原理是直接对飞行器的角速率和线加速度进行积分来更新姿态和位置，而非通过计算空气动力和力矩来求解。\n3.1 数值积分方法 采用二阶 Adams–Bashforth方法，对状态导数进行积分，该方法利用当前和前一时刻的导数信息来预测下一时刻的状态，以在精度和性能间取得平衡：\n$$ S_{k+1} = S_k + \\frac{\\Delta t}{2} \\bigl(3\\,\\dot S_k - \\dot S_{k-1}\\bigr) $$其中状态向量 $S=[x,y,z,\\phi,\\theta,\\psi,u,v,w]^T$。\n其中 $(x, y, z)$ 为世界坐标系位置，$(\\phi, \\theta, \\psi)$ 为欧拉角，$(u, v, w)$ 为机体坐标系速度。\n3.2 运动学方程 (Equations of Motion) 状态的更新通过对一阶导数进行积分完成。令状态向量的导数为 $\\dot{S}$，在 $k$ 时刻，积分方法为二阶Adams-Bashforth： $$S_{k+1} = S_k + \\frac{\\Delta t}{2} (3 \\dot{S}_k - \\dot{S}_{k-1})$$其中，$\\dot{S}_k$ 的分量由控制律和运动学关系确定：\n位置导数：$(\\dot{x}, \\dot{y}, \\dot{z})^T = \\mathbf{v}_{world} = R_{body \\to world}(\\phi, \\theta, \\psi) \\cdot (u, v, w)^T$ 姿态导数：$(\\dot{\\phi}, \\dot{\\theta}, \\dot{\\psi})^T$ 由低层控制律直接给出。 速度导数：$(\\dot{u}, \\dot{v}, \\dot{w})^T$ 由速度控制律和假设（$\\dot{v}=\\dot{w}=0$）给出。 3.3 分层控制律 (Hierarchical Control Law) 高层控制：\n将高度误差、航向误差、速度误差映射为对应的期望爬升率、转弯率与加速度。它们负责将用户的目标状态（如目标高度）转换为中间层的控制目标（如目标俯仰角）。 中层映射：\n爬升/俯仰耦合：根据期望爬升率 $\\dot H$ 与真空速 $V_{TAS}$，计算俯仰角指令：\n$$ \\theta_{cmd} = \\arcsin\\bigl(\\dot H / V_{TAS}\\bigr) $$ 航向/滚转耦合：根据期望转弯率 $\\dot\\Psi$ 与重力加速度 $g$，计算滚转角指令： $$ \\phi_{cmd} = \\arctan\\bigl(\\dot\\Psi\\,V_{TAS}/g\\bigr) $$ 低层比例控制：它们接收中间目标（如目标俯仰角），并根据一个**带时间常数的比例控制（P-Control）**逻辑，计算出实现该目标所需的角速率。对目标角度与当前角度之间的误差应用带时间常数 $\\tau$ （如俯仰/滚转 $\\tau=1$ s，爬升 $\\tau=4$ s。）的分段 P 控制，生成角速率或加速度指令：\n$$ \\dot x = \\begin{cases} \\mathrm{sign}(e_x)\\,\\dot x_{max}, \u0026 |e_x|\\ge \\dot x_{max}\\,\\tau,\\\\ \\frac{e_x}{\\tau\\,\\dot x_{max}}\\,\\dot x_{max}, \u0026 |e_x|\u003c \\dot x_{max}\\,\\tau. \\end{cases} $$其中 $e_x$ 表示对应通道的角度/速率误差。\n3.4 控制通道耦合 高度–俯仰：将期望爬升率转换为俯仰指令。 航向–滚转：将期望转弯率转换为滚转指令。 速度：直接控制前向线加速度 $u$ 分量。 3.5 坐标系与变换 机体坐标系 (Body)：速度 $(u,v,w)$、角速率 $(p,q,r)$。 惯性坐标系 (NED)：位置更新与惯性速度 $(V_N,V_E,V_D)$。用于表示飞机的位置和全局速度。 方向余弦矩阵 (DCM)：基于欧拉角 $(\\phi,\\theta,\\psi)$ 将机体速度转换为惯性速度。机体系与惯性系两者之间的转换通过基于欧拉角的方向余弦矩阵完成。 世界速度 $\\mathbf{v}_{world}$ 和机体速度 $\\mathbf{v}_{body}$ 的关系： $$\\begin{bmatrix} \\dot{x} \\\\ \\dot{y} \\\\ \\dot{z} \\end{bmatrix} = \\begin{bmatrix} c_\\theta c_\\psi \u0026 s_\\phi s_\\theta c_\\psi - c_\\phi s_\\psi \u0026 c_\\phi s_\\theta c_\\psi + s_\\phi s_\\psi \\\\ c_\\theta s_\\psi \u0026 s_\\phi s_\\theta s_\\psi + c_\\phi c_\\psi \u0026 c_\\phi s_\\theta s_\\psi - s_\\phi c_\\psi \\\\ -s_\\theta \u0026 s_\\phi c_\\theta \u0026 c_\\phi c_\\theta \\end{bmatrix} \\begin{bmatrix} u \\\\ v \\\\ w \\end{bmatrix}$$ 其中 $c_\\alpha = \\cos(\\alpha)$, $s_\\alpha = \\sin(\\alpha)$。\nC++代码实现",
-    "description": "轻量级的四自由度（4-DOF）飞行动力学模型",
-    "tags": [],
-    "title": "轻量级飞行动力学模型",
-    "uri": "/uas/fix_wing_uav_flight_sim/standalonelaeromodel/index.html"
   },
   {
     "breadcrumb": "FlitSoft Docs \u003e  UAS \u003e  Aerodynamics",
