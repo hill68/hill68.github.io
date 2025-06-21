@@ -5,8 +5,9 @@ title = '轻量级飞行动力学模型'
 summary= "轻量级的四自由度（4-DOF）飞行动力学模型"
 +++
 
+## 一、Laero 模型
 
-[C++代码实现](https://github.com/flitai/StandaloneLaeroModel)
+[Laero 模型的 C++代码实现](https://github.com/flitai/StandaloneLaeroModel)
 
 ### 1. 问题定义
 
@@ -125,4 +126,133 @@ $$\begin{bmatrix} \dot{x} \\ \dot{y} \\ \dot{z} \end{bmatrix} = \begin{bmatrix} 
 
 ---
 
-[C++代码实现](https://github.com/flitai/StandaloneLaeroModel)
+[Laero 模型的 C++代码实现](https://github.com/flitai/StandaloneLaeroModel)
+
+## 二、Rac 模型
+
+[Rac 模型的 C++代码实现](https://github.com/flitai/StandaloneLaeroModel/StandaloneRacModel)
+
+### 1. 问题定义与设计目标
+
+本模型旨在提供一个**轻量级、性能逼真**的飞行姿态与速度动态模拟，适用于实时仿真与可视化场景。模型通过接收高层指令（目标航向、目标高度、目标速度），在满足结构简洁和运行高效的前提下，保证以下目标：
+
+* **实时更新**：在仿真步长内（如 1/60 s）完成状态积分与输出，支持大规模实体同时模拟。
+* **高层指令驱动**：用户仅需设置目标航向（deg）、目标高度（m）、目标速度（kts），无需关注舵面或推力等底层物理量。
+* **性能限制嵌入**：融入速度与载荷（G 值）限制，动态调整机动能力，保证模拟安全边界。
+* **自然响应**：通过增益调节与二阶积分逼近，实现姿态变化和平滑的加速过程。
+
+### 2. 输入输出设计
+
+#### 2.1 输入
+
+* **初始状态**：
+
+  * 位置、姿态（滚转 roll、俯仰 pitch、偏航 yaw）及机体速度向量（m/s）。
+* **周期更新**（方法 `update(dt)`）：
+
+  * 时间步长 $\Delta t$ (s)
+  * **高层指令**：
+
+    * 期望航向 $\psi_{cmd}$ (deg)
+    * 期望高度 $h_{cmd}$ (m)
+    * 期望速度 $V_{cmd}$ (kts)
+* **性能限制配置**（方法 `setPerformanceLimits(minSpeedKts, maxG, speedAtMaxG_Kts, maxAccel_mps2)`）：
+
+  * 最低巡航速度 (kts)  $V_{p,min}$
+  * 最大过载 $g_{max}$
+  * 达到最大过载的速度阈值 (kts)  $V_{p,\mathrm{max}G}$
+  * 最大加速度 (m/s²) $a_{max}$ fileciteturn2file0
+
+#### 2.2 输出
+
+* **更新后的飞机状态**：
+
+  * 姿态 (roll, pitch, yaw)
+  * 机体角速度 (p,q,r)
+  * 机体速度向量 (u,v,w)
+  * 惯性速度与位置更新 (NED)
+
+### 3. 核心原理与体系结构
+
+#### 3.1 单步更新流程
+
+1. **单位转换与当前量提取**：
+
+   * 节–米/秒互换常数 $K_{kts\to mps}$、$K_{mps\to kts}$；角度–弧度转换 $R2D, D2R$。
+2. **默认指令**：若高层指令未显式设置，则保持当前状态作为目标。 
+3. **高度控制映射**：
+
+   * 计算高度误差速率 $\dot h = h_{cmd} - h$，限幅至最大垂直速率 $\pm3000\,ft/min$。
+   * 期望俯仰角：
+     $\theta_{cmd}=\arcsin\Bigl(\frac{\dot h}{V}\Bigr)\quad (V>1\,m/s).$  fileciteturn2file0
+4. **载荷限制与机动性**：
+
+   * 当前速度 $V$ 低于阈值 $V_{p,\mathrm{max}G}$ 时，线性插值调整有效最大载荷 $g_{eff}$。
+   * 最大转弯率：
+     $r_{max}=\frac{(g_{eff}-1)g_0}{V},$
+     对应俯仰/偏航角速率极限 $q_{max}=r_{max},\,q_{min}=-r_{max}$。
+5. **角速率指令**：
+
+   * 误差转换：使用比例增益（0.5）将角度误差转换为速率指令：
+     $q=K_q(\theta_{cmd}-\theta),\quad r=K_r(\psi_{cmd}-\psi),$
+   * 并在极限内饱和。 
+6. **积分更新姿态**：
+
+   * 采用梯形法（Trapezoidal Rule）：
+
+     $$
+     \theta^{+}=\theta+\frac{(q+q_{prev})\,\Delta t}{2},\quad
+     \psi^{+}=\psi+\frac{(r+r_{prev})\,\Delta t}{2}.
+     $$
+7. **滚转视觉效果**：
+
+   * 滚转角与转弯率成比例平滑混合：
+     $\phi^{+}=0.98\,\phi+0.02\,(r/r_{max}\times60°).$ 
+8. **速度控制映射**：
+
+   * 速度误差加速度：
+     $\dot V=K_v(V_{cmd}-V),$ 并限幅至 $\pm a_{max}$。
+   * 更新前向速度：
+     $V^{+}=\max(V_{min},V+\dot V\,\Delta t).$ 
+9. **惯性速度与位置更新**：
+
+   * 根据新姿态 $(\theta^{+},\psi^{+})$ 计算 NED 分量：
+     $V_N=\cos\theta^{+}\cos\psi^{+}V,\quad V_E=\cos\theta^{+}\sin\psi^{+}V,\quad V_D=-\sin\theta^{+}V.$
+   * 位置积分：$\mathbf{r}^{+}=\mathbf{r}+\mathbf{V}\Delta t$。
+
+#### 3.2 数据状态保持
+
+* **上步速率缓存**：存储前步角速率 $q_{prev},r_{prev}$ 用于梯形积分。
+* **命令保持**：若未更新，命令值持续沿用。
+
+### 4. 形式化表达
+
+$$
+S=\begin{bmatrix}x,y,z,\phi,\theta,\psi,V\end{bmatrix}^T,
+$$
+
+主要映射函数：
+
+$$
+\theta_{cmd}=\arcsin(\dot h/V),
+\quad r_{max}=((g_{eff}-1)g_0)/V,
+\quad q=K_q(\theta_{cmd}-\theta),
+\quad r=K_r(\psi_{cmd}-\psi),
+$$
+
+梯形积分：
+
+$$
+\theta^{+}=\theta+((q+q_{prev})\Delta t)/2,
+\psi^{+}=\psi+((r+r_{prev})\Delta t)/2.
+$$
+
+### 5. 模型特性与应用
+
+* **性能逼真**：动态载荷限制与姿态耦合，反映高速和低速下的不同机动性。
+* **轻量高效**：仅利用简单 trig 和线性插值，适应 GPU 或多线程批量计算。
+* **易于集成**：纯 C++ 实现，无第三方依赖，可作为模块嵌入各类仿真框架。
+* **可视化友好**：滚转角平滑混合保证动画自然，适合游戏与训练场景。
+
+
+
