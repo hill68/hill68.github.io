@@ -196,18 +196,18 @@ U（未说明）- 未指明功能/属性
 
 OpenEaagles是一个跨平台仿真框架，旨在帮助仿真工程师和软件开发者快速原型设计并构建健壮、可扩展、虚拟、构造式、独立及分布式仿真应用……OpenEaagles全称为开放可扩展联动仿真分析与生成架构。该框架成熟，已开发活跃逾十年。[26]
 
-此外，框架具备模块化架构，支持与成熟且可信的FDM（如JSBSim，FlightGear使用的同一FDM）轻松初始化和配置仿真，并提供内置功能，促进蜂群行为建模配置。
+此外，框架具备模块化架构，支持与成熟且可信的FDM（Flight Dynamics Model）（如JSBSim，FlightGear使用的同一FDM）轻松初始化和配置仿真，并提供内置功能，促进蜂群行为建模配置。
 
 #### 2.5.1 模型-视图-控制器设计模式
 
 OpenEaagles是一个面向对象框架，使用C++编写，遵循模型-视图-控制器（MVC）设计模式。每个仿真实例由多种对象组成，形成树状数据结构（见图7）。模型包括玩家（Player）和系统（System）对象，多种可选图形及I/O接口提供定制视图，站点（Station）对象位于树根部，负责与仿真对象（Simulation）接口，承担仿真控制器功能。
 
 <img src="https://cdn.mathpix.com/cropped/2025_06_20_ef2849397a0779e4da2eg-36.jpg?height=762&width=1013&top_left_y=248&top_left_x=556"  width=500/>
-图7. OpenEaagles设计模式[26]。OpenEaagles遵循模型-视图-控制器设计模式。右侧的玩家和系统树提供模型，左侧图形和$I/O$对象提供视图，站点和仿真对象充当控制器。
+图7. OpenEaagles设计模式[26]。OpenEaagles遵循模型-视图-控制器设计模式。右侧的`玩家`和`系统`树提供模型，左侧`图形`和`I/O`对象提供视图，`站点`和`仿真`对象充当控制器。
 
-**模型。** 每个仿真实例拥有一个Simulation对象。Simulation包含Players，Players包含Systems。Players代表被建模实体（如无人机和目标），Systems代表实体使用的设备、工具（如无线电、动力学模型、传感器）。开发者可通过子类化Player和System类实现定制。图8展示了与蜂群相关的无人机系统及其在OpenEaagles中的子类化方式。该简单设计结合继承与多态，支持无限蜂群配置建模。
+**模型。** 每个仿真实例拥有一个Simulation对象。Simulation包含Players，Players包含Systems。Players代表被建模实体（如无人机和目标），Systems代表实体使用的设备、工具（如电台、动力学模型、传感器）。开发者可通过子类化Player和System类实现定制。图8展示了与蜂群相关的无人机系统及其在OpenEaagles中的子类化方式。该简单设计结合继承与多态，支持无限蜂群配置建模。
 
-<img src="https://cdn.mathpix.com/cropped/2025_06_20_ef2849397a0779e4da2eg-37.jpg?height=589&width=1509&top_left_y=248&top_left_x=308"  width=500/>
+<img src="https://cdn.mathpix.com/cropped/2025_06_20_ef2849397a0779e4da2eg-37.jpg?height=589&width=1509&top_left_y=248&top_left_x=308"  width=600/>
 图8. 无人机系统层级。无人机系统和子系统按功能角色分组（图下方圆圈）。OpenEaagles中这些系统通过继承实现父子关系，带来可扩展性和代码复用优势。
 
 此外，每个System拥有名为getOwnship的方法，返回所属Player指针。Player拥有getSimulation方法，Simulation拥有getStation方法。由于Station对象可访问整个树，且每个对象能回溯至Station，任意对象均可直接访问其他对象。这赋予Player和System之间交互能力。
