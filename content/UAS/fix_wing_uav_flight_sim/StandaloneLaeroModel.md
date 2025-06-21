@@ -124,13 +124,15 @@ $$
 $$\begin{bmatrix} \dot{x} \\ \dot{y} \\ \dot{z} \end{bmatrix} = \begin{bmatrix} c_\theta c_\psi & s_\phi s_\theta c_\psi - c_\phi s_\psi & c_\phi s_\theta c_\psi + s_\phi s_\psi \\ c_\theta s_\psi & s_\phi s_\theta s_\psi + c_\phi c_\psi & c_\phi s_\theta s_\psi - s_\phi c_\psi \\ -s_\theta & s_\phi c_\theta & c_\phi c_\theta \end{bmatrix} \begin{bmatrix} u \\ v \\ w \end{bmatrix}$$
 其中 $c_\alpha = \cos(\alpha)$, $s_\alpha = \sin(\alpha)$。
 
----
+
 
 [Laero 模型的 C++代码实现](https://github.com/flitai/StandaloneLaeroModel)
 
+---
+
 ## 二、Rac 模型
 
-[Rac 模型的 C++代码实现](https://github.com/flitai/StandaloneLaeroModel/StandaloneRacModel)
+Rac 模型的 C++代码实现见 [Laero 模型下的](https://github.com/flitai/StandaloneLaeroModel/) StandaloneRacModel目录
 
 ### 1. 问题定义与设计目标
 
@@ -255,4 +257,6 @@ $$
 * **可视化友好**：滚转角平滑混合保证动画自然，适合游戏与训练场景。
 
 
+Rac 模型的 C++代码实现见 [Laero 模型下的](https://github.com/flitai/StandaloneLaeroModel/) StandaloneRacModel目录
+---
 
