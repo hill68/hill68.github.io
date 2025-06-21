@@ -163,7 +163,7 @@ Rac 模型的 C++代码实现见 [Laero 模型下的](https://github.com/flitai/
   * 最低巡航速度 (kts)  $V_{p,min}$
   * 最大过载 $g_{max}$
   * 达到最大过载的速度阈值 (kts)  $V_{p,\mathrm{max}G}$
-  * 最大加速度 (m/s²) $a_{max}$ fileciteturn2file0
+  * 最大加速度 (m/s²) $a_{max}$ 
 
 #### 2.2 输出
 
