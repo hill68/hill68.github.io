@@ -210,7 +210,8 @@ OpenEaagles是一个面向对象框架，使用C++编写，遵循模型-视图-�
 
 **模型。** 每个仿真实例拥有一个Simulation对象。Simulation包含Players，Players包含Systems。Players代表被建模实体（如无人机和目标），Systems代表实体使用的设备、工具（如无线电、动力学模型、传感器）。开发者可通过子类化Player和System类实现定制。图8展示了与蜂群相关的无人机系统及其在OpenEaagles中的子类化方式。该简单设计结合继承与多态，支持无限蜂群配置建模。
 
-![](https://cdn.mathpix.com/cropped/2025_06_20_ef2849397a0779e4da2eg-37.jpg?height=589&width=1509&top_left_y=248&top_left_x=308)
+<img src="https://cdn.mathpix.com/cropped/2025_06_20_ef2849397a0779e4da2eg-37.jpg?height=589&width=1509&top_left_y=248&top_left_x=308"  width=500/>
+
 
 图8. 无人机系统层级。无人机系统和子系统按功能角色分组（图下方圆圈）。OpenEaagles中这些系统通过继承实现父子关系，带来可扩展性和代码复用优势。
 
@@ -274,7 +275,9 @@ createObj方法接受一个字符串参数，若该字符串匹配某定义对�
 
 接着，开发者通过传入createObj方法及EDL文件名给解析器，实现builder方法。解析器返回仿真树的Station对象指针，builder方法将其传给main方法。最后，开发者实现main方法，按需循环执行仿真更新。对于HIL仿真，该方法必须实时运行，定期同步系统时钟，并以硬件嵌入式系统要求的刷新率更新。main方法中的逻辑应考虑等待或延迟，以将“仿真时间”与“实时”对齐。
 
-![](https://cdn.mathpix.com/cropped/2025_06_20_ef2849397a0779e4da2eg-42.jpg?height=591&width=960&top_left_y=271&top_left_x=585)
+<img src="https://cdn.mathpix.com/cropped/2025_06_20_ef2849397a0779e4da2eg-42.jpg?height=591&width=960&top_left_y=271&top_left_x=585"  width=500/>
+
+
 
 图11. Eaagles定义语言解析。1）批处理脚本将Eaagles预处理文件（.epp）合并为单一的EDL文件。2）Main类的builder方法调用lcParser，传入EDL文件名和Factory类的createObj方法。3）解析器利用createObj方法将EDL文件转换为仿真解析树，返回树根指针给main方法执行仿真。
 
@@ -282,7 +285,7 @@ createObj方法接受一个字符串参数，若该字符串匹配某定义对�
 
 OpenEaagles包含众多内置功能包，已满足多种蜂群仿真需求（见图12）。开发者可扩展这些包，实现自定义飞行器、传感器、飞行动力学和自动驾驶仪。例如，开发者可将现有的AirVehicle类子类化为UnmannedAirVehicle类，添加特定于自主飞行器的子系统，从而灵活建模不同蜂群配置。
 
-![](https://cdn.mathpix.com/cropped/2025_06_20_ef2849397a0779e4da2eg-43.jpg?height=603&width=1107&top_left_y=246&top_left_x=506)
+<img src="https://cdn.mathpix.com/cropped/2025_06_20_ef2849397a0779e4da2eg-43.jpg?height=603&width=1107&top_left_y=246&top_left_x=506"  width=500/>
 
 图12. OpenEaagles包层级。白色/透明背景表示使用第三方开源工具。（最初见于[26]，作为公共领域元素复现）
 
@@ -302,7 +305,7 @@ OpenEaagles包含众多内置功能包，已满足多种蜂群仿真需求（见
 
 **机载控制代理。** 在传统无人机任务中，地面控制站（GCS）允许操作者向自动驾驶仪传递路径规划信息，指示其飞行路径（见图13）。然而，蜂群无人机特性要求自主路径规划，无需操作者介入——各无人机必须自主行动。当每架无人机配备智能代理，具备独立决策能力（即无外部干预）时，方能实现此目标。若代理具备主动（目标导向行为）、响应（应对变化）及社交能力（与其他代理交互）[46]，则被视为智能且能自主行为。本文以“机载控制代理”（OCA）称呼具备此功能的组件。
 
-![](https://cdn.mathpix.com/cropped/2025_06_20_ef2849397a0779e4da2eg-46.jpg?height=454&width=1009&top_left_y=242&top_left_x=558)
+<img src="https://cdn.mathpix.com/cropped/2025_06_20_ef2849397a0779e4da2eg-46.jpg?height=454&width=1009&top_left_y=242&top_left_x=558"  width=500/>
 
 图13. 无人机任务概览。图示典型无人机任务中，GCS（此处为Mission Control）向现场无人机传递任务参数及引导信息，反过来接收任务期间采集的传感器数据。（最初见于[10]，作为公共领域元素复现）
 
@@ -327,7 +330,7 @@ OpenEaagles包含众多内置功能包，已满足多种蜂群仿真需求（见
 
 这四个仿真组件的功能角色决定了它们的交互方式及共享信息。OCA主要负责自主决策和路径规划——基于其反应性、主动性和社交能力——需要传感和通信数据输入。自动驾驶仪的角色是为飞行器提供稳定飞行和导航的飞控信号，需要路径规划信息及飞行器测量数据的反馈循环。FDM负责随着时间推进及飞控信号输入，模拟飞行器测量数据。最后，仿真视觉接口需要飞行器测量数据。将各组件所需输入与对应输出匹配，形成蜂群行为建模所必需的反馈环和信息流。此通信流程如图14所示，并在蜂群仿真框架设计中实现。
 
-![](https://cdn.mathpix.com/cropped/2025_06_20_ef2849397a0779e4da2eg-49.jpg?height=388&width=1261&top_left_y=245&top_left_x=432)
+<img src="https://cdn.mathpix.com/cropped/2025_06_20_ef2849397a0779e4da2eg-49.jpg?height=388&width=1261&top_left_y=245&top_left_x=432"  width=500/>
 
 图14. 蜂群仿真组件通信图。蜂群行为起源于OCA，并通过蜂群算法处理测量数据后形成路径规划信息。自动驾驶仪将OCA的路径信息和FDM的测量数据转化为飞控信号，构成反馈环。仿真视图通过解释FDM测量数据生成。注意，每个OCA需来自多个FDM的测量数据以支持其社交能力。
 
@@ -341,7 +344,7 @@ OpenEaagles包含众多内置功能包，已满足多种蜂群仿真需求（见
 
 在OpenEaagles中，自动驾驶仪和OCA均为无人机玩家实体的子系统。为支持DWF，自动驾驶仪类须实现设置和更新动态航点的方法，因此需要一个顶层抽象类包含这些方法。该类强制所有自动驾驶仪子类实现DWF，同时允许在基类层面自定义自动驾驶仪设计，保持模块化。图15展示了支持蜂群行为模拟的无人机三大子系统（FDM、OCA、自动驾驶仪）。FDM模拟飞机，接收飞控输入并产生模拟遥测数据。OCA包含实现智能自主行为的蜂群算法，蜂群开发者主要在此工作。OCA基于来自其他无人机子系统的传感输入（图中未示）及邻近无人机数据，独立决策并路径规划，实现蜂群行为。自动驾驶仪持续接收OCA传来的动态航点路径规划信息，驱动FDM通过飞控信号操纵模拟飞机向该航点飞行。
 
-![](https://cdn.mathpix.com/cropped/2025_06_20_ef2849397a0779e4da2eg-51.jpg?height=562&width=1253&top_left_y=245&top_left_x=436)
+<img src="https://cdn.mathpix.com/cropped/2025_06_20_ef2849397a0779e4da2eg-51.jpg?height=562&width=1253&top_left_y=245&top_left_x=436"  width=500/>
 
 图15. 无人机系统通信图。在蜂群仿真中，OCA接收对应无人机FDM的测量数据及邻近无人机数据。OCA中的蜂群算法将数据转化为自主路径规划信息，以动态航点形式传递给自动驾驶仪。自动驾驶仪持续引导模拟飞机向动态航点飞行。该交互产生模拟蜂群行为。
 
@@ -349,7 +352,7 @@ OpenEaagles包含众多内置功能包，已满足多种蜂群仿真需求（见
 
 为支持HIL仿真，OpenEaagles必须与硬件设备接口。为保持OpenEaagles的设计模式及系统/子系统关系，硬件设备对应的系统对象作为硬件接口，而非功能组件（图16）。此类接口管理与设备的串口连接，并负责仿真与设备间信号转换和路由。例如，自动驾驶仪硬件接口对象继续与FDM和OCA通信，但不直接将输入（遥测与航点）转为输出（飞控信号），而是以设备能识别格式传给硬件（如Pixhawk）。硬件接收输入信号执行自动驾驶功能，返回飞控命令，自动驾驶仪对象将其转换为FDM可读控制信号。
 
-![](https://cdn.mathpix.com/cropped/2025_06_20_ef2849397a0779e4da2eg-52.jpg?height=727&width=1275&top_left_y=241&top_left_x=422)
+<img src="https://cdn.mathpix.com/cropped/2025_06_20_ef2849397a0779e4da2eg-52.jpg?height=727&width=1275&top_left_y=241&top_left_x=422"  width=500/>
 
 图16. 无人机系统通信图（含HIL）。实现HIL仿真时，硬件设备通过硬件接口直接向仿真提供系统功能。示例中，Pixhawk与Raspberry Pi分别提供自动驾驶仪与OCA功能，自动驾驶仪和OCA系统对象作为其硬件接口。（图中Raspberry Pi仅作示意，本文未实现OCA硬件接口。）
 
@@ -363,7 +366,7 @@ OpenEaagles包含众多内置功能包，已满足多种蜂群仿真需求（见
 
 通过公有方法，OCA直接从FDM拉取遥测，设置自动驾驶仪的动态航点，自动驾驶仪则控制FDM的操纵面（如方向舵、操纵杆、节气门）。最终蜂群仿真框架设计实现了模块化、可扩展且准确的综合蜂群行为建模，同时支持HIL仿真，助力接近真实操作配置。
 
-![](https://cdn.mathpix.com/cropped/2025_06_20_ef2849397a0779e4da2eg-54.jpg?height=1608&width=1424&top_left_y=340&top_left_x=348)
+<img src="https://cdn.mathpix.com/cropped/2025_06_20_ef2849397a0779e4da2eg-54.jpg?height=1608&width=1424&top_left_y=340&top_left_x=348"  width=500/>
 
 图17. 蜂群框架类图。OpenEaagles（白色部分）为所提蜂群仿真框架（灰色部分）基础。所有Player子类均有DynamicsModel和Pilot子系统。AirVehicle子类UAV用于容纳OnboardControlAgent子系统，实现蜂群行为。OCA封装蜂群行为开发，并通过推送航点实现DWF控制SwarmAutopilot。SwarmAutopilot子类实现模拟自动驾驶仪或作为HIL仿真时的硬件自动驾驶仪接口。左下角显示JSBSimModel为OpenEaagles内置接口，连接流行开源飞行动力学模型JSBSim。
 
@@ -394,7 +397,7 @@ OpenEaagles包含众多内置功能包，已满足多种蜂群仿真需求（见
 
 展示框架如何实现可扩展后，现可评估HIL仿真期间的质量属性。因外部硬件设备实时执行，仿真也必须实时执行，否则仿真失效。随着蜂群规模增长，仿真树规模随之扩大，实时更新和推进仿真所需操作量增加。评估HIL仿真中框架可扩展性将采用两项性能指标：1）仿真树更新时长（毫秒）以指示是否实现实时，2）最大蜂群规模（无人机数量）以指示框架总体扩展极限。
 
-![](https://cdn.mathpix.com/cropped/2025_06_20_ef2849397a0779e4da2eg-58.jpg?height=391&width=1253&top_left_y=249&top_left_x=433)
+<img src="https://cdn.mathpix.com/cropped/2025_06_20_ef2849397a0779e4da2eg-58.jpg?height=391&width=1253&top_left_y=249&top_left_x=433"  width=500/>
 
 图18. 仿真运行时长示意图。三个进程均需50Hz刷新率和20ms帧。箭头表示每次仿真树更新时长。绿色更新在当前帧结束前完成，进入短暂等待至下一帧开始；红色更新未完成，导致帧延迟。
 
@@ -402,8 +405,7 @@ OpenEaagles包含众多内置功能包，已满足多种蜂群仿真需求（见
 
 图18展示三种进程示例。进程A每帧内均完成仿真树更新，故每次更新后进入等待。进程B第二次更新超时，但随后更新足够快，仿真恢复实时执行。进程C所有更新均超时，累积影响使仿真远离实时。
 
-![](https://cdn.mathpix.com/cropped/2025_06_20_ef2849397a0779e4da2eg-59.jpg?height=256&width=1511&top_left_y=249&top_left_x=307)
-
+<img src="https://cdn.mathpix.com/cropped/2025_06_20_ef2849397a0779e4da2eg-59.jpg?height=256&width=1511&top_left_y=249&top_left_x=307"  width=500/>
 图19. 性能示例图。该频率分布图显示了50Hz、约1秒仿真中各更新的等待时间。大部分更新时长为14\~16ms，表明仿真实时执行，但处理器利用率较高（时长接近20ms表示高利用率，接近0ms表示低利用率，预留更多蜂群无人机仿真空间）。
 
 本文演示的仿真通过记录前10分钟每次仿真树更新时长评估实时执行能力。更新时长取毫秒向上取整（例如2.0324ms向上为3ms），并绘制为频率分布图。仿真更新时长的形状和位置能强烈反映仿真性能。图19为示例，显示50Hz帧率、约1秒总时长仿真中50次更新时长分布，大部分时长集中于14至16ms。一次更新持续完整刷新周期（20ms），另有4次超时，表明这些更新期间未达实时。
@@ -427,24 +429,22 @@ $$
 
 框架演示利用上述场景验证 OCA 蜂群开发沙箱，使开发者可在高度自定义配置中应用和测试蜂群算法，高可信度保证结果蜂群行为能转化为真实飞行，从而在无风险真实飞机的情况下验证或否定蜂群控制策略。相关代码见：[https://github.com/derekworth/SwarmSim](https://github.com/derekworth/SwarmSim) 。
 
-![](https://cdn.mathpix.com/cropped/2025_06_20_ef2849397a0779e4da2eg-62.jpg?height=751&width=947&top_left_y=248&top_left_x=584)
+<img src="https://cdn.mathpix.com/cropped/2025_06_20_ef2849397a0779e4da2eg-62.jpg?height=751&width=947&top_left_y=248&top_left_x=584"  width=500/>
 
 图20. 场景共同航点域。每次仿真包含 10 个共同航点，分布于约 20 平方海里区域，原点位于 WP10 之下，约为 $39.0084648^{\circ} \mathrm{N},-104.8887177^{\circ} \mathrm{W}$，海拔 0 英尺 MSL。
 
-![](https://cdn.mathpix.com/cropped/2025_06_20_ef2849397a0779e4da2eg-62.jpg?height=901&width=1283&top_left_y=1227&top_left_x=421)
-
+<img src="https://cdn.mathpix.com/cropped/2025_06_20_ef2849397a0779e4da2eg-62.jpg?height=901&width=1283&top_left_y=1227&top_left_x=421"  width=500/>
 图21. 无人机路径。导航模式下的无人机重复飞行各自预编程路径，途经 10 个共同航点；蜂群无人机则依据 Reynolds 群集规则及邻近无人机信息决定路径。
 
 飞行动力学模型。前述概念验证所用 FDM 为 JSBSim，采用 XML 定义的 Sig Rascal 110 ARF 机型（图22）——“基于 FlightGear 中的 Rascal110，调整用于 ArduPilot 测试系统”[18]。虽然 JSBSim 几乎支持任意机型，Sig Rascal 选为示范机型因其为典型机型，广泛应用于业余和无人机社区。该机属于小型固定翼无人机类别，单螺旋桨，传统控制面（副翼、方向舵、电梯），翼展 9.17 英尺。
 
-![](https://cdn.mathpix.com/cropped/2025_06_20_ef2849397a0779e4da2eg-63.jpg?height=253&width=459&top_left_y=936&top_left_x=833)
+<img src="https://cdn.mathpix.com/cropped/2025_06_20_ef2849397a0779e4da2eg-63.jpg?height=253&width=459&top_left_y=936&top_left_x=833"  width=500/>
 
 图22. Sig Rascal 110 ARF 模型。
 
 **SIMDIS。** 为查看开发中蜂群行为的动态交互，使用分布式交互仿真（DIS），通过 OpenEaagles 网络类 DisNetIO 配置，广播 DIS 包至本地主机环回网络接口。SIMDIS™ 软件工具截获并解析此类包，提供仿真数据的三维交互图形和视频显示。图23展示与上述场景相关的主要工具。SIMDIS 是本文所有演示的视觉接口。为可视化起见，SIMDIS 中无人机显示为 MQ-1 Predator，因图标模型有限，但不影响飞行特性，飞行由 Sig Rascal 110 FDM 定义（即飞行如 Sig Rascal，但外观如 Predator）。
 
-![](https://cdn.mathpix.com/cropped/2025_06_20_ef2849397a0779e4da2eg-64.jpg?height=828&width=1517&top_left_y=242&top_left_x=304)
-
+<img src="https://cdn.mathpix.com/cropped/2025_06_20_ef2849397a0779e4da2eg-64.jpg?height=828&width=1517&top_left_y=242&top_left_x=304"  width=500/>
 图23. SIMDIS 概览。SIMDIS 截获并解释仿真广播的 DIS 包。左侧“测距工具”提供多实体间距离信息（如高度差、斜距等）；右侧“超级表单”支持视图定制（添加/移除标签、数据表、本地网格等）及聚焦特定实体。主窗口支持点选交互，仿真运行时可自由平移、俯仰和缩放视图。
 
 ### 3.5 小结
@@ -475,7 +475,7 @@ $$
 
 动态航点向量（vect\_X）通过将三向量乘以相应缩放因子后求和计算。本文使用的缩放因子分别为：分离 0.5，对齐 10.0，凝聚 1.0。最终将动态航点向量直接转换为航点（即相对于蜂群无人机当前位置的纬度、经度和高度偏移），传递给自动驾驶仪实现自主导航。为向量可视化，向仿真树中添加四个“虚拟”玩家实体，其位置由 OCA 更新，对应四个向量。OCA 每次仿真树更新时重新计算向量，实现 Reynolds 群集规则的平滑连续可视化。
 
-![](https://cdn.mathpix.com/cropped/2025_06_20_ef2849397a0779e4da2eg-67.jpg?height=293&width=1033&top_left_y=233&top_left_x=546)
+<img src="https://cdn.mathpix.com/cropped/2025_06_20_ef2849397a0779e4da2eg-67.jpg?height=293&width=1033&top_left_y=233&top_left_x=546"  width=500/>
 
 图24. Reynolds 群集规则。分离使局部群体成员间保持距离，避免拥挤；对齐使成员朝向局部群体的平均航向；凝聚使成员向局部群体的平均位置移动。（最初见于[38]，作为公共领域元素复现）
 
@@ -483,7 +483,7 @@ $$
 
 仿真准确性。自动驾驶仪设计与调试过程中，定性分析表明飞控输入对 Sig Rascal FDM 反应准确且灵敏。预设飞控输入诱发特定机动，模拟无人机表现符合预期，增强了对 FDM 准确性的信心。图25展示部分机动效果。
 
-![](https://cdn.mathpix.com/cropped/2025_06_20_ef2849397a0779e4da2eg-68.jpg?height=815&width=1461&top_left_y=243&top_left_x=332)
+<img src="https://cdn.mathpix.com/cropped/2025_06_20_ef2849397a0779e4da2eg-68.jpg?height=815&width=1461&top_left_y=243&top_left_x=332"  width=500/>
 
 图25. 飞行机动。多种机动用于测试 Sig Rascal 110 FDM 的偏航、俯仰、滚转和节气门控制的准确性和响应性。
 
@@ -491,14 +491,13 @@ $$
 
 蜂群行为。仿真显示 Reynolds 向量及对应动态航点。图26标注各向量（黑箭头）。分离向量指向唯一处于分离距离内的无人机 N2 反方向。对齐向量指向三架导航无人机的平均飞行方向。凝聚向量指向三架导航无人机的平均位置。动态航点向量为三缩放 Reynolds 向量之和。向量随仿真刷新周期更新，呈现平滑连续轨迹，残迹如图所示。为演示效果，OCA 刷新率设为较高值，后续演示中将使用更低刷新率。正如预期，蜂群无人机持续“追逐”动态航点 vect\_X，展示 OCA 对自动驾驶仪的控制能力。
 
-![](https://cdn.mathpix.com/cropped/2025_06_20_ef2849397a0779e4da2eg-69.jpg?height=825&width=1191&top_left_y=233&top_left_x=467)
+<img src="https://cdn.mathpix.com/cropped/2025_06_20_ef2849397a0779e4da2eg-69.jpg?height=825&width=1191&top_left_y=233&top_left_x=467"  width=500/>
 
 图26. 模拟 Reynolds 向量。分离向量（左上）表示分离范围内周围无人机的排斥“力”（仅无人机 N2）。对齐向量（右上）表示周围无人机的平均速度向量。凝聚向量（左下）指向周围无人机的平均位置。动态航点向量（右下）由三者相加得出。
 
 性能分析。单架蜂群无人机与三架导航无人机的 10 分钟仿真中，记录了 30,000 次更新（即每 20 ms 一次）。图27显示仿真更新时长的频率分布，$P\_{\mathrm{rt}}$ 达 100%，大多数更新时长约为 4 ms，表明资源利用率低，具备容纳更多蜂群无人机的能力。
 
-![](https://cdn.mathpix.com/cropped/2025_06_20_ef2849397a0779e4da2eg-70.jpg?height=286&width=893&top_left_y=242&top_left_x=616)
-
+<img src="https://cdn.mathpix.com/cropped/2025_06_20_ef2849397a0779e4da2eg-70.jpg?height=286&width=893&top_left_y=242&top_left_x=616"  width=500/>
 图27. 性能图——单架蜂群无人机。展示了单蜂群无人机与三导航无人机（仅仿真自动驾驶仪）10分钟仿真中每次仿真树更新后的时长记录。
 
 ### 4.2 使用仿真自动驾驶仪的无人机蜂群
@@ -533,16 +532,13 @@ $$
 | 67 | $30.4%$ |
 | 70 | $21.8%$ |
 
-![](https://cdn.mathpix.com/cropped/2025_06_20_ef2849397a0779e4da2eg-72.jpg?height=1608&width=1538&top_left_y=394&top_left_x=288)
-
+<img src="https://cdn.mathpix.com/cropped/2025_06_20_ef2849397a0779e4da2eg-72.jpg?height=1608&width=1538&top_left_y=394&top_left_x=288"  width=500/>
 图28. 蜂群规模性能比较。各仿真均持续 10 分钟。更新时长记录中蓝色条代表在 20 ms 帧内完成（即实时执行），红色条表示超时（更新延迟）。
 
-![](https://cdn.mathpix.com/cropped/2025_06_20_ef2849397a0779e4da2eg-73.jpg?height=716&width=1169&top_left_y=317&top_left_x=478)
-
+<img src="https://cdn.mathpix.com/cropped/2025_06_20_ef2849397a0779e4da2eg-73.jpg?height=716&width=1169&top_left_y=317&top_left_x=478"  width=500/>
 图29. 实时蜂群。蜂群规模逐步增加，最终达到最大实时执行规模 64 架（右下图所示）。
 
-![](https://cdn.mathpix.com/cropped/2025_06_20_ef2849397a0779e4da2eg-73.jpg?height=731&width=1186&top_left_y=1399&top_left_x=467)
-
+<img src="https://cdn.mathpix.com/cropped/2025_06_20_ef2849397a0779e4da2eg-73.jpg?height=731&width=1186&top_left_y=1399&top_left_x=467"  width=500/>
 图30. 大规模蜂群。随机布置于两海里半径内的 240 架蜂群无人机先合并（左上），最终形成紧凑球形编队（右下），在无碰撞情况下徘徊于三架“有人机”附近。
 
 
@@ -554,16 +550,14 @@ $$
 
 **Pixhawk 硬件在环准备。** 在集成 Pixhawk 进行 HIL 仿真前，使用 QGroundControl v2.3.0 安装了 `px4fmu-v2_default.px4` 飞控软件包。QGroundControl 还作为 FlightGear v3.4.0（同一 Sig Rascal 110 FDM）与 Pixhawk 自动驾驶仪之间的 HIL 接口用于参数调试。为提高蜂群飞行稳定性，将正俯仰角限制参数 FW\_P\_LIM\_MAX 从默认 45.0 调整为 15.0，最大正负俯仰速率参数 FW\_P\_RMAX\_POS 和 FW\_P\_RMAX\_NEG 从默认 60.0 调整为 10.0，其他参数保持默认。Pixhawk 在模拟飞行前通过 QGroundControl 解锁并设置为自动模式，基模式设置为 189（启用 HIL、稳定、引导、自动及自定义模式；安全开关解锁；测试和手动输入禁用）。Pixhawk 的安全开关必须安装并切换至常亮红灯状态。最终硬件设置见图31。
 
-![](https://cdn.mathpix.com/cropped/2025_06_20_ef2849397a0779e4da2eg-75.jpg?height=573&width=763&top_left_y=242&top_left_x=681)
-
+<img src="https://cdn.mathpix.com/cropped/2025_06_20_ef2849397a0779e4da2eg-75.jpg?height=573&width=763&top_left_y=242&top_left_x=681"  width=500/>
 图31. Pixhawk 硬件设置。单个 Pixhawk 自动驾驶仪通过 USB（COM5端口）连接到仿真系统。安全开关（伸缩线末端按钮）在安全解除时常亮红灯。多色 LED 飞行状态指示灯（图中覆盖黄色胶带）常亮绿灯表示系统已解锁、获得 GPS 定位且准备就绪。接收航点时绿灯闪烁，其他灯光模式表示错误状态。
 
 为测试 Pixhawk 支持动态航点跟踪（DWF），在飞行中途向 Pixhawk 程序化单个航点并定期更新（图32）。Pixhawk 能如预期动态追踪更新的航点，验证了其在蜂群场景中的实用性。本演示及后续演示中，所有 Pixhawk HIL 模式初始化均通过 QGroundControl 与 FlightGear 实例完成。建立 DWF HIL 仿真后，Pixhawk 从 QGroundControl 断开，接入基于 PixhawkAP 的蜂群仿真框架硬件接口。
 
 硬件需求。Pixhawk HIL 集成需通过 USB 串口连接，使用 MAVLink 协议双向通讯，完成 Pixhawk 与仿真（FDM 和 OCA）之间的遥测与航点数据传输。Pixhawk 串口连接使用 CSerial API [2] 实现。MAVLink 通用消息库 C++ 版本 [31] 支持消息编解码。Pixhawk MAVLink 消息需求详见 [https://pixhawk.ethz.ch/mavlink/](https://pixhawk.ethz.ch/mavlink/，指导) 指导PixhawkAP 类的数据转换逻辑开发。
 
-![](https://cdn.mathpix.com/cropped/2025_06_20_ef2849397a0779e4da2eg-76.jpg?height=690&width=1261&top_left_y=243&top_left_x=432)
-
+<img src="https://cdn.mathpix.com/cropped/2025_06_20_ef2849397a0779e4da2eg-76.jpg?height=690&width=1261&top_left_y=243&top_left_x=432"  width=500/>
 图32. 利用 QGroundControl 实现动态航点跟踪。QGroundControl 作为仿真（左侧 FlightGear）与 Pixhawk 硬件自动驾驶仪之间的接口。黄色圆圈表示动态航点更新，黄色箭头（右上起）显示更新顺序。红色高亮线为无人机实际飞行路径。
 
 时间同步。表4 汇总了 HIL 仿真期间 MAVLink 消息流（从仿真角度）及其消息率与大小。Pixhawk 需要稳定的 HIL\_SENSOR 和 HIL\_GPS MAVLink 消息分别以 50 Hz 和 10 Hz 频率发送有效测量数据流，同时需要 1 Hz 的 HEARTBEAT 消息。为实时满足各消息频率，PixhawkAP 将其与计算机系统时钟同步。
@@ -594,22 +588,19 @@ $$
 
 性能分析。更新时长分析显示 HIL 仿真保持了实时执行（图33）。然而，单个由 Pixhawk 自动驾驶仪驱动的蜂群无人机仿真，其更新时长平均值与由模拟自动驾驶仪驱动的 38 架蜂群无人机相当，表明切换至 HIL 仿真时可扩展性大幅降低，主要原因是生成和发送 HIL\_SENSOR 与 HIL\_GPS 消息时，仿真到 MAVLink 数据转换的高频率开销。
 
-![](https://cdn.mathpix.com/cropped/2025_06_20_ef2849397a0779e4da2eg-79.jpg?height=275&width=890&top_left_y=242&top_left_x=615)
-
+<img src="https://cdn.mathpix.com/cropped/2025_06_20_ef2849397a0779e4da2eg-79.jpg?height=275&width=890&top_left_y=242&top_left_x=615"  width=500/>
 图33. 性能图 - 单架蜂群无人机（HIL）。该图展示了一次 10 分钟仿真中，包含一架集成 Pixhawk 自动驾驶仪（HIL 仿真）和三架使用模拟自动驾驶仪的导航无人机的更新时长。两个局部峰值中较小的峰值（约 17 ms）显示了在主刷新周期外资源利用率的周期性升高，即 10 Hz 频率的 HIL\_GPS MAVLink 消息生成与传输。
 
 为了给仿真提供控制信号（即 HIL\_CONTROLS），Pixhawk 需要以较高频率接收准确的测量数据流（HIL\_SENSOR 50 Hz，HIL\_GPS 10 Hz）。每条 HIL\_SENSOR 消息生成包含大量磁力计计算及气压和温度转换的乘法运算。sendHilSensor 方法调用前后时间戳测得该过程（包括从 FDM 拉取数据、转换为 MAVLink 消息并通过串口发送给 Pixhawk）约需 11 ms。同理，HIL\_GPS 消息生成涉及多个乘法运算及外部方法调用，sendHilGps 方法调用前后时间戳表明生成并发送每条 HIL\_GPS 消息约需 7 ms。
 
 图33 中显示两个峰值——11 ms 处的大峰和约 17 ms 处的小峰。平均等待时间从使用模拟自动驾驶仪到集成 Pixhawk 的 HIL 仿真显著增加（由大峰体现），这是因为每刷新周期都会生成并发送一条 HIL\_SENSOR 消息；而小峰源于每 50 Hz 帧率外的周期性（10 Hz）资源使用峰值，即每隔五帧生成并发送一条 HIL\_GPS 消息（约耗时 7 ms）叠加在 HIL\_SENSOR 消息上。
 
-![](https://cdn.mathpix.com/cropped/2025_06_20_ef2849397a0779e4da2eg-80.jpg?height=636&width=1167&top_left_y=243&top_left_x=479)
-
+<img src="https://cdn.mathpix.com/cropped/2025_06_20_ef2849397a0779e4da2eg-80.jpg?height=636&width=1167&top_left_y=243&top_left_x=479"  width=500/>
 图34. HIL 仿真中的 Reynolds 向量。Pixhawk 自动驾驶仪为蜂群无人机 P1 的 FDM 提供飞控信号，驱动其持续追踪动态航点（由 OCA 每五秒更新一次）。红线表示 P1 的瞬时航向。
 
 行为表现。由于 PixhawkAP 继承自 SwarmAutopilot，故其可无缝替代蜂群无人机（重新命名为 P1）中的 SimAP。当 OCA 通过 setWaypoint 方法设置动态航点时，PixhawkAP 通过航点协议将该航点经 USB 转发至 Pixhawk。测量数据与控制信号的交互如前述。图34 展示了采用该蜂群仿真框架集成 Pixhawk 自动驾驶仪的仿真结果——P1 类似于首次演示中的 S1，无间断追踪 vect\_X，验证了由机载控制代理主导的硬件在环仿真成功实现。
 
-![](https://cdn.mathpix.com/cropped/2025_06_20_ef2849397a0779e4da2eg-81.jpg?height=529&width=1009&top_left_y=245&top_left_x=558)
-
+<img src="https://cdn.mathpix.com/cropped/2025_06_20_ef2849397a0779e4da2eg-81.jpg?height=529&width=1009&top_left_y=245&top_left_x=558"  width=500/>
 图35. 多 Pixhawk 硬件设置。图中笔记本电脑（右侧）为本论文全部实验的平台。多个 Pixhawk（左侧）通过 USB 2.0 集线器（中央上方）连接到笔记本电脑的 USB 2.0 端口。
 
 ### 4.4 配备硬件自动驾驶仪的无人机蜂群
@@ -620,8 +611,7 @@ $$
 
 沿用单机 HIL 演示的设置，移除动态航点及 Reynolds 向量可视化。将前演示参数复制到新增 Pixhawk 自动驾驶仪中。各 Pixhawk 通过 QGroundControl 分别初始化 HIL 模式。所有 Pixhawk 通过 USB 2.0（图35）连接，自动分配虚拟 COM 端口。PixhawkAP 接口与对应 Pixhawk 自动驾驶仪的 COM 端口映射通过 EDL 文件定义。蜂群无人机随机布置于场景原点半径两海里范围内。
 
-![](https://cdn.mathpix.com/cropped/2025_06_20_ef2849397a0779e4da2eg-82.jpg?height=695&width=1511&top_left_y=241&top_left_x=307)
-
+<img src="https://cdn.mathpix.com/cropped/2025_06_20_ef2849397a0779e4da2eg-82.jpg?height=695&width=1511&top_left_y=241&top_left_x=307"  width=500/>
 图36. 蜂群规模性能比较（HIL）。随着 Pixhawk 自动驾驶仪数量增加，仿真性能线性下降。
 
 #### 4.4.2 观察结果
@@ -641,8 +631,7 @@ $$
 
 行为表现。不同规模的蜂群行为与仅使用模拟自动驾驶仪时相似。无人机合并形成紧凑编队，在共同航点区内于三架导航无人机附近盘旋。图37 展示了不同蜂群规模下的协调行为。尽管最大可接受实时率的蜂群规模仅为四架，五架和六架蜂群亦表现出稳定的 Reynolds 编队行为。
 
-![](https://cdn.mathpix.com/cropped/2025_06_20_ef2849397a0779e4da2eg-83.jpg?height=706&width=1163&top_left_y=243&top_left_x=481)
-
+<img src="https://cdn.mathpix.com/cropped/2025_06_20_ef2849397a0779e4da2eg-83.jpg?height=706&width=1163&top_left_y=243&top_left_x=481"  width=500/>
 图37. HIL 仿真中的蜂群行为。红色高亮的蜂群无人机由 Pixhawk 自动驾驶仪驱动，其行为与第二次演示中由模拟自动驾驶仪驱动的蜂群无人机相似。
 
 
