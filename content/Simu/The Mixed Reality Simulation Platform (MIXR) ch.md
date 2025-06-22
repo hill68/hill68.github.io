@@ -12,21 +12,14 @@ Douglas D. Hodson , David P. Gehl
 
 Air Force Institute of Technology, WPAFB, OH, USA
 
-[Int'l Conf. Scientific Computing | CSC'18 |](https://www.sce.carleton.ca/faculty/wainer/papers/CSC9033.pdf)
+论文原文[Int'l Conf. Scientific Computing | CSC'18 |](https://www.sce.carleton.ca/faculty/wainer/papers/CSC9033.pdf)
 
-[Latest Version]( https://www.mixr.dev/)
+MIXR [Latest Version]( https://www.mixr.dev/)
 
-[Code Repository](https://github.com/doughodson/mixr)
+MIXR [Code Repository](https://github.com/doughodson/mixr)
 
 
-[C++ 编码标准](https://www.mixr.dev/assets/pages/docs/coding-stds.pdf)：
-当开发新的或扩展现有的 OpenEaagles 类时，应遵循这些编码标准。此文档还定义了在开发 C++ 应用程序时应遵循的一些有用指导原则。
 
-[Basic 类](https://www.mixr.dev/assets/pages/docs/basic-classes.pdf)：
- OpenEaagles 框架 Basic 包中包含的许多类。它还包含框架的一些底层设计理念。
-
-[BasicGL 类](https://www.mixr.dev/assets/pages/docs/basicGL-classes.pdf)：
- OpenEaagles 框架 BasicGL 包中包含的许多类。
 
 
 
@@ -246,6 +239,18 @@ MIXR 软件发行版包含构建新应用的代码，以及展示如何利用其
 ## 12. 结语
 
 MIXR 是开源且免费提供的；可连同一套示例程序从 [www.mixr-platform.org](http://www.mixr-platform.org) 下载使用。
+
+
+## 附录：
+
+[C++ 编码标准](https://www.mixr.dev/assets/pages/docs/coding-stds.pdf)：
+当开发新的或扩展现有的 OpenEaagles 类时，应遵循这些编码标准。此文档还定义了在开发 C++ 应用程序时应遵循的一些有用指导原则。
+
+[Basic 类](https://www.mixr.dev/assets/pages/docs/basic-classes.pdf)：
+ OpenEaagles 框架 Basic 包中包含的许多类。它还包含框架的一些底层设计理念。
+
+[BasicGL 类](https://www.mixr.dev/assets/pages/docs/basicGL-classes.pdf)：
+ OpenEaagles 框架 BasicGL 包中包含的许多类。
 
 
 ## References
