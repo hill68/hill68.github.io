@@ -23,7 +23,7 @@ MIXR [Code Repository](https://github.com/doughodson/mixr)
 
 
 
-#### 摘要
+### 摘要
 
 混合现实仿真平台（MIXR, The Mixed Reality Simulation Platform）是一个开源软件项目，旨在支持健壮、可扩展、虚拟与构造型、独立及分布式仿真应用的开发。其最常见的用例是支持可执行仿真应用的开发，用于组建实时、交互式、分布式虚拟环境（DVE）。
 
