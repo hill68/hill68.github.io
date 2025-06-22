@@ -19,6 +19,17 @@ Air Force Institute of Technology, WPAFB, OH, USA
 [Code Repository](https://github.com/doughodson/mixr)
 
 
+[C++ 编码标准](https://www.mixr.dev/assets/pages/docs/coding-stds.pdf)：
+当开发新的或扩展现有的 OpenEaagles 类时，应遵循这些编码标准。此文档还定义了在开发 C++ 应用程序时应遵循的一些有用指导原则。
+
+[Basic 类](https://www.mixr.dev/assets/pages/docs/basic-classes.pdf)：
+ OpenEaagles 框架 Basic 包中包含的许多类。它还包含框架的一些底层设计理念。
+
+[BasicGL 类](https://www.mixr.dev/assets/pages/docs/basicGL-classes.pdf)：
+ OpenEaagles 框架 BasicGL 包中包含的许多类。
+
+
+
 #### 摘要
 
 混合现实仿真平台（MIXR, The Mixed Reality Simulation Platform）是一个开源软件项目，旨在支持健壮、可扩展、虚拟与构造型、独立及分布式仿真应用的开发。其最常见的用例是支持可执行仿真应用的开发，用于组建实时、交互式、分布式虚拟环境（DVE）。
