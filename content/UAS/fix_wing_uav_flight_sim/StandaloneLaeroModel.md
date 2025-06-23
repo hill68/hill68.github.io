@@ -134,7 +134,7 @@ $$\begin{bmatrix} \dot{x} \\ \dot{y} \\ \dot{z} \end{bmatrix} = \begin{bmatrix} 
 
 ## 二、Rac 模型
 
-Rac 模型的 C++代码实现见 [Laero 模型下的](https://github.com/flitai/StandaloneLaeroModel/) StandaloneRacModel目录
+Rac 模型的 C++代码实现见 [Laero 模型下的](https://github.com/flitai/StandaloneLaeroModel/) `StandaloneRacModel`目录
 
 ### 1. 问题定义与设计目标
 
@@ -259,7 +259,55 @@ $$
 * **可视化友好**：滚转角平滑混合保证动画自然，适合游戏与训练场景。
 
 
-Rac 模型的 C++代码实现见 [Laero 模型下的](https://github.com/flitai/StandaloneLaeroModel/) StandaloneRacModel目录
+Rac 模型的 C++代码实现见 [Laero 模型下的](https://github.com/flitai/StandaloneLaeroModel/) 
+`StandaloneRacModel`目录
 
 ---
 
+## 三、JSBSimModel
+
+[C++代码实现](https://github.com/flitai/JSBSimModel)
+
+这是一个**仅依赖于标准C++库和JSBSim库**的独立应用程序，能够初始化和配置JSBSim，将控制意图转换给JSBSim，调用其运算，并返回精确结果。
+
+`JSBSimModel`通过扮演一个精心设计的**双向数据翻译器和流程协调器**的角色，来实现充当仿真框架和JSBSim引擎之间的桥梁。它本身不进行飞行动力学计算，而是负责处理两个系统之间的所有通信。
+
+这个“桥梁”作用主要通过以下四个关键阶段实现：
+
+### 1. 初始化与配置阶段 (在 `reset()` 函数中)
+
+这是建立连接和同步初始状态的第一步。
+
+* **创建JSBSim实例**: 代码首先创建一个JSBSim的核心执行对象 `FGFDMExec`。这是与JSBSim引擎交互的主要入口。
+* **加载飞机模型**: 它根据配置加载一个特定的JSBSim飞机模型文件（例如 `c172.xml` 或 `f16.xml`）。这决定了飞机的气动特性、发动机、尺寸等所有物理属性。
+* **同步初始条件**: 这是最关键的桥接步骤之一。`JSBSimModel`会从仿真框架中中获取初始状态（如高度、速度、姿态、地理位置），然后将这些值设置到JSBSim的初始条件模块（`FGInitialCondition`）中。这确保了两个系统在仿真开始时处于完全相同的状态。
+* **启动引擎**: 代码会调用JSBSim的接口来初始化并启动飞机引擎。
+* **运行初始条件**: 最后，它命令JSBSim根据设定好的初始条件来稳定其内部状态，为仿真循环做准备。
+
+### 2. 控制输入传递阶段 (在 `setControl...` 系列函数中)
+
+当用户或AI在仿真框架中进行操作时，`JSBSimModel`负责将这些操作“翻译”成JSBSim能理解的指令。
+
+* **驾驶杆输入**: 当调用 `setControlStickRollInput()` 或 `setControlStickPitchInput()` 时，`JSBSimModel` 会接收到一个标准化的输入值（-1.0到1.0）。它随后会调用JSBSim飞行控制系统（`FGFCS`）的相应函数，如 `SetDaCmd()` (副翼指令) 和 `SetDeCmd()` (升降舵指令)，来直接控制JSBSim中的舵面。
+* **油门输入**: `setThrottles()` 函数接收油门位置，并为JSBSim中的每个引擎调用 `SetThrottleCmd()`。
+* **其他控制**: 同样，起落架、刹车、减速板等指令也通过类似的方式，从仿真框架的通用接口传递到JSBSim的具体控制函数中。
+
+### 3. 仿真核心循环阶段 (在 `dynamics()` 函数中)
+
+在每个仿真时间步（frame），`JSBSimModel` 负责协调一次完整的计算。
+
+* **设置时间步长**: 它首先告诉JSBSim本次仿真的时间增量 `dt`。
+* **执行计算**: 最核心的一行代码是 `fdmex->Run();`。这个函数调用会触发JSBSim引擎执行一次完整的、复杂的飞行动力学解算。所有关于气动力、推力、重力、力矩的计算和积分都在JSBSim内部完成。`JSBSimModel` 在此只是按下了“计算”按钮。
+
+### 4. 状态数据回传阶段 (在 `dynamics()` 和 `get...` 函数中)
+
+当JSBSim完成计算后，`JSBSimModel` 负责从JSBSim中“提取”结果，并用这些结果来更新仿真框架中的飞机状态。
+
+* **更新核心状态**: 在 `dynamics()` 函数中，紧接着 `fdmex->Run()` 之后，代码会立即从JSBSim的内部模块（如 `FGPropagate` 和 `FGAccelerations`）中获取最新的数据。
+    * 它调用 `Propagate->GetAltitudeASL()` 获取高度，`Propagate->GetEuler()` 获取姿态角，`Propagate->GetVel()` 获取速度。
+    * 然后，它调用OpenEaagles `Player` 对象的 `setAltitude()`、`setEulerAngles()` 和 `setVelocity()` 等函数，将这些新数据“写回”到OpenEaagles的仿真实体中。
+* **提供详细数据查询**: `JSBSimModel` 还实现了一系列 `get...` 函数，如 `getGload()`, `getMach()`, `getEngThrust()` 等。当外部需要这些详细数据时，这些函数会实时地从JSBSim的相应模块（如 `FGAuxiliary`, `FGPropulsion`）中查询并返回结果。
+
+综上所述，`JSBSimModel` 的桥梁作用体现在它是一个**全权代理**：它代表仿真框架初始化和配置JSBSim，将仿真框架的控制意图翻译给JSBSim，命令JSBSim进行运算，最后将JSBSim的精确运算结果取回并更新到仿真框架的世界中，从而实现了两个系统的无缝集成。
+
+JSBSimModel的[C++代码实现](https://github.com/flitai/JSBSimModel)
