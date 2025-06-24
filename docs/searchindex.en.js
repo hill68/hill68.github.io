@@ -226,7 +226,7 @@ var relearn_searchindex = [
   {
     "breadcrumb": "FlitSoft Docs",
     "content": "SIMDIS美国海军研究实验室（NRL）开发的SIMDIS三维分析与显示工具集\nHIL Swarm Simulation一个用于硬件在环蜂群仿真的OpenEaagles框架扩展\nMIXR混合现实仿真平台（MIXR, The Mixed Reality Simulation Platform）\nOctoMapOctoMap: 基于八叉树的高效概率性三维建图框架",
-    "description": "仿真平台与技术新进展",
+    "description": "仿真平台与技术",
     "tags": [],
     "title": "Simulation",
     "uri": "/simu/index.html"
