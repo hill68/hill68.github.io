@@ -71,6 +71,7 @@ article h3,
 article h4,
 .content h4 {
     font-family: 'HeadingFont', "Helvetica Neue", Arial, sans-serif !important;
+    font-weight: 550 !important;
     font-size: 1.1rem !important;
 }
 
@@ -80,6 +81,7 @@ article h4,
 article h5,
 .content h5 {
     font-family: 'HeadingFont', "Helvetica Neue", Arial, sans-serif !important;
+    font-weight: 550 !important;
     font-size: 1.0rem !important;
 }
 
