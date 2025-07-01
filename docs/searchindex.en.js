@@ -233,8 +233,8 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "FlitSoft Docs",
-    "content": "This is a new chapter.",
-    "description": "This is a new chapter.",
+    "content": "SIMDIS SDK与OSG基于SIMDIS SDK与OSG的3D可视化分析工具综合实施指南\nTacview Technical ReferenceThis summary is independent of the content.",
+    "description": "SIMDIS SDK与OSG基于SIMDIS SDK与OSG的3D可视化分析工具综合实施指南\nTacview Technical ReferenceThis summary is independent of the content.",
     "tags": [],
     "title": "Visualization",
     "uri": "/visual/index.html"
