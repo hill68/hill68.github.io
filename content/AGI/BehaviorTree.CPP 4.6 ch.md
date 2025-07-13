@@ -5,7 +5,7 @@ title = 'BehaviorTree.CPP库'
 summary= "用于创建和管理行为树(Behavior Trees)开源C++库BehaviorTree.CPP，该库特别针对机器人的需求进行了优化，例如任务规划、导航、操作等。"
 +++
 
-https://www.behaviortree.dev/  是学习和使用 BehaviorTree.CPP 库的官方入口。它不仅提供了这个强大的C++库，还围绕它构建了一个完整的生态系统，包括了革命性的可视化编辑和监控工具 Groot2。如果您正在从事机器人、自动化或相关AI领域的工作，并且需要一个强大、灵活且高效的工具来设计复杂的行为逻辑，那么 BehaviorTree.CPP 是一个非常值得了解和使用的选择。
+https://www.behaviortree.dev/  是学习和使用 BehaviorTree.CPP 库的官方入口。它不仅提供了这个强大的C++库，还围绕它构建了一个完整的生态系统，包括了革命性的可视化编辑和监控工具 Groot2。 BehaviorTree.CPP作为一个强大、灵活且高效的工具来设计复杂的行为逻辑，适合在机器人、自动化或相关AI领域选择使用。
 
 
 ### **核心内容：BehaviorTree.CPP 是什么？**
