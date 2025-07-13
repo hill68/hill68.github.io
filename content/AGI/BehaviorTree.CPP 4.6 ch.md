@@ -1,7 +1,7 @@
 +++
 date = '2025-07-13T17:07:50+08:00'
 draft = false
-title = '基础模型与智能决策'
+title = 'BehaviorTree.CPP库'
 summary= "用于创建和管理行为树(Behavior Trees)开源C++库BehaviorTree.CPP，该库特别针对机器人的需求进行了优化，例如任务规划、导航、操作等。"
 +++
 
