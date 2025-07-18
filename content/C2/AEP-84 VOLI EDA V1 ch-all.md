@@ -1786,7 +1786,7 @@ DLI数据内容由CUCS与VSM之间通信的功能需求决定。DLI数据元素�
 24. 限定为可打印字符范围的Character(n)数据类型，应仅包含ASCII码范围$0 \times 20-0 \times 7E$内的字符（包括字母、数字、标点、空格及少数符号），并以空字符（0x00）结尾 [DLI 0525]。
 
 
-#### **系统ID信息 (System ID Messages)**
+#### 4.2  **系统ID信息 (System ID Messages)**
 这类信息用于在CUCS（控制与监视单元）和VSM（载具特定模块）/UA（无人机）之间建立和验证连接 。它们处理授权请求、身份识别和授权响应，是确保正确控制和监视关系的基础 。
 
 
@@ -1802,7 +1802,7 @@ DLI数据内容由CUCS与VSM之间通信的功能需求决定。DLI数据元素�
 ---
 
 
-#### **飞行载具命令与状态信息 (Flight Vehicle Command and Status Messages)**
+#### 4.3  **飞行载具命令与状态信息 (Flight Vehicle Command and Status Messages)**
 该类别包括从CUCS发送到飞行器的命令以及从飞行器返回的状态报告 。命令涵盖了飞行器的配置、操作模式、灯光、发动机控制和飞行终止等 。状态信息则报告飞行器的惯性状态、相对空气/地面状态、机体感知状态、运行状态和发动机状态，为操作员提供全面的飞行态势感知 。
 
 * **信息 #40: 载具配置命令 (Vehicle Configuration Command)**
@@ -1867,7 +1867,7 @@ DLI数据内容由CUCS与VSM之间通信的功能需求决定。DLI数据元素�
 
 ---
 
-#### **有效载荷命令与状态信息 (Payload Command and Status Messages)**
+#### 4.4 **有效载荷命令与状态信息 (Payload Command and Status Messages)**
 由于无人机通常作为有效载荷系统的载体，该组信息旨在为CUCS提供以互操作方式命令和监控各种有效载荷（如光电/红外传感器、合成孔径雷达、挂载管理系统、通信中继和CBRN探测器）操作状态的方法 。
 
 * **信息 #200: 有效载荷转向命令 (Payload Steering Command)**
@@ -1960,7 +1960,7 @@ DLI数据内容由CUCS与VSM之间通信的功能需求决定。DLI数据元素�
 ---
 
 
-#### **数据链路信息 (Data Link Messages)**
+#### 4.5 **数据链路信息 (Data Link Messages)**
 这类信息允许CUCS控制数据链路并接收其状态 。它包括用于设置和控制数据链路与天线基座的命令和状态消息，并支持无人机控制权的交接 。
 
 * **信息 #400: 数据链路设置消息 (Data Link Set Up Message)**
@@ -1998,7 +1998,7 @@ DLI数据内容由CUCS与VSM之间通信的功能需求决定。DLI数据元素�
 
 ---
 
-#### **任务信息 (Mission Messages)**
+#### 4.6 **任务信息 (Mission Messages)**
 这些信息支持在UA和CUCS之间传输任务计划 。任务信息可以在飞行前和飞行中发送至UA或从UA接收，涵盖了任务的传输控制、航线定义以及各类航点（位置、悬停、有效载荷动作、机体动作）的详细设置 。
 
 * **信息 #800: 任务传输命令 (Mission Transfer Command)**
@@ -2027,7 +2027,7 @@ DLI数据内容由CUCS与VSM之间通信的功能需求决定。DLI数据元素�
 
 ---
 
-#### **子系统状态信息 (Subsystems Status Messages)**
+#### 4.7 **子系统状态信息 (Subsystems Status Messages)**
 该通用消息集包含用于CUCS状态显示的摘要健康和状态信息 。它旨在为控制台提供整体健康摘要数据，通常使用颜色代码（绿=正常，黄=警告，红=危险）进行提示，而不是传达详细的、特定于配置的诊断信息 。
 
 * **信息 #1000: 子系统状态请求 (Subsystem Status Request)**
@@ -2044,7 +2044,7 @@ DLI数据内容由CUCS与VSM之间通信的功能需求决定。DLI数据元素�
 
 ---
 
-#### **通用配置信息 (General Configuration Messages)**
+#### 4.8 **通用配置信息 (General Configuration Messages)**
 这些消息用于CUCS和VSM之间的配置过程 。CUCS可以使用这些消息请求特定LOI（互操作等级）的配置参数，定义显示单位，并报告其资源 。VSM则响应这些请求，提供关于其支持的DLI（数据链路接口）字段的详细配置信息，如数值范围、支持的枚举值和可用性 。
 
 * **信息 #1200: 字段配置请求 (Field Configuration Request)**
@@ -2082,7 +2082,7 @@ DLI数据内容由CUCS与VSM之间通信的功能需求决定。DLI数据元素�
 
 ---
 
-#### **杂项信息类型 (Miscellaneous Message Types)**
+#### 4.9 **杂项信息类型 (Miscellaneous Message Types)**
 该类别包含不属于其他特定功能分组的通用或辅助性消息 。这包括用于确认消息接收的**消息确认（#1400）** 、用于请求周期性数据更新的**调度消息更新命令（#1402）** ，以及用于请求单个消息的**通用信息请求（#1403）** 。
 
 * **信息 #1400: 消息确认 (Message Acknowledgement)**
@@ -2096,7 +2096,7 @@ DLI数据内容由CUCS与VSM之间通信的功能需求决定。DLI数据元素�
 
 ---
 
-#### **IFF/SSR 命令与状态信息 (IFF/SSR Command and Status Messages)**
+#### 4.10 **IFF/SSR 命令与状态信息 (IFF/SSR Command and Status Messages)**
 这类信息用于控制和报告机载敌我识别（IFF）和二次监视雷达（SSR）应答器的状态 。消息涵盖了设置模式代码、启动位置识别（I/P）、控制加密密钥以及发起内置测试（BIT）等功能 。
 
 * **信息 #1500: IFF/SSR 代码命令 (IFF/SSR Code Command)**
@@ -2116,7 +2116,7 @@ DLI数据内容由CUCS与VSM之间通信的功能需求决定。DLI数据元素�
 
 ---
 
-#### **武器命令与状态信息 (Weapons Messages)**
+#### 4.11 **武器命令与状态信息 (Weapons Messages)**
 该信息类别提供了对机载武器系统进行详细控制和状态监控的功能 。它包括从武器配置、清单建立、目标修改到主武器保险、武器包选择、发射控制、引信设置和抛弃等一系列命令，并配有相应的状态响应消息 。
 
 * **信息 #1800: 挂载特定信息请求 (Store Specific Information Request)**
@@ -2280,7 +2280,7 @@ DLI数据内容由CUCS与VSM之间通信的功能需求决定。DLI数据元素�
 
 
 
-#### **私有信息 (Private Messages)**
+#### 4.12 **私有信息 (Private Messages)**
 此类消息用于处理标准通用消息未涵盖的载具和有效载荷特定功能 。VSM设计者可以使用特定的显示服务来格式化这些消息，而CUCS则提供显示这些特定数据和信息（例如在浏览器窗口中）的服务 。
 
 * **信息 #2000: IP 地址和端口分配请求 (IP Address and Port Assignment Request)**
