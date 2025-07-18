@@ -88,6 +88,8 @@ ZMQ 常被称作“带增强功能的套接字 (Sockets on Steroids)” 或 “�
 
 https://zguide.zeromq.org
 
+以下由 ZMQ 的原作者之一 Pieter Hintjens 撰写
+
 ## 第1章 - 基础知识
 
 ### 改造世界
