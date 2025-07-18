@@ -329,7 +329,7 @@ Here’s the client code:
 
 hwclient: Hello World client in C++
 
-```
+```c++
 //
 //  Hello World client in C++
 //  Connects REQ socket to tcp://localhost:5555
@@ -465,7 +465,7 @@ int main ()
 
 wuserver: Weather update server in C++
 
-```
+```c++
 //
 //  Weather update server in C++
 //  Binds PUB socket to tcp://*:5556
