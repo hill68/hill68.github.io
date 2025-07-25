@@ -444,7 +444,7 @@ ${ }^{17}$ Office of Management and Budget, "Accelerating Federal Use of AI thro
 
 ${ }^{18}$ Office of Management and Budget, "Driving Efficient Acquisition of Artificial Intelligence in Government (M-25 22)," (Washington, DC: Executive Office of the President, 2025), www.whitehouse.gov/wp-content/uploads/2025/02/M-25-22-Driving-Efficient-Acquisition-of-Artificial-Intelligence-in-Government.pdf.
 
-${ }^{19$ TAKE IT DOWN Act, Pub. L. No. 119-12, 139 Stat. 55 (2025) (codified as 47 U.S.C. § 223(h)).
+${ }^{19}$ TAKE IT DOWN Act, Pub. L. No. 119-12, 139 Stat. 55 (2025) (codified as 47 U.S.C. § 223(h)).
 
 ${ }^{20}$ Haiying Guan, James Horan, and Andrew Zhang, "Guardians of Forensic Evidence: Evaluating Analytic Systems Against AIGenerated Deepfakes," (Gaithersburg, MD: National Institute of Standards and Technology, January 27, 2025), www.nist.gov/publications/guardians-forensic-evidence-evaluating-analytic-systems-against-ai-generated-deepfakes.
 
