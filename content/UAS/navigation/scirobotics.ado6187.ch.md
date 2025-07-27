@@ -22,9 +22,15 @@ https://www.science.org/doi/10.1126/scirobotics.ado6187
 
 
 <video controls width="640">
-  <source src="{{ "media/ado6187_movie_s1.mp4" | relURL }}" type="video/mp4">
+  <source src="{{ "/media/ado6187_movie_s1.mp4" | relURL }}" type="video/mp4" />
   您的浏览器不支持 video 标签。
 </video>
+
+<audio controls>
+  <source src="/media/Behavior Trees in Robot Control Systems.wav" type="audio/wav" />
+  您的浏览器不支持音频播放。
+</audio>
+
 
 影片1. 提出SUPER系统概览。SUPER展示了其在未知且复杂环境中高速安全导航的能力；成功避开细小障碍如电线；并能在多种场景下稳健运行，包括目标跟踪和自主探索。
 
