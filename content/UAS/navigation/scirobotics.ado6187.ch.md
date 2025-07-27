@@ -26,6 +26,11 @@ https://www.science.org/doi/10.1126/scirobotics.ado6187
   您的浏览器不支持 video 标签。
 </video>
 
+<video controls width="640">
+  <source src="/media/ado6187_movie_s1.mp4"  type="video/mp4" />
+  您的浏览器不支持 video 标签。
+</video>
+
 <audio controls>
   <source src="/media/Behavior Trees in Robot Control Systems.wav" type="audio/wav" />
   您的浏览器不支持音频播放。
