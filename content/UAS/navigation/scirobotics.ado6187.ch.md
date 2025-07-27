@@ -20,22 +20,10 @@ https://www.science.org/doi/10.1126/scirobotics.ado6187
 
 鸟类长期以来以其卓越的飞行能力吸引着人类，能够以极低的失败率在复杂环境中高速穿行。类似地，微型无人机（MAV）作为人类制造的最灵巧机器之一（1），具备实现鸟类般高速灵巧飞行的潜力。MAV快速且安全地到达目的地，是其成功应用于实际场景的关键因素。快速意味着MAV能够及时抵达指定位置，从而实现对时间敏感任务（如搜救（2）或灾害救援（3,4））的快速响应。安全则意味着MAV能够在途中探测并避开障碍物，避免碰撞失败。本研究探索如何赋予MAV鸟类般的能力，仅依赖机载传感与计算单元，实现未知环境中的安全高速飞行（见影片1）。
 
-
-<video controls width="640">
-  <source src="{{ "/media/ado6187_movie_s1.mp4" | relURL }}" type="video/mp4" />
-  您的浏览器不支持 video 标签。
-</video>
-
 <video controls width="640">
   <source src="/media/ado6187_movie_s1.mp4"  type="video/mp4" />
   您的浏览器不支持 video 标签。
 </video>
-
-<audio controls>
-  <source src="/media/Behavior Trees in Robot Control Systems.wav" type="audio/wav" />
-  您的浏览器不支持音频播放。
-</audio>
-
 
 影片1. 提出SUPER系统概览。SUPER展示了其在未知且复杂环境中高速安全导航的能力；成功避开细小障碍如电线；并能在多种场景下稳健运行，包括目标跟踪和自主探索。
 
