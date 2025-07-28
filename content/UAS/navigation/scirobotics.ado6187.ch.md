@@ -25,6 +25,19 @@ https://www.science.org/doi/10.1126/scirobotics.ado6187
   您的浏览器不支持 video 标签。
 </video>
 
+{{< youtube GPHuzG0ANmI 640 360 >}}
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe
+    src="https://www.youtube.com/embed/GPHuzG0ANmI?rel=0&autoplay=0"
+    style="position: absolute; top:0; left:0; width:100%; height:100%;"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen>
+  </iframe>
+</div>
+
+
 影片1. 提出SUPER系统概览。SUPER展示了其在未知且复杂环境中高速安全导航的能力；成功避开细小障碍如电线；并能在多种场景下稳健运行，包括目标跟踪和自主探索。
 
 在未知环境中实现安全保障的高速飞行是一项复杂任务，需要系统设计的整体考虑。首先，为了在高速飞行中执行规避先前未知障碍的激进机动，MAV必须具备高机动性，体现为紧凑的体积和高推重比（TWR）。其次，MAV需要具备远距离探测能力，以提供足够的反应时间来避开高速运动中的障碍物。同时，这种探测能力应通过轻量、紧凑的传感器实现，以免削弱MAV的机动性。最后，MAV必须在轨迹规划中谨慎平衡飞行速度与安全。飞行速度与安全是相互冲突的两大因素，且需在MAV有限的机载计算能力下高效实现平衡。
