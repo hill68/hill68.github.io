@@ -6,8 +6,7 @@ summary= "提出了一种安全保障的高速空中机器人（SUPER），SUPER
 weight = 1
 +++
 
-
-Yunfan Ren，Fangcheng Zhu，Guozheng Lu，Yixi Cai，Longji Yin，Fanze Kong，Jiarong Lin，Nan Chen，Fu Zhang*
+## Safety-assured high-speed navigation for MAVs 
 
 原文：
 https://www.science.org/doi/10.1126/scirobotics.ado6187
@@ -20,23 +19,7 @@ https://www.science.org/doi/10.1126/scirobotics.ado6187
 
 鸟类长期以来以其卓越的飞行能力吸引着人类，能够以极低的失败率在复杂环境中高速穿行。类似地，微型无人机（MAV）作为人类制造的最灵巧机器之一（1），具备实现鸟类般高速灵巧飞行的潜力。MAV快速且安全地到达目的地，是其成功应用于实际场景的关键因素。快速意味着MAV能够及时抵达指定位置，从而实现对时间敏感任务（如搜救（2）或灾害救援（3,4））的快速响应。安全则意味着MAV能够在途中探测并避开障碍物，避免碰撞失败。本研究探索如何赋予MAV鸟类般的能力，仅依赖机载传感与计算单元，实现未知环境中的安全高速飞行（见影片1）。
 
-<video controls width="640">
-  <source src="/media/ado6187_movie_s1.mp4"  type="video/mp4" />
-  您的浏览器不支持 video 标签。
-</video>
-
 {{< youtube GPHuzG0ANmI 640 360 >}}
-
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe
-    src="https://www.youtube.com/embed/GPHuzG0ANmI?rel=0&autoplay=0"
-    style="position: absolute; top:0; left:0; width:100%; height:100%;"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen>
-  </iframe>
-</div>
-
 
 影片1. 提出SUPER系统概览。SUPER展示了其在未知且复杂环境中高速安全导航的能力；成功避开细小障碍如电线；并能在多种场景下稳健运行，包括目标跟踪和自主探索。
 
@@ -263,21 +246,345 @@ $$
 
 箱线图（图S8使用）总结数据分布，显示中位数和四分位距（IQR），须须延伸至1.5倍IQR，超出范围的数据视为异常值，不显示。
 
-## 补充材料
+#补充材料
 
-**PDF文件包含：**
 
-补充方法  
-图S1至S13  
-表S1  
-参考文献（66-75）
+
+
+## 补充方法
+
+### SUPER系统构成详解
+
+本节详细介绍SUPER系统在重量、功耗和CPU使用率方面的构成（见图S1）。如图S1A所示，SUPER的硬件总重为$1,512 \mathrm{~g}$，包括机身框架（510 g）、电池（432 g）、机载计算机（266 g）、激光雷达传感器（255 g）及其他航空电子设备（52 g）。在公园内典型飞行任务中测量了SUPER的功耗（见图S2A），开启完整机载感知、规划与控制，平均速度为$2.84 \mathrm{~m}/\mathrm{s}$。飞行任务中，SUPER被指令连续遍历航点路径：$\mathbf{p}_{1} \rightarrow \mathbf{p}_{2} \rightarrow \mathbf{p}_{3} \rightarrow \mathbf{p}_{4} \rightarrow \mathbf{p}_{1} \rightarrow \mathbf{p}_{5} \rightarrow \mathbf{p}_{3} \rightarrow \mathbf{p}_{4} \rightarrow \mathbf{p}_{1} \rightarrow \mathbf{p}_{6} \rightarrow \mathbf{p}_{3} \rightarrow \mathbf{p}_{4}$（见图S2B）。搭载3300 mAh电池，无人机可在电量耗尽前自主导航完成给定航点序列。总飞行时间约为11分24秒，飞行总距离为$1,942.56 \mathrm{~m}$（见图S2）。总平均功耗约432 W，其中驱动器消耗比例最高，达$87.9\% (379.7 \mathrm{~W})$。机载计算机功耗居第二，约43.3 W。激光雷达和其他航空电子设备功耗分别为6.3 W和3.2 W。
+
+飞行任务中机载计算机CPU使用率亦被测量。平均CPU使用率约$13.9\%$，峰值为$19.7\%$。状态估计模块为主要计算负载，平均占用$11.1\%$。状态估计、规划和控制三大软件组件作为独立进程并行运行，通过机器人操作系统（ROS）的发布-订阅机制通信（66）。为进一步提升计算效率，各模块内进程采用多线程并行化。状态估计模块中，扫描配准时的最近邻搜索并行化为16线程。规划模块中的时空滑动地图更新及轨迹规划任务（包含前端路径搜索和后端轨迹优化）由两个独立线程处理。控制模块中的模型预测控制器（MPC）运行于单线程。
+
+### 基于激光雷达导航方法的基准比较
+
+为对比SUPER规划模块与最先进激光雷达导航系统Falco (42)、Bubble planner (13)和IPC (67)的性能，本节给出仿真中的详细基准对比。仿真测试设置与正文“安全性、成功率及效率评估”中的主结果一致。测试了两个Falco版本。第一版本为无云台Falco，对应官方开源实现，不包含其真实实验中使用的云台结构。在该设置下，无人机加减速时激光雷达视场（FOV）及相应运动基元与机体坐标系对齐（见图S3A）。第二版本为带云台Falco，通过修改官方实现加入云台结构，使激光雷达水平朝向独立于无人机姿态，如图S3B所示。该云台配置也用于Falco的实飞实验，助力高速飞行时稳定运行。
+
+结果见图S4，其中Bubble结果直接取自主结果。带云台Falco整体成功率为$57.04\%$，最大平均速度超$10 \mathrm{~m}/\mathrm{s}$，与原文表现一致（42）。无云台Falco，即默认开源版本，整体成功率仅$40.28\%$，最大平均速度低于$6 \mathrm{~m}/\mathrm{s}$，即使在最稀疏环境下亦如此。IPC成功率高达$75\%$，优于两版本Falco及Bubble planner。尽管IPC因其乐观规划策略在低可通行环境下成功率较低，随可通行性改善成功率提升。但最大速度方面，IPC落后于Bubble和SUPER。结果表明，SUPER在成功率上优于Falco、Bubble和IPC，同时飞行速度显著更高。计算时间对比见图S4C。Falco依赖离线轨迹库及无地图规划框架，计算时间低于Bubble和SUPER。IPC每次重规划周期仅生成一至两个多面体，前端计算负载低，且其基于MPC的规划控制后端耗时不足1 ms，整体计算开销显著较低。
+
+### 不同基线方法实现细节
+
+本文“安全性、成功率及效率评估”部分简要对不同基线方法的实现细节进行了比较。表S1展示了方法在四个方面的比较。首先，基于安全策略将方法分为三类：乐观型、安全感知型及安全保障型。Bubble (13)为乐观型，视未知空间为自由空间。Raptor (20)为安全感知型，主动规划轨迹以增强未知空间可见性，但无安全保证。Faster (23)和本文提出的SUPER均为安全保障型，具备理论安全保证。其次，映射方法存在差异。Raptor采用基于欧氏有符号距离场（ESDF）的地图（31），Faster采用占据栅格地图（OGM）。相比之下，Bubble和SUPER采用点云映射，Bubble额外使用K维树生成走廊。整体上，Bubble和SUPER的点云映射计算时间远低于Faster和Raptor。四种基线均采用前后端式轨迹生成，具体方法不同。Bubble、Faster和SUPER采用基于飞行走廊的前端，Raptor采用拓扑路径搜索。后端方面，Faster采用混合整数二次规划（MIQP），Raptor使用路径引导轨迹优化。但Faster的MIQP及Raptor的路径引导优化仅优化轨迹空间属性，高速飞行时轨迹可行性受限，需引入时间优化。相比之下，Bubble和SUPER基于MINCO (29)实现时空轨迹优化，在高速飞行中表现更优，正文中有验证。
+
+### Faster与SUPER规划模块的评估
+
+我们在仿真中评估了Faster (23)和SUPER的规划模块，测试环境为一个具有挑战性的室内拐角，障碍物隐藏于拐角背后，如图S6A-i所示。此外，我们对SUPER进行了消融实验，具体为关闭切换时间优化（OT）的SUPER变体。每次测试中，无人机起始位置为$\mathbf{p}_{\mathbf{s}}=[0,0,1.2]^{\mathrm{T}}$，目标位置为$\mathbf{p}_{\mathbf{g}}=[12.5,7.5,1.2]^{\mathrm{T}}$。三种方法均安全到达目标。Faster与关闭OT的SUPER在无人机探测到拐角后的障碍物时均切换至备份轨迹两次。但由于Faster采用计算量大的基于MIQP的轨迹优化，未能及时规划新轨迹并执行备份轨迹直至停下，导致备份轨迹执行时间远超关闭OT的SUPER。Faster总耗时为6.2秒，超出关闭OT的SUPER的4.9秒。引入备份轨迹切换时间优化的完整SUPER版本避免了切换备份轨迹和不必要的减速，达到最短到达时间4.8秒，体现了所提规划模块的高速能力。
+
+我们还对Faster与SUPER的备份轨迹生成进行了定量控制分析。图S6C所示，两规划器在相同探索轨迹和备份走廊下，生成备份轨迹及切换时间$t_s$分别以绿色曲线和橙色圆点展示。Faster采用启发式方法确定切换时间，将$t_s$设为无人机当前状态后0.45秒。SUPER则同步优化切换时间与备份轨迹，在确保备份轨迹位于备份走廊内的前提下，最大化$t_s$，最终获得$t_s=0.84\mathrm{~s}$。相比Faster，SUPER延迟切换时间86\%，为规划模块争取更多重新规划探索和备份轨迹的时间，减少了备份轨迹执行比例（见图S6B），提升了整体飞行速度和平滑性。
+
+为验证规划模块集成完整系统后的性能，我们在真实环境中复现上述仿真实验（见图S6D-F）。无人机起始于$\mathbf{p}_{\mathbf{s}}=[0,0,1.2]^{\mathrm{T}}$，目标为$\mathbf{p}_{\mathbf{g}}=[12.5,-7.5,1.2]^{\mathrm{T}}$，最高速度限制$\mathbf{v}_{\max}=8\mathrm{~m/s}$，仿真设置一致。图S6E显示，$t_1=2.1\mathrm{~s}$时障碍物被墙体遮挡，生成的探索轨迹$\mathcal{T}_{e}^1$与障碍物相撞，但备份轨迹$\mathcal{T}_{b}^1$限制于备份走廊，保证最坏情况下无人机可安全停车避免碰撞。$t_2=2.2\mathrm{~s}$时无人机首次感知障碍物（图S6D, ii），重新规划探索轨迹$\mathcal{T}_{e}^2$避开障碍，未执行初始备份轨迹$\mathcal{T}_{b}^1$，而生成新的备份轨迹。速度曲线见图S6F，显示无人机未执行任何备份轨迹，高速安全抵达目标，彰显SUPER的高速与安全特性。
+
+### 配置空间中的凸分解
+
+凸分解是一种围绕给定种子（如点或线段）识别凸形状的技术，旨在有效地将空间中的凸区域与障碍物分离。在机器人导航任务中，在配置空间（C空间）执行凸分解并在分解空间规划轨迹（12,13,23,40）是实现高效避障的常用方法。目前存在两种主流的C空间自由多面体生成方法。第一种称为点膨胀法（12,23,60），通过膨胀点云并对膨胀后的点云执行凸分解（见图S7A, i）。该方法导致点云数量指数增长，降低计算效率，且膨胀后的障碍点云常不能准确表示配置空间，导致生成多面体小且尖锐（见图S7A, i），限制轨迹优化问题的可行解空间。第二种为平面收缩法（40,61），直接由原始点云生成凸形状，随后以机器人半径收缩得到C空间自由多面体（见图S7A, ii）。但该方法先最大化多面体后收缩，可能导致结果多面体变小且尖锐，且收缩后多面体可能不包含种子，限制了需保证种子位于多面体内场景的适用性。
+
+针对上述问题，我们提出了配置空间迭代区域膨胀（CIRI）算法。不同于以往将障碍表示为点的方法（40,58,59,68,69），我们将障碍点建模为半径等于机器人半径的球体。此方法直接在C空间生成自由多面体，具备多项优势。首先，算法直接作用于原始点云，无需膨胀，减少参与点数，显著提升计算效率。其次，准确的配置空间障碍建模使得我们方法能生成比基于收缩或膨胀方法更大的多面体。此外，我们提出平面调整方法，确保生成多面体包含种子，有利于生成备份走廊。
+
+所提CIRI基于FIRI框架（58）的迭代流程（见算法1）改进，提升计算效率并生成更大多面体。算法以线段种子$\mathrm{S}:\{\mathbf{s}_a, \mathbf{s}_b\}$及障碍点云$\mathcal{O}$为输入，初始将椭球设为单位球（第2行），迭代直至椭球体积收敛。迭代过程包含两步：第一，均匀膨胀椭球至与障碍点云相切，生成一组超平面，将凸区域与障碍分离且保证包含种子（第7行）；第二，基于二阶锥规划（SOCP）优化，求解由上述超平面定义的无障碍半空间多面体内最大体积椭球（第8行）。通过迭代精炼，超平面与椭球逐步调整，扩展内接椭球体积，得到更大多面体与更宽阔的无障碍空间区域。
+
+
+#### 基于椭球的凸分解
+
+本步骤旨在确定由一组分割超平面组成的自由多面体，这些超平面确保给定种子区域无障碍物。每个超平面用$\mathcal{H}(A,b)$表示，其中$A \mathbf{x} \leq b, \mathbf{x} \in \mathbb{R}^3$定义一个半空间。多面体$\mathcal{P}$由$K$个半空间的交集定义：$\mathcal{P}:\{\mathcal{H}_1, \ldots, \mathcal{H}_k\}$。椭球使用单位球的像，即Löwner-John椭球（70）表示，定义如下：
+
+$$
+\mathbf{E}(\mathbf{C}, \mathbf{d}) = \{\mathbf{C} \tilde{\mathbf{x}} + \mathbf{d} \mid \|\tilde{\mathbf{x}}\| \leq 1\} \tag{S1}
+$$
+
+**算法 1：配置空间迭代区域膨胀（CIRI）** 
+
+符号说明：单位矩阵：$\mathbf{I} \in \mathbb{R}^{3 \times 3}$；以 $\mathbf{d}$ 为中心，形状矩阵为 $\mathbf{C}$ 的椭球 $\mathbf{E}$；收敛阈值：$\varepsilon$ 
+
+输入：障碍物点云：$\mathcal{O}$；机器人半径：$r$；种子点：S 
+
+输出：多面体：$\mathcal{P}$  
+
+<img src="https://cdn.mathpix.com/snip/images/eKXmEii835l3YqWFDMnP19nHcwF8A5MZkvyVaMwgy28.original.fullsize.png" width=650/>
+
+
+其中$\mathbf{C} \in \mathbb{R}^{3 \times 3}$为对角形状矩阵，定义为$\mathbf{C}=\operatorname{diag}(r_x, r_y, r_z)$，$\mathbf{d} \in \mathbb{R}^3$为椭球中心。其均匀扩展定义为：
+
+$$
+\mathbf{E}_\alpha(\mathbf{C}, \mathbf{d}) = \{\mathbf{C} \tilde{\mathbf{x}} + \mathbf{d} \mid \|\tilde{\mathbf{x}}\| \leq \alpha \}, \quad \alpha \geq 1 \tag{S2}
+$$
+
+其中$\alpha$为扩展因子。球体的定义类似，$\mathbf{C} = \operatorname{diag}(r, r, r)$，$\mathbf{d}$为球心。
+
+所提方法输入包含障碍点云$\mathcal{O} \in \mathbb{R}^{3 \times N}$（$N$点数）、世界坐标系下椭球$\mathbf{E}^\mathcal{W}$、种子$\mathbf{S}$及机器人半径$r$。流程见算法2，示意于图S7C。
+
+初始时，将激活障碍点云$\mathcal{O}_a$设为全障碍点云$\mathcal{O}$（第2行）。随后循环生成分割超平面，直到$\mathcal{O}_a$为空。每轮迭代选择离椭球中心$\mathbf{E}$最近的障碍球体$\mathbf{E}_s^\mathcal{W}$（第4行），尝试寻找椭球与该障碍球体间的分割超平面。寻找超平面的关键是定位与障碍物相交且与均匀扩展椭球$\mathbf{E}_\alpha^\mathcal{W}$相切的平面。基于文献（59）思路，将问题转到椭球坐标系$\mathcal{E}$，转化为单一最短距离规划问题，避免对不同扩展因子$\alpha$的搜索。根据式S1，椭球$\mathbf{E}^\mathcal{W}$为椭球系$\mathcal{E}$中单位球的像。通过构建逆映射，将问题转换至椭球系$\mathcal{E}$（见图S7B）。交点$\mathbf{p}_t^\mathcal{W}$对应椭球系中最靠近原点的点$\mathbf{p}_t^\mathcal{E}$，问题转为最小距离优化：
+
+$$
+\mathbf{p}_t^\mathcal{E} = \arg \min_{\mathbf{x}} \|\mathbf{x}\|_2, \quad \text{s.t.} \quad \mathbf{x} \in \mathbf{E}_s^\mathcal{E} \tag{S3}
+$$
+
+**算法 2：基于椭球的凸分解** 
+
+参数：活动障碍物点云 $\mathcal{O}_{a}$； 
+
+输入：障碍物点云：$\mathcal{O}$；机器人半径：$r$；种子点：$\mathbf{S}$；椭球：$\mathbf{E}^{\mathcal{W}}$ 
+
+输出：多面体：$\mathcal{P}$  
+
+<img src="https://cdn.mathpix.com/snip/images/N04JCIBaqGxB5qQAyCRhr4OnvAoGxcFim9P8PKYEVvk.original.fullsize.png" width=650/>
+
+该问题可高效通过求解六次多项式根（71）获得。我们用C++实现，Intel i7 CPU下典型求解时间不足0.5微秒。得切点$\mathbf{p}_t^\mathcal{E}$后，计算半空间$\mathcal{H}^\mathcal{E}(A^\mathcal{E}, b^\mathcal{E}) = (\mathbf{p}_t^\mathcal{E} / \|\mathbf{p}_t^\mathcal{E}\|, -\|\mathbf{p}_t^\mathcal{E}\|)$，及扩展因子$\alpha = \|\mathbf{p}_t^\mathcal{E}\|$。再将其反变换回世界系得到：
+
+$$
+\mathcal{H}^\mathcal{W}(\mathbf{C} A^\mathcal{E}, b^\mathcal{E} + [\mathbf{C} A^\mathcal{E}] \cdot \mathbf{d}) \tag{S4}
+$$
+
+其中$\mathbf{C}, \mathbf{d}$分别为椭球$\mathbf{E}$的形状矩阵和中心。
+
+上述过程得到椭球与障碍球体的分割超平面。但可能出现种子不在生成半空间内的情况。为此，我们提出平面调整方法，确保生成多面体包含种子（第6行）。如图S7D所示，先检查$\mathbf{s}_a$和$\mathbf{s}_b$是否均在半空间$\mathcal{H}$内。若种子点$\mathbf{s}_a$在$\mathcal{H}$外，则将$\mathcal{H}$调整为过$\mathbf{s}_a$且切于障碍球体、指向另一种子点$\mathbf{s}_b$的新超平面$\mathcal{H}_{adj}$。该调整保证$\mathcal{H}_{adj}$包含$\mathbf{s}_a$和$\mathbf{s}_b$。随后用$\mathcal{H}_{adj}$替代本轮生成的$\mathcal{H}$。调整后（如必要），将$\mathcal{H}$外的障碍点从$\mathcal{O}_a$中剔除，并将$\mathcal{H}$加入多面体$\mathcal{P}$。该过程循环直至所有障碍点被排除。
+
+
+#### 最大内切椭球
+
+给定多面体（一组超平面），此步骤通过确定该多面体内的最大体积内切椭球（MVIE）来更新椭球。假设多面体由$K$个超平面组成$\mathcal{P}=\{\mathcal{H}_1, \ldots, \mathcal{H}_K\}$，椭球定义如式S1，优化问题可表述为：
+
+$$
+\begin{align*}
+\max _{\mathbf{C}, \mathbf{d}} & \operatorname{det}(\mathbf{C}) \\
+\text { s.t. } & \sup \left(A_{i} \mathbf{C} \tilde{\mathbf{x}}\right)+A_{i} \mathbf{d} \leq b_{i}, \forall i=1, \ldots, K,  \tag{S5}\\
+& \mathbf{C} \succeq 0,
+\end{align*}
+$$
+
+其中$\mathbf{C}$和$\mathbf{d}$分别为椭球的形状矩阵和中心。$A_i$和$b_i$为超平面$\mathcal{H}(A,b): A \mathbf{x} \leq b$的参数。式S5是计算几何中经典的凸优化问题。本文采用文献（72）提出的SOCP转化方法，并通过锥增强拉格朗日方法（73）高效求解。
+
+#### 凸分解方法比较
+
+我们在三种不同障碍形态环境——柱子（Pillars）、森林（Forest）和Perlin（74）（见图S8）——中进行凸分解方法对比分析。每种障碍类型随机生成300个不同障碍密度的场景。障碍密度以障碍填充率（OFR）衡量，即障碍体积总和与空间总体积比值。共900个场景涵盖OFR从0.0005到0.6。每个场景采样分辨率为0.1 m的点云地图，随机生成线段种子，保证种子距最近障碍至少0.2 m（等于机器人半径），确保配置空间内存在可行多面体。点云与种子输入不同凸分解方法。
+
+比较三种配置空间凸分解方法（见图S7A）：第一为平面收缩法，先在原始点云上生成多面体，再按机器人半径收缩各超平面；第二为点膨胀法，通过在每输入点中心构建边长等于机器人半径的立方体插入点云，实现点云膨胀后执行凸分解，保证生成多面体在配置空间有效；第三为CIRI（配置空间迭代区域膨胀），将输入点视为半径等于机器人半径的球体，在此基础上执行凸分解。前两种方法分别基于两种先进凸分解技术FIRI (58)和RILS (40)实现，命名为FIRI-Shrinkage、FIRI-Inflation、RILS-Shrinkage和RILS-Inflation。
+
+评估指标包括种子包含率（多面体包含线段种子比例）、计算时间及多面体体积（见图S8B-D）。种子包含率方面（图S8B），CIRI及点膨胀方法（FIRI-Inflation或RILS-Inflation）均达100\%。而平面收缩法（FIRI-Shrinkage或RILS-Shrinkage）种子包含率较低，仅保证收缩前种子在多面体内。多面体体积方面（图S8C），CIRI因准确建模配置空间，生成的多面体平均体积最大。计算时间方面（图S8D），CIRI及两种收缩基线（FIRI-Shrinkage和RILS-Shrinkage）计算时间低于点膨胀方法。
+
+点膨胀法由于点云数量增多，显著增加计算时间。与收缩法相比，CIRI计算时间略高，因需求解球与椭球间切平面，而其他方法仅需点-椭球切平面，计算更简单。
+
+由于收缩法（包括FIRI-Shrinkage和RILS-Shrinkage）不保证种子包含，不适合SUPER。种子包含保障方法中，CIRI生成更大体积多面体且计算时间低于点膨胀法。综上，CIRI在计算时间较少情况下有效提升走廊质量，进一步优化SUPER整体性能。
+
+### 备份安全飞行走廊生成定理
+
+**定理1.** 设$\mathcal{D}$为在位置$\mathbf{p}_c \in \mathbb{R}^3$采集的全方向且无限密集深度图像。若集合$\mathcal{S} \subseteq \mathbb{R}^3$满足：
+
+(a) $\mathcal{S}$为凸集；
+
+(b) $\mathcal{S}$不含$\mathcal{D}$中的点；
+
+(c) $\mathbf{p}_c \in \mathcal{S}$，
+
+则$\mathcal{S}$必位于已知自由空间内。
+
+**证明：**假设$\mathcal{S}$不完全包含于已知自由空间，则存在点$\mathbf{p}$处于占据或未知状态。若$\mathbf{p}$占据空间，则必存在于$\mathcal{D}$，与(b)矛盾。若$\mathbf{p}$处于未知空间，则其深度大于相同方位方向上任一点$\mathbf{d} \in \mathcal{D}$。$\mathbf{d}$位于连接$\mathbf{p}$与$\mathbf{p}_c$的直线上，凸性条件保证$\mathbf{d} \in \mathcal{S}$，再次与(b)矛盾。故$\mathcal{S}$必完全包含于已知自由空间。
+
+### 有限激光雷达视场下的轨迹规划
+
+考虑激光雷达视场（FOV）有限性，备份走廊需与FOV相交以确保交集空间完全处于已知自由区域。常见激光雷达具360度水平FOV与有限垂直FOV（见图S11A）。设垂直FOV角度为$\theta < \pi$（图S11B），则总FOV为非凸形状。为保证交集备份走廊凸性，需选取FOV的凸子集与由CIRI生成的多面体相交。360度水平FOV最大凸子集为由切于FOV上下界的两个超平面定义的半空间交集（见图S11A、B）。FOV存在无数此类凸子集，由一自由度航向$\mathbf{h}$唯一确定（见图S11C）。为使备份走廊包含最大探索轨迹，令$\mathbf{h}$与探索轨迹切向对齐（图S11D）。
+
+为研究垂直FOV角度$\theta$对规划性能的影响，我们在仿真环境中进行系列实验，垂直FOV角度从30度到180度（全方位FOV）变化。测试环境与正文基准对比类似。选取两种不同可通行性环境：一为可通行性3.1的稠密环境，另一为6.5的较稀疏环境。每种环境测试10张地图，每张地图10次试验，无速度限制。每次记录平均速度、备份轨迹执行比例及最终结果（成功或失败）。结果见图S12。
+
+成功率方面，无论低高可通行性环境，SUPER均达100\%成功率（图S12A,i及图S12B,i），体现安全保障属性。在稠密环境中，平均速度随垂直FOV增大而提升（图S12A,ii），因更大FOV生成更大备份走廊，减少备份轨迹执行比例（图S12A,iii），从而提高平均速度。稀疏环境中平均速度趋势相似，但FOV大小影响较小（图S12B,ii），因障碍较少，较小FOV亦能规划安全高速轨迹，且备份轨迹执行比例受FOV影响较小（图S12B,iii）。
+
+
+### 具有转子阻力补偿的流形模型预测控制（On-manifold MPC）
+
+在我们之前的工作（65）中，提出了一种适用于机器人系统的流形模型预测控制（OMMPC）框架，并演示了室内四旋翼特技飞行。然而，之前工作忽略了空气动力学效应，这在无人机执行高速户外飞行时会影响轨迹跟踪精度。为克服此限制，我们扩展了之前的四旋翼模型，引入转子阻力——导致跟踪误差的主要气动效应（64）。由此导出新的OMMPC算法，并在本文所有飞行实验中实现，验证了其高精度跟踪效果。通过对比实验进一步证明了该改进的有效性。
+
+#### 四旋翼动力学
+
+四旋翼坐标系定义为$X$轴前进方向，$Y$轴右侧，$Z$轴向下。包含转子阻力的动力学模型（64）表达为：
+
+$$
+\begin{align*}
+\dot{\mathbf{p}} & =\mathbf{v} \\
+\dot{\mathbf{v}} & =\mathbf{g}-a_{T} \mathbf{R e}_{3}-\frac{1}{m} \mathbf{R D R}^{\mathrm{T}} \mathbf{v}  \tag{S6}\\
+\dot{\mathbf{R}} & =\mathbf{R}\left\lfloor\omega^{\mathcal{B}}\right\rfloor
+\end{align*}
+$$
+
+其中$m$为无人机质量，$\mathbf{g}$为重力加速度向量，大小固定为$9.81\, \mathrm{m/s}^2$，$a_T$为标量推力加速度。位置与速度分别为惯性系中的$\mathbf{p} \in \mathbb{R}^3$和$\mathbf{v} \in \mathbb{R}^3$。机体姿态表示为$\mathbf{R} \in SO(3)$，$\boldsymbol{\omega}$为机体系角速度。操作符$\lfloor \cdot \rfloor$将向量转为反对称矩阵。$\mathbf{D}$为转子阻力系数矩阵，参数化为$\mathbf{D} = \operatorname{diag}(d_h, d_h, d_v)$。
+
+如文献（64）所述，含转子阻力的四旋翼动力系统满足微分平坦性。平坦输出通常选为$\sigma = [\mathbf{p}, \psi]^\top$，其中$\psi$为偏航角。该特性允许规划平坦输出轨迹$\sigma(t)$，替代规划四旋翼完整状态轨迹$\mathbf{s}(t)$。
+
+#### 系统线性化
+
+如前述（65），OMMPC将四旋翼系统嵌入复合流形，定义状态与输入为：
+
+$$
+\begin{align*}
+& \mathcal{M}=\mathbb{R}^{3} \times \mathbb{R}^{3} \times S O(3), \quad \operatorname{dim}(\mathcal{M})=9 \\
+& \mathbf{x}=\left(\begin{array}{lll}
+\mathbf{p}^{\mathcal{I}} & \mathbf{v}^{\mathcal{I}} & \mathbf{R}
+\end{array}\right) \in \mathcal{M}, \quad \mathbf{u}=\left[\begin{array}{ll}
+a_{T} & \boldsymbol{\omega}^{\mathcal{B}}
+\end{array}\right] \in \mathbb{R}^{4} \tag{S7}
+\end{align*}
+$$
+
+测量状态$\mathbf{x}$与参考状态$\mathbf{x}_d$均位于流形$\mathcal{M}$上，误差映射至参考点周围的局部同胚空间（欧氏空间的开集）。状态误差定义为：
+
+$$
+\begin{align*}
+& \delta \mathbf{x} \triangleq \mathbf{x}_{d} \boxminus \mathbf{x}=\left[\begin{array}{ll}
+\delta \mathbf{p}^{\mathrm{T}} & \delta \mathbf{v}^{\mathrm{T}} \quad \delta \mathbf{R}^{\mathrm{T}}
+\end{array}\right]^{\mathrm{T}} \in \mathbb{R}^{9} \\
+& \delta \mathbf{p} \triangleq \mathbf{p}_{d} \boxminus \mathbf{p}=\mathbf{p}_{d}-\mathbf{p} \in \mathbb{R}^{3}  \tag{S8}\\
+& \delta \mathbf{v} \triangleq \mathbf{v}_{d} \boxminus \mathbf{v}=\mathbf{v}_{d}-\mathbf{v} \in \mathbb{R}^{3} \\
+& \delta \mathbf{R} \triangleq \mathbf{R}_{d} \boxminus \mathbf{R}=\log \left(\mathbf{R}^{\mathrm{T}} \mathbf{R}_{d}\right) \in \mathbb{R}^{3},
+\end{align*}
+$$
+
+其中$\boxminus$为映射$\boxminus: \mathcal{M} \times \mathcal{M} \to \mathbb{R}^n$的封装算子（详见65），输入误差定义为：
+
+$$
+\begin{align*}
+\delta \mathbf{u} & \triangleq \mathbf{u}_{d}-\mathbf{u}=\left[\begin{array}{ll}
+\delta a_{T} & \delta \boldsymbol{\omega}^{\mathrm{T}}
+\end{array}\right]^{\mathrm{T}} \in \mathbb{R}^{4} \\
+\delta a_{T} & \triangleq a_{T_{d}}-a_{T} \in \mathbb{R}  \tag{S9}\\
+\delta \boldsymbol{\omega} & \triangleq \boldsymbol{\omega}_{d}-\boldsymbol{\omega} \in \mathbb{R}^{3}
+\end{align*}
+$$
+
+原始四旋翼系统等价于误差系统，状态映射至参考轨迹每点的局部坐标。依据（65）推导，线性化误差系统为：
+
+$$
+\begin{equation*}
+\delta \mathbf{x}_{k+1}=\mathbf{F}_{\mathbf{x}_{k}} \delta \mathbf{x}_{k}+\mathbf{F}_{\mathbf{u}_{k}} \delta \mathbf{u}_{k}, \tag{S10}
+\end{equation*}
+$$
+
+其中
+
+$$
+\mathbf{F}_{\mathbf{x}_k}=\left[\begin{array}{ccc}\mathbf{I}_3 & \mathbf{I}_3 \Delta t & \mathbf{0} \\ \mathbf{0} & \mathbf{I}_3-\frac{\Delta t}{m} \mathbf{R}_k^d \mathbf{D} \mathbf{R}_k^{d^{\mathrm{T}}} & \frac{\Delta t}{m} \mathbf{R}_k^d\left(2 \mathbf{I}_3-\mathbf{D}\right)\left\lfloor a_T m \mathbf{e}_3+\mathbf{D} \mathbf{R}_k^{d^{\mathrm{T}}} \mathbf{v}-\mathbf{R}_k^{d^{\mathrm{T}}} \mathbf{v}\right\rfloor \\ \mathbf{0} & \mathbf{0} & \operatorname{Exp}\left(-\boldsymbol{\omega}_k^d \Delta t\right)\end{array}\right],  \tag{S11}\\
+\mathbf{F}_{\mathbf{u}_k}=\Delta t\left[\begin{array}{cc}\mathbf{0} & \mathbf{0} \\ -\mathbf{R}_k^d \mathbf{e}_3 & \mathbf{0} \\ \mathbf{0} & \mathbf{A}\left(\boldsymbol{\omega}_k^d \Delta t\right)^{\mathrm{T}}\end{array}\right]
+$$
+
+
+其中
+
+$$
+\begin{equation*}
+\mathbf{A}(\boldsymbol{\theta})=\mathbf{I}_{3}+\left(\frac{1-\cos \|\boldsymbol{\theta}\|}{\|\boldsymbol{\theta}\|}\right) \frac{\lfloor\boldsymbol{\theta}\rfloor}{\|\boldsymbol{\theta}\|}+\left(1-\frac{\sin \|\boldsymbol{\theta}\|}{\|\boldsymbol{\theta}\|}\right) \frac{\lfloor\boldsymbol{\theta}\rfloor^{2}}{\|\boldsymbol{\theta}\|^{2}} . \tag{S12}
+\end{equation*}
+$$
+
+
+因此，OMMPC根据当前误差和参考轨迹给出高效的二次规划（QP）解：
+
+$$
+\begin{array}{ll}
+\min _{\delta \mathbf{u}_{k}} & \sum_{k=0}^{N-1}\left(\left\|\delta \mathbf{x}_{k}\right\|_{\mathbf{Q}}^{2}+\left\|\delta \mathbf{u}_{k}\right\|_{\mathbf{R}}^{2}\right)+\left\|\delta \mathbf{x}_{N}\right\|_{\mathbf{P}}^{2},  \tag{S13}\\
+\text { s.t. } & \delta \mathbf{x}_{k+1}=\mathbf{F}_{\mathbf{x}_{k}} \delta \mathbf{x}_{k}+\mathbf{F}_{\mathbf{u}_{k}} \delta \mathbf{u}_{k}, \\
+& \delta \mathbf{u}_{k} \in \delta \mathbb{U}_{k}, \quad k=0, \cdots, N-1,
+\end{array}
+$$
+
+其中$N$为预测时域，$\mathbf{Q}, \mathbf{R}, \mathbf{P}$为阶段状态、阶段输入和终端状态的正定对角惩罚矩阵。输入误差约束集为$\mathbb{U}_k = \{\delta \mathbf{u} \in \mathbb{R}^4 \mid \mathbf{u}_{min} - \mathbf{u}_k^d \leq \delta \mathbf{u} \leq \mathbf{u}_{max} - \mathbf{u}_k^d \}$。
+
+
+#### 实验结果
+
+为定量评估所提含转子阻力模型的OMMPC效果，我们使用带有Gazebo仿真器（75）的PX4 SITL软件，对比分析了传统四旋翼模型（65）与改进模型的性能。该仿真器能提供真实的动力学与空气阻力模拟。我们在平坦空间生成了最大速度为$15 \mathrm{~m/s}$的离线多项式轨迹$\sigma(t)$。轨迹为沿$x$轴从起点$\mathbf{p}_0 = [0,0,0]^\top$至终点$\mathbf{p}_g = [120,0,0]^\top$的直线。初始时，基于常规模型的微分平坦性生成期望状态轨迹，并用文献（65）中提出的四旋翼OMMPC进行跟踪。图S13A显示，无人机存在显著姿态跟踪误差，且位置误差明显受速度方向影响，最大达0.4 m。相比之下，采用式(S6)中含转子阻力的四旋翼模型，OMMPC有效预测并补偿阻力，显著改善了姿态跟踪性能，位置跟踪误差减小至0.05 m。
+
+## 补充图表
+
+
+<img src="https://cdn.mathpix.com/cropped/2025_07_28_4ce3067d1cb92616a586g-13.jpg?height=901&width=1590&top_left_y=298&top_left_x=262" width=650/>
+
+Fig. S1. SUPER 系统构成 (A) SUPER 的重量、电力和 CPU 使用率分解。 (B) SUPER 的硬件组件。
+
+<img src="https://cdn.mathpix.com/cropped/2025_07_28_4ce3067d1cb92616a586g-13.jpg?height=486&width=1578&top_left_y=1356&top_left_x=268" width=650/>
+
+Fig. S2. 耐久测试的场景和轨迹 (A) 测试场景。 (B) 耐久测试期间无人机的点云视图和飞行轨迹。
+
+<img src="https://cdn.mathpix.com/cropped/2025_07_28_4ce3067d1cb92616a586g-14.jpg?height=651&width=1559&top_left_y=176&top_left_x=272" width=650/>
+
+Fig. S3. 带和不带云台结构的 Falco 示意图 (A) Falco 开源实现的原始版本缺少云台结构。在这种配置下，当多旋翼加速时，运动原语被限制指向向下，禁止无人机向前飞行。 (B) 带云台结构的 Falco 修改版本。LiDAR 传感器保持水平姿态，与无人机的姿态无关。
+
+<img src="https://cdn.mathpix.com/cropped/2025_07_28_4ce3067d1cb92616a586g-14.jpg?height=1034&width=1573&top_left_y=1093&top_left_x=262" width=650/>
+
+Fig. S4. 成功率和效率评估 (A) 在不同障碍物密度（以可通行性衡量）和飞行速度下的基准方法成功率。空白列表示未达到相应速度和密度的组合。 (B) 基准方法在1080次实验中的飞行结果。 (C) 基准方法的时间消耗，方块表示平均值，误差条表示总计算时间的标准差。每个均值和标准差均基于180次测试计算。
+
+<img src="https://cdn.mathpix.com/cropped/2025_07_28_4ce3067d1cb92616a586g-15.jpg?height=445&width=1527&top_left_y=176&top_left_x=304" width=650/>
+
+Fig. S5. OGM 上细线检测的视觉示例 (A) 无人机面对细线（绿色显示）的第三人称视角。 (B) 检测过程的侧视图。灰色框代表占据栅格地图（OGM）中包含细线的栅格。蓝线表示穿过该栅格但未击中细线的 LiDAR 光束，红线表示击中细线的光束。由于大多数光束未检测到细线，该栅格被错误地分类为自由空间。
+
+<img src="https://cdn.mathpix.com/cropped/2025_07_28_4ce3067d1cb92616a586g-16.jpg?height=1912&width=1590&top_left_y=177&top_left_x=262" width=650/>
+
+Fig. S6. Faster 和 SUPER 规划模块评估 (A) (i) 模拟环境的俯视图，红色圆柱隐藏在角落后方。 (ii-iv) 三种方法执行轨迹比较：Faster（23）、提出的 SUPER 以及未进行切换时间优化的 SUPER（称为 SUPER 无 OT）。 (B) 模拟中备份轨迹的速度曲线和执行情况。 (C) 在相同探索轨迹和备份走廊条件下，Faster 和 SUPER 的切换时间 $t_{\mathrm{s}}$。 (D) (i) SUPER 的真实实验，隐藏障碍用红色虚线框标示。 (ii) 时间点 $t_{2}$ 机载摄像头的第一人称视角。 (E) 时间点 $t_{1}$ 和 $t_{2}$ 的规划轨迹。$\mathcal{T}_{e}^{1}$ 和 $\mathcal{T}_{b}^{1}$ 分别为 $t_{1}$ 的探索轨迹和备份轨迹，$\mathcal{T}_{e}^{2}$ 是 $t_{2}$ 的探索轨迹。$t_{2}$ 时的备份轨迹未显示。 (F) 实验中的速度曲线。
+
+<img src="https://cdn.mathpix.com/cropped/2025_07_28_4ce3067d1cb92616a586g-17.jpg?height=1207&width=1608&top_left_y=166&top_left_x=253" width=650/>
+
+Fig. S7. 提出的飞行走廊生成算法（CIRI）示意图 (A) 配置空间中三种不同安全飞行走廊生成方法的比较。 (B) 说明椭球坐标系 $\mathcal{E}$ 和世界坐标系 $\mathcal{W}$ 之间的变换示例。 (C) C 空间中凸分解过程的视觉展示。 (D) 平面调整策略示例，确保给定的种子点位于生成的多面体内。
+
+<img src="https://cdn.mathpix.com/cropped/2025_07_28_4ce3067d1cb92616a586g-18.jpg?height=1682&width=1590&top_left_y=175&top_left_x=262" width=650/>
+
+Fig. S8. 配置空间中凸分解的比较 (A) 障碍物填充率（OFR）从0.005到0.6的基准环境示例。 (B) 不同方法生成多面体的种子包含率随OFR变化。 (C) 不同方法生成的多面体体积的箱线图，基于100次测试。中线表示中位数。 (D) 各方法计算时间的箱线图，基于100次测试。中线表示中位数。
+
+<img src="https://cdn.mathpix.com/cropped/2025_07_28_4ce3067d1cb92616a586g-19.jpg?height=638&width=1603&top_left_y=161&top_left_x=253" width=650/>
+
+Fig. S9. 障碍函数 $\mathcal{L}_{\mu}$ 的绘图。图示了函数 $\mathcal{L}_{\mu}$。随着参数 $\mu$ 从 $\mu=0.5$ 降至 $\mu=0.01$，障碍函数逐渐变得更陡峭，形状更尖锐。
+
+<img src="https://cdn.mathpix.com/cropped/2025_07_28_4ce3067d1cb92616a586g-19.jpg?height=716&width=1608&top_left_y=989&top_left_x=248" width=650/>
+
+Fig. S10. 从 $\eta$ 到 $t_{s}$ 的映射绘图。图示一个类似 Sigmoid 的函数，将 $\eta \in \mathbb{R}$ 映射到区间 $\left(t_{c}, t_{o}\right)$。
+
+<img src="https://cdn.mathpix.com/cropped/2025_07_28_4ce3067d1cb92616a586g-20.jpg?height=1163&width=1586&top_left_y=176&top_left_x=264" width=650/>
+
+Fig. S11. 有限视场备份走廊生成 (A) 非凸视场的最大凸子集由两个由切割视场上边界 $\mathcal{H}_{u}$ 和下边界 $\mathcal{H}_{l}$ 切平面的半空间交集形成。 (B) 切平面 $\mathcal{H}_{u}$ 和 $\mathcal{H}_{l}$ 的侧视图及垂直视场角 $\theta$。 (C) 俯视图显示凸子集和两个切平面，由航向方向 $\mathbf{h}$ 唯一确定。 (D) 航向方向与探索轨迹对齐，确保生成的备份走廊包含探索轨迹的初始部分。
+
+<img src="https://cdn.mathpix.com/cropped/2025_07_28_4ce3067d1cb92616a586g-21.jpg?height=996&width=1590&top_left_y=174&top_left_x=262" width=650/>
+
+Fig. S12. 不同垂直视场下的基准比较 (A) 在可通行性得分为3.1的模拟地图上的基准结果。 (B) 在可通行性得分为6.5的模拟地图上的基准结果。对于 (A) 和 (B)，分布图 (ii-iii) 展示平均飞行速度和执行备份轨迹的比例。误差条表示标准差，黑点表示均值。每个分布基于180次测试数据。
+
+<img src="https://cdn.mathpix.com/cropped/2025_07_28_4ce3067d1cb92616a586g-22.jpg?height=1102&width=1617&top_left_y=159&top_left_x=243" width=650/>
+
+Fig. S13. 不同无人机模型下 MPC 跟踪性能比较。速度、俯仰角和各轴位置跟踪误差的绘图。
+
+Table S1. 不同方法的实现细节
+
+|  | 类型 | 映射 | 前端 | 后端 |
+| :--- | :--- | :--- | :--- | :--- |
+| Bubble (13) | 乐观型 | 点云 + Kd-Tree | 球形走廊 | 时空轨迹优化（STTP） |
+| Raptor (20) | 安全感知型 | ESDF | 拓扑路径搜索 | 路径引导轨迹优化（PGO） |
+| Faster (23) | 安全保障型 | 占据栅格地图（OGM） | 多面体形走廊 | 混合整数二次规划（MIQP） |
+| SUPER（本工作） | 安全保障型 | 点云 | 多面体形走廊 | 时空轨迹优化（STTP） |
+
 
 ## 本文其他补充材料包括：
+### 视频1
 
-影片S1至S4
+<img src="https://cdn.mathpix.com/cropped/2025_07_28_4ce3067d1cb92616a586g-24.jpg?height=1048&width=1590&top_left_y=300&top_left_x=262" width=650/>
+
+视频 1. 提出 SUPER 系统的概览。SUPER 展示了其在高速下安全穿越未知且杂乱环境的能力，能够避开如电力线等细小障碍，并在多种场景中表现出鲁棒性，包括目标跟踪和自主探索。
+
+### 视频S1至S4
+
+<img src="https://cdn.mathpix.com/cropped/2025_07_28_4ce3067d1cb92616a586g-24.jpg?height=903&width=1590&top_left_y=1538&top_left_x=262" width=650/>
+
+视频 S1. 未知环境中的安全高速导航。
+
+<img src="https://cdn.mathpix.com/cropped/2025_07_28_4ce3067d1cb92616a586g-25.jpg?height=1036&width=1586&top_left_y=176&top_left_x=264" width=650/>
+
+视频 S2. 杂乱环境中的导航。
+
+<img src="https://cdn.mathpix.com/cropped/2025_07_28_4ce3067d1cb92616a586g-25.jpg?height=952&width=1584&top_left_y=1329&top_left_x=265" width=650/>
+
+视频 S3. SUPER 避开细小障碍能力演示。
+
+<img src="https://cdn.mathpix.com/cropped/2025_07_28_4ce3067d1cb92616a586g-26.jpg?height=1118&width=1586&top_left_y=178&top_left_x=264" width=650/>
+
+视频 S4. SUPER 在目标跟踪、自主探索和航路点导航任务中的应用。
+
 
 ## 参考文献及注释
-
 
 1. J. Verbeke, J. D. Schutter, Experimental maneuverability and agility quantification for rotary unmanned aerial vehicle. Int. J. Micro Air Veh. 10, 3-11 (2018).
 2. B. Mishra, D. Garg, P. Narang, V. Mishra, Drone-surveillance for search and rescue in natural disaster. Comput. Commun. 156, 1-10 (2020).
@@ -286,24 +593,26 @@ $$
 5. Y. Song, A. Romero, M. Müller, V. Koltun, D. Scaramuzza, Reaching the limit in autonomous racing: Optimal control versus reinforcement learning. Sci. Robot. 8, eadg1462 (2023).
 6. P. Foehn, A. Romero, D. Scaramuzza, Time-optimal planning for quadrotor waypoint flight. Sci. Robot. 6, eabh1221 (2021).
 7. A. Romero, R. Penicka, D. Scaramuzza, Time-optimal online replanning for agile quadrotor flight. IEEE Robot. Autom. Lett. 7, 7730-7737 (2022).
-8. A. Romero, S. Sun, P. Foehn, D. Scaramuzza, Model predictive contouring control for time-optimal quadrotor flight. IEEE Trans. Robot. 38, 3340-3356 (2022).
-9. E. Kaufmann, L. Bauersfeld, A. Loquercio, M. Müller, V. Koltun, D. Scaramuzza, Champion-level drone racing using deep reinforcement learning. Nature 620, 982-987 (2023).
+8. A. Romero, S. Sun, P. Foehn, D. Scaramuzza, Model predictive contouring control for timeoptimal quadrotor flight. IEEE Trans. Robot. 38, 3340-3356 (2022).
+9. E. Kaufmann, L. Bauersfeld, A. Loquercio, M. Müller, V. Koltun, D. Scaramuzza, Championlevel drone racing using deep reinforcement learning. Nature 620, 982-987 (2023).
 10. J. Zhang, R. G. Chadha, V. Velivela, S. Singh, P-cal: Pre-computed alternative lanes for aggressive aerial collision avoidance, paper presented at the 12th International Conference on Field and Service Robotics (FSR), Tokyo, Japan, 31 August 2019.
-11. J. Zhang, R. G. Chadha, V. Velivela, S. Singh, P-cap: Pre-computed alternative paths to enable aggressive aerial maneuvers in cluttered environments, in 2018 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS) (IEEE, 2018), pp. 8456-8463.
+11. J. Zhang, R. G. Chadha, V. Velivela, S. Singh, P-cap: Pre-computed alternative paths to enable
+aggressive aerial maneuvers in cluttered environments, in 2018 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS) (IEEE, 2018), pp. 8456-8463.
 12. Y. Ren, S. Liang, F. Zhu, G. Lu, F. Zhang, Online whole-body motion planning for quadrotor using multi-resolution search, in 2023 IEEE International Conference on Robotics and Automation (ICRA) (IEEE, 2023), pp. 1594-1600.
-13. Y. Ren, F. Zhu, W. Liu, Z. Wang, Y. Lin, F. Gao, F. Zhang, Bubble planner: Planning highspeed smooth quadrotor trajectories using receding corridors, in 2022 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS) (IEEE, 2022), pp. 6332-6339.
+13. Y. Ren, F. Zhu, W. Liu, Z. Wang, Y. Lin, F. Gao, F. Zhang, Bubble planner: Planning highspeed smooth quadrotor trajectories using receding corridors, in 2022 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS) (IEEE, 2022), pp. 63326339.
 14. X. Zhou, Z. Wang, H. Ye, C. Xu, F. Gao, Ego-planner: An esdf-free gradient-based local planner for quadrotors. IEEE Robot. Autom. Lett. 6, 478-485 (2020).
 15. H. Ye, X. Zhou, Z. Wang, C. Xu, J. Chu, F. Gao, Tgk-planner: An efficient topology guided kinodynamic planner for autonomous quadrotors. IEEE Robot. Autom. Lett. 6, 494-501 (2020).
-16. A. Loquercio, E. Kaufmann, R. Ranftl, M. Müller, V. Koltun, D. Scaramuzza, Learning high-speed flight in the wild. Sci. Robot. 6, eabg5810 (2021).
-17. H. D. Escobar-Alvarez, N. Johnson, T. Hebble, K. Klingebiel, S. A. Quintero, J. Regenstein, N. A. Browning, R-advance: Rapid adaptive prediction for vision-based autonomous navigation, control, and evasion. J. Field Robot. 35, 91-100 (2018).
+16. A. Loquercio, E. Kaufmann, R. Ranftl, M. Müller, V. Koltun, D. Scaramuzza, Learning highspeed flight in the wild. Sci. Robot. 6, eabg5810 (2021).
+17. H. D. Escobar-Alvarez, N. Johnson, T. Hebble, K. Klingebiel, S. A. Quintero, J. Regenstein, N.
+A. Browning, R-advance: Rapid adaptive prediction for vision-based autonomous navigation, control, and evasion. J. Field Robot. 35, 91-100 (2018).
 18. L. Quan, Z. Zhang, X. Zhong, C. Xu, F. Gao, Eva-planner: Environmental adaptive quadrotor planning, in 2021 IEEE International Conference on Robotics and Automation (ICRA) (IEEE, 2021), pp. 398-404.
-19. L. Wang, Y. Guo, Speed adaptive robot trajectory generation based on derivative property of b-spline curve. IEEE Robot. Autom. Lett. 8, 1905-1911 (2023).
+19. L. Wang, Y. Guo, Speed adaptive robot trajectory generation based on derivative property of bspline curve. IEEE Robot. Autom. Lett. 8, 1905-1911 (2023).
 20. B. Zhou, J. Pan, F. Gao, S. Shen, Raptor: Robust and perception-aware trajectory replanning for quadrotor fast flight. IEEE Trans. Robot. 37, 1992-2009 (2021).
-21. H. Oleynikova, Z. Taylor, R. Siegwart, J. Nieto, Safe local exploration for replanning in cluttered unknown environments for microaerial vehicles. IEEE Robot. Autom. Lett. 3, 1474-1481 (2018).
+21. H. Oleynikova, Z. Taylor, R. Siegwart, J. Nieto, Safe local exploration for replanning in cluttered unknown environments for microaerial vehicles. IEEE Robot. Autom. Lett. 3, 14741481 (2018).
 22. S. Liu, M. Watterson, S. Tang, V. Kumar, High speed navigation for quadrotors with limited onboard sensing, in 2016 IEEE International Conference on Robotics and Automation (ICRA) (IEEE, 2016), pp. 1484-1491.
 23. J. Tordesillas, B. T. Lopez, M. Everett, J. P. How, Faster: Fast and safe trajectory planner for navigation in unknown environments. IEEE Transact. Robot. 38, 922-938 (2021).
 24. E. Mueggler, H. Rebecq, G. Gallego, T. Delbruck, D. Scaramuzza, The event-camera dataset and simulator: Event-based data for pose estimation, visual odometry, and slam. Int. J. Robot. Res. 36, 142-149 (2017).
-25. Livox Technology Company Limited, Livox Mid-360 User Manual (2023); https://livoxtech. com/mid-360.
+25. Livox Technology Company Limited, Livox Mid-360 User Manual (2023); https://livoxtech.com/mid-360.
 26. Wikipedia, Lockheed Martin F-35 Lightning II stealth multirole combat aircraft (2024); https://en.wikipedia.org/wiki/Lockheed_Martin_F-35_Lightning_II.
 27. DJI, DJI Mavic 3 (2024); https://dji.com/mavic-3.
 28. J. Tordesillas, B. T. Lopez, J. P. How, Faster: Fast and safe trajectory planner for flights in unknown environments, in 2019 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS) (IEEE, 2019), pp. 1934-1940.
@@ -312,34 +621,36 @@ $$
 31. L. Han, F. Gao, B. Zhou, S. Shen, Fiesta: Fast incremental Euclidean distance fields for online motion planning of aerial robots, in 2019 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS) (IEEE, 2019), pp. 4423-4430.
 32. B. Tang, Y. Ren, F. Zhu, R. He, S. Liang, F. Kong, F. Zhang, Bubble explorer: Fast uav exploration in large-scale and cluttered 3D-environments using occlusion-free spheres. arXiv:2304.00852 [cs.RO] (2023).
 33. P. Foehn, E. Kaufmann, A. Romero, R. Penicka, S. Sun, L. Bauersfeld, T. Laengle, G. Cioffi, Y. Song, A. Loquercio, D. Scaramuzza, Agilicious: Open-source and open-hardware agile quadrotor for vision-based flight. Sci. Robot. 7, eabl6259 (2022).
-34. NVIDIA Corporation, Nvidia Jetson TX2 embedded AI computing device (2024); https:// developer.nvidia.com/embedded/jetson-tx2.
+34. NVIDIA Corporation, Nvidia Jetson TX2 embedded AI computing device (2024); https://developer.nvidia.com/embedded/jetson-tx2.
 35. X. Zhou, X. Wen, Z. Wang, Y. Gao, H. Li, Q. Wang, T. Yang, H. Lu, Y. Cao, C. Xu, F. Gao, Swarm of micro flying robots in the wild. Sci. Robot. 7, eabm5954 (2022).
-36. Skydio 2 Plus Enterprise, An intelligent flying robot powered by AI (2024); https://skydio. com/skydio-2-plus-enterprise.
+36. Skydio 2 Plus Enterprise, An intelligent flying robot powered by AI (2024); https://skydio.com/skydio-2-plus-enterprise.
 37. A. Harmat, M. Trentini, I. Sharf, Multi-camera tracking and mapping for unmanned aerial vehicles in unstructured environments. J. Intell. Robot. Syst. 78, 291-317 (2015).
-38. Intel, Intel RealSense Depth Camera D435i (2024); https://intelrealsense.com/ depth-camera-d435i.
+38. Intel, Intel RealSense Depth Camera D435i (2024); https://intelrealsense.com/depth-camerad435i.
 39. W. Xu, Y. Cai, D. He, J. Lin, F. Zhang, Fast-lio2: Fast direct lidar-inertial odometry. IEEE Trans. Robot. 38, 2053-2073 (2022).
 40. S. Liu, M. Watterson, K. Mohta, K. Sun, S. Bhattacharya, C. J. Taylor, V. Kumar, Planning dynamically feasible trajectories for quadrotors using safe flight corridors in 3-d complex environments. IEEE Robot. Autom. Lett. 2, 1688-1695 (2017).
-41. F. Gao, W. Wu, W. Gao, S. Shen, Flying on point clouds: Online trajectory generation and autonomous navigation for quadrotors in cluttered environments. J. Field Robot. 36, 710-733 (2019).
+41. F. Gao, W. Wu, W. Gao, S. Shen, Flying on point clouds: Online trajectory generation and autonomous navigation for quadrotors in cluttered environments, J. Field Robot. 36, 710-733 (2019).
 42. J. Zhang, C. Hu, R. G. Chadha, S. Singh, Falco: Fast likelihood-based collision avoidance with extension to human-guided navigation. J. Field Robot. 37, 1300-1313 (2020).
-43. D. Cheng, F. C. Ojeda, A. Prabhu, X. Liu, A. Zhu, P. C. Green, R. Ehsani, P. Chaudhari, V. Kumar, TreeScope: An agricultural robotics dataset for lidar-based mapping of trees in forests and orchards, in 2024 IEEE International Conference on Robotics and Automation (ICRA) (IEEE, 2024), pp. 14860-14866.
-44. P. De Petris, H. Nguyen, M. Dharmadhikari, M. Kulkarni, N. Khedekar, F. Mascarich, sK. Alexis, Rmf-owl: A collision-tolerant flying robot for autonomous subterranean exploration, in 2022 International Conference on Unmanned Aircraft Systems (ICUAS) (IEEE, 2022), pp. 536-543.
+43. D. Cheng, F. C. Ojeda, A. Prabhu, X. Liu, A. Zhu, P. C. Green, R. Ehsani, P. Chaudhari, V. Kumar, Treescope: An agricultural robotics dataset for lidar-based mapping of trees in forests and orchards, in 2024 IEEE International Conference on Robotics and Automation (ICRA) (IEEE, 2023), pp. 14860-14866.
+44. P. De Petris, H. Nguyen, M. Dharmadhikari, M. Kulkarni, N. Khedekar, F. Mascarich, K. Alexis, Rmf-owl: A collision-tolerant flying robot for autonomous subterranean exploration, in 2022 International Conference on Unmanned Aircraft Systems (ICUAS) (IEEE, 2022), pp. 536543.
 45. Y. Cai, F. Kong, Y. Ren, F. Zhu, J. Lin, F. Zhang, Occupancy grid mapping without raycasting for high-resolution LiDAR sensors. IEEE Trans. Robot. 40, 172-192 (2023).
-46. Ouster, Ouster OS1-128 sensor (2024); https://ouster.com/products/scanning-lidar/ os1-sensor.
+46. Ouster, Ouster OS1-128 sensor (2024); https://ouster.com/products/scanning-lidar/os1-sensor.
 47. DJI, DJI Matrice 300 RTK (2024); https://enterprise.dji.com/zh-tw/matrice-300.
 48. LiDAR USA, LiDAR USA surveyor 32 (2024); https://lidarusa.com/.
-49. Intel, Product Family D400 Series Datasheet (2024); https://intelrealsense.com/download/ 21345/?tmstv=1697035582.
+49. Intel, Product Family D400 Series Datasheet (2024); https://intelrealsense.com/download/21345/?tmstv=1697035582.
 50. A. Hornung, K. M. Wurm, M. Bennewitz, C. Stachniss, W. Burgard, Octomap: An efficient probabilistic 3d mapping framework based on octrees. Autonom. Robot. 34, 189-206 (2013).
-51. Y. Ren, Y. Cai, F. Zhu, S. Liang, F. Zhang, Rog-map: An efficient robocentric occupancy grid map for large-scene and high-resolution lidar-based motion planning. arXiv:2302.14819 [cs.RO] (2023).
+51. Y. Ren, Y. Cai, F. Zhu, S. Liang, F. Zhang, Rog-map: An efficient robocentric occupancy grid map for large-scene and high-resolution lidar-based motion planning. arXiv:2302.14819 [cs.RO]
+(2023).
 52. F. Kong, W. Xu, Y. Cai, F. Zhang, Avoiding dynamic small obstacles with onboard sensing and computation on aerial robots. IEEE Robot. Autom. Lett. 6, 7869-7876 (2021).
 53. H. Wu, Y. Li, W. Xu, F. Kong, F. Zhang, Moving event detection from LiDAR point streams. Nat. Commun. 15, 345 (2024).
-54. T-MOTOR, T-MOTOR F90 series racing drone motor specifications (2024); https://store. tmotor.com/goods-1064-F90.html.
+54. T-MOTOR, T-MOTOR F90 series racing drone motor specifications (2024); https://store.tmotor.com/goods-1064-F90.html.
 55. Dronecode Foundation, PX4: Open source autopilot for drone developers (2024); https://px4.io.
 56. J. Chen, K. Su, S. Shen, Real-time safe trajectory generation for quadrotor flight in cluttered environments, in 2015 IEEE International Conference on Robotics and Biomimetics (ROBIO) (IEEE, 2015), pp. 1678-1685.
 57. P. Hart, N. Nilsson, B. Raphael, A formal basis for the heuristic determination of minimum cost paths. IEEE Trans. Syst. Sci. Cybern. 4, 100-107 (1968).
-58. Q. Wang, Z. Wang, C. Xu, F. Gao, Fast iterative region inflation for computing large $2-d / 3-d$ convex regions of obstacle-free space. arXiv:2403.02977 [cs.RO] (2024).
+58. Q. Wang, Z. Wang, C. Xu, F. Gao, Fast iterative region inflation for computing large 2-d/3-d convex regions of obstacle-free space. arXiv:2403.02977 [cs.RO] (2024).
 59. R. Deits, R. Tedrake, Computing large convex regions of obstacle-free space through semidefinite programming, in Algorithmic Foundations of Robotics XI: Selected Contributions of the Eleventh International Workshop on the Algorithmic Foundations of Robotics (Springer, 2015), pp. 109-124.
-60. L. Yin, F. Zhu, Y. Ren, F. Kong, F. Zhang, Decentralized swarm trajectory generation for lidar-based aerial tracking in cluttered environments, in 2023 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS) (IEEE, 2023), pp. 9285-9292.
-61. J. Ji, N. Pan, C. Xu, F. Gao, Elastic tracker: A spatio-temporal trajectory planner for flexible aerial tracking, in 2022 International Conference on Robotics and Automation (ICRA) (IEEE, 2022), pp. 47-53.
+60. L. Yin, F. Zhu, Y. Ren, F. Kong, F. Zhang, Decentralized swarm trajectory generation for lidarbased aerial tracking in cluttered environments, in 2023 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS) (IEEE, 2023), pp. 9285-9292.
+61. J. Ji, N. Pan, C. Xu, F. Gao, Elastic tracker: A spatio-temporal trajectory planner for flexible aerial tracking, in 2022 International Conference on Robotics and Automation (ICRA) (IEEE,
+2022), pp. 47-53.
 62. S. Liu, N. Atanasov, K. Mohta, V. Kumar, Search-based motion planning for quadrotors using linear quadratic minimum time control, in 2017 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS) (IEEE, 2017), pp. 2872-2879.
 63. ZJU FAST Lab, LBFGS-Lite: A header-only L-BFGS unconstrained optimizer (Github, 2024); https://github.com/ZJU-FAST-Lab/LBFGS-Lite.
 64. M. Faessler, A. Franchi, D. Scaramuzza, Differential flatness of quadrotor dynamics subject to rotor drag for accurate tracking of high-speed trajectories. IEEE Robot. Autom. Lett. 3, 620-626 (2017).
@@ -349,15 +660,14 @@ $$
 68. C. Toumieh, A. Lambert, Voxel-grid based convex decomposition of 3D space for safe corridor generation. J. Intell. Robot. Syst. 105, 87 (2022).
 69. X. Zhong, Y. Wu, D. Wang, Q. Wang, C. Xu, F. Gao, Generating large convex polytopes directly on point clouds. arXiv:2010.08744 [cs.RO] (2020).
 70. C. D. Toth, J. O'Rourke, J. E. Goodman, Handbook of Discrete and Computational Geometry (CRC Press, 2017).
-71. D. Eberly, Distance from a point to an ellipse, an ellipsoid, or a hyperellipsoid (Geometric Tools, 2013); https://geometrictools.com/Documentation/DistancePointEllipseEllipsoid. pdf.
+71. D. Eberly, Distance from a point to an ellipse, an ellipsoid, or a hyperellipsoid (Geometric Tools, 2013); https://geometrictools.com/Documentation/DistancePointEllipseEllipsoid.pdf.
 72. Z. Wang, "A geometrical approach to multicopter motion planning," thesis, Zhejiang University, Hangzhou, China (2022).
 73. Y. Cui, D. Sun, K.-C. Toh, On the r-superlinear convergence of the KKT residuals generated by the augmented lagrangian method for convex composite conic programming. Math. Program. 178, 381-415 (2019).
 74. W. Wu, mockamap, https://github.com/HKUST-Aerial-Robotics/mockamap.
-75. Dronecode Foundation, PX4 software in the loop simulation with Gazebo (2024); https:// docs.px4.io/v1.12/en/simulation/gazebo.html.
+75. Dronecode Foundation, PX4 software in the loop simulation with Gazebo (2024); https://docs.px4.io/v1.12/en/simulation/gazebo.html.
 
-## Acknowledgments
 
-Funding: This work was supported by the Hong Kong Research Grants Council (RGC) General Research Fund (GRF) 17204523 and a DJI donation. Author contributions: The research was initiated by Y.R. and F. Zhang. Y.R. was responsible for the design and manufacture of the UAV prototype, as well as the implementation of the planning modules for the UAV, with assistance from G.L. and L.Y. F. Zhu and Y.C. were responsible for implementing the perception model, whereas G.L. and Y.R. implemented the control module with the assistance of N.C. The experiments were designed by Y.R. and F. Zhu and conducted by Y.R., F. Zhu, G.L., N.C., and F.K. Y.R. and J.L. performed all data analyses. The manuscript was written by Y.R. and F. Zhang, with input and advice from all authors. F. Zhang provided funding for the research and supervised the project. Competing interests: The authors declare that they have no competing interests. Data and materials availability: The data and source code supporting the conclusions of this study are available at https://doi.org/10.5281/zenodo. 14528604 and https://github.com/ hku-mars/SUPER.
+
 
 Submitted 13 February 2024
 Accepted 23 December 2024
