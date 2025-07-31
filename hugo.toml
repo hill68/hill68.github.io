@@ -4,6 +4,7 @@ title = "FlitSoft Docs"
 theme = "hugo-theme-relearn"
 disableKinds = ["taxonomy"] # 可选：关闭 Hugo 自带的 /tags/ 目录
 
+googleAnalytics = "G-TXZZJN3Q2Y" 
 
 [pagination]
   pagerSize = 10   # 每页文章数量
