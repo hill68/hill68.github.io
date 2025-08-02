@@ -1,5 +1,5 @@
 <!doctype html><html lang=zh-cn dir=ltr itemscope itemtype=http://schema.org/Article data-r-output-format=html><head><meta charset=utf-8><meta name=viewport content="height=device-height,width=device-width,initial-scale=1,minimum-scale=1"><meta name=generator content="Hugo 0.147.3"><meta name=generator content="Relearn 8.0.0+9803d5122ebb3276acea823f476e9eb44f607862"><meta name=description content="该模型用于根据给定的测向站数据与测向真方位来求解辐射源目标的经纬度坐标。给出的C++代码示例假设已经获得了多个测向数据点（测向站坐标及测向方位），并使用线性代数方法求解。"><meta name=author content><meta name=twitter:card content="summary"><meta name=twitter:title content="无源侦察测向定位模型 :: FlitSoft Docs"><meta name=twitter:description content="该模型用于根据给定的测向站数据与测向真方位来求解辐射源目标的经纬度坐标。给出的C++代码示例假设已经获得了多个测向数据点（测向站坐标及测向方位），并使用线性代数方法求解。"><meta property="og:url" content="https://hill68.github.io/em/radar/%E6%97%A0%E6%BA%90%E4%BE%A6%E5%AF%9F%E6%B5%8B%E5%90%91%E5%AE%9A%E4%BD%8D%E6%A8%A1%E5%9E%8B/index.html"><meta property="og:site_name" content="FlitSoft Docs"><meta property="og:title" content="无源侦察测向定位模型 :: FlitSoft Docs"><meta property="og:description" content="该模型用于根据给定的测向站数据与测向真方位来求解辐射源目标的经纬度坐标。给出的C++代码示例假设已经获得了多个测向数据点（测向站坐标及测向方位），并使用线性代数方法求解。"><meta property="og:locale" content="zh_cn"><meta property="og:type" content="article"><meta property="article:section" content="EM"><meta property="article:published_time" content="2025-05-21T15:43:38+08:00"><meta property="article:modified_time" content="2025-05-21T15:43:38+08:00"><meta itemprop=name content="无源侦察测向定位模型 :: FlitSoft Docs"><meta itemprop=description content="该模型用于根据给定的测向站数据与测向真方位来求解辐射源目标的经纬度坐标。给出的C++代码示例假设已经获得了多个测向数据点（测向站坐标及测向方位），并使用线性代数方法求解。"><meta itemprop=datePublished content="2025-05-21T15:43:38+08:00"><meta itemprop=dateModified content="2025-05-21T15:43:38+08:00"><meta itemprop=wordCount content="1704"><title>无源侦察测向定位模型 :: FlitSoft Docs</title>
-<link href=/images/logo.png?1754146231 rel=icon type=image/png><link href=/css/auto-complete/auto-complete.min.css?1754146231 rel=stylesheet><script src=/js/auto-complete/auto-complete.min.js?1754146231 defer></script><script src=/js/search-lunr.min.js?1754146231 defer></script><script src=/js/search.min.js?1754146231 defer></script><script>window.relearn=window.relearn||{},window.relearn.index_js_url="/searchindex.en.js?1754146231"</script><script src=/js/lunr/lunr.min.js?1754146231 defer></script><script src=/js/lunr/lunr.stemmer.support.min.js?1754146231 defer></script><script src=/js/lunr/lunr.multi.min.js?1754146231 defer></script><script src=/js/lunr/lunr.zh.min.js?1754146231 defer></script><script>window.relearn=window.relearn||{},window.relearn.contentLangs=["zh"]</script><link href=/fonts/fontawesome/css/fontawesome-all.min.css?1754146231 rel=stylesheet media=print onload='this.media="all",this.onload=null'><noscript><link href=/fonts/fontawesome/css/fontawesome-all.min.css?1754146231 rel=stylesheet></noscript><link href=/css/perfect-scrollbar/perfect-scrollbar.min.css?1754146231 rel=stylesheet><link href=/css/theme.min.css?1754146231 rel=stylesheet><link href=/css/format-html.min.css?1754146231 rel=stylesheet id=R-format-style><script>window.relearn=window.relearn||{},window.relearn.min=`.min`,window.relearn.path="/em/radar/%E6%97%A0%E6%BA%90%E4%BE%A6%E5%AF%9F%E6%B5%8B%E5%90%91%E5%AE%9A%E4%BD%8D%E6%A8%A1%E5%9E%8B/index.html",window.relearn.relBasePath="../../..",window.relearn.relBaseUri="../../..",window.relearn.absBaseUri="https://hill68.github.io",window.relearn.disableAnchorCopy=!1,window.relearn.disableAnchorScrolling=!1,window.relearn.disableInlineCopyToClipboard=!1,window.relearn.enableBlockCodeWrap=!0,window.relearn.getItem=(e,t)=>e.getItem(t),window.relearn.setItem=(e,t,n)=>e.setItem(t,n),window.relearn.removeItem=(e,t)=>e.removeItem(t),window.T_Copy_to_clipboard=`Copy to clipboard`,window.T_Copied_to_clipboard=`Copied to clipboard!`,window.T_Copy_link_to_clipboard=`Copy link to clipboard`,window.T_Link_copied_to_clipboard=`Copied link to clipboard!`,window.T_Reset_view=`Reset view`,window.T_View_reset=`View reset!`,window.T_No_results_found=`No results found for "{0}"`,window.T_N_results_found=`{1} results found for "{0}"`,window.relearn.themevariants=["zen-light","zen-dark"],window.relearn.customvariantname="my-custom-variant",window.relearn.changeVariant=function(e){var t=document.documentElement.dataset.rThemeVariant;window.relearn.setItem(window.localStorage,window.relearn.absBaseUri+"/variant",e),document.documentElement.dataset.rThemeVariant=e,t!=e&&(document.dispatchEvent(new CustomEvent("themeVariantLoaded",{detail:{variant:e,oldVariant:t}})),window.relearn.markVariant())},window.relearn.markVariant=function(){var e=window.relearn.getItem(window.localStorage,window.relearn.absBaseUri+"/variant");document.querySelectorAll(".R-variantswitcher select").forEach(t=>{t.value=e})},window.relearn.initVariant=function(){var e=window.relearn.getItem(window.localStorage,window.relearn.absBaseUri+"/variant")??"";e==window.relearn.customvariantname||(!e||!window.relearn.themevariants.includes(e))&&(e=window.relearn.themevariants[0],window.relearn.setItem(window.localStorage,window.relearn.absBaseUri+"/variant",e)),document.documentElement.dataset.rThemeVariant=e},window.relearn.initVariant(),window.relearn.markVariant()</script><link href=/css/custom.css?1754146231 rel=stylesheet><script async src="https://www.googletagmanager.com/gtag/js?id=G-TXZZJN3Q2Y"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-TXZZJN3Q2Y")</script></head><body class="mobile-support html" data-url=/em/radar/%E6%97%A0%E6%BA%90%E4%BE%A6%E5%AF%9F%E6%B5%8B%E5%90%91%E5%AE%9A%E4%BD%8D%E6%A8%A1%E5%9E%8B/index.html><div id=R-body class=default-animation><div id=R-body-overlay></div><nav id=R-topbar><div class=topbar-wrapper><div class=topbar-sidebar-divider></div><div class="topbar-area topbar-area-start" data-area=start><div class="topbar-button topbar-button-sidebar" data-content-empty=disable data-width-s=show data-width-m=hide data-width-l=hide><button class=topbar-control onclick=toggleNav() type=button title="Menu (CTRL+ALT+n)"><i class="fa-fw fas fa-bars"></i></button></div><div class="topbar-button topbar-button-toc" data-content-empty=hide data-width-s=show data-width-m=show data-width-l=show><button class=topbar-control onclick=toggleTopbarFlyout(this) type=button title="Table of Contents (CTRL+ALT+t)"><i class="fa-fw fas fa-list-alt"></i></button><div class=topbar-content><div class=topbar-content-wrapper><nav class=TableOfContents><ul><li><a href=#模型设计>模型设计</a></li><li><a href=#模型适应性分析>模型适应性分析</a></li><li><a href=#c示例代码>C++示例代码：</a><ul><li><a href=#更稳定分解的版本>更稳定分解的版本</a></li></ul></li><li><a href=#无源侦察测向定位计算器>无源侦察测向定位计算器</a></li></ul></nav></div></div></div></div><ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype=http://schema.org/BreadcrumbList><li itemscope itemtype=https://schema.org/ListItem itemprop=itemListElement><a itemprop=item href=/index.html><span itemprop=name>FlitSoft Docs</span></a><meta itemprop=position content="1">&nbsp;>&nbsp;</li><li itemscope itemtype=https://schema.org/ListItem itemprop=itemListElement><a itemprop=item href=/em/index.html><span itemprop=name>EM</span></a><meta itemprop=position content="2">&nbsp;>&nbsp;</li><li itemscope itemtype=https://schema.org/ListItem itemprop=itemListElement><a itemprop=item href=/em/radar/index.html><span itemprop=name>Radar</span></a><meta itemprop=position content="3">&nbsp;>&nbsp;</li><li itemscope itemtype=https://schema.org/ListItem itemprop=itemListElement><span itemprop=name>无源侦察测向定位模型</span><meta itemprop=position content="4"></li></ol><div class="topbar-area topbar-area-end" data-area=end><div class="topbar-button topbar-button-prev" data-content-empty=disable data-width-s=show data-width-m=show data-width-l=show><a class=topbar-control href=/em/radar/index.html title="Radar (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a></div><div class="topbar-button topbar-button-next" data-content-empty=disable data-width-s=show data-width-m=show data-width-l=show><a class=topbar-control href=/em/radar/%E9%9B%B7%E8%BE%BE%E5%AF%B9%E6%8A%97%E4%BE%A6%E5%AF%9F%E6%95%88%E8%83%BD%E6%A8%A1%E5%9E%8B%E7%A9%BA%E5%AF%B9%E5%9C%B0/index.html title="空对地雷达对抗侦察效能模型 (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a></div><div class="topbar-button topbar-button-more" data-content-empty=hide data-width-s=show data-width-m=show data-width-l=show><button class=topbar-control onclick=toggleTopbarFlyout(this) type=button title=More><i class="fa-fw fas fa-ellipsis-v"></i></button><div class=topbar-content><div class=topbar-content-wrapper><div class="topbar-area topbar-area-more" data-area=more></div></div></div></div></div></div></nav><div id=R-main-overlay></div><main id=R-body-inner class="highlightable em" tabindex=-1><div class=flex-block-wrapper><article class=default><header class=headline></header><h1 id=无源侦察测向定位模型>无源侦察测向定位模型</h1><h2 id=模型设计>模型设计</h2><p>由于地球是一个椭球体，因此不能简单用平面的数学模型。考虑到我国地处东北半球，采用简化的 Mercator 投影，公式如下：</p>$$
+<link href=/images/logo.png?1754148149 rel=icon type=image/png><link href=/css/auto-complete/auto-complete.min.css?1754148149 rel=stylesheet><script src=/js/auto-complete/auto-complete.min.js?1754148149 defer></script><script src=/js/search-lunr.min.js?1754148149 defer></script><script src=/js/search.min.js?1754148149 defer></script><script>window.relearn=window.relearn||{},window.relearn.index_js_url="/searchindex.en.js?1754148149"</script><script src=/js/lunr/lunr.min.js?1754148149 defer></script><script src=/js/lunr/lunr.stemmer.support.min.js?1754148149 defer></script><script src=/js/lunr/lunr.multi.min.js?1754148149 defer></script><script src=/js/lunr/lunr.zh.min.js?1754148149 defer></script><script>window.relearn=window.relearn||{},window.relearn.contentLangs=["zh"]</script><link href=/fonts/fontawesome/css/fontawesome-all.min.css?1754148149 rel=stylesheet media=print onload='this.media="all",this.onload=null'><noscript><link href=/fonts/fontawesome/css/fontawesome-all.min.css?1754148149 rel=stylesheet></noscript><link href=/css/perfect-scrollbar/perfect-scrollbar.min.css?1754148149 rel=stylesheet><link href=/css/theme.min.css?1754148149 rel=stylesheet><link href=/css/format-html.min.css?1754148149 rel=stylesheet id=R-format-style><script>window.relearn=window.relearn||{},window.relearn.min=`.min`,window.relearn.path="/em/radar/%E6%97%A0%E6%BA%90%E4%BE%A6%E5%AF%9F%E6%B5%8B%E5%90%91%E5%AE%9A%E4%BD%8D%E6%A8%A1%E5%9E%8B/index.html",window.relearn.relBasePath="../../..",window.relearn.relBaseUri="../../..",window.relearn.absBaseUri="https://hill68.github.io",window.relearn.disableAnchorCopy=!1,window.relearn.disableAnchorScrolling=!1,window.relearn.disableInlineCopyToClipboard=!1,window.relearn.enableBlockCodeWrap=!0,window.relearn.getItem=(e,t)=>e.getItem(t),window.relearn.setItem=(e,t,n)=>e.setItem(t,n),window.relearn.removeItem=(e,t)=>e.removeItem(t),window.T_Copy_to_clipboard=`Copy to clipboard`,window.T_Copied_to_clipboard=`Copied to clipboard!`,window.T_Copy_link_to_clipboard=`Copy link to clipboard`,window.T_Link_copied_to_clipboard=`Copied link to clipboard!`,window.T_Reset_view=`Reset view`,window.T_View_reset=`View reset!`,window.T_No_results_found=`No results found for "{0}"`,window.T_N_results_found=`{1} results found for "{0}"`,window.relearn.themevariants=["zen-light","zen-dark"],window.relearn.customvariantname="my-custom-variant",window.relearn.changeVariant=function(e){var t=document.documentElement.dataset.rThemeVariant;window.relearn.setItem(window.localStorage,window.relearn.absBaseUri+"/variant",e),document.documentElement.dataset.rThemeVariant=e,t!=e&&(document.dispatchEvent(new CustomEvent("themeVariantLoaded",{detail:{variant:e,oldVariant:t}})),window.relearn.markVariant())},window.relearn.markVariant=function(){var e=window.relearn.getItem(window.localStorage,window.relearn.absBaseUri+"/variant");document.querySelectorAll(".R-variantswitcher select").forEach(t=>{t.value=e})},window.relearn.initVariant=function(){var e=window.relearn.getItem(window.localStorage,window.relearn.absBaseUri+"/variant")??"";e==window.relearn.customvariantname||(!e||!window.relearn.themevariants.includes(e))&&(e=window.relearn.themevariants[0],window.relearn.setItem(window.localStorage,window.relearn.absBaseUri+"/variant",e)),document.documentElement.dataset.rThemeVariant=e},window.relearn.initVariant(),window.relearn.markVariant()</script><link href=/css/custom.css?1754148149 rel=stylesheet><script async src="https://www.googletagmanager.com/gtag/js?id=G-TXZZJN3Q2Y"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-TXZZJN3Q2Y")</script></head><body class="mobile-support html" data-url=/em/radar/%E6%97%A0%E6%BA%90%E4%BE%A6%E5%AF%9F%E6%B5%8B%E5%90%91%E5%AE%9A%E4%BD%8D%E6%A8%A1%E5%9E%8B/index.html><div id=R-body class=default-animation><div id=R-body-overlay></div><nav id=R-topbar><div class=topbar-wrapper><div class=topbar-sidebar-divider></div><div class="topbar-area topbar-area-start" data-area=start><div class="topbar-button topbar-button-sidebar" data-content-empty=disable data-width-s=show data-width-m=hide data-width-l=hide><button class=topbar-control onclick=toggleNav() type=button title="Menu (CTRL+ALT+n)"><i class="fa-fw fas fa-bars"></i></button></div><div class="topbar-button topbar-button-toc" data-content-empty=hide data-width-s=show data-width-m=show data-width-l=show><button class=topbar-control onclick=toggleTopbarFlyout(this) type=button title="Table of Contents (CTRL+ALT+t)"><i class="fa-fw fas fa-list-alt"></i></button><div class=topbar-content><div class=topbar-content-wrapper><nav class=TableOfContents><ul><li><a href=#模型设计>模型设计</a></li><li><a href=#模型适应性分析>模型适应性分析</a></li><li><a href=#c示例代码>C++示例代码：</a><ul><li><a href=#更稳定分解的版本>更稳定分解的版本</a></li></ul></li><li><a href=#无源侦察测向定位计算器>无源侦察测向定位计算器</a></li></ul></nav></div></div></div></div><ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype=http://schema.org/BreadcrumbList><li itemscope itemtype=https://schema.org/ListItem itemprop=itemListElement><a itemprop=item href=/index.html><span itemprop=name>FlitSoft Docs</span></a><meta itemprop=position content="1">&nbsp;>&nbsp;</li><li itemscope itemtype=https://schema.org/ListItem itemprop=itemListElement><a itemprop=item href=/em/index.html><span itemprop=name>EM</span></a><meta itemprop=position content="2">&nbsp;>&nbsp;</li><li itemscope itemtype=https://schema.org/ListItem itemprop=itemListElement><a itemprop=item href=/em/radar/index.html><span itemprop=name>Radar</span></a><meta itemprop=position content="3">&nbsp;>&nbsp;</li><li itemscope itemtype=https://schema.org/ListItem itemprop=itemListElement><span itemprop=name>无源侦察测向定位模型</span><meta itemprop=position content="4"></li></ol><div class="topbar-area topbar-area-end" data-area=end><div class="topbar-button topbar-button-prev" data-content-empty=disable data-width-s=show data-width-m=show data-width-l=show><a class=topbar-control href=/em/radar/index.html title="Radar (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a></div><div class="topbar-button topbar-button-next" data-content-empty=disable data-width-s=show data-width-m=show data-width-l=show><a class=topbar-control href=/em/radar/%E9%9B%B7%E8%BE%BE%E5%AF%B9%E6%8A%97%E4%BE%A6%E5%AF%9F%E6%95%88%E8%83%BD%E6%A8%A1%E5%9E%8B%E7%A9%BA%E5%AF%B9%E5%9C%B0/index.html title="空对地雷达对抗侦察效能模型 (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a></div><div class="topbar-button topbar-button-more" data-content-empty=hide data-width-s=show data-width-m=show data-width-l=show><button class=topbar-control onclick=toggleTopbarFlyout(this) type=button title=More><i class="fa-fw fas fa-ellipsis-v"></i></button><div class=topbar-content><div class=topbar-content-wrapper><div class="topbar-area topbar-area-more" data-area=more></div></div></div></div></div></div></nav><div id=R-main-overlay></div><main id=R-body-inner class="highlightable em" tabindex=-1><div class=flex-block-wrapper><article class=default><header class=headline></header><h1 id=无源侦察测向定位模型>无源侦察测向定位模型</h1><h2 id=模型设计>模型设计</h2><p>由于地球是一个椭球体，因此不能简单用平面的数学模型。考虑到我国地处东北半球，采用简化的 Mercator 投影，公式如下：</p>$$
 \theta_i=\arccos \frac{\phi_e-\phi_i}{\sqrt{\left(\phi_e-\phi_i\right)^2+\left(\lambda_e-\lambda_i\right)^2 \cos ^2 \phi_i}} \tag{1}
 $$<p>上式中辐射源目标的经纬度坐标为 $\left(\lambda_e, \phi_e\right)$, 测向真方位 $\theta_i$, 测向站坐标 $(\lambda_{\mathrm{i}}, \phi_{\mathrm{i}}$ ）。</p><p>在实际应用中, 辐射源目标的坐标是一个估计值, 测向真方位含有误差, 测向站的坐标也可能含有误差。测向站坐标是可以修正的，在下面的讨论中假设是没有误差的。只讨论测向方位含有误差的情况。
 $\lambda_e=$ 辐射源经度
@@ -30,465 +30,465 @@ n \geq 2
 \end{array}
 $$<p>根据线性代数的理论, 有两次和两次以上的测向值就可以解出 $\lambda_e$ 和 $\phi_e$, 则 $\lambda_e$ 和 $\phi_e$ 的解向量 $\mathbf{X}$ 为</p>$$
 \mathbf{X}=\mathbf{A}_n^{-1} \cdot \mathbf{W}_n
-$$<h2 id=模型适应性分析>模型适应性分析</h2><p>整体来看，该模型在给定的前提和假设下是合理的。分析如下：</p><ol><li><p><strong>投影与模型设定</strong>：<br>模型中明确说明由地球的椭球体特性出发，而非简单的平面模型，为此采用了简化的 Mercator 投影。此类投影在局部范围内可以近似地将经纬度坐标转化为与平面坐标相类似的形式，从而使问题简化为类平面几何问题。</p><p>在该投影下，将位置由$(\lambda,\phi)$映射到近似平面坐标时，一般会有对经度差异乘以$\cos \phi$的修正，以确保经纬度差在局部范围内与实际的东西向距离变化一致。这一点在模型中已体现：<br></p>$$\sqrt{(\phi_e-\phi_i)^2 + ((\lambda_e-\lambda_i)^2\cos^2\phi_i)}$$<p><br>中对经度差$(\lambda_e-\lambda_i)$引入了$\cos\phi_i$因子。</p></li><li><p><strong>方位角公式的合理性</strong>：<br>一般在球面或近似平面上求点 $e(\lambda_e,\phi_e)$ 相对于点 $i(\lambda_i,\phi_i)$ 的方位角 $\theta_i$时，常用的简化公式为：<br></p>$$ \theta_i = \arctan2\big((\lambda_e-\lambda_i)\cos\phi_i, \phi_e-\phi_i\big) $$<p>给出的公式中对 $\cos \theta_i$ 的定义为：<br></p>$$ \cos \theta_i = \frac{\phi_e - \phi_i}{\sqrt{(\phi_e - \phi_i)^2 + ((\lambda_e - \lambda_i)^2 \cos^2\phi_i)}} $$<p>如果从上述 $\arctan2$ 形式出发，可以发现：</p><ul><li>分子方向为南北差 $(\phi_e - \phi_i)$，分母为总距离的平方根（类似直角三角形斜边长度）。</li><li>$\arctan2$给出的是正北方向顺时针转动的角度，将 $\cos\theta_i$ 表达为上述比值是完全可行的，只需注意 $\arctan2$ 会自动考虑象限问题，而使用 $\arccos$ 需要小心相位。但在定义清晰的前提下，这是可接受的近似和定义方式。</li></ul></li><li><p><strong>线性化处理</strong>：<br>文中将非线性关系通过平方、移项、合并后，最终导出了一组关于 $\lambda_e$、$\phi_e$ 的线性方程。给出了矩阵形式：<br></p>$$ \mathbf{A}_n \cdot \mathbf{X}=\mathbf{W}_n $$<p>其中 $\mathbf{X} = [\lambda_e, \phi_e]^T$，$\mathbf{A}_n$ 和 $\mathbf{W}_n$ 分别由测向站坐标与测量到的真方位角相关参数构成。在有两个及以上的测向方位数据时（$n \geq 2$），就可以求解 $\mathbf{X}$，即辐射源目标的经纬度。这是典型的从多条“方位直线”求交点的过程（在局部近似的投影平面中成立）。</p></li><li><p><strong>误差与假设</strong>：<br>模型中仅考虑测向方位的误差，假设测向站坐标无误差，这使得问题进一步简化。实际情况中，坐标与测量方位均可能存在误差，需要相应的误差传播与最小二乘优化来求解。但文中仅讨论理论模型的正确性与可解性，这一点不影响模型的基础正确性。</p></li></ol><p><strong>总结</strong>：<br>给定“采用简化的 Mercator 投影”、“已知测向站坐标无误差”、“测向真方位有已知（或可估计）误差”的前提条件下，文中给出的数学推导逻辑清晰、步骤合理，最终建立的二元一次线性方程组形式也是正确可行的。这套模型在一定近似下（局域范围内的地理坐标换算为近似平面问题）是成立的。</p><p>因此，从理论与推导过程来看，该模型是正确且合理的。</p><h2 id=c示例代码>C++示例代码：</h2><p>下面给出一个示例 C++ 代码，用于根据给定的测向站数据与测向真方位来求解辐射源目标的经纬度坐标 $\lambda_e, \phi_e$ 。该代码示例假设已经获得了多个测向数据点（测向站坐标 $\lambda_i, \phi_i$ 及测向方位 $\theta_i$），并使用线性代数方法求解。</p><p>这里采用 <a href=http://eigen.tuxfamily.org/ rel=external target=_blank>Eigen</a> 作为线性代数库来求解线性方程组。<br>如果只有两组测向数据（$n=2$），则对应的矩阵 $\mathbf{A}_n$ 为 $2\times2$，可直接求逆。<br>如果有多于两组数据（$n>2$），则可采用最小二乘解（Normal Equation或Eigen内置的最小二乘求解）来获得 $\lambda_e, \phi_e$ 的估计值。</p><p><strong>注意事项</strong>：</p><ul><li>测向站坐标和角度需以弧度制输入和处理。</li><li>对于 $\cos\phi_i$ 和 $\sin\theta_i$ 等需要确保 $\phi_i, \theta_i$ 已经是弧度。</li><li>数据格式与获取方式需根据实际情况调整。</li></ul><div class="highlight wrap-code" dir=auto><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-cpp data-lang=cpp><span style=display:flex><span><span style=color:#ff79c6>#include</span> <span style=color:#ff79c6>&lt;iostream&gt;</span><span style=color:#ff79c6>
-</span></span></span><span style=display:flex><span><span style=color:#ff79c6>#include</span> <span style=color:#ff79c6>&lt;vector&gt;</span><span style=color:#ff79c6>
-</span></span></span><span style=display:flex><span><span style=color:#ff79c6>#include</span> <span style=color:#ff79c6>&lt;Eigen/Dense&gt;</span><span style=color:#ff79c6>
-</span></span></span><span style=display:flex><span><span style=color:#ff79c6>#include</span> <span style=color:#ff79c6>&lt;cmath&gt;</span><span style=color:#ff79c6>
-</span></span></span><span style=display:flex><span><span style=color:#ff79c6></span>
-</span></span><span style=display:flex><span><span style=color:#6272a4>// 假设数据结构如下
-</span></span></span><span style=display:flex><span><span style=color:#6272a4></span><span style=color:#ff79c6>struct</span> <span style=color:#50fa7b>Measurement</span> {
-</span></span><span style=display:flex><span>    <span style=color:#8be9fd>double</span> lambda_i; <span style=color:#6272a4>// 测向站经度(弧度)
-</span></span></span><span style=display:flex><span><span style=color:#6272a4></span>    <span style=color:#8be9fd>double</span> phi_i;    <span style=color:#6272a4>// 测向站纬度(弧度)
-</span></span></span><span style=display:flex><span><span style=color:#6272a4></span>    <span style=color:#8be9fd>double</span> theta_i;  <span style=color:#6272a4>// 测向方位角(弧度)，正北为0，顺时针方向
-</span></span></span><span style=display:flex><span><span style=color:#6272a4></span>};
+$$<h2 id=模型适应性分析>模型适应性分析</h2><p>整体来看，该模型在给定的前提和假设下是合理的。分析如下：</p><ol><li><p><strong>投影与模型设定</strong>：<br>模型中明确说明由地球的椭球体特性出发，而非简单的平面模型，为此采用了简化的 Mercator 投影。此类投影在局部范围内可以近似地将经纬度坐标转化为与平面坐标相类似的形式，从而使问题简化为类平面几何问题。</p><p>在该投影下，将位置由$(\lambda,\phi)$映射到近似平面坐标时，一般会有对经度差异乘以$\cos \phi$的修正，以确保经纬度差在局部范围内与实际的东西向距离变化一致。这一点在模型中已体现：<br></p>$$\sqrt{(\phi_e-\phi_i)^2 + ((\lambda_e-\lambda_i)^2\cos^2\phi_i)}$$<p><br>中对经度差$(\lambda_e-\lambda_i)$引入了$\cos\phi_i$因子。</p></li><li><p><strong>方位角公式的合理性</strong>：<br>一般在球面或近似平面上求点 $e(\lambda_e,\phi_e)$ 相对于点 $i(\lambda_i,\phi_i)$ 的方位角 $\theta_i$时，常用的简化公式为：<br></p>$$ \theta_i = \arctan2\big((\lambda_e-\lambda_i)\cos\phi_i, \phi_e-\phi_i\big) $$<p>给出的公式中对 $\cos \theta_i$ 的定义为：<br></p>$$ \cos \theta_i = \frac{\phi_e - \phi_i}{\sqrt{(\phi_e - \phi_i)^2 + ((\lambda_e - \lambda_i)^2 \cos^2\phi_i)}} $$<p>如果从上述 $\arctan2$ 形式出发，可以发现：</p><ul><li>分子方向为南北差 $(\phi_e - \phi_i)$，分母为总距离的平方根（类似直角三角形斜边长度）。</li><li>$\arctan2$给出的是正北方向顺时针转动的角度，将 $\cos\theta_i$ 表达为上述比值是完全可行的，只需注意 $\arctan2$ 会自动考虑象限问题，而使用 $\arccos$ 需要小心相位。但在定义清晰的前提下，这是可接受的近似和定义方式。</li></ul></li><li><p><strong>线性化处理</strong>：<br>文中将非线性关系通过平方、移项、合并后，最终导出了一组关于 $\lambda_e$、$\phi_e$ 的线性方程。给出了矩阵形式：<br></p>$$ \mathbf{A}_n \cdot \mathbf{X}=\mathbf{W}_n $$<p>其中 $\mathbf{X} = [\lambda_e, \phi_e]^T$，$\mathbf{A}_n$ 和 $\mathbf{W}_n$ 分别由测向站坐标与测量到的真方位角相关参数构成。在有两个及以上的测向方位数据时（$n \geq 2$），就可以求解 $\mathbf{X}$，即辐射源目标的经纬度。这是典型的从多条“方位直线”求交点的过程（在局部近似的投影平面中成立）。</p></li><li><p><strong>误差与假设</strong>：<br>模型中仅考虑测向方位的误差，假设测向站坐标无误差，这使得问题进一步简化。实际情况中，坐标与测量方位均可能存在误差，需要相应的误差传播与最小二乘优化来求解。但文中仅讨论理论模型的正确性与可解性，这一点不影响模型的基础正确性。</p></li></ol><p><strong>总结</strong>：<br>给定“采用简化的 Mercator 投影”、“已知测向站坐标无误差”、“测向真方位有已知（或可估计）误差”的前提条件下，文中给出的数学推导逻辑清晰、步骤合理，最终建立的二元一次线性方程组形式也是正确可行的。这套模型在一定近似下（局域范围内的地理坐标换算为近似平面问题）是成立的。</p><p>因此，从理论与推导过程来看，该模型是正确且合理的。</p><h2 id=c示例代码>C++示例代码：</h2><p>下面给出一个示例 C++ 代码，用于根据给定的测向站数据与测向真方位来求解辐射源目标的经纬度坐标 $\lambda_e, \phi_e$ 。该代码示例假设已经获得了多个测向数据点（测向站坐标 $\lambda_i, \phi_i$ 及测向方位 $\theta_i$），并使用线性代数方法求解。</p><p>这里采用 <a href=http://eigen.tuxfamily.org/ rel=external target=_blank>Eigen</a> 作为线性代数库来求解线性方程组。<br>如果只有两组测向数据（$n=2$），则对应的矩阵 $\mathbf{A}_n$ 为 $2\times2$，可直接求逆。<br>如果有多于两组数据（$n>2$），则可采用最小二乘解（Normal Equation或Eigen内置的最小二乘求解）来获得 $\lambda_e, \phi_e$ 的估计值。</p><p><strong>注意事项</strong>：</p><ul><li>测向站坐标和角度需以弧度制输入和处理。</li><li>对于 $\cos\phi_i$ 和 $\sin\theta_i$ 等需要确保 $\phi_i, \theta_i$ 已经是弧度。</li><li>数据格式与获取方式需根据实际情况调整。</li></ul><div class="highlight wrap-code" dir=auto><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-cpp data-lang=cpp><span style=display:flex><span><span style=color:#00f>#include</span> <span style=color:#00f>&lt;iostream&gt;</span><span style=color:#00f>
+</span></span></span><span style=display:flex><span><span style=color:#00f>#include</span> <span style=color:#00f>&lt;vector&gt;</span><span style=color:#00f>
+</span></span></span><span style=display:flex><span><span style=color:#00f>#include</span> <span style=color:#00f>&lt;Eigen/Dense&gt;</span><span style=color:#00f>
+</span></span></span><span style=display:flex><span><span style=color:#00f>#include</span> <span style=color:#00f>&lt;cmath&gt;</span><span style=color:#00f>
+</span></span></span><span style=display:flex><span><span style=color:#00f></span>
+</span></span><span style=display:flex><span><span style=color:green>// 假设数据结构如下
+</span></span></span><span style=display:flex><span><span style=color:green></span><span style=color:#00f>struct</span> <span style=color:#2b91af>Measurement</span> {
+</span></span><span style=display:flex><span>    <span style=color:#2b91af>double</span> lambda_i; <span style=color:green>// 测向站经度(弧度)
+</span></span></span><span style=display:flex><span><span style=color:green></span>    <span style=color:#2b91af>double</span> phi_i;    <span style=color:green>// 测向站纬度(弧度)
+</span></span></span><span style=display:flex><span><span style=color:green></span>    <span style=color:#2b91af>double</span> theta_i;  <span style=color:green>// 测向方位角(弧度)，正北为0，顺时针方向
+</span></span></span><span style=display:flex><span><span style=color:green></span>};
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#8be9fd>int</span> <span style=color:#50fa7b>main</span>() {
-</span></span><span style=display:flex><span>    <span style=color:#6272a4>// 示例输入数据（需根据实际情况填写）
-</span></span></span><span style=display:flex><span><span style=color:#6272a4></span>    <span style=color:#6272a4>// 假设有 n 次测量，每次给定测向站位置 (lambda_i, phi_i) 和方位 theta_i
-</span></span></span><span style=display:flex><span><span style=color:#6272a4></span>    std<span style=color:#ff79c6>::</span>vector<span style=color:#ff79c6>&lt;</span>Measurement<span style=color:#ff79c6>&gt;</span> measurements <span style=color:#ff79c6>=</span> {
-</span></span><span style=display:flex><span>        <span style=color:#6272a4>// 示例数据，请根据实际情况修改
-</span></span></span><span style=display:flex><span><span style=color:#6272a4></span>        { <span style=color:#bd93f9>1.234</span>, <span style=color:#bd93f9>0.456</span>, <span style=color:#bd93f9>0.523</span> },
-</span></span><span style=display:flex><span>        { <span style=color:#bd93f9>1.235</span>, <span style=color:#bd93f9>0.457</span>, <span style=color:#bd93f9>1.047</span> },
-</span></span><span style=display:flex><span>        { <span style=color:#bd93f9>1.237</span>, <span style=color:#bd93f9>0.460</span>, <span style=color:#bd93f9>1.570</span> }
+</span></span><span style=display:flex><span><span style=color:#2b91af>int</span> main() {
+</span></span><span style=display:flex><span>    <span style=color:green>// 示例输入数据（需根据实际情况填写）
+</span></span></span><span style=display:flex><span><span style=color:green></span>    <span style=color:green>// 假设有 n 次测量，每次给定测向站位置 (lambda_i, phi_i) 和方位 theta_i
+</span></span></span><span style=display:flex><span><span style=color:green></span>    std::vector&lt;Measurement&gt; measurements = {
+</span></span><span style=display:flex><span>        <span style=color:green>// 示例数据，请根据实际情况修改
+</span></span></span><span style=display:flex><span><span style=color:green></span>        { 1.234, 0.456, 0.523 },
+</span></span><span style=display:flex><span>        { 1.235, 0.457, 1.047 },
+</span></span><span style=display:flex><span>        { 1.237, 0.460, 1.570 }
 </span></span><span style=display:flex><span>    };
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    <span style=color:#8be9fd>int</span> n <span style=color:#ff79c6>=</span> <span style=color:#ff79c6>static_cast</span><span style=color:#ff79c6>&lt;</span><span style=color:#8be9fd>int</span><span style=color:#ff79c6>&gt;</span>(measurements.size());
-</span></span><span style=display:flex><span>    <span style=color:#ff79c6>if</span> (n <span style=color:#ff79c6>&lt;</span> <span style=color:#bd93f9>2</span>) {
-</span></span><span style=display:flex><span>        std<span style=color:#ff79c6>::</span>cerr <span style=color:#ff79c6>&lt;&lt;</span> <span style=color:#f1fa8c>&#34;至少需要两组测向数据才能求解！&#34;</span> <span style=color:#ff79c6>&lt;&lt;</span> std<span style=color:#ff79c6>::</span>endl;
-</span></span><span style=display:flex><span>        <span style=color:#ff79c6>return</span> <span style=color:#ff79c6>-</span><span style=color:#bd93f9>1</span>;
+</span></span><span style=display:flex><span>    <span style=color:#2b91af>int</span> n = <span style=color:#00f>static_cast</span>&lt;<span style=color:#2b91af>int</span>&gt;(measurements.size());
+</span></span><span style=display:flex><span>    <span style=color:#00f>if</span> (n &lt; 2) {
+</span></span><span style=display:flex><span>        std::cerr &lt;&lt; <span style=color:#a31515>&#34;至少需要两组测向数据才能求解！&#34;</span> &lt;&lt; std::endl;
+</span></span><span style=display:flex><span>        <span style=color:#00f>return</span> -1;
 </span></span><span style=display:flex><span>    }
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    <span style=color:#6272a4>// 构建线性方程组 A * X = C
-</span></span></span><span style=display:flex><span><span style=color:#6272a4></span>    <span style=color:#6272a4>// 对应关系：
-</span></span></span><span style=display:flex><span><span style=color:#6272a4></span>    <span style=color:#6272a4>// A的每行: [cos(phi_i)*cos(theta_i), -sin(theta_i)]
-</span></span></span><span style=display:flex><span><span style=color:#6272a4></span>    <span style=color:#6272a4>// C的每行: lambda_i * cos(phi_i)*cos(theta_i) - phi_i*sin(theta_i)
-</span></span></span><span style=display:flex><span><span style=color:#6272a4></span>    <span style=color:#6272a4>//
-</span></span></span><span style=display:flex><span><span style=color:#6272a4></span>    <span style=color:#6272a4>// X = [lambda_e, phi_e]^T 是未知量。
-</span></span></span><span style=display:flex><span><span style=color:#6272a4></span>
-</span></span><span style=display:flex><span>    Eigen<span style=color:#ff79c6>::</span>MatrixXd A(n, <span style=color:#bd93f9>2</span>);
-</span></span><span style=display:flex><span>    Eigen<span style=color:#ff79c6>::</span>VectorXd C(n);
+</span></span><span style=display:flex><span>    <span style=color:green>// 构建线性方程组 A * X = C
+</span></span></span><span style=display:flex><span><span style=color:green></span>    <span style=color:green>// 对应关系：
+</span></span></span><span style=display:flex><span><span style=color:green></span>    <span style=color:green>// A的每行: [cos(phi_i)*cos(theta_i), -sin(theta_i)]
+</span></span></span><span style=display:flex><span><span style=color:green></span>    <span style=color:green>// C的每行: lambda_i * cos(phi_i)*cos(theta_i) - phi_i*sin(theta_i)
+</span></span></span><span style=display:flex><span><span style=color:green></span>    <span style=color:green>//
+</span></span></span><span style=display:flex><span><span style=color:green></span>    <span style=color:green>// X = [lambda_e, phi_e]^T 是未知量。
+</span></span></span><span style=display:flex><span><span style=color:green></span>
+</span></span><span style=display:flex><span>    Eigen::MatrixXd A(n, 2);
+</span></span><span style=display:flex><span>    Eigen::VectorXd C(n);
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    <span style=color:#ff79c6>for</span> (<span style=color:#8be9fd>int</span> i <span style=color:#ff79c6>=</span> <span style=color:#bd93f9>0</span>; i <span style=color:#ff79c6>&lt;</span> n; <span style=color:#ff79c6>++</span>i) {
-</span></span><span style=display:flex><span>        <span style=color:#8be9fd>double</span> lambda_i <span style=color:#ff79c6>=</span> measurements[i].lambda_i;
-</span></span><span style=display:flex><span>        <span style=color:#8be9fd>double</span> phi_i    <span style=color:#ff79c6>=</span> measurements[i].phi_i;
-</span></span><span style=display:flex><span>        <span style=color:#8be9fd>double</span> theta_i  <span style=color:#ff79c6>=</span> measurements[i].theta_i;
+</span></span><span style=display:flex><span>    <span style=color:#00f>for</span> (<span style=color:#2b91af>int</span> i = 0; i &lt; n; ++i) {
+</span></span><span style=display:flex><span>        <span style=color:#2b91af>double</span> lambda_i = measurements[i].lambda_i;
+</span></span><span style=display:flex><span>        <span style=color:#2b91af>double</span> phi_i    = measurements[i].phi_i;
+</span></span><span style=display:flex><span>        <span style=color:#2b91af>double</span> theta_i  = measurements[i].theta_i;
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>        <span style=color:#8be9fd>double</span> a_i <span style=color:#ff79c6>=</span> std<span style=color:#ff79c6>::</span>cos(phi_i)<span style=color:#ff79c6>*</span>std<span style=color:#ff79c6>::</span>cos(theta_i);
-</span></span><span style=display:flex><span>        <span style=color:#8be9fd>double</span> b_i <span style=color:#ff79c6>=</span> <span style=color:#ff79c6>-</span>std<span style=color:#ff79c6>::</span>sin(theta_i);
-</span></span><span style=display:flex><span>        <span style=color:#8be9fd>double</span> c_i <span style=color:#ff79c6>=</span> lambda_i <span style=color:#ff79c6>*</span> std<span style=color:#ff79c6>::</span>cos(phi_i)<span style=color:#ff79c6>*</span>std<span style=color:#ff79c6>::</span>cos(theta_i) <span style=color:#ff79c6>-</span> phi_i <span style=color:#ff79c6>*</span> std<span style=color:#ff79c6>::</span>sin(theta_i);
+</span></span><span style=display:flex><span>        <span style=color:#2b91af>double</span> a_i = std::cos(phi_i)*std::cos(theta_i);
+</span></span><span style=display:flex><span>        <span style=color:#2b91af>double</span> b_i = -std::sin(theta_i);
+</span></span><span style=display:flex><span>        <span style=color:#2b91af>double</span> c_i = lambda_i * std::cos(phi_i)*std::cos(theta_i) - phi_i * std::sin(theta_i);
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>        A(i, <span style=color:#bd93f9>0</span>) <span style=color:#ff79c6>=</span> a_i;
-</span></span><span style=display:flex><span>        A(i, <span style=color:#bd93f9>1</span>) <span style=color:#ff79c6>=</span> b_i;
-</span></span><span style=display:flex><span>        C(i)    <span style=color:#ff79c6>=</span> c_i;
+</span></span><span style=display:flex><span>        A(i, 0) = a_i;
+</span></span><span style=display:flex><span>        A(i, 1) = b_i;
+</span></span><span style=display:flex><span>        C(i)    = c_i;
 </span></span><span style=display:flex><span>    }
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    <span style=color:#6272a4>// 当 n=2 时可以直接 A.inverse()*C 求解
-</span></span></span><span style=display:flex><span><span style=color:#6272a4></span>    <span style=color:#6272a4>// 当 n&gt;2 时，需要使用最小二乘求解，即 (A^T A)X = A^T C
-</span></span></span><span style=display:flex><span><span style=color:#6272a4></span>    <span style=color:#6272a4>// 使用Eigen提供的最小二乘求解器
-</span></span></span><span style=display:flex><span><span style=color:#6272a4></span>    Eigen<span style=color:#ff79c6>::</span>VectorXd X;
+</span></span><span style=display:flex><span>    <span style=color:green>// 当 n=2 时可以直接 A.inverse()*C 求解
+</span></span></span><span style=display:flex><span><span style=color:green></span>    <span style=color:green>// 当 n&gt;2 时，需要使用最小二乘求解，即 (A^T A)X = A^T C
+</span></span></span><span style=display:flex><span><span style=color:green></span>    <span style=color:green>// 使用Eigen提供的最小二乘求解器
+</span></span></span><span style=display:flex><span><span style=color:green></span>    Eigen::VectorXd X;
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    <span style=color:#ff79c6>if</span> (n <span style=color:#ff79c6>==</span> <span style=color:#bd93f9>2</span>) {
-</span></span><span style=display:flex><span>        <span style=color:#6272a4>// 2x2可直接求逆
-</span></span></span><span style=display:flex><span><span style=color:#6272a4></span>        Eigen<span style=color:#ff79c6>::</span>Matrix2d A2;
-</span></span><span style=display:flex><span>        Eigen<span style=color:#ff79c6>::</span>Vector2d C2;
-</span></span><span style=display:flex><span>        A2 <span style=color:#ff79c6>&lt;&lt;</span> A(<span style=color:#bd93f9>0</span>,<span style=color:#bd93f9>0</span>), A(<span style=color:#bd93f9>0</span>,<span style=color:#bd93f9>1</span>),
-</span></span><span style=display:flex><span>              A(<span style=color:#bd93f9>1</span>,<span style=color:#bd93f9>0</span>), A(<span style=color:#bd93f9>1</span>,<span style=color:#bd93f9>1</span>);
-</span></span><span style=display:flex><span>        C2 <span style=color:#ff79c6>&lt;&lt;</span> C(<span style=color:#bd93f9>0</span>), C(<span style=color:#bd93f9>1</span>);
-</span></span><span style=display:flex><span>        X <span style=color:#ff79c6>=</span> A2.inverse() <span style=color:#ff79c6>*</span> C2;
-</span></span><span style=display:flex><span>    } <span style=color:#ff79c6>else</span> {
-</span></span><span style=display:flex><span>        <span style=color:#6272a4>// n &gt; 2，用最小二乘法
-</span></span></span><span style=display:flex><span><span style=color:#6272a4></span>        <span style=color:#6272a4>// 正规方程: X = (A^T A)^{-1} A^T C
-</span></span></span><span style=display:flex><span><span style=color:#6272a4></span>        <span style=color:#6272a4>// 或直接使用Eigen的colPivHouseholderQr等分解进行求解
-</span></span></span><span style=display:flex><span><span style=color:#6272a4></span>        X <span style=color:#ff79c6>=</span> (A.transpose() <span style=color:#ff79c6>*</span> A).ldlt().solve(A.transpose() <span style=color:#ff79c6>*</span> C);
+</span></span><span style=display:flex><span>    <span style=color:#00f>if</span> (n == 2) {
+</span></span><span style=display:flex><span>        <span style=color:green>// 2x2可直接求逆
+</span></span></span><span style=display:flex><span><span style=color:green></span>        Eigen::Matrix2d A2;
+</span></span><span style=display:flex><span>        Eigen::Vector2d C2;
+</span></span><span style=display:flex><span>        A2 &lt;&lt; A(0,0), A(0,1),
+</span></span><span style=display:flex><span>              A(1,0), A(1,1);
+</span></span><span style=display:flex><span>        C2 &lt;&lt; C(0), C(1);
+</span></span><span style=display:flex><span>        X = A2.inverse() * C2;
+</span></span><span style=display:flex><span>    } <span style=color:#00f>else</span> {
+</span></span><span style=display:flex><span>        <span style=color:green>// n &gt; 2，用最小二乘法
+</span></span></span><span style=display:flex><span><span style=color:green></span>        <span style=color:green>// 正规方程: X = (A^T A)^{-1} A^T C
+</span></span></span><span style=display:flex><span><span style=color:green></span>        <span style=color:green>// 或直接使用Eigen的colPivHouseholderQr等分解进行求解
+</span></span></span><span style=display:flex><span><span style=color:green></span>        X = (A.transpose() * A).ldlt().solve(A.transpose() * C);
 </span></span><span style=display:flex><span>    }
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    <span style=color:#8be9fd>double</span> lambda_e <span style=color:#ff79c6>=</span> X(<span style=color:#bd93f9>0</span>); <span style=color:#6272a4>// 求解出的辐射源经度
-</span></span></span><span style=display:flex><span><span style=color:#6272a4></span>    <span style=color:#8be9fd>double</span> phi_e    <span style=color:#ff79c6>=</span> X(<span style=color:#bd93f9>1</span>); <span style=color:#6272a4>// 求解出的辐射源纬度
-</span></span></span><span style=display:flex><span><span style=color:#6272a4></span>
-</span></span><span style=display:flex><span>    <span style=color:#6272a4>// 输出结果
-</span></span></span><span style=display:flex><span><span style=color:#6272a4></span>    std<span style=color:#ff79c6>::</span>cout <span style=color:#ff79c6>&lt;&lt;</span> <span style=color:#f1fa8c>&#34;求解得到的辐射源坐标：&#34;</span> <span style=color:#ff79c6>&lt;&lt;</span> std<span style=color:#ff79c6>::</span>endl;
-</span></span><span style=display:flex><span>    std<span style=color:#ff79c6>::</span>cout <span style=color:#ff79c6>&lt;&lt;</span> <span style=color:#f1fa8c>&#34;lambda_e = &#34;</span> <span style=color:#ff79c6>&lt;&lt;</span> lambda_e <span style=color:#ff79c6>&lt;&lt;</span> <span style=color:#f1fa8c>&#34; (弧度)&#34;</span> <span style=color:#ff79c6>&lt;&lt;</span> std<span style=color:#ff79c6>::</span>endl;
-</span></span><span style=display:flex><span>    std<span style=color:#ff79c6>::</span>cout <span style=color:#ff79c6>&lt;&lt;</span> <span style=color:#f1fa8c>&#34;phi_e    = &#34;</span> <span style=color:#ff79c6>&lt;&lt;</span> phi_e    <span style=color:#ff79c6>&lt;&lt;</span> <span style=color:#f1fa8c>&#34; (弧度)&#34;</span> <span style=color:#ff79c6>&lt;&lt;</span> std<span style=color:#ff79c6>::</span>endl;
+</span></span><span style=display:flex><span>    <span style=color:#2b91af>double</span> lambda_e = X(0); <span style=color:green>// 求解出的辐射源经度
+</span></span></span><span style=display:flex><span><span style=color:green></span>    <span style=color:#2b91af>double</span> phi_e    = X(1); <span style=color:green>// 求解出的辐射源纬度
+</span></span></span><span style=display:flex><span><span style=color:green></span>
+</span></span><span style=display:flex><span>    <span style=color:green>// 输出结果
+</span></span></span><span style=display:flex><span><span style=color:green></span>    std::cout &lt;&lt; <span style=color:#a31515>&#34;求解得到的辐射源坐标：&#34;</span> &lt;&lt; std::endl;
+</span></span><span style=display:flex><span>    std::cout &lt;&lt; <span style=color:#a31515>&#34;lambda_e = &#34;</span> &lt;&lt; lambda_e &lt;&lt; <span style=color:#a31515>&#34; (弧度)&#34;</span> &lt;&lt; std::endl;
+</span></span><span style=display:flex><span>    std::cout &lt;&lt; <span style=color:#a31515>&#34;phi_e    = &#34;</span> &lt;&lt; phi_e    &lt;&lt; <span style=color:#a31515>&#34; (弧度)&#34;</span> &lt;&lt; std::endl;
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    <span style=color:#6272a4>// 若需要，可将弧度转换为度
-</span></span></span><span style=display:flex><span><span style=color:#6272a4></span>    <span style=color:#8be9fd>double</span> lambda_e_deg <span style=color:#ff79c6>=</span> lambda_e <span style=color:#ff79c6>*</span> <span style=color:#bd93f9>180.0</span> <span style=color:#ff79c6>/</span> M_PI;
-</span></span><span style=display:flex><span>    <span style=color:#8be9fd>double</span> phi_e_deg <span style=color:#ff79c6>=</span> phi_e <span style=color:#ff79c6>*</span> <span style=color:#bd93f9>180.0</span> <span style=color:#ff79c6>/</span> M_PI;
-</span></span><span style=display:flex><span>    std<span style=color:#ff79c6>::</span>cout <span style=color:#ff79c6>&lt;&lt;</span> <span style=color:#f1fa8c>&#34;lambda_e (度) = &#34;</span> <span style=color:#ff79c6>&lt;&lt;</span> lambda_e_deg <span style=color:#ff79c6>&lt;&lt;</span> std<span style=color:#ff79c6>::</span>endl;
-</span></span><span style=display:flex><span>    std<span style=color:#ff79c6>::</span>cout <span style=color:#ff79c6>&lt;&lt;</span> <span style=color:#f1fa8c>&#34;phi_e    (度) = &#34;</span> <span style=color:#ff79c6>&lt;&lt;</span> phi_e_deg  <span style=color:#ff79c6>&lt;&lt;</span> std<span style=color:#ff79c6>::</span>endl;
+</span></span><span style=display:flex><span>    <span style=color:green>// 若需要，可将弧度转换为度
+</span></span></span><span style=display:flex><span><span style=color:green></span>    <span style=color:#2b91af>double</span> lambda_e_deg = lambda_e * 180.0 / M_PI;
+</span></span><span style=display:flex><span>    <span style=color:#2b91af>double</span> phi_e_deg = phi_e * 180.0 / M_PI;
+</span></span><span style=display:flex><span>    std::cout &lt;&lt; <span style=color:#a31515>&#34;lambda_e (度) = &#34;</span> &lt;&lt; lambda_e_deg &lt;&lt; std::endl;
+</span></span><span style=display:flex><span>    std::cout &lt;&lt; <span style=color:#a31515>&#34;phi_e    (度) = &#34;</span> &lt;&lt; phi_e_deg  &lt;&lt; std::endl;
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    <span style=color:#ff79c6>return</span> <span style=color:#bd93f9>0</span>;
-</span></span><span style=display:flex><span>}</span></span></code></pre></div><p><strong>说明</strong>：</p><ul><li>在上述代码中，我们假设输入的 $\lambda_i, \phi_i, \theta_i$ 已经是弧度制。如果输入为度，需要先转换为弧度。</li><li>当 $n=2$ 时，是标准的 2x2 方程组，可直接通过逆矩阵求解。</li><li>当 $n>2$ 时，为过定方程组，采用最小二乘方法（正规方程或QR分解等方法）来求解。上例使用 <code>(A.transpose() * A).ldlt().solve(A.transpose() * C)</code> 来求最小二乘解。</li><li>实际中还应考虑误差和数值稳定性，可以使用更稳定的分解方法，如 <code>A.colPivHouseholderQr().solve(C)</code> 来得到最小二乘解。</li><li>根据需求可以对输入和输出进行更严格的检查和格式化。</li></ul><h3 id=更稳定分解的版本>更稳定分解的版本</h3><p>下面给出采用更稳定的 <code>colPivHouseholderQr()</code> 分解进行求解的示例代码。同样使用 Eigen 库来处理线性代数运算。在此示例中，只需稍作修改，通过 <code>A.colPivHouseholderQr().solve(C)</code> 来得到最小二乘解。</p><p><strong>注意事项：</strong></p><ul><li>输入输出与前例相同。</li><li>同样假设输入的坐标和角度已转换为弧度。</li><li>当有两组数据（n=2）时仍可直接求逆解，但建议统一使用QR分解求解，因其对数值稳定性更好。</li></ul><div class="highlight wrap-code" dir=auto><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-cpp data-lang=cpp><span style=display:flex><span><span style=color:#ff79c6>#include</span> <span style=color:#ff79c6>&lt;iostream&gt;</span><span style=color:#ff79c6>
-</span></span></span><span style=display:flex><span><span style=color:#ff79c6>#include</span> <span style=color:#ff79c6>&lt;vector&gt;</span><span style=color:#ff79c6>
-</span></span></span><span style=display:flex><span><span style=color:#ff79c6>#include</span> <span style=color:#ff79c6>&lt;Eigen/Dense&gt;</span><span style=color:#ff79c6>
-</span></span></span><span style=display:flex><span><span style=color:#ff79c6>#include</span> <span style=color:#ff79c6>&lt;cmath&gt;</span><span style=color:#ff79c6>
-</span></span></span><span style=display:flex><span><span style=color:#ff79c6></span>
-</span></span><span style=display:flex><span><span style=color:#6272a4>// 测量数据结构
-</span></span></span><span style=display:flex><span><span style=color:#6272a4></span><span style=color:#ff79c6>struct</span> <span style=color:#50fa7b>Measurement</span> {
-</span></span><span style=display:flex><span>    <span style=color:#8be9fd>double</span> lambda_i; <span style=color:#6272a4>// 测向站经度 (弧度)
-</span></span></span><span style=display:flex><span><span style=color:#6272a4></span>    <span style=color:#8be9fd>double</span> phi_i;    <span style=color:#6272a4>// 测向站纬度 (弧度)
-</span></span></span><span style=display:flex><span><span style=color:#6272a4></span>    <span style=color:#8be9fd>double</span> theta_i;  <span style=color:#6272a4>// 测向方位角 (弧度)
-</span></span></span><span style=display:flex><span><span style=color:#6272a4></span>};
+</span></span><span style=display:flex><span>    <span style=color:#00f>return</span> 0;
+</span></span><span style=display:flex><span>}</span></span></code></pre></div><p><strong>说明</strong>：</p><ul><li>在上述代码中，我们假设输入的 $\lambda_i, \phi_i, \theta_i$ 已经是弧度制。如果输入为度，需要先转换为弧度。</li><li>当 $n=2$ 时，是标准的 2x2 方程组，可直接通过逆矩阵求解。</li><li>当 $n>2$ 时，为过定方程组，采用最小二乘方法（正规方程或QR分解等方法）来求解。上例使用 <code>(A.transpose() * A).ldlt().solve(A.transpose() * C)</code> 来求最小二乘解。</li><li>实际中还应考虑误差和数值稳定性，可以使用更稳定的分解方法，如 <code>A.colPivHouseholderQr().solve(C)</code> 来得到最小二乘解。</li><li>根据需求可以对输入和输出进行更严格的检查和格式化。</li></ul><h3 id=更稳定分解的版本>更稳定分解的版本</h3><p>下面给出采用更稳定的 <code>colPivHouseholderQr()</code> 分解进行求解的示例代码。同样使用 Eigen 库来处理线性代数运算。在此示例中，只需稍作修改，通过 <code>A.colPivHouseholderQr().solve(C)</code> 来得到最小二乘解。</p><p><strong>注意事项：</strong></p><ul><li>输入输出与前例相同。</li><li>同样假设输入的坐标和角度已转换为弧度。</li><li>当有两组数据（n=2）时仍可直接求逆解，但建议统一使用QR分解求解，因其对数值稳定性更好。</li></ul><div class="highlight wrap-code" dir=auto><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-cpp data-lang=cpp><span style=display:flex><span><span style=color:#00f>#include</span> <span style=color:#00f>&lt;iostream&gt;</span><span style=color:#00f>
+</span></span></span><span style=display:flex><span><span style=color:#00f>#include</span> <span style=color:#00f>&lt;vector&gt;</span><span style=color:#00f>
+</span></span></span><span style=display:flex><span><span style=color:#00f>#include</span> <span style=color:#00f>&lt;Eigen/Dense&gt;</span><span style=color:#00f>
+</span></span></span><span style=display:flex><span><span style=color:#00f>#include</span> <span style=color:#00f>&lt;cmath&gt;</span><span style=color:#00f>
+</span></span></span><span style=display:flex><span><span style=color:#00f></span>
+</span></span><span style=display:flex><span><span style=color:green>// 测量数据结构
+</span></span></span><span style=display:flex><span><span style=color:green></span><span style=color:#00f>struct</span> <span style=color:#2b91af>Measurement</span> {
+</span></span><span style=display:flex><span>    <span style=color:#2b91af>double</span> lambda_i; <span style=color:green>// 测向站经度 (弧度)
+</span></span></span><span style=display:flex><span><span style=color:green></span>    <span style=color:#2b91af>double</span> phi_i;    <span style=color:green>// 测向站纬度 (弧度)
+</span></span></span><span style=display:flex><span><span style=color:green></span>    <span style=color:#2b91af>double</span> theta_i;  <span style=color:green>// 测向方位角 (弧度)
+</span></span></span><span style=display:flex><span><span style=color:green></span>};
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#8be9fd>int</span> <span style=color:#50fa7b>main</span>() {
-</span></span><span style=display:flex><span>    <span style=color:#6272a4>// 示例测量数据，需根据实际情况修改
-</span></span></span><span style=display:flex><span><span style=color:#6272a4></span>    std<span style=color:#ff79c6>::</span>vector<span style=color:#ff79c6>&lt;</span>Measurement<span style=color:#ff79c6>&gt;</span> measurements <span style=color:#ff79c6>=</span> {
-</span></span><span style=display:flex><span>        { <span style=color:#bd93f9>1.234</span>, <span style=color:#bd93f9>0.456</span>, <span style=color:#bd93f9>0.523</span> },
-</span></span><span style=display:flex><span>        { <span style=color:#bd93f9>1.235</span>, <span style=color:#bd93f9>0.457</span>, <span style=color:#bd93f9>1.047</span> },
-</span></span><span style=display:flex><span>        { <span style=color:#bd93f9>1.237</span>, <span style=color:#bd93f9>0.460</span>, <span style=color:#bd93f9>1.570</span> }
+</span></span><span style=display:flex><span><span style=color:#2b91af>int</span> main() {
+</span></span><span style=display:flex><span>    <span style=color:green>// 示例测量数据，需根据实际情况修改
+</span></span></span><span style=display:flex><span><span style=color:green></span>    std::vector&lt;Measurement&gt; measurements = {
+</span></span><span style=display:flex><span>        { 1.234, 0.456, 0.523 },
+</span></span><span style=display:flex><span>        { 1.235, 0.457, 1.047 },
+</span></span><span style=display:flex><span>        { 1.237, 0.460, 1.570 }
 </span></span><span style=display:flex><span>    };
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    <span style=color:#8be9fd>int</span> n <span style=color:#ff79c6>=</span> <span style=color:#ff79c6>static_cast</span><span style=color:#ff79c6>&lt;</span><span style=color:#8be9fd>int</span><span style=color:#ff79c6>&gt;</span>(measurements.size());
-</span></span><span style=display:flex><span>    <span style=color:#ff79c6>if</span> (n <span style=color:#ff79c6>&lt;</span> <span style=color:#bd93f9>2</span>) {
-</span></span><span style=display:flex><span>        std<span style=color:#ff79c6>::</span>cerr <span style=color:#ff79c6>&lt;&lt;</span> <span style=color:#f1fa8c>&#34;至少需要两组测向数据才能求解！&#34;</span> <span style=color:#ff79c6>&lt;&lt;</span> std<span style=color:#ff79c6>::</span>endl;
-</span></span><span style=display:flex><span>        <span style=color:#ff79c6>return</span> <span style=color:#ff79c6>-</span><span style=color:#bd93f9>1</span>;
+</span></span><span style=display:flex><span>    <span style=color:#2b91af>int</span> n = <span style=color:#00f>static_cast</span>&lt;<span style=color:#2b91af>int</span>&gt;(measurements.size());
+</span></span><span style=display:flex><span>    <span style=color:#00f>if</span> (n &lt; 2) {
+</span></span><span style=display:flex><span>        std::cerr &lt;&lt; <span style=color:#a31515>&#34;至少需要两组测向数据才能求解！&#34;</span> &lt;&lt; std::endl;
+</span></span><span style=display:flex><span>        <span style=color:#00f>return</span> -1;
 </span></span><span style=display:flex><span>    }
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    Eigen<span style=color:#ff79c6>::</span>MatrixXd A(n, <span style=color:#bd93f9>2</span>);
-</span></span><span style=display:flex><span>    Eigen<span style=color:#ff79c6>::</span>VectorXd C(n);
+</span></span><span style=display:flex><span>    Eigen::MatrixXd A(n, 2);
+</span></span><span style=display:flex><span>    Eigen::VectorXd C(n);
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    <span style=color:#6272a4>// 构建方程组 A * X = C
-</span></span></span><span style=display:flex><span><span style=color:#6272a4></span>    <span style=color:#6272a4>// A的每行对应: [cos(phi_i)*cos(theta_i), -sin(theta_i)]
-</span></span></span><span style=display:flex><span><span style=color:#6272a4></span>    <span style=color:#6272a4>// C的每行对应: lambda_i*cos(phi_i)*cos(theta_i) - phi_i*sin(theta_i)
-</span></span></span><span style=display:flex><span><span style=color:#6272a4></span>    <span style=color:#ff79c6>for</span> (<span style=color:#8be9fd>int</span> i <span style=color:#ff79c6>=</span> <span style=color:#bd93f9>0</span>; i <span style=color:#ff79c6>&lt;</span> n; <span style=color:#ff79c6>++</span>i) {
-</span></span><span style=display:flex><span>        <span style=color:#8be9fd>double</span> lambda_i <span style=color:#ff79c6>=</span> measurements[i].lambda_i;
-</span></span><span style=display:flex><span>        <span style=color:#8be9fd>double</span> phi_i    <span style=color:#ff79c6>=</span> measurements[i].phi_i;
-</span></span><span style=display:flex><span>        <span style=color:#8be9fd>double</span> theta_i  <span style=color:#ff79c6>=</span> measurements[i].theta_i;
+</span></span><span style=display:flex><span>    <span style=color:green>// 构建方程组 A * X = C
+</span></span></span><span style=display:flex><span><span style=color:green></span>    <span style=color:green>// A的每行对应: [cos(phi_i)*cos(theta_i), -sin(theta_i)]
+</span></span></span><span style=display:flex><span><span style=color:green></span>    <span style=color:green>// C的每行对应: lambda_i*cos(phi_i)*cos(theta_i) - phi_i*sin(theta_i)
+</span></span></span><span style=display:flex><span><span style=color:green></span>    <span style=color:#00f>for</span> (<span style=color:#2b91af>int</span> i = 0; i &lt; n; ++i) {
+</span></span><span style=display:flex><span>        <span style=color:#2b91af>double</span> lambda_i = measurements[i].lambda_i;
+</span></span><span style=display:flex><span>        <span style=color:#2b91af>double</span> phi_i    = measurements[i].phi_i;
+</span></span><span style=display:flex><span>        <span style=color:#2b91af>double</span> theta_i  = measurements[i].theta_i;
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>        <span style=color:#8be9fd>double</span> a_i <span style=color:#ff79c6>=</span> std<span style=color:#ff79c6>::</span>cos(phi_i)<span style=color:#ff79c6>*</span>std<span style=color:#ff79c6>::</span>cos(theta_i);
-</span></span><span style=display:flex><span>        <span style=color:#8be9fd>double</span> b_i <span style=color:#ff79c6>=</span> <span style=color:#ff79c6>-</span>std<span style=color:#ff79c6>::</span>sin(theta_i);
-</span></span><span style=display:flex><span>        <span style=color:#8be9fd>double</span> c_i <span style=color:#ff79c6>=</span> lambda_i <span style=color:#ff79c6>*</span> std<span style=color:#ff79c6>::</span>cos(phi_i)<span style=color:#ff79c6>*</span>std<span style=color:#ff79c6>::</span>cos(theta_i) <span style=color:#ff79c6>-</span> phi_i <span style=color:#ff79c6>*</span> std<span style=color:#ff79c6>::</span>sin(theta_i);
+</span></span><span style=display:flex><span>        <span style=color:#2b91af>double</span> a_i = std::cos(phi_i)*std::cos(theta_i);
+</span></span><span style=display:flex><span>        <span style=color:#2b91af>double</span> b_i = -std::sin(theta_i);
+</span></span><span style=display:flex><span>        <span style=color:#2b91af>double</span> c_i = lambda_i * std::cos(phi_i)*std::cos(theta_i) - phi_i * std::sin(theta_i);
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>        A(i, <span style=color:#bd93f9>0</span>) <span style=color:#ff79c6>=</span> a_i;
-</span></span><span style=display:flex><span>        A(i, <span style=color:#bd93f9>1</span>) <span style=color:#ff79c6>=</span> b_i;
-</span></span><span style=display:flex><span>        C(i)    <span style=color:#ff79c6>=</span> c_i;
+</span></span><span style=display:flex><span>        A(i, 0) = a_i;
+</span></span><span style=display:flex><span>        A(i, 1) = b_i;
+</span></span><span style=display:flex><span>        C(i)    = c_i;
 </span></span><span style=display:flex><span>    }
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    <span style=color:#6272a4>// 使用更加数值稳定的分解法求解最小二乘问题
-</span></span></span><span style=display:flex><span><span style=color:#6272a4></span>    Eigen<span style=color:#ff79c6>::</span>VectorXd X <span style=color:#ff79c6>=</span> A.colPivHouseholderQr().solve(C);
+</span></span><span style=display:flex><span>    <span style=color:green>// 使用更加数值稳定的分解法求解最小二乘问题
+</span></span></span><span style=display:flex><span><span style=color:green></span>    Eigen::VectorXd X = A.colPivHouseholderQr().solve(C);
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    <span style=color:#8be9fd>double</span> lambda_e <span style=color:#ff79c6>=</span> X(<span style=color:#bd93f9>0</span>); <span style=color:#6272a4>// 辐射源经度 (弧度)
-</span></span></span><span style=display:flex><span><span style=color:#6272a4></span>    <span style=color:#8be9fd>double</span> phi_e    <span style=color:#ff79c6>=</span> X(<span style=color:#bd93f9>1</span>); <span style=color:#6272a4>// 辐射源纬度 (弧度)
-</span></span></span><span style=display:flex><span><span style=color:#6272a4></span>
-</span></span><span style=display:flex><span>    std<span style=color:#ff79c6>::</span>cout <span style=color:#ff79c6>&lt;&lt;</span> <span style=color:#f1fa8c>&#34;求解得到的辐射源坐标(弧度)：&#34;</span> <span style=color:#ff79c6>&lt;&lt;</span> std<span style=color:#ff79c6>::</span>endl;
-</span></span><span style=display:flex><span>    std<span style=color:#ff79c6>::</span>cout <span style=color:#ff79c6>&lt;&lt;</span> <span style=color:#f1fa8c>&#34;lambda_e = &#34;</span> <span style=color:#ff79c6>&lt;&lt;</span> lambda_e <span style=color:#ff79c6>&lt;&lt;</span> std<span style=color:#ff79c6>::</span>endl;
-</span></span><span style=display:flex><span>    std<span style=color:#ff79c6>::</span>cout <span style=color:#ff79c6>&lt;&lt;</span> <span style=color:#f1fa8c>&#34;phi_e    = &#34;</span> <span style=color:#ff79c6>&lt;&lt;</span> phi_e <span style=color:#ff79c6>&lt;&lt;</span> std<span style=color:#ff79c6>::</span>endl;
+</span></span><span style=display:flex><span>    <span style=color:#2b91af>double</span> lambda_e = X(0); <span style=color:green>// 辐射源经度 (弧度)
+</span></span></span><span style=display:flex><span><span style=color:green></span>    <span style=color:#2b91af>double</span> phi_e    = X(1); <span style=color:green>// 辐射源纬度 (弧度)
+</span></span></span><span style=display:flex><span><span style=color:green></span>
+</span></span><span style=display:flex><span>    std::cout &lt;&lt; <span style=color:#a31515>&#34;求解得到的辐射源坐标(弧度)：&#34;</span> &lt;&lt; std::endl;
+</span></span><span style=display:flex><span>    std::cout &lt;&lt; <span style=color:#a31515>&#34;lambda_e = &#34;</span> &lt;&lt; lambda_e &lt;&lt; std::endl;
+</span></span><span style=display:flex><span>    std::cout &lt;&lt; <span style=color:#a31515>&#34;phi_e    = &#34;</span> &lt;&lt; phi_e &lt;&lt; std::endl;
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    <span style=color:#6272a4>// 若需要度制输出
-</span></span></span><span style=display:flex><span><span style=color:#6272a4></span>    <span style=color:#8be9fd>double</span> lambda_e_deg <span style=color:#ff79c6>=</span> lambda_e <span style=color:#ff79c6>*</span> <span style=color:#bd93f9>180.0</span> <span style=color:#ff79c6>/</span> M_PI;
-</span></span><span style=display:flex><span>    <span style=color:#8be9fd>double</span> phi_e_deg <span style=color:#ff79c6>=</span> phi_e <span style=color:#ff79c6>*</span> <span style=color:#bd93f9>180.0</span> <span style=color:#ff79c6>/</span> M_PI;
+</span></span><span style=display:flex><span>    <span style=color:green>// 若需要度制输出
+</span></span></span><span style=display:flex><span><span style=color:green></span>    <span style=color:#2b91af>double</span> lambda_e_deg = lambda_e * 180.0 / M_PI;
+</span></span><span style=display:flex><span>    <span style=color:#2b91af>double</span> phi_e_deg = phi_e * 180.0 / M_PI;
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    std<span style=color:#ff79c6>::</span>cout <span style=color:#ff79c6>&lt;&lt;</span> <span style=color:#f1fa8c>&#34;辐射源坐标(度)：&#34;</span> <span style=color:#ff79c6>&lt;&lt;</span> std<span style=color:#ff79c6>::</span>endl;
-</span></span><span style=display:flex><span>    std<span style=color:#ff79c6>::</span>cout <span style=color:#ff79c6>&lt;&lt;</span> <span style=color:#f1fa8c>&#34;lambda_e (deg) = &#34;</span> <span style=color:#ff79c6>&lt;&lt;</span> lambda_e_deg <span style=color:#ff79c6>&lt;&lt;</span> std<span style=color:#ff79c6>::</span>endl;
-</span></span><span style=display:flex><span>    std<span style=color:#ff79c6>::</span>cout <span style=color:#ff79c6>&lt;&lt;</span> <span style=color:#f1fa8c>&#34;phi_e    (deg) = &#34;</span> <span style=color:#ff79c6>&lt;&lt;</span> phi_e_deg <span style=color:#ff79c6>&lt;&lt;</span> std<span style=color:#ff79c6>::</span>endl;
+</span></span><span style=display:flex><span>    std::cout &lt;&lt; <span style=color:#a31515>&#34;辐射源坐标(度)：&#34;</span> &lt;&lt; std::endl;
+</span></span><span style=display:flex><span>    std::cout &lt;&lt; <span style=color:#a31515>&#34;lambda_e (deg) = &#34;</span> &lt;&lt; lambda_e_deg &lt;&lt; std::endl;
+</span></span><span style=display:flex><span>    std::cout &lt;&lt; <span style=color:#a31515>&#34;phi_e    (deg) = &#34;</span> &lt;&lt; phi_e_deg &lt;&lt; std::endl;
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    <span style=color:#ff79c6>return</span> <span style=color:#bd93f9>0</span>;
-</span></span><span style=display:flex><span>}</span></span></code></pre></div><p>通过上述修改，当测向数据点多于2个时，<code>colPivHouseholderQr()</code> 的方法能够在一定程度上提高数值稳定性和求解精度，对于实际中不适定或近似共线的情况能提供更稳定的结果。</p><h2 id=无源侦察测向定位计算器>无源侦察测向定位计算器</h2><p><a href=https://claude.site/artifacts/c9ff1d40-3bad-4001-97f7-f2c2030d30a6 rel=external target=_blank>https://claude.site/artifacts/c9ff1d40-3bad-4001-97f7-f2c2030d30a6</a></p><ul><li>其中辐射源位置用于与测向定位后结果做对比，使用了球面距离计算公式（Haversine公式）来计算两个经纬度点之间的距离。计算时使用地球平均半径为 6371000 米。</li><li>在结果显示部分增加了两个新的区域：<ul><li>&ldquo;计算位置到各测向站的距离&rdquo;：显示计算出的辐射源位置到每个测向站的距离</li><li>&ldquo;测向站之间的距离&rdquo;：显示各个测向站之间的距离</li></ul></li></ul><div class="highlight wrap-code" dir=auto><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-tsx data-lang=tsx><span style=display:flex><span><span style=color:#ff79c6>import</span> React, { useState } <span style=color:#ff79c6>from</span> <span style=color:#f1fa8c>&#39;react&#39;</span>;
-</span></span><span style=display:flex><span><span style=color:#ff79c6>import</span> { Card, CardHeader, CardTitle, CardContent } <span style=color:#ff79c6>from</span> <span style=color:#f1fa8c>&#39;@/components/ui/card&#39;</span>;
-</span></span><span style=display:flex><span><span style=color:#ff79c6>import</span> { Button } <span style=color:#ff79c6>from</span> <span style=color:#f1fa8c>&#39;@/components/ui/button&#39;</span>;
-</span></span><span style=display:flex><span><span style=color:#ff79c6>import</span> { Input } <span style=color:#ff79c6>from</span> <span style=color:#f1fa8c>&#39;@/components/ui/input&#39;</span>;
+</span></span><span style=display:flex><span>    <span style=color:#00f>return</span> 0;
+</span></span><span style=display:flex><span>}</span></span></code></pre></div><p>通过上述修改，当测向数据点多于2个时，<code>colPivHouseholderQr()</code> 的方法能够在一定程度上提高数值稳定性和求解精度，对于实际中不适定或近似共线的情况能提供更稳定的结果。</p><h2 id=无源侦察测向定位计算器>无源侦察测向定位计算器</h2><p><a href=https://claude.site/artifacts/c9ff1d40-3bad-4001-97f7-f2c2030d30a6 rel=external target=_blank>https://claude.site/artifacts/c9ff1d40-3bad-4001-97f7-f2c2030d30a6</a></p><ul><li>其中辐射源位置用于与测向定位后结果做对比，使用了球面距离计算公式（Haversine公式）来计算两个经纬度点之间的距离。计算时使用地球平均半径为 6371000 米。</li><li>在结果显示部分增加了两个新的区域：<ul><li>&ldquo;计算位置到各测向站的距离&rdquo;：显示计算出的辐射源位置到每个测向站的距离</li><li>&ldquo;测向站之间的距离&rdquo;：显示各个测向站之间的距离</li></ul></li></ul><div class="highlight wrap-code" dir=auto><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-tsx data-lang=tsx><span style=display:flex><span><span style=color:#00f>import</span> React, { useState } <span style=color:#00f>from</span> <span style=color:#a31515>&#39;react&#39;</span>;
+</span></span><span style=display:flex><span><span style=color:#00f>import</span> { Card, CardHeader, CardTitle, CardContent } <span style=color:#00f>from</span> <span style=color:#a31515>&#39;@/components/ui/card&#39;</span>;
+</span></span><span style=display:flex><span><span style=color:#00f>import</span> { Button } <span style=color:#00f>from</span> <span style=color:#a31515>&#39;@/components/ui/button&#39;</span>;
+</span></span><span style=display:flex><span><span style=color:#00f>import</span> { Input } <span style=color:#00f>from</span> <span style=color:#a31515>&#39;@/components/ui/input&#39;</span>;
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#ff79c6>const</span> RadiationCalculator <span style=color:#ff79c6>=</span> () <span style=color:#ff79c6>=&gt;</span> {
-</span></span><span style=display:flex><span>  <span style=color:#ff79c6>const</span> [measurements, setMeasurements] <span style=color:#ff79c6>=</span> useState([
-</span></span><span style=display:flex><span>    { lambda_i<span style=color:#ff79c6>:</span> <span style=color:#f1fa8c>&#39;&#39;</span>, phi_i<span style=color:#ff79c6>:</span> <span style=color:#f1fa8c>&#39;&#39;</span>, theta_i<span style=color:#ff79c6>:</span> <span style=color:#f1fa8c>&#39;&#39;</span> }
+</span></span><span style=display:flex><span><span style=color:#00f>const</span> RadiationCalculator = () =&gt; {
+</span></span><span style=display:flex><span>  <span style=color:#00f>const</span> [measurements, setMeasurements] = useState([
+</span></span><span style=display:flex><span>    { lambda_i: <span style=color:#a31515>&#39;&#39;</span>, phi_i: <span style=color:#a31515>&#39;&#39;</span>, theta_i: <span style=color:#a31515>&#39;&#39;</span> }
 </span></span><span style=display:flex><span>  ]);
-</span></span><span style=display:flex><span>  <span style=color:#ff79c6>const</span> [actualSource, setActualSource] <span style=color:#ff79c6>=</span> useState({
-</span></span><span style=display:flex><span>    lambda_e<span style=color:#ff79c6>:</span> <span style=color:#f1fa8c>&#39;&#39;</span>,
-</span></span><span style=display:flex><span>    phi_e<span style=color:#ff79c6>:</span> <span style=color:#f1fa8c>&#39;&#39;</span>
+</span></span><span style=display:flex><span>  <span style=color:#00f>const</span> [actualSource, setActualSource] = useState({
+</span></span><span style=display:flex><span>    lambda_e: <span style=color:#a31515>&#39;&#39;</span>,
+</span></span><span style=display:flex><span>    phi_e: <span style=color:#a31515>&#39;&#39;</span>
 </span></span><span style=display:flex><span>  });
-</span></span><span style=display:flex><span>  <span style=color:#ff79c6>const</span> [result, setResult] <span style=color:#ff79c6>=</span> useState(<span style=color:#ff79c6>null</span>);
+</span></span><span style=display:flex><span>  <span style=color:#00f>const</span> [result, setResult] = useState(<span style=color:#00f>null</span>);
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>  <span style=color:#6272a4>// 计算两点间的距离（米）
-</span></span></span><span style=display:flex><span><span style=color:#6272a4></span>  <span style=color:#ff79c6>const</span> calculateDistance <span style=color:#ff79c6>=</span> (lat1, lon1, lat2, lon2) <span style=color:#ff79c6>=&gt;</span> {
-</span></span><span style=display:flex><span>    <span style=color:#ff79c6>const</span> R <span style=color:#ff79c6>=</span> <span style=color:#bd93f9>6371000</span>; <span style=color:#6272a4>// 地球平均半径（米）
-</span></span></span><span style=display:flex><span><span style=color:#6272a4></span>    <span style=color:#ff79c6>const</span> phi1 <span style=color:#ff79c6>=</span> lat1 <span style=color:#ff79c6>*</span> <span style=color:#8be9fd;font-style:italic>Math</span>.PI <span style=color:#ff79c6>/</span> <span style=color:#bd93f9>180</span>;
-</span></span><span style=display:flex><span>    <span style=color:#ff79c6>const</span> phi2 <span style=color:#ff79c6>=</span> lat2 <span style=color:#ff79c6>*</span> <span style=color:#8be9fd;font-style:italic>Math</span>.PI <span style=color:#ff79c6>/</span> <span style=color:#bd93f9>180</span>;
-</span></span><span style=display:flex><span>    <span style=color:#ff79c6>const</span> deltaPhi <span style=color:#ff79c6>=</span> (lat2 <span style=color:#ff79c6>-</span> lat1) <span style=color:#ff79c6>*</span> <span style=color:#8be9fd;font-style:italic>Math</span>.PI <span style=color:#ff79c6>/</span> <span style=color:#bd93f9>180</span>;
-</span></span><span style=display:flex><span>    <span style=color:#ff79c6>const</span> deltaLambda <span style=color:#ff79c6>=</span> (lon2 <span style=color:#ff79c6>-</span> lon1) <span style=color:#ff79c6>*</span> <span style=color:#8be9fd;font-style:italic>Math</span>.PI <span style=color:#ff79c6>/</span> <span style=color:#bd93f9>180</span>;
+</span></span><span style=display:flex><span>  <span style=color:green>// 计算两点间的距离（米）
+</span></span></span><span style=display:flex><span><span style=color:green></span>  <span style=color:#00f>const</span> calculateDistance = (lat1, lon1, lat2, lon2) =&gt; {
+</span></span><span style=display:flex><span>    <span style=color:#00f>const</span> R = 6371000; <span style=color:green>// 地球平均半径（米）
+</span></span></span><span style=display:flex><span><span style=color:green></span>    <span style=color:#00f>const</span> phi1 = lat1 * Math.PI / 180;
+</span></span><span style=display:flex><span>    <span style=color:#00f>const</span> phi2 = lat2 * Math.PI / 180;
+</span></span><span style=display:flex><span>    <span style=color:#00f>const</span> deltaPhi = (lat2 - lat1) * Math.PI / 180;
+</span></span><span style=display:flex><span>    <span style=color:#00f>const</span> deltaLambda = (lon2 - lon1) * Math.PI / 180;
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    <span style=color:#ff79c6>const</span> a <span style=color:#ff79c6>=</span> <span style=color:#8be9fd;font-style:italic>Math</span>.sin(deltaPhi<span style=color:#ff79c6>/</span><span style=color:#bd93f9>2</span>) <span style=color:#ff79c6>*</span> <span style=color:#8be9fd;font-style:italic>Math</span>.sin(deltaPhi<span style=color:#ff79c6>/</span><span style=color:#bd93f9>2</span>) <span style=color:#ff79c6>+</span>
-</span></span><span style=display:flex><span>              <span style=color:#8be9fd;font-style:italic>Math</span>.cos(phi1) <span style=color:#ff79c6>*</span> <span style=color:#8be9fd;font-style:italic>Math</span>.cos(phi2) <span style=color:#ff79c6>*</span>
-</span></span><span style=display:flex><span>              <span style=color:#8be9fd;font-style:italic>Math</span>.sin(deltaLambda<span style=color:#ff79c6>/</span><span style=color:#bd93f9>2</span>) <span style=color:#ff79c6>*</span> <span style=color:#8be9fd;font-style:italic>Math</span>.sin(deltaLambda<span style=color:#ff79c6>/</span><span style=color:#bd93f9>2</span>);
-</span></span><span style=display:flex><span>    <span style=color:#ff79c6>const</span> c <span style=color:#ff79c6>=</span> <span style=color:#bd93f9>2</span> <span style=color:#ff79c6>*</span> <span style=color:#8be9fd;font-style:italic>Math</span>.atan2(<span style=color:#8be9fd;font-style:italic>Math</span>.sqrt(a), <span style=color:#8be9fd;font-style:italic>Math</span>.sqrt(<span style=color:#bd93f9>1</span><span style=color:#ff79c6>-</span>a));
-</span></span><span style=display:flex><span>    <span style=color:#ff79c6>const</span> distance <span style=color:#ff79c6>=</span> R <span style=color:#ff79c6>*</span> c;
+</span></span><span style=display:flex><span>    <span style=color:#00f>const</span> a = Math.sin(deltaPhi/2) * Math.sin(deltaPhi/2) +
+</span></span><span style=display:flex><span>              Math.cos(phi1) * Math.cos(phi2) *
+</span></span><span style=display:flex><span>              Math.sin(deltaLambda/2) * Math.sin(deltaLambda/2);
+</span></span><span style=display:flex><span>    <span style=color:#00f>const</span> c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+</span></span><span style=display:flex><span>    <span style=color:#00f>const</span> distance = R * c;
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    <span style=color:#ff79c6>return</span> distance;
+</span></span><span style=display:flex><span>    <span style=color:#00f>return</span> distance;
 </span></span><span style=display:flex><span>  };
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>  <span style=color:#6272a4>// 计算所有站点之间的距离
-</span></span></span><span style=display:flex><span><span style=color:#6272a4></span>  <span style=color:#ff79c6>const</span> calculateAllDistances <span style=color:#ff79c6>=</span> (sourcePos, stations) <span style=color:#ff79c6>=&gt;</span> {
-</span></span><span style=display:flex><span>    <span style=color:#ff79c6>const</span> distances <span style=color:#ff79c6>=</span> {
-</span></span><span style=display:flex><span>      sourceToStations<span style=color:#ff79c6>:</span> [], <span style=color:#6272a4>// 辐射源到各测向站的距离
-</span></span></span><span style=display:flex><span><span style=color:#6272a4></span>      betweenStations<span style=color:#ff79c6>:</span> [] <span style=color:#6272a4>// 测向站之间的距离
-</span></span></span><span style=display:flex><span><span style=color:#6272a4></span>    };
+</span></span><span style=display:flex><span>  <span style=color:green>// 计算所有站点之间的距离
+</span></span></span><span style=display:flex><span><span style=color:green></span>  <span style=color:#00f>const</span> calculateAllDistances = (sourcePos, stations) =&gt; {
+</span></span><span style=display:flex><span>    <span style=color:#00f>const</span> distances = {
+</span></span><span style=display:flex><span>      sourceToStations: [], <span style=color:green>// 辐射源到各测向站的距离
+</span></span></span><span style=display:flex><span><span style=color:green></span>      betweenStations: [] <span style=color:green>// 测向站之间的距离
+</span></span></span><span style=display:flex><span><span style=color:green></span>    };
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    <span style=color:#6272a4>// 计算辐射源到各测向站的距离
-</span></span></span><span style=display:flex><span><span style=color:#6272a4></span>    stations.forEach((station, idx) <span style=color:#ff79c6>=&gt;</span> {
-</span></span><span style=display:flex><span>      <span style=color:#ff79c6>const</span> distance <span style=color:#ff79c6>=</span> calculateDistance(
+</span></span><span style=display:flex><span>    <span style=color:green>// 计算辐射源到各测向站的距离
+</span></span></span><span style=display:flex><span><span style=color:green></span>    stations.forEach((station, idx) =&gt; {
+</span></span><span style=display:flex><span>      <span style=color:#00f>const</span> distance = calculateDistance(
 </span></span><span style=display:flex><span>        sourcePos.phi,
 </span></span><span style=display:flex><span>        sourcePos.lambda,
-</span></span><span style=display:flex><span>        <span style=color:#8be9fd;font-style:italic>parseFloat</span>(station.phi_i),
-</span></span><span style=display:flex><span>        <span style=color:#8be9fd;font-style:italic>parseFloat</span>(station.lambda_i)
+</span></span><span style=display:flex><span>        parseFloat(station.phi_i),
+</span></span><span style=display:flex><span>        parseFloat(station.lambda_i)
 </span></span><span style=display:flex><span>      );
 </span></span><span style=display:flex><span>      distances.sourceToStations.push({
-</span></span><span style=display:flex><span>        stationIndex: <span style=color:#8be9fd>idx</span> <span style=color:#ff79c6>+</span> <span style=color:#bd93f9>1</span>,
-</span></span><span style=display:flex><span>        distance: <span style=color:#8be9fd>distance</span> <span style=color:#ff79c6>/</span> <span style=color:#bd93f9>1000</span> <span style=color:#6272a4>// 转换为公里
-</span></span></span><span style=display:flex><span><span style=color:#6272a4></span>      });
+</span></span><span style=display:flex><span>        stationIndex: <span style=color:#2b91af>idx</span> + 1,
+</span></span><span style=display:flex><span>        distance: <span style=color:#2b91af>distance</span> / 1000 <span style=color:green>// 转换为公里
+</span></span></span><span style=display:flex><span><span style=color:green></span>      });
 </span></span><span style=display:flex><span>    });
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    <span style=color:#6272a4>// 计算测向站之间的距离
-</span></span></span><span style=display:flex><span><span style=color:#6272a4></span>    <span style=color:#ff79c6>for</span> (<span style=color:#8be9fd;font-style:italic>let</span> i <span style=color:#ff79c6>=</span> <span style=color:#bd93f9>0</span>; i <span style=color:#ff79c6>&lt;</span> stations.length; i<span style=color:#ff79c6>++</span>) {
-</span></span><span style=display:flex><span>      <span style=color:#ff79c6>for</span> (<span style=color:#8be9fd;font-style:italic>let</span> j <span style=color:#ff79c6>=</span> i <span style=color:#ff79c6>+</span> <span style=color:#bd93f9>1</span>; j <span style=color:#ff79c6>&lt;</span> stations.length; j<span style=color:#ff79c6>++</span>) {
-</span></span><span style=display:flex><span>        <span style=color:#ff79c6>const</span> distance <span style=color:#ff79c6>=</span> calculateDistance(
-</span></span><span style=display:flex><span>          <span style=color:#8be9fd;font-style:italic>parseFloat</span>(stations[i].phi_i),
-</span></span><span style=display:flex><span>          <span style=color:#8be9fd;font-style:italic>parseFloat</span>(stations[i].lambda_i),
-</span></span><span style=display:flex><span>          <span style=color:#8be9fd;font-style:italic>parseFloat</span>(stations[j].phi_i),
-</span></span><span style=display:flex><span>          <span style=color:#8be9fd;font-style:italic>parseFloat</span>(stations[j].lambda_i)
+</span></span><span style=display:flex><span>    <span style=color:green>// 计算测向站之间的距离
+</span></span></span><span style=display:flex><span><span style=color:green></span>    <span style=color:#00f>for</span> (<span style=color:#00f>let</span> i = 0; i &lt; stations.length; i++) {
+</span></span><span style=display:flex><span>      <span style=color:#00f>for</span> (<span style=color:#00f>let</span> j = i + 1; j &lt; stations.length; j++) {
+</span></span><span style=display:flex><span>        <span style=color:#00f>const</span> distance = calculateDistance(
+</span></span><span style=display:flex><span>          parseFloat(stations[i].phi_i),
+</span></span><span style=display:flex><span>          parseFloat(stations[i].lambda_i),
+</span></span><span style=display:flex><span>          parseFloat(stations[j].phi_i),
+</span></span><span style=display:flex><span>          parseFloat(stations[j].lambda_i)
 </span></span><span style=display:flex><span>        );
 </span></span><span style=display:flex><span>        distances.betweenStations.push({
-</span></span><span style=display:flex><span>          station1: <span style=color:#8be9fd>i</span> <span style=color:#ff79c6>+</span> <span style=color:#bd93f9>1</span>,
-</span></span><span style=display:flex><span>          station2: <span style=color:#8be9fd>j</span> <span style=color:#ff79c6>+</span> <span style=color:#bd93f9>1</span>,
-</span></span><span style=display:flex><span>          distance: <span style=color:#8be9fd>distance</span> <span style=color:#ff79c6>/</span> <span style=color:#bd93f9>1000</span> <span style=color:#6272a4>// 转换为公里
-</span></span></span><span style=display:flex><span><span style=color:#6272a4></span>        });
+</span></span><span style=display:flex><span>          station1: <span style=color:#2b91af>i</span> + 1,
+</span></span><span style=display:flex><span>          station2: <span style=color:#2b91af>j</span> + 1,
+</span></span><span style=display:flex><span>          distance: <span style=color:#2b91af>distance</span> / 1000 <span style=color:green>// 转换为公里
+</span></span></span><span style=display:flex><span><span style=color:green></span>        });
 </span></span><span style=display:flex><span>      }
 </span></span><span style=display:flex><span>    }
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    <span style=color:#ff79c6>return</span> distances;
+</span></span><span style=display:flex><span>    <span style=color:#00f>return</span> distances;
 </span></span><span style=display:flex><span>  };
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>  <span style=color:#ff79c6>const</span> addMeasurement <span style=color:#ff79c6>=</span> () <span style=color:#ff79c6>=&gt;</span> {
-</span></span><span style=display:flex><span>    setMeasurements([...measurements, { lambda_i<span style=color:#ff79c6>:</span> <span style=color:#f1fa8c>&#39;&#39;</span>, phi_i<span style=color:#ff79c6>:</span> <span style=color:#f1fa8c>&#39;&#39;</span>, theta_i<span style=color:#ff79c6>:</span> <span style=color:#f1fa8c>&#39;&#39;</span> }]);
+</span></span><span style=display:flex><span>  <span style=color:#00f>const</span> addMeasurement = () =&gt; {
+</span></span><span style=display:flex><span>    setMeasurements([...measurements, { lambda_i: <span style=color:#a31515>&#39;&#39;</span>, phi_i: <span style=color:#a31515>&#39;&#39;</span>, theta_i: <span style=color:#a31515>&#39;&#39;</span> }]);
 </span></span><span style=display:flex><span>  };
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>  <span style=color:#ff79c6>const</span> removeMeasurement <span style=color:#ff79c6>=</span> (index) <span style=color:#ff79c6>=&gt;</span> {
-</span></span><span style=display:flex><span>    <span style=color:#ff79c6>if</span> (measurements.length <span style=color:#ff79c6>&gt;</span> <span style=color:#bd93f9>1</span>) {
-</span></span><span style=display:flex><span>      <span style=color:#ff79c6>const</span> newMeasurements <span style=color:#ff79c6>=</span> measurements.filter((_, i) <span style=color:#ff79c6>=&gt;</span> i <span style=color:#ff79c6>!==</span> index);
+</span></span><span style=display:flex><span>  <span style=color:#00f>const</span> removeMeasurement = (index) =&gt; {
+</span></span><span style=display:flex><span>    <span style=color:#00f>if</span> (measurements.length &gt; 1) {
+</span></span><span style=display:flex><span>      <span style=color:#00f>const</span> newMeasurements = measurements.filter((_, i) =&gt; i !== index);
 </span></span><span style=display:flex><span>      setMeasurements(newMeasurements);
 </span></span><span style=display:flex><span>    }
 </span></span><span style=display:flex><span>  };
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>  <span style=color:#ff79c6>const</span> handleMeasurementChange <span style=color:#ff79c6>=</span> (index, field, value) <span style=color:#ff79c6>=&gt;</span> {
-</span></span><span style=display:flex><span>    <span style=color:#ff79c6>const</span> newMeasurements <span style=color:#ff79c6>=</span> [...measurements];
-</span></span><span style=display:flex><span>    newMeasurements[index][field] <span style=color:#ff79c6>=</span> value;
+</span></span><span style=display:flex><span>  <span style=color:#00f>const</span> handleMeasurementChange = (index, field, value) =&gt; {
+</span></span><span style=display:flex><span>    <span style=color:#00f>const</span> newMeasurements = [...measurements];
+</span></span><span style=display:flex><span>    newMeasurements[index][field] = value;
 </span></span><span style=display:flex><span>    setMeasurements(newMeasurements);
 </span></span><span style=display:flex><span>  };
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>  <span style=color:#ff79c6>const</span> calculatePosition <span style=color:#ff79c6>=</span> () <span style=color:#ff79c6>=&gt;</span> {
-</span></span><span style=display:flex><span>    <span style=color:#6272a4>// 将度数转换为弧度
-</span></span></span><span style=display:flex><span><span style=color:#6272a4></span>    <span style=color:#ff79c6>const</span> measurementsRad <span style=color:#ff79c6>=</span> measurements.map(m <span style=color:#ff79c6>=&gt;</span> ({
-</span></span><span style=display:flex><span>      lambda_i: <span style=color:#8be9fd>parseFloat</span>(m.lambda_i) <span style=color:#ff79c6>*</span> <span style=color:#8be9fd;font-style:italic>Math</span>.PI <span style=color:#ff79c6>/</span> <span style=color:#bd93f9>180</span>,
-</span></span><span style=display:flex><span>      phi_i: <span style=color:#8be9fd>parseFloat</span>(m.phi_i) <span style=color:#ff79c6>*</span> <span style=color:#8be9fd;font-style:italic>Math</span>.PI <span style=color:#ff79c6>/</span> <span style=color:#bd93f9>180</span>,
-</span></span><span style=display:flex><span>      theta_i: <span style=color:#8be9fd>parseFloat</span>(m.theta_i) <span style=color:#ff79c6>*</span> <span style=color:#8be9fd;font-style:italic>Math</span>.PI <span style=color:#ff79c6>/</span> <span style=color:#bd93f9>180</span>
+</span></span><span style=display:flex><span>  <span style=color:#00f>const</span> calculatePosition = () =&gt; {
+</span></span><span style=display:flex><span>    <span style=color:green>// 将度数转换为弧度
+</span></span></span><span style=display:flex><span><span style=color:green></span>    <span style=color:#00f>const</span> measurementsRad = measurements.map(m =&gt; ({
+</span></span><span style=display:flex><span>      lambda_i: <span style=color:#2b91af>parseFloat</span>(m.lambda_i) * Math.PI / 180,
+</span></span><span style=display:flex><span>      phi_i: <span style=color:#2b91af>parseFloat</span>(m.phi_i) * Math.PI / 180,
+</span></span><span style=display:flex><span>      theta_i: <span style=color:#2b91af>parseFloat</span>(m.theta_i) * Math.PI / 180
 </span></span><span style=display:flex><span>    }));
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    <span style=color:#ff79c6>const</span> n <span style=color:#ff79c6>=</span> measurementsRad.length;
-</span></span><span style=display:flex><span>    <span style=color:#ff79c6>if</span> (n <span style=color:#ff79c6>&lt;</span> <span style=color:#bd93f9>2</span>) {
-</span></span><span style=display:flex><span>      alert(<span style=color:#f1fa8c>&#39;至少需要两组测向数据！&#39;</span>);
-</span></span><span style=display:flex><span>      <span style=color:#ff79c6>return</span>;
+</span></span><span style=display:flex><span>    <span style=color:#00f>const</span> n = measurementsRad.length;
+</span></span><span style=display:flex><span>    <span style=color:#00f>if</span> (n &lt; 2) {
+</span></span><span style=display:flex><span>      alert(<span style=color:#a31515>&#39;至少需要两组测向数据！&#39;</span>);
+</span></span><span style=display:flex><span>      <span style=color:#00f>return</span>;
 </span></span><span style=display:flex><span>    }
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    <span style=color:#6272a4>// 构建方程组
-</span></span></span><span style=display:flex><span><span style=color:#6272a4></span>    <span style=color:#ff79c6>const</span> A <span style=color:#ff79c6>=</span> <span style=color:#ff79c6>new</span> <span style=color:#8be9fd;font-style:italic>Array</span>(n).fill(<span style=color:#bd93f9>0</span>).map(() <span style=color:#ff79c6>=&gt;</span> <span style=color:#ff79c6>new</span> <span style=color:#8be9fd;font-style:italic>Array</span>(<span style=color:#bd93f9>2</span>).fill(<span style=color:#bd93f9>0</span>));
-</span></span><span style=display:flex><span>    <span style=color:#ff79c6>const</span> C <span style=color:#ff79c6>=</span> <span style=color:#ff79c6>new</span> <span style=color:#8be9fd;font-style:italic>Array</span>(n).fill(<span style=color:#bd93f9>0</span>);
+</span></span><span style=display:flex><span>    <span style=color:green>// 构建方程组
+</span></span></span><span style=display:flex><span><span style=color:green></span>    <span style=color:#00f>const</span> A = <span style=color:#00f>new</span> Array(n).fill(0).map(() =&gt; <span style=color:#00f>new</span> Array(2).fill(0));
+</span></span><span style=display:flex><span>    <span style=color:#00f>const</span> C = <span style=color:#00f>new</span> Array(n).fill(0);
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    <span style=color:#ff79c6>for</span> (<span style=color:#8be9fd;font-style:italic>let</span> i <span style=color:#ff79c6>=</span> <span style=color:#bd93f9>0</span>; i <span style=color:#ff79c6>&lt;</span> n; i<span style=color:#ff79c6>++</span>) {
-</span></span><span style=display:flex><span>      <span style=color:#ff79c6>const</span> { lambda_i, phi_i, theta_i } <span style=color:#ff79c6>=</span> measurementsRad[i];
-</span></span><span style=display:flex><span>      <span style=color:#ff79c6>const</span> cos_phi <span style=color:#ff79c6>=</span> <span style=color:#8be9fd;font-style:italic>Math</span>.cos(phi_i);
-</span></span><span style=display:flex><span>      <span style=color:#ff79c6>const</span> cos_theta <span style=color:#ff79c6>=</span> <span style=color:#8be9fd;font-style:italic>Math</span>.cos(theta_i);
-</span></span><span style=display:flex><span>      <span style=color:#ff79c6>const</span> sin_theta <span style=color:#ff79c6>=</span> <span style=color:#8be9fd;font-style:italic>Math</span>.sin(theta_i);
+</span></span><span style=display:flex><span>    <span style=color:#00f>for</span> (<span style=color:#00f>let</span> i = 0; i &lt; n; i++) {
+</span></span><span style=display:flex><span>      <span style=color:#00f>const</span> { lambda_i, phi_i, theta_i } = measurementsRad[i];
+</span></span><span style=display:flex><span>      <span style=color:#00f>const</span> cos_phi = Math.cos(phi_i);
+</span></span><span style=display:flex><span>      <span style=color:#00f>const</span> cos_theta = Math.cos(theta_i);
+</span></span><span style=display:flex><span>      <span style=color:#00f>const</span> sin_theta = Math.sin(theta_i);
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>      A[i][<span style=color:#bd93f9>0</span>] <span style=color:#ff79c6>=</span> cos_phi <span style=color:#ff79c6>*</span> cos_theta;
-</span></span><span style=display:flex><span>      A[i][<span style=color:#bd93f9>1</span>] <span style=color:#ff79c6>=</span> <span style=color:#ff79c6>-</span>sin_theta;
-</span></span><span style=display:flex><span>      C[i] <span style=color:#ff79c6>=</span> lambda_i <span style=color:#ff79c6>*</span> cos_phi <span style=color:#ff79c6>*</span> cos_theta <span style=color:#ff79c6>-</span> phi_i <span style=color:#ff79c6>*</span> sin_theta;
+</span></span><span style=display:flex><span>      A[i][0] = cos_phi * cos_theta;
+</span></span><span style=display:flex><span>      A[i][1] = -sin_theta;
+</span></span><span style=display:flex><span>      C[i] = lambda_i * cos_phi * cos_theta - phi_i * sin_theta;
 </span></span><span style=display:flex><span>    }
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    <span style=color:#6272a4>// 使用最小二乘法求解
-</span></span></span><span style=display:flex><span><span style=color:#6272a4></span>    <span style=color:#ff79c6>const</span> AT <span style=color:#ff79c6>=</span> A[<span style=color:#bd93f9>0</span>].map((_, colIndex) <span style=color:#ff79c6>=&gt;</span> A.map(row <span style=color:#ff79c6>=&gt;</span> row[colIndex]));
-</span></span><span style=display:flex><span>    <span style=color:#ff79c6>const</span> ATA <span style=color:#ff79c6>=</span> AT.map(row <span style=color:#ff79c6>=&gt;</span> {
-</span></span><span style=display:flex><span>      <span style=color:#ff79c6>return</span> A[<span style=color:#bd93f9>0</span>].map((_, j) <span style=color:#ff79c6>=&gt;</span> {
-</span></span><span style=display:flex><span>        <span style=color:#ff79c6>return</span> row.reduce((sum, _, k) <span style=color:#ff79c6>=&gt;</span> sum <span style=color:#ff79c6>+</span> row[k] <span style=color:#ff79c6>*</span> A[k][j], <span style=color:#bd93f9>0</span>);
+</span></span><span style=display:flex><span>    <span style=color:green>// 使用最小二乘法求解
+</span></span></span><span style=display:flex><span><span style=color:green></span>    <span style=color:#00f>const</span> AT = A[0].map((_, colIndex) =&gt; A.map(row =&gt; row[colIndex]));
+</span></span><span style=display:flex><span>    <span style=color:#00f>const</span> ATA = AT.map(row =&gt; {
+</span></span><span style=display:flex><span>      <span style=color:#00f>return</span> A[0].map((_, j) =&gt; {
+</span></span><span style=display:flex><span>        <span style=color:#00f>return</span> row.reduce((sum, _, k) =&gt; sum + row[k] * A[k][j], 0);
 </span></span><span style=display:flex><span>      });
 </span></span><span style=display:flex><span>    });
-</span></span><span style=display:flex><span>    <span style=color:#ff79c6>const</span> ATC <span style=color:#ff79c6>=</span> AT.map(row <span style=color:#ff79c6>=&gt;</span> {
-</span></span><span style=display:flex><span>      <span style=color:#ff79c6>return</span> row.reduce((sum, _, i) <span style=color:#ff79c6>=&gt;</span> sum <span style=color:#ff79c6>+</span> row[i] <span style=color:#ff79c6>*</span> C[i], <span style=color:#bd93f9>0</span>);
+</span></span><span style=display:flex><span>    <span style=color:#00f>const</span> ATC = AT.map(row =&gt; {
+</span></span><span style=display:flex><span>      <span style=color:#00f>return</span> row.reduce((sum, _, i) =&gt; sum + row[i] * C[i], 0);
 </span></span><span style=display:flex><span>    });
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    <span style=color:#ff79c6>const</span> det <span style=color:#ff79c6>=</span> ATA[<span style=color:#bd93f9>0</span>][<span style=color:#bd93f9>0</span>] <span style=color:#ff79c6>*</span> ATA[<span style=color:#bd93f9>1</span>][<span style=color:#bd93f9>1</span>] <span style=color:#ff79c6>-</span> ATA[<span style=color:#bd93f9>0</span>][<span style=color:#bd93f9>1</span>] <span style=color:#ff79c6>*</span> ATA[<span style=color:#bd93f9>1</span>][<span style=color:#bd93f9>0</span>];
-</span></span><span style=display:flex><span>    <span style=color:#ff79c6>const</span> lambda_e <span style=color:#ff79c6>=</span> (ATA[<span style=color:#bd93f9>1</span>][<span style=color:#bd93f9>1</span>] <span style=color:#ff79c6>*</span> ATC[<span style=color:#bd93f9>0</span>] <span style=color:#ff79c6>-</span> ATA[<span style=color:#bd93f9>0</span>][<span style=color:#bd93f9>1</span>] <span style=color:#ff79c6>*</span> ATC[<span style=color:#bd93f9>1</span>]) <span style=color:#ff79c6>/</span> det;
-</span></span><span style=display:flex><span>    <span style=color:#ff79c6>const</span> phi_e <span style=color:#ff79c6>=</span> (<span style=color:#ff79c6>-</span>ATA[<span style=color:#bd93f9>1</span>][<span style=color:#bd93f9>0</span>] <span style=color:#ff79c6>*</span> ATC[<span style=color:#bd93f9>0</span>] <span style=color:#ff79c6>+</span> ATA[<span style=color:#bd93f9>0</span>][<span style=color:#bd93f9>0</span>] <span style=color:#ff79c6>*</span> ATC[<span style=color:#bd93f9>1</span>]) <span style=color:#ff79c6>/</span> det;
+</span></span><span style=display:flex><span>    <span style=color:#00f>const</span> det = ATA[0][0] * ATA[1][1] - ATA[0][1] * ATA[1][0];
+</span></span><span style=display:flex><span>    <span style=color:#00f>const</span> lambda_e = (ATA[1][1] * ATC[0] - ATA[0][1] * ATC[1]) / det;
+</span></span><span style=display:flex><span>    <span style=color:#00f>const</span> phi_e = (-ATA[1][0] * ATC[0] + ATA[0][0] * ATC[1]) / det;
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    <span style=color:#6272a4>// 转换回度数
-</span></span></span><span style=display:flex><span><span style=color:#6272a4></span>    <span style=color:#ff79c6>const</span> lambda_e_deg <span style=color:#ff79c6>=</span> lambda_e <span style=color:#ff79c6>*</span> <span style=color:#bd93f9>180</span> <span style=color:#ff79c6>/</span> <span style=color:#8be9fd;font-style:italic>Math</span>.PI;
-</span></span><span style=display:flex><span>    <span style=color:#ff79c6>const</span> phi_e_deg <span style=color:#ff79c6>=</span> phi_e <span style=color:#ff79c6>*</span> <span style=color:#bd93f9>180</span> <span style=color:#ff79c6>/</span> <span style=color:#8be9fd;font-style:italic>Math</span>.PI;
+</span></span><span style=display:flex><span>    <span style=color:green>// 转换回度数
+</span></span></span><span style=display:flex><span><span style=color:green></span>    <span style=color:#00f>const</span> lambda_e_deg = lambda_e * 180 / Math.PI;
+</span></span><span style=display:flex><span>    <span style=color:#00f>const</span> phi_e_deg = phi_e * 180 / Math.PI;
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    <span style=color:#6272a4>// 计算与实际位置的偏差
-</span></span></span><span style=display:flex><span><span style=color:#6272a4></span>    <span style=color:#ff79c6>const</span> actual_lambda <span style=color:#ff79c6>=</span> <span style=color:#8be9fd;font-style:italic>parseFloat</span>(actualSource.lambda_e);
-</span></span><span style=display:flex><span>    <span style=color:#ff79c6>const</span> actual_phi <span style=color:#ff79c6>=</span> <span style=color:#8be9fd;font-style:italic>parseFloat</span>(actualSource.phi_e);
+</span></span><span style=display:flex><span>    <span style=color:green>// 计算与实际位置的偏差
+</span></span></span><span style=display:flex><span><span style=color:green></span>    <span style=color:#00f>const</span> actual_lambda = parseFloat(actualSource.lambda_e);
+</span></span><span style=display:flex><span>    <span style=color:#00f>const</span> actual_phi = parseFloat(actualSource.phi_e);
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    <span style=color:#ff79c6>const</span> lambda_error <span style=color:#ff79c6>=</span> <span style=color:#8be9fd;font-style:italic>Math</span>.abs(lambda_e_deg <span style=color:#ff79c6>-</span> actual_lambda);
-</span></span><span style=display:flex><span>    <span style=color:#ff79c6>const</span> phi_error <span style=color:#ff79c6>=</span> <span style=color:#8be9fd;font-style:italic>Math</span>.abs(phi_e_deg <span style=color:#ff79c6>-</span> actual_phi);
+</span></span><span style=display:flex><span>    <span style=color:#00f>const</span> lambda_error = Math.abs(lambda_e_deg - actual_lambda);
+</span></span><span style=display:flex><span>    <span style=color:#00f>const</span> phi_error = Math.abs(phi_e_deg - actual_phi);
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    <span style=color:#6272a4>// 计算距离偏差
-</span></span></span><span style=display:flex><span><span style=color:#6272a4></span>    <span style=color:#ff79c6>const</span> distance_error <span style=color:#ff79c6>=</span> calculateDistance(
+</span></span><span style=display:flex><span>    <span style=color:green>// 计算距离偏差
+</span></span></span><span style=display:flex><span><span style=color:green></span>    <span style=color:#00f>const</span> distance_error = calculateDistance(
 </span></span><span style=display:flex><span>      actual_phi,
 </span></span><span style=display:flex><span>      actual_lambda,
 </span></span><span style=display:flex><span>      phi_e_deg,
 </span></span><span style=display:flex><span>      lambda_e_deg
 </span></span><span style=display:flex><span>    );
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    <span style=color:#6272a4>// 计算所有站点之间的距离
-</span></span></span><span style=display:flex><span><span style=color:#6272a4></span>    <span style=color:#ff79c6>const</span> calculatedDistances <span style=color:#ff79c6>=</span> calculateAllDistances(
-</span></span><span style=display:flex><span>      { lambda: <span style=color:#8be9fd>lambda_e_deg</span>, phi: <span style=color:#8be9fd>phi_e_deg</span> },
+</span></span><span style=display:flex><span>    <span style=color:green>// 计算所有站点之间的距离
+</span></span></span><span style=display:flex><span><span style=color:green></span>    <span style=color:#00f>const</span> calculatedDistances = calculateAllDistances(
+</span></span><span style=display:flex><span>      { lambda: <span style=color:#2b91af>lambda_e_deg</span>, phi: <span style=color:#2b91af>phi_e_deg</span> },
 </span></span><span style=display:flex><span>      measurements
 </span></span><span style=display:flex><span>    );
 </span></span><span style=display:flex><span>    
-</span></span><span style=display:flex><span>    <span style=color:#ff79c6>const</span> actualDistances <span style=color:#ff79c6>=</span> calculateAllDistances(
-</span></span><span style=display:flex><span>      { lambda: <span style=color:#8be9fd>actual_lambda</span>, phi: <span style=color:#8be9fd>actual_phi</span> },
+</span></span><span style=display:flex><span>    <span style=color:#00f>const</span> actualDistances = calculateAllDistances(
+</span></span><span style=display:flex><span>      { lambda: <span style=color:#2b91af>actual_lambda</span>, phi: <span style=color:#2b91af>actual_phi</span> },
 </span></span><span style=display:flex><span>      measurements
 </span></span><span style=display:flex><span>    );
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>    setResult({
-</span></span><span style=display:flex><span>      calculated<span style=color:#ff79c6>:</span> {
-</span></span><span style=display:flex><span>        lambda: <span style=color:#8be9fd>lambda_e_deg.toFixed</span>(<span style=color:#bd93f9>4</span>),
-</span></span><span style=display:flex><span>        phi: <span style=color:#8be9fd>phi_e_deg.toFixed</span>(<span style=color:#bd93f9>4</span>)
+</span></span><span style=display:flex><span>      calculated: {
+</span></span><span style=display:flex><span>        lambda: <span style=color:#2b91af>lambda_e_deg.toFixed</span>(4),
+</span></span><span style=display:flex><span>        phi: <span style=color:#2b91af>phi_e_deg.toFixed</span>(4)
 </span></span><span style=display:flex><span>      },
-</span></span><span style=display:flex><span>      error<span style=color:#ff79c6>:</span> {
-</span></span><span style=display:flex><span>        lambda: <span style=color:#8be9fd>lambda_error.toFixed</span>(<span style=color:#bd93f9>4</span>),
-</span></span><span style=display:flex><span>        phi: <span style=color:#8be9fd>phi_error.toFixed</span>(<span style=color:#bd93f9>4</span>),
-</span></span><span style=display:flex><span>        distance<span style=color:#ff79c6>:</span> (distance_error <span style=color:#ff79c6>/</span> <span style=color:#bd93f9>1000</span>).toFixed(<span style=color:#bd93f9>3</span>)  <span style=color:#6272a4>// 转换为公里
-</span></span></span><span style=display:flex><span><span style=color:#6272a4></span>      },
-</span></span><span style=display:flex><span>      distances<span style=color:#ff79c6>:</span> {
-</span></span><span style=display:flex><span>        calculated: <span style=color:#8be9fd>calculatedDistances</span>,
-</span></span><span style=display:flex><span>        actual: <span style=color:#8be9fd>actualDistances</span>
+</span></span><span style=display:flex><span>      error: {
+</span></span><span style=display:flex><span>        lambda: <span style=color:#2b91af>lambda_error.toFixed</span>(4),
+</span></span><span style=display:flex><span>        phi: <span style=color:#2b91af>phi_error.toFixed</span>(4),
+</span></span><span style=display:flex><span>        distance: (distance_error / 1000).toFixed(3)  <span style=color:green>// 转换为公里
+</span></span></span><span style=display:flex><span><span style=color:green></span>      },
+</span></span><span style=display:flex><span>      distances: {
+</span></span><span style=display:flex><span>        calculated: <span style=color:#2b91af>calculatedDistances</span>,
+</span></span><span style=display:flex><span>        actual: <span style=color:#2b91af>actualDistances</span>
 </span></span><span style=display:flex><span>      }
 </span></span><span style=display:flex><span>    });
 </span></span><span style=display:flex><span>  };
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>  <span style=color:#ff79c6>return</span> (
-</span></span><span style=display:flex><span>    &lt;<span style=color:#ff79c6>Card</span> <span style=color:#50fa7b>className</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;w-full max-w-4xl&#34;</span>&gt;
-</span></span><span style=display:flex><span>      &lt;<span style=color:#ff79c6>CardHeader</span>&gt;
-</span></span><span style=display:flex><span>        &lt;<span style=color:#ff79c6>CardTitle</span>&gt;辐射源定位计算器&lt;/<span style=color:#ff79c6>CardTitle</span>&gt;
-</span></span><span style=display:flex><span>      &lt;/<span style=color:#ff79c6>CardHeader</span>&gt;
-</span></span><span style=display:flex><span>      &lt;<span style=color:#ff79c6>CardContent</span> <span style=color:#50fa7b>className</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;space-y-6&#34;</span>&gt;
-</span></span><span style=display:flex><span>        &lt;<span style=color:#ff79c6>div</span> <span style=color:#50fa7b>className</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;space-y-4&#34;</span>&gt;
-</span></span><span style=display:flex><span>          &lt;<span style=color:#ff79c6>div</span> <span style=color:#50fa7b>className</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;font-medium&#34;</span>&gt;实际辐射源位置（度）：&lt;/<span style=color:#ff79c6>div</span>&gt;
-</span></span><span style=display:flex><span>          &lt;<span style=color:#ff79c6>div</span> <span style=color:#50fa7b>className</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;grid grid-cols-2 gap-4&#34;</span>&gt;
-</span></span><span style=display:flex><span>            &lt;<span style=color:#ff79c6>div</span>&gt;
-</span></span><span style=display:flex><span>              &lt;<span style=color:#ff79c6>label</span> <span style=color:#50fa7b>className</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;block text-sm mb-1&#34;</span>&gt;辐射源经度 (λe)：&lt;/<span style=color:#ff79c6>label</span>&gt;
-</span></span><span style=display:flex><span>              &lt;<span style=color:#ff79c6>Input</span>
-</span></span><span style=display:flex><span>                <span style=color:#50fa7b>type</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;number&#34;</span>
-</span></span><span style=display:flex><span>                <span style=color:#50fa7b>value</span><span style=color:#ff79c6>=</span>{actualSource.lambda_e}
-</span></span><span style=display:flex><span>                <span style=color:#50fa7b>onChange</span><span style=color:#ff79c6>=</span>{(e) <span style=color:#ff79c6>=&gt;</span> setActualSource({...actualSource, lambda_e: <span style=color:#8be9fd>e.target.value</span>})}
-</span></span><span style=display:flex><span>                <span style=color:#50fa7b>placeholder</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;输入实际经度&#34;</span>
+</span></span><span style=display:flex><span>  <span style=color:#00f>return</span> (
+</span></span><span style=display:flex><span>    &lt;Card className=<span style=color:#a31515>&#34;w-full max-w-4xl&#34;</span>&gt;
+</span></span><span style=display:flex><span>      &lt;CardHeader&gt;
+</span></span><span style=display:flex><span>        &lt;CardTitle&gt;<span>辐射源定位计算器</span>&lt;/CardTitle&gt;
+</span></span><span style=display:flex><span>      &lt;/CardHeader&gt;
+</span></span><span style=display:flex><span>      &lt;CardContent className=<span style=color:#a31515>&#34;space-y-6&#34;</span>&gt;
+</span></span><span style=display:flex><span>        &lt;div className=<span style=color:#a31515>&#34;space-y-4&#34;</span>&gt;
+</span></span><span style=display:flex><span>          &lt;div className=<span style=color:#a31515>&#34;font-medium&#34;</span>&gt;<span>实际辐射源位置（度）：</span>&lt;/div&gt;
+</span></span><span style=display:flex><span>          &lt;div className=<span style=color:#a31515>&#34;grid grid-cols-2 gap-4&#34;</span>&gt;
+</span></span><span style=display:flex><span>            &lt;div&gt;
+</span></span><span style=display:flex><span>              &lt;label className=<span style=color:#a31515>&#34;block text-sm mb-1&#34;</span>&gt;<span>辐射源经度</span> (<span>λ</span>e)<span>：</span>&lt;/label&gt;
+</span></span><span style=display:flex><span>              &lt;Input
+</span></span><span style=display:flex><span>                type=<span style=color:#a31515>&#34;number&#34;</span>
+</span></span><span style=display:flex><span>                value={actualSource.lambda_e}
+</span></span><span style=display:flex><span>                onChange={(e) =&gt; setActualSource({...actualSource, lambda_e: <span style=color:#2b91af>e.target.value</span>})}
+</span></span><span style=display:flex><span>                placeholder=<span style=color:#a31515>&#34;输入实际经度&#34;</span>
 </span></span><span style=display:flex><span>              /&gt;
-</span></span><span style=display:flex><span>            &lt;/<span style=color:#ff79c6>div</span>&gt;
-</span></span><span style=display:flex><span>            &lt;<span style=color:#ff79c6>div</span>&gt;
-</span></span><span style=display:flex><span>              &lt;<span style=color:#ff79c6>label</span> <span style=color:#50fa7b>className</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;block text-sm mb-1&#34;</span>&gt;辐射源纬度 (φe)：&lt;/<span style=color:#ff79c6>label</span>&gt;
-</span></span><span style=display:flex><span>              &lt;<span style=color:#ff79c6>Input</span>
-</span></span><span style=display:flex><span>                <span style=color:#50fa7b>type</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;number&#34;</span>
-</span></span><span style=display:flex><span>                <span style=color:#50fa7b>value</span><span style=color:#ff79c6>=</span>{actualSource.phi_e}
-</span></span><span style=display:flex><span>                <span style=color:#50fa7b>onChange</span><span style=color:#ff79c6>=</span>{(e) <span style=color:#ff79c6>=&gt;</span> setActualSource({...actualSource, phi_e: <span style=color:#8be9fd>e.target.value</span>})}
-</span></span><span style=display:flex><span>                <span style=color:#50fa7b>placeholder</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;输入实际纬度&#34;</span>
+</span></span><span style=display:flex><span>            &lt;/div&gt;
+</span></span><span style=display:flex><span>            &lt;div&gt;
+</span></span><span style=display:flex><span>              &lt;label className=<span style=color:#a31515>&#34;block text-sm mb-1&#34;</span>&gt;<span>辐射源纬度</span> (<span>φ</span>e)<span>：</span>&lt;/label&gt;
+</span></span><span style=display:flex><span>              &lt;Input
+</span></span><span style=display:flex><span>                type=<span style=color:#a31515>&#34;number&#34;</span>
+</span></span><span style=display:flex><span>                value={actualSource.phi_e}
+</span></span><span style=display:flex><span>                onChange={(e) =&gt; setActualSource({...actualSource, phi_e: <span style=color:#2b91af>e.target.value</span>})}
+</span></span><span style=display:flex><span>                placeholder=<span style=color:#a31515>&#34;输入实际纬度&#34;</span>
 </span></span><span style=display:flex><span>              /&gt;
-</span></span><span style=display:flex><span>            &lt;/<span style=color:#ff79c6>div</span>&gt;
-</span></span><span style=display:flex><span>          &lt;/<span style=color:#ff79c6>div</span>&gt;
-</span></span><span style=display:flex><span>        &lt;/<span style=color:#ff79c6>div</span>&gt;
+</span></span><span style=display:flex><span>            &lt;/div&gt;
+</span></span><span style=display:flex><span>          &lt;/div&gt;
+</span></span><span style=display:flex><span>        &lt;/div&gt;
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>        &lt;<span style=color:#ff79c6>div</span> <span style=color:#50fa7b>className</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;space-y-4&#34;</span>&gt;
-</span></span><span style=display:flex><span>          &lt;<span style=color:#ff79c6>div</span> <span style=color:#50fa7b>className</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;font-medium&#34;</span>&gt;测向站数据（度）：&lt;/<span style=color:#ff79c6>div</span>&gt;
-</span></span><span style=display:flex><span>          {measurements.map((m, index) <span style=color:#ff79c6>=&gt;</span> (
-</span></span><span style=display:flex><span>            &lt;<span style=color:#ff79c6>div</span> <span style=color:#50fa7b>key</span><span style=color:#ff79c6>=</span>{index} <span style=color:#50fa7b>className</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;grid grid-cols-3 gap-4 items-end&#34;</span>&gt;
-</span></span><span style=display:flex><span>              &lt;<span style=color:#ff79c6>div</span>&gt;
-</span></span><span style=display:flex><span>                &lt;<span style=color:#ff79c6>label</span> <span style=color:#50fa7b>className</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;block text-sm mb-1&#34;</span>&gt;测向站经度 (λi)：&lt;/<span style=color:#ff79c6>label</span>&gt;
-</span></span><span style=display:flex><span>                &lt;<span style=color:#ff79c6>Input</span>
-</span></span><span style=display:flex><span>                  <span style=color:#50fa7b>type</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;number&#34;</span>
-</span></span><span style=display:flex><span>                  <span style=color:#50fa7b>value</span><span style=color:#ff79c6>=</span>{m.lambda_i}
-</span></span><span style=display:flex><span>                  <span style=color:#50fa7b>onChange</span><span style=color:#ff79c6>=</span>{(e) <span style=color:#ff79c6>=&gt;</span> handleMeasurementChange(index, <span style=color:#f1fa8c>&#39;lambda_i&#39;</span>, e.target.value)}
-</span></span><span style=display:flex><span>                  <span style=color:#50fa7b>placeholder</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;输入测向站经度&#34;</span>
+</span></span><span style=display:flex><span>        &lt;div className=<span style=color:#a31515>&#34;space-y-4&#34;</span>&gt;
+</span></span><span style=display:flex><span>          &lt;div className=<span style=color:#a31515>&#34;font-medium&#34;</span>&gt;<span>测向站数据（度）：</span>&lt;/div&gt;
+</span></span><span style=display:flex><span>          {measurements.map((m, index) =&gt; (
+</span></span><span style=display:flex><span>            &lt;div key={index} className=<span style=color:#a31515>&#34;grid grid-cols-3 gap-4 items-end&#34;</span>&gt;
+</span></span><span style=display:flex><span>              &lt;div&gt;
+</span></span><span style=display:flex><span>                &lt;label className=<span style=color:#a31515>&#34;block text-sm mb-1&#34;</span>&gt;<span>测向站经度</span> (<span>λ</span>i)<span>：</span>&lt;/label&gt;
+</span></span><span style=display:flex><span>                &lt;Input
+</span></span><span style=display:flex><span>                  type=<span style=color:#a31515>&#34;number&#34;</span>
+</span></span><span style=display:flex><span>                  value={m.lambda_i}
+</span></span><span style=display:flex><span>                  onChange={(e) =&gt; handleMeasurementChange(index, <span style=color:#a31515>&#39;lambda_i&#39;</span>, e.target.value)}
+</span></span><span style=display:flex><span>                  placeholder=<span style=color:#a31515>&#34;输入测向站经度&#34;</span>
 </span></span><span style=display:flex><span>                /&gt;
-</span></span><span style=display:flex><span>              &lt;/<span style=color:#ff79c6>div</span>&gt;
-</span></span><span style=display:flex><span>              &lt;<span style=color:#ff79c6>div</span>&gt;
-</span></span><span style=display:flex><span>                &lt;<span style=color:#ff79c6>label</span> <span style=color:#50fa7b>className</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;block text-sm mb-1&#34;</span>&gt;测向站纬度 (φi)：&lt;/<span style=color:#ff79c6>label</span>&gt;
-</span></span><span style=display:flex><span>                &lt;<span style=color:#ff79c6>Input</span>
-</span></span><span style=display:flex><span>                  <span style=color:#50fa7b>type</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;number&#34;</span>
-</span></span><span style=display:flex><span>                  <span style=color:#50fa7b>value</span><span style=color:#ff79c6>=</span>{m.phi_i}
-</span></span><span style=display:flex><span>                  <span style=color:#50fa7b>onChange</span><span style=color:#ff79c6>=</span>{(e) <span style=color:#ff79c6>=&gt;</span> handleMeasurementChange(index, <span style=color:#f1fa8c>&#39;phi_i&#39;</span>, e.target.value)}
-</span></span><span style=display:flex><span>                  <span style=color:#50fa7b>placeholder</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;输入测向站纬度&#34;</span>
+</span></span><span style=display:flex><span>              &lt;/div&gt;
+</span></span><span style=display:flex><span>              &lt;div&gt;
+</span></span><span style=display:flex><span>                &lt;label className=<span style=color:#a31515>&#34;block text-sm mb-1&#34;</span>&gt;<span>测向站纬度</span> (<span>φ</span>i)<span>：</span>&lt;/label&gt;
+</span></span><span style=display:flex><span>                &lt;Input
+</span></span><span style=display:flex><span>                  type=<span style=color:#a31515>&#34;number&#34;</span>
+</span></span><span style=display:flex><span>                  value={m.phi_i}
+</span></span><span style=display:flex><span>                  onChange={(e) =&gt; handleMeasurementChange(index, <span style=color:#a31515>&#39;phi_i&#39;</span>, e.target.value)}
+</span></span><span style=display:flex><span>                  placeholder=<span style=color:#a31515>&#34;输入测向站纬度&#34;</span>
 </span></span><span style=display:flex><span>                /&gt;
-</span></span><span style=display:flex><span>              &lt;/<span style=color:#ff79c6>div</span>&gt;
-</span></span><span style=display:flex><span>              &lt;<span style=color:#ff79c6>div</span>&gt;
-</span></span><span style=display:flex><span>                &lt;<span style=color:#ff79c6>label</span> <span style=color:#50fa7b>className</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;block text-sm mb-1&#34;</span>&gt;方位角 (θi)：&lt;/<span style=color:#ff79c6>label</span>&gt;
-</span></span><span style=display:flex><span>                &lt;<span style=color:#ff79c6>div</span> <span style=color:#50fa7b>className</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;flex gap-2&#34;</span>&gt;
-</span></span><span style=display:flex><span>                  &lt;<span style=color:#ff79c6>Input</span>
-</span></span><span style=display:flex><span>                    <span style=color:#50fa7b>type</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;number&#34;</span>
-</span></span><span style=display:flex><span>                    <span style=color:#50fa7b>value</span><span style=color:#ff79c6>=</span>{m.theta_i}
-</span></span><span style=display:flex><span>                    <span style=color:#50fa7b>onChange</span><span style=color:#ff79c6>=</span>{(e) <span style=color:#ff79c6>=&gt;</span> handleMeasurementChange(index, <span style=color:#f1fa8c>&#39;theta_i&#39;</span>, e.target.value)}
-</span></span><span style=display:flex><span>                    <span style=color:#50fa7b>placeholder</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;输入方位角&#34;</span>
+</span></span><span style=display:flex><span>              &lt;/div&gt;
+</span></span><span style=display:flex><span>              &lt;div&gt;
+</span></span><span style=display:flex><span>                &lt;label className=<span style=color:#a31515>&#34;block text-sm mb-1&#34;</span>&gt;<span>方位角</span> (<span>θ</span>i)<span>：</span>&lt;/label&gt;
+</span></span><span style=display:flex><span>                &lt;div className=<span style=color:#a31515>&#34;flex gap-2&#34;</span>&gt;
+</span></span><span style=display:flex><span>                  &lt;Input
+</span></span><span style=display:flex><span>                    type=<span style=color:#a31515>&#34;number&#34;</span>
+</span></span><span style=display:flex><span>                    value={m.theta_i}
+</span></span><span style=display:flex><span>                    onChange={(e) =&gt; handleMeasurementChange(index, <span style=color:#a31515>&#39;theta_i&#39;</span>, e.target.value)}
+</span></span><span style=display:flex><span>                    placeholder=<span style=color:#a31515>&#34;输入方位角&#34;</span>
 </span></span><span style=display:flex><span>                  /&gt;
-</span></span><span style=display:flex><span>                  {measurements.length <span style=color:#ff79c6>&gt;</span> <span style=color:#bd93f9>1</span> <span style=color:#ff79c6>&amp;&amp;</span> (
-</span></span><span style=display:flex><span>                    &lt;<span style=color:#ff79c6>Button</span> 
-</span></span><span style=display:flex><span>                      <span style=color:#50fa7b>variant</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;destructive&#34;</span>
-</span></span><span style=display:flex><span>                      <span style=color:#50fa7b>className</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;px-3&#34;</span>
-</span></span><span style=display:flex><span>                      <span style=color:#50fa7b>onClick</span><span style=color:#ff79c6>=</span>{() <span style=color:#ff79c6>=&gt;</span> removeMeasurement(index)}
+</span></span><span style=display:flex><span>                  {measurements.length &gt; 1 &amp;&amp; (
+</span></span><span style=display:flex><span>                    &lt;Button 
+</span></span><span style=display:flex><span>                      variant=<span style=color:#a31515>&#34;destructive&#34;</span>
+</span></span><span style=display:flex><span>                      className=<span style=color:#a31515>&#34;px-3&#34;</span>
+</span></span><span style=display:flex><span>                      onClick={() =&gt; removeMeasurement(index)}
 </span></span><span style=display:flex><span>                    &gt;
-</span></span><span style=display:flex><span>                      删除
-</span></span><span style=display:flex><span>                    &lt;/<span style=color:#ff79c6>Button</span>&gt;
+</span></span><span style=display:flex><span>                      <span>删除</span>
+</span></span><span style=display:flex><span>                    &lt;/Button&gt;
 </span></span><span style=display:flex><span>                  )}
-</span></span><span style=display:flex><span>                &lt;/<span style=color:#ff79c6>div</span>&gt;
-</span></span><span style=display:flex><span>              &lt;/<span style=color:#ff79c6>div</span>&gt;
-</span></span><span style=display:flex><span>            &lt;/<span style=color:#ff79c6>div</span>&gt;
+</span></span><span style=display:flex><span>                &lt;/div&gt;
+</span></span><span style=display:flex><span>              &lt;/div&gt;
+</span></span><span style=display:flex><span>            &lt;/div&gt;
 </span></span><span style=display:flex><span>          ))}
-</span></span><span style=display:flex><span>        &lt;/<span style=color:#ff79c6>div</span>&gt;
+</span></span><span style=display:flex><span>        &lt;/div&gt;
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>        &lt;<span style=color:#ff79c6>div</span> <span style=color:#50fa7b>className</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;space-x-4&#34;</span>&gt;
-</span></span><span style=display:flex><span>          &lt;<span style=color:#ff79c6>Button</span> <span style=color:#50fa7b>onClick</span><span style=color:#ff79c6>=</span>{addMeasurement}&gt;添加测向站&lt;/<span style=color:#ff79c6>Button</span>&gt;
-</span></span><span style=display:flex><span>          &lt;<span style=color:#ff79c6>Button</span> <span style=color:#50fa7b>onClick</span><span style=color:#ff79c6>=</span>{calculatePosition}&gt;计算位置&lt;/<span style=color:#ff79c6>Button</span>&gt;
-</span></span><span style=display:flex><span>        &lt;/<span style=color:#ff79c6>div</span>&gt;
+</span></span><span style=display:flex><span>        &lt;div className=<span style=color:#a31515>&#34;space-x-4&#34;</span>&gt;
+</span></span><span style=display:flex><span>          &lt;Button onClick={addMeasurement}&gt;<span>添加测向站</span>&lt;/Button&gt;
+</span></span><span style=display:flex><span>          &lt;Button onClick={calculatePosition}&gt;<span>计算位置</span>&lt;/Button&gt;
+</span></span><span style=display:flex><span>        &lt;/div&gt;
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>        {result <span style=color:#ff79c6>&amp;&amp;</span> (
-</span></span><span style=display:flex><span>          &lt;<span style=color:#ff79c6>div</span> <span style=color:#50fa7b>className</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;mt-6 p-4 bg-gray-100 rounded-lg&#34;</span>&gt;
-</span></span><span style=display:flex><span>            &lt;<span style=color:#ff79c6>h3</span> <span style=color:#50fa7b>className</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;font-medium mb-2&#34;</span>&gt;计算结果：&lt;/<span style=color:#ff79c6>h3</span>&gt;
-</span></span><span style=display:flex><span>            &lt;<span style=color:#ff79c6>div</span> <span style=color:#50fa7b>className</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;space-y-4&#34;</span>&gt;
-</span></span><span style=display:flex><span>              &lt;<span style=color:#ff79c6>div</span>&gt;
-</span></span><span style=display:flex><span>                &lt;<span style=color:#ff79c6>p</span> <span style=color:#50fa7b>className</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;font-medium&#34;</span>&gt;计算得到的位置：&lt;/<span style=color:#ff79c6>p</span>&gt;
-</span></span><span style=display:flex><span>                &lt;<span style=color:#ff79c6>p</span>&gt;经度 (λe) <span style=color:#ff79c6>=</span> {result.calculated.lambda}°&lt;/<span style=color:#ff79c6>p</span>&gt;
-</span></span><span style=display:flex><span>                &lt;<span style=color:#ff79c6>p</span>&gt;纬度 (φe) <span style=color:#ff79c6>=</span> {result.calculated.phi}°&lt;/<span style=color:#ff79c6>p</span>&gt;
-</span></span><span style=display:flex><span>              &lt;/<span style=color:#ff79c6>div</span>&gt;
+</span></span><span style=display:flex><span>        {result &amp;&amp; (
+</span></span><span style=display:flex><span>          &lt;div className=<span style=color:#a31515>&#34;mt-6 p-4 bg-gray-100 rounded-lg&#34;</span>&gt;
+</span></span><span style=display:flex><span>            &lt;h3 className=<span style=color:#a31515>&#34;font-medium mb-2&#34;</span>&gt;<span>计算结果：</span>&lt;/h3&gt;
+</span></span><span style=display:flex><span>            &lt;div className=<span style=color:#a31515>&#34;space-y-4&#34;</span>&gt;
+</span></span><span style=display:flex><span>              &lt;div&gt;
+</span></span><span style=display:flex><span>                &lt;p className=<span style=color:#a31515>&#34;font-medium&#34;</span>&gt;<span>计算得到的位置：</span>&lt;/p&gt;
+</span></span><span style=display:flex><span>                &lt;p&gt;<span>经度</span> (<span>λ</span>e) = {result.calculated.lambda}<span>°</span>&lt;/p&gt;
+</span></span><span style=display:flex><span>                &lt;p&gt;<span>纬度</span> (<span>φ</span>e) = {result.calculated.phi}<span>°</span>&lt;/p&gt;
+</span></span><span style=display:flex><span>              &lt;/div&gt;
 </span></span><span style=display:flex><span>              
-</span></span><span style=display:flex><span>              &lt;<span style=color:#ff79c6>div</span>&gt;
-</span></span><span style=display:flex><span>                &lt;<span style=color:#ff79c6>p</span> <span style=color:#50fa7b>className</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;font-medium&#34;</span>&gt;与实际位置的偏差：&lt;/<span style=color:#ff79c6>p</span>&gt;
-</span></span><span style=display:flex><span>                &lt;<span style=color:#ff79c6>p</span>&gt;经度偏差 <span style=color:#ff79c6>=</span> {result.error.lambda}°&lt;/<span style=color:#ff79c6>p</span>&gt;
-</span></span><span style=display:flex><span>                &lt;<span style=color:#ff79c6>p</span>&gt;纬度偏差 <span style=color:#ff79c6>=</span> {result.error.phi}°&lt;/<span style=color:#ff79c6>p</span>&gt;
-</span></span><span style=display:flex><span>                &lt;<span style=color:#ff79c6>p</span>&gt;距离偏差 <span style=color:#ff79c6>=</span> {result.error.distance} 公里&lt;/<span style=color:#ff79c6>p</span>&gt;
-</span></span><span style=display:flex><span>              &lt;/<span style=color:#ff79c6>div</span>&gt;
+</span></span><span style=display:flex><span>              &lt;div&gt;
+</span></span><span style=display:flex><span>                &lt;p className=<span style=color:#a31515>&#34;font-medium&#34;</span>&gt;<span>与实际位置的偏差：</span>&lt;/p&gt;
+</span></span><span style=display:flex><span>                &lt;p&gt;<span>经度偏差</span> = {result.error.lambda}<span>°</span>&lt;/p&gt;
+</span></span><span style=display:flex><span>                &lt;p&gt;<span>纬度偏差</span> = {result.error.phi}<span>°</span>&lt;/p&gt;
+</span></span><span style=display:flex><span>                &lt;p&gt;<span>距离偏差</span> = {result.error.distance} <span>公里</span>&lt;/p&gt;
+</span></span><span style=display:flex><span>              &lt;/div&gt;
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>              &lt;<span style=color:#ff79c6>div</span>&gt;
-</span></span><span style=display:flex><span>                &lt;<span style=color:#ff79c6>p</span> <span style=color:#50fa7b>className</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;font-medium&#34;</span>&gt;计算位置到各测向站的距离：&lt;/<span style=color:#ff79c6>p</span>&gt;
-</span></span><span style=display:flex><span>                {result.distances.calculated.sourceToStations.map((dist, idx) <span style=color:#ff79c6>=&gt;</span> (
-</span></span><span style=display:flex><span>                  &lt;<span style=color:#ff79c6>p</span> <span style=color:#50fa7b>key</span><span style=color:#ff79c6>=</span>{idx}&gt;
-</span></span><span style=display:flex><span>                    到测向站{dist.stationIndex}<span style=color:#ff79c6>:</span> {dist.distance.toFixed(<span style=color:#bd93f9>3</span>)} 公里
-</span></span><span style=display:flex><span>                  &lt;/<span style=color:#ff79c6>p</span>&gt;
+</span></span><span style=display:flex><span>              &lt;div&gt;
+</span></span><span style=display:flex><span>                &lt;p className=<span style=color:#a31515>&#34;font-medium&#34;</span>&gt;<span>计算位置到各测向站的距离：</span>&lt;/p&gt;
+</span></span><span style=display:flex><span>                {result.distances.calculated.sourceToStations.map((dist, idx) =&gt; (
+</span></span><span style=display:flex><span>                  &lt;p key={idx}&gt;
+</span></span><span style=display:flex><span>                    <span>到测向站</span>{dist.stationIndex}: {dist.distance.toFixed(3)} <span>公里</span>
+</span></span><span style=display:flex><span>                  &lt;/p&gt;
 </span></span><span style=display:flex><span>                ))}
-</span></span><span style=display:flex><span>              &lt;/<span style=color:#ff79c6>div</span>&gt;
+</span></span><span style=display:flex><span>              &lt;/div&gt;
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>              &lt;<span style=color:#ff79c6>div</span>&gt;
-</span></span><span style=display:flex><span>                &lt;<span style=color:#ff79c6>p</span> <span style=color:#50fa7b>className</span><span style=color:#ff79c6>=</span><span style=color:#f1fa8c>&#34;font-medium&#34;</span>&gt;测向站之间的距离：&lt;/<span style=color:#ff79c6>p</span>&gt;
-</span></span><span style=display:flex><span>                {result.distances.calculated.betweenStations.map((dist, idx) <span style=color:#ff79c6>=&gt;</span> (
-</span></span><span style=display:flex><span>                  &lt;<span style=color:#ff79c6>p</span> <span style=color:#50fa7b>key</span><span style=color:#ff79c6>=</span>{idx}&gt;
-</span></span><span style=display:flex><span>                    测向站{dist.station1}到测向站{dist.station2}<span style=color:#ff79c6>:</span> {dist.distance.toFixed(<span style=color:#bd93f9>3</span>)} 公里
-</span></span><span style=display:flex><span>                  &lt;/<span style=color:#ff79c6>p</span>&gt;
+</span></span><span style=display:flex><span>              &lt;div&gt;
+</span></span><span style=display:flex><span>                &lt;p className=<span style=color:#a31515>&#34;font-medium&#34;</span>&gt;<span>测向站之间的距离：</span>&lt;/p&gt;
+</span></span><span style=display:flex><span>                {result.distances.calculated.betweenStations.map((dist, idx) =&gt; (
+</span></span><span style=display:flex><span>                  &lt;p key={idx}&gt;
+</span></span><span style=display:flex><span>                    <span>测向站</span>{dist.station1}<span>到测向站</span>{dist.station2}: {dist.distance.toFixed(3)} <span>公里</span>
+</span></span><span style=display:flex><span>                  &lt;/p&gt;
 </span></span><span style=display:flex><span>                ))}
-</span></span><span style=display:flex><span>              &lt;/<span style=color:#ff79c6>div</span>&gt;
-</span></span><span style=display:flex><span>            &lt;/<span style=color:#ff79c6>div</span>&gt;
-</span></span><span style=display:flex><span>          &lt;/<span style=color:#ff79c6>div</span>&gt;
+</span></span><span style=display:flex><span>              &lt;/div&gt;
+</span></span><span style=display:flex><span>            &lt;/div&gt;
+</span></span><span style=display:flex><span>          &lt;/div&gt;
 </span></span><span style=display:flex><span>        )}
-</span></span><span style=display:flex><span>      &lt;/<span style=color:#ff79c6>CardContent</span>&gt;
-</span></span><span style=display:flex><span>    &lt;/<span style=color:#ff79c6>Card</span>&gt;
+</span></span><span style=display:flex><span>      &lt;/CardContent&gt;
+</span></span><span style=display:flex><span>    &lt;/Card&gt;
 </span></span><span style=display:flex><span>  );
 </span></span><span style=display:flex><span>};
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#ff79c6>export</span> <span style=color:#ff79c6>default</span> RadiationCalculator;</span></span></code></pre></div><footer class=footline><i class='fa-fw fas fa-calendar'></i> 2025-05-21</footer></article></div></main></div><aside id=R-sidebar class=default-animation><div id=R-header-topbar class=default-animation></div><div id=R-header-wrapper class=default-animation><div id=R-header class=default-animation><a id=R-logo href=/index.html><img src=/images/logo.png alt="FlitSoft Docs" style=width:80px;height:auto></a></div><search><form action=/search/index.html method=get><div class="searchbox default-animation"><button class=search-detail type=submit title="Search (CTRL+ALT+f)"><i class="fas fa-search"></i></button>
+</span></span><span style=display:flex><span><span style=color:#00f>export</span> <span style=color:#00f>default</span> RadiationCalculator;</span></span></code></pre></div><footer class=footline><i class='fa-fw fas fa-calendar'></i> 2025-05-21</footer></article></div></main></div><aside id=R-sidebar class=default-animation><div id=R-header-topbar class=default-animation></div><div id=R-header-wrapper class=default-animation><div id=R-header class=default-animation><a id=R-logo href=/index.html><img src=/images/logo.png alt="FlitSoft Docs" style=width:80px;height:auto></a></div><search><form action=/search/index.html method=get><div class="searchbox default-animation"><button class=search-detail type=submit title="Search (CTRL+ALT+f)"><i class="fas fa-search"></i></button>
 <label class=a11y-only for=R-search-by>Search</label>
 <input data-search-input id=R-search-by name=search-by class=search-by type=search placeholder=Search...>
 <button class=search-clear type=button data-search-clear title="Clear search"><i class="fas fa-times" title="Clear search"></i></button></div></form></search></div><div id=R-homelinks class=default-animation><div class="R-menu-divider default-animation"><hr class=padding></div><div class="R-sidebarmenu R-shortcutmenu-homelinks"><ul class="space collapsible-menu"></ul></div><div class="R-menu-divider default-animation"><hr class=padding></div><div class="R-sidebarmenu R-shortcutmenu-headercontrols"><ul></ul></div><div class="R-menu-divider default-animation"><hr class=padding></div></div><div id=R-content-wrapper class=highlightable><div class="R-sidebarmenu R-shortcutmenu-main"><ul class="enlarge morespace collapsible-menu"><li data-nav-id=/uas/index.html><a class=padding href=/uas/index.html>UAS</a><ul id=R-subsections-50d6e18f3c774adcdf96c62beb3fb9ae class=collapsible-menu></ul></li><li class=parent data-nav-id=/em/index.html><a class=padding href=/em/index.html>EM</a><ul id=R-subsections-5221d921411ef33ede36c0310590339e class=collapsible-menu><li class=alwaysopen data-nav-id=/em/antenna-pattern/index.html><a class=padding href=/em/antenna-pattern/index.html>Antenna Pattern</a><ul id=R-subsections-ccb34e1afa1278e5b9fa47ea16615cf2 class=collapsible-menu></ul></li><li class=alwaysopen data-nav-id=/em/comm/index.html><a class=padding href=/em/comm/index.html>Communication</a><ul id=R-subsections-76a132cf152c8c25082aa45ad7e583aa class=collapsible-menu></ul></li><li class="parent alwaysopen" data-nav-id=/em/radar/index.html><a class=padding href=/em/radar/index.html>Radar</a><ul id=R-subsections-ffd05e868c4f9d0f123a8646ca79cb9c class=collapsible-menu><li class=active data-nav-id=/em/radar/%E6%97%A0%E6%BA%90%E4%BE%A6%E5%AF%9F%E6%B5%8B%E5%90%91%E5%AE%9A%E4%BD%8D%E6%A8%A1%E5%9E%8B/index.html><a class=padding href=/em/radar/%E6%97%A0%E6%BA%90%E4%BE%A6%E5%AF%9F%E6%B5%8B%E5%90%91%E5%AE%9A%E4%BD%8D%E6%A8%A1%E5%9E%8B/index.html>无源侦察测向定位模型</a></li><li data-nav-id=/em/radar/%E9%9B%B7%E8%BE%BE%E5%AF%B9%E6%8A%97%E4%BE%A6%E5%AF%9F%E6%95%88%E8%83%BD%E6%A8%A1%E5%9E%8B%E7%A9%BA%E5%AF%B9%E5%9C%B0/index.html><a class=padding href=/em/radar/%E9%9B%B7%E8%BE%BE%E5%AF%B9%E6%8A%97%E4%BE%A6%E5%AF%9F%E6%95%88%E8%83%BD%E6%A8%A1%E5%9E%8B%E7%A9%BA%E5%AF%B9%E5%9C%B0/index.html>空对地雷达对抗侦察效能模型</a></li><li data-nav-id=/em/radar/%E9%9B%B7%E8%BE%BE%E5%AF%B9%E6%8A%97%E4%BE%A6%E5%AF%9F%E9%80%9A%E7%94%A8%E4%BE%A6%E5%AF%9F%E6%A8%A1%E5%9E%8B/index.html><a class=padding href=/em/radar/%E9%9B%B7%E8%BE%BE%E5%AF%B9%E6%8A%97%E4%BE%A6%E5%AF%9F%E9%80%9A%E7%94%A8%E4%BE%A6%E5%AF%9F%E6%A8%A1%E5%9E%8B/index.html>雷达对抗侦察效能通用模型</a></li><li data-nav-id=/em/radar/%E9%9B%B7%E8%BE%BE%E5%B9%B2%E6%89%B0%E6%95%88%E8%83%BD%E6%A8%A1%E5%9E%8Bv3/index.html><a class=padding href=/em/radar/%E9%9B%B7%E8%BE%BE%E5%B9%B2%E6%89%B0%E6%95%88%E8%83%BD%E6%A8%A1%E5%9E%8Bv3/index.html>雷达干扰效能模型</a></li></ul></li></ul></li><li data-nav-id=/agi/index.html><a class=padding href=/agi/index.html>AI</a><ul id=R-subsections-b697951847df19851ae8635cac95c15a class=collapsible-menu></ul></li><li data-nav-id=/gaming/index.html><a class=padding href=/gaming/index.html>Gaming</a><ul id=R-subsections-74a7dd4da8e6f52f53b466af73613f22 class=collapsible-menu></ul></li><li data-nav-id=/c2/index.html><a class=padding href=/c2/index.html>NGC2</a><ul id=R-subsections-e0126222f5f1b52fd67c95ccf5ad1c18 class=collapsible-menu></ul></li><li data-nav-id=/simu/index.html><a class=padding href=/simu/index.html>Simulation</a><ul id=R-subsections-80cfed847676c641fa01f11f3f2904bf class=collapsible-menu></ul></li><li data-nav-id=/visual/index.html><a class=padding href=/visual/index.html>Visualization</a><ul id=R-subsections-080a96fba97ea97926a463e36c9cb108 class=collapsible-menu></ul></li><li data-nav-id=/log/index.html><a class=padding href=/log/index.html>Log</a></li></ul></div><div class="R-sidebarmenu R-shortcutmenu-shortcuts"><ul class="space collapsible-menu"></ul></div><div id=R-footer-margin></div><div class="R-menu-divider default-animation"><hr class=padding></div><div class="R-sidebarmenu R-shortcutmenu-footercontrols"><ul><li class=R-variantswitcher><div class="padding menu-control"><i class="fa-fw fas fa-paint-brush"></i>
 <span>&nbsp;</span><div class=control-style><label class=a11y-only for=R-select-variant>Theme</label>
-<select id=R-select-variant><option id=R-select-variant-zen-light value=zen-light selected>Zen Light</option><option id=R-select-variant-zen-dark value=zen-dark>Zen Dark</option></select></div><div class=clear></div></div><script>window.relearn.markVariant()</script></li></ul></div><div id=R-footer><p>Built By FlitSoft</p></div></div></aside><script>window.MathJax=Object.assign(window.MathJax||{},{tex:{inlineMath:[["\\(","\\)"],["$","$"]],displayMath:[["\\[","\\]"],["$$","$$"]]},options:{enableMenu:!1}},JSON.parse("{}"))</script><script id=MathJax-script async src=/js/mathjax/tex-mml-chtml.js?1754146231></script><script src=/js/clipboard/clipboard.min.js?1754146231 defer></script><script src=/js/perfect-scrollbar/perfect-scrollbar.min.js?1754146231 defer></script><script src=/js/theme.min.js?1754146231 defer></script></body></html>
+<select id=R-select-variant><option id=R-select-variant-zen-light value=zen-light selected>Zen Light</option><option id=R-select-variant-zen-dark value=zen-dark>Zen Dark</option></select></div><div class=clear></div></div><script>window.relearn.markVariant()</script></li></ul></div><div id=R-footer><p>Built By FlitSoft</p></div></div></aside><script>window.MathJax=Object.assign(window.MathJax||{},{tex:{inlineMath:[["\\(","\\)"],["$","$"]],displayMath:[["\\[","\\]"],["$$","$$"]]},options:{enableMenu:!1}},JSON.parse("{}"))</script><script id=MathJax-script async src=/js/mathjax/tex-mml-chtml.js?1754148149></script><script src=/js/clipboard/clipboard.min.js?1754148149 defer></script><script src=/js/perfect-scrollbar/perfect-scrollbar.min.js?1754148149 defer></script><script src=/js/theme.min.js?1754148149 defer></script></body></html>
