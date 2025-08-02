@@ -5,9 +5,7 @@ theme = "hugo-theme-relearn"
 disableKinds = ["taxonomy"] # 可选：关闭 Hugo 自带的 /tags/ 目录
 
 
-[services]
-  [services.googleAnalytics]
-    ID = "G-TXZZJN3Q2Y"               # Hugo ≥0.120 推荐
+
  
 
 # googleAnalytics = "G-TXZZJN3Q2Y" 
@@ -69,4 +67,6 @@ publishDir = "docs"
         ]
 
 
-
+[services]
+  [services.googleAnalytics]
+    ID = "G-TXZZJN3Q2Y"           
