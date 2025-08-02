@@ -25,8 +25,8 @@
 
 @font-face {
     font-family: 'CodeFont';
-    src: url('/fonts/JetBrainsMono-Regular.woff2') format('woff2');
-    font-weight: 300;
+    src: url('/fonts/JetBrainsMono-Light.woff2') format('woff2');
+    font-weight:  normal;
     font-style: normal;
     font-display: swap;
 }
@@ -130,8 +130,8 @@ pre code {
   /* 设置代码字体，浏览器会从左到右依次尝试，如果加载失败，则使用系统默认的等宽字体 */
   font-family: 'CodeFont', 'JetBrains Mono', 'Fira Code', Consolas, 'Courier New', monospace;
 
-  /* 将字体大小设置为基础字号的 90% */
-  font-size: 0.9rem; 
+  /* 将字体大小设置为基础字号的 80% */
+  font-size: 0.8rem;
 
   /* 您还可以在这里添加其他样式，比如行高 */
   line-height: 1.5;
