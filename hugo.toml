@@ -20,7 +20,7 @@ disableKinds = ["taxonomy"] # 关闭 /tags/ 和 /categories/ 等分类页面
   disableLandingPageButton = true
   disablePrintButton = false
   customCSS = ["css/custom.css"]
-  googleAnalytics = "G-TXZZJN3Q2Y"
+
 
 
 # 这是 [markup] 表格，它也是一个独立的块，与上面的都平级
