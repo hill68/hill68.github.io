@@ -70,21 +70,3 @@ publishDir = "docs"
 
 
 
-# 菜单
-[menu]
-  [[menu.main]]
-    name = "首页"
-    url  = "/"
-    weight = 1
-  [[menu.main]]
-    name = "分类"
-    url  = "/categories/"
-    weight = 2
-  [[menu.main]]
-    name = "标签"
-    url  = "/tags/"
-    weight = 3
-  [[menu.main]]
-    name = "关于"
-    url  = "/about/"
-    weight = 4
