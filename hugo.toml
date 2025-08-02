@@ -1,7 +1,3 @@
-# =================================================================
-#               修正后的 hugo.toml 配置文件
-# =================================================================
-
 baseURL = "https://hill68.github.io/"
 languageCode = "zh-cn"
 title = "FlitSoft Docs"
@@ -34,10 +30,10 @@ disableKinds = ["taxonomy"] # 关闭 /tags/ 和 /categories/ 等分类页面
  # highlightTheme = "monokai" # 代码块（Code Block）的高亮显示风格为 “Monokai” 
  # highlightTheme = "github"  # 代码块（Code Block）的高亮显示风格为 “github” 
   highlightTheme = "dracula"
-  math = true
+  math = true # 若需数学公式支持，启用 MathJax
   disableLandingPageButton = true
-  disablePrintButton = false
-  customCSS = ["css/custom.css"]
+  disablePrintButton = false  #显示打印按钮
+  customCSS = ["css/custom.css"] #改变页面字体
   
   # 作者信息已合并到 [params] 内部，这是标准做法
   [params.author]
@@ -49,8 +45,10 @@ disableKinds = ["taxonomy"] # 关闭 /tags/ 和 /categories/ 等分类页面
     [markup.goldmark.renderer]
       # 允许在 Markdown 中渲染原生 HTML
       unsafe = true
-
+  
+    # 启用 passthrough 扩展，并自定义数学分隔符
     [markup.goldmark.extensions]
+      # 允许在 Markdown 中渲染原生 HTML
       [markup.goldmark.extensions.passthrough]
         enable = true
         [markup.goldmark.extensions.passthrough.delimiters]
