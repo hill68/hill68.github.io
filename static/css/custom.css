@@ -136,3 +136,7 @@ pre code {
   /* 您还可以在这里添加其他样式，比如行高 */
   line-height: 1.5;
 }
+
+.chapter {
+  display: none !important;
+}
