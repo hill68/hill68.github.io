@@ -131,7 +131,7 @@ pre code {
   font-family: 'CodeFont', 'JetBrains Mono', 'Fira Code', Consolas, 'Courier New', monospace;
 
   /* 将字体大小设置为基础字号的 50% */
-  font-size: 0.5rem !important;
+  font-size: 0.7rem !important;
 
   /* 您还可以在这里添加其他样式，比如行高 */
   line-height: 1.5;
