@@ -31,7 +31,7 @@ disableKinds = ["taxonomy"] # 关闭 /tags/ 和 /categories/ 等分类页面
   
   # 作者信息已合并到 [params] 内部，这是标准做法
   [params.author]
-    name = "你的名字"
+    name = "Z.Huang@FlitSoft"
 
 # Markdown 渲染器配置
 [markup]
