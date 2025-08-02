@@ -129,7 +129,10 @@ $$
 
   - 使用数值积分方法（如四阶Runge-Kutta方法）在时间步长$\tau$内对运动学方程进行积分，计算新状态$\mathbf{s}(t+\tau)$。
 
+1 
+
   - **状态更新函数**：
+
 
     ```cpp
     void stateTransit(const Eigen::VectorXd& state0, Eigen::VectorXd& state1,
