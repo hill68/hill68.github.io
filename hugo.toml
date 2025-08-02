@@ -1,72 +1,54 @@
-baseURL = "https://hill68.github.io/"    # 换成你的地址
+# =================================================================
+#               修正后的 hugo.toml 配置文件
+# =================================================================
+
+baseURL = "https://hill68.github.io/"
 languageCode = "zh-cn"
 title = "FlitSoft Docs"
 theme = "hugo-theme-relearn"
-disableKinds = ["taxonomy"] # 可选：关闭 Hugo 自带的 /tags/ 目录
 
-
-
- 
-
-# googleAnalytics = "G-TXZZJN3Q2Y" 
-
-[pagination]
-  pagerSize = 10   # 每页文章数量
-
-# 指定 Hugo build 输出到 docs/ 而不是默认 public/
+# 指定 Hugo build 输出到 docs/ 目录
 publishDir = "docs"
-  
-# URL 结构
-[permalinks]
-  post = "/:year-:month/:slug/"
+disableKinds = ["taxonomy"] # 关闭 /tags/ 和 /categories/ 等分类页面
 
-# 文章列表分组（可选）
-[taxonomies]
-  category = "categories"
-  tag      = "tags"
-  
-[params.author]
-  name = "你的名字"
+# 【重要】Google Analytics 官方推荐配置
+# 您的 [services] 表已移动到这里，确保它能被正确解析
+[services]
+  [services.googleAnalytics]
+    ID = "G-TXZZJN3Q2Y"
 
-
-# Relearn 主题自定义参数
+# Relearn 主题及其他参数
 [params]
-  subtitle     = "副标题 / 口号"
-  dateFormat   = "2006-01-02"
+  subtitle = "副标题 / 口号"
+  dateFormat = "2006-01-02"
   showReadingTime = true
   themeVariant = ['zen-light', 'zen-dark']
-  highlightTheme  = "monokai"   # 代码高亮风格
-  # 若需数学公式支持，启用 MathJax
+  highlightTheme = "monokai"
   math = true
- #隐藏Home按钮
   disableLandingPageButton = true
-  #显示打印按钮
   disablePrintButton = false
-  #改变页面字体
   customCSS = ["css/custom.css"]
+  
+  # 作者信息已合并到 [params] 内部，这是标准做法
+  [params.author]
+    name = "你的名字"
 
+# Markdown 渲染器配置
 [markup]
   [markup.goldmark]
-    # 允许在 Markdown 中渲染原生 HTML
     [markup.goldmark.renderer]
+      # 允许在 Markdown 中渲染原生 HTML
       unsafe = true
 
-    # 启用 passthrough 扩展，并自定义数学分隔符
     [markup.goldmark.extensions]
       [markup.goldmark.extensions.passthrough]
         enable = true
-
-      [markup.goldmark.extensions.passthrough.delimiters]
-        block = [
-          ['\[', '\]'],
-          ['$$', '$$']
-        ]
-        inline = [
-          ['\(', '\)'],
-          ['$', '$']
-        ]
-
-
-[services]
-  [services.googleAnalytics]
-    ID = "G-TXZZJN3Q2Y"           
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [
+            ['\[', '\]'],
+            ['$$', '$$']
+          ]
+          inline = [
+            ['\(', '\)'],
+            ['$', '$']
+          ]
