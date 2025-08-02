@@ -11,11 +11,19 @@ theme = "hugo-theme-relearn"
 publishDir = "docs"
 disableKinds = ["taxonomy"] # 关闭 /tags/ 和 /categories/ 等分类页面
 
-# 【重要】Google Analytics 官方推荐配置
-# 您的 [services] 表已移动到这里，确保它能被正确解析
+# --- Google Analytics 核心配置 ---
+
+# 1. 启用 GA 服务并提供 ID
 [services]
   [services.googleAnalytics]
     ID = "G-TXZZJN3Q2Y"
+
+# 2. 确保隐私设置允许 GA 运行
+[privacy]
+  [privacy.googleAnalytics]
+    disable = false
+    respectDoNotTrack = false # 如果设为true，当用户浏览器开启“Do Not Track”时，GA脚本不会加载
+
 
 # Relearn 主题及其他参数
 [params]
