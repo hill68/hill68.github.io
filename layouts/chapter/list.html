@@ -1,0 +1,11 @@
+{{- define "main" -}}
+  <div class="td-content">
+    {{/* 这里会显示 _index.md 文件里的标题 */}}
+    <h1>{{ .Title }}</h1>
+
+    {{/* 这里会渲染 _index.md 文件里的内容，最重要的就是那个 children 短代码 */}}
+    <div class="td-content-children">
+      {{ .Content }}
+    </div>
+  </div>
+{{- end -}}
