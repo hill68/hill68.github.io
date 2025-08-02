@@ -23,6 +23,14 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'CodeFont';
+    src: url('/fonts/JetBrainsMono-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 /* 应用到你现有的选择器 */
 /* H1 使用 TitleFont */
 .body #body-inner h1,
@@ -114,16 +122,17 @@ article p,
 */
 
 /* 1. 从 Google Fonts 服务引入 "JetBrains Mono" 字体 */
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,700;1,400&display=swap'); 
+/*@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,700;1,400&display=swap'); */
+
 
 /* 2. 将样式应用到所有代码块 */
 pre code {
   /* 设置代码字体，浏览器会从左到右依次尝试，如果加载失败，则使用系统默认的等宽字体 */
-  font-family: 'JetBrains Mono', 'Fira Code', Consolas, 'Courier New', monospace;
+  font-family: 'CodeFont', 'JetBrains Mono', 'Fira Code', Consolas, 'Courier New', monospace;
 
   /* 将字体大小设置为基础字号的 90% */
   font-size: 0.9rem; 
 
   /* 您还可以在这里添加其他样式，比如行高 */
-  line-height: 1.6;
+  line-height: 1.5;
 }
