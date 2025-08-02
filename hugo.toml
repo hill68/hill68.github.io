@@ -49,3 +49,15 @@ disableKinds = ["taxonomy"] # 关闭 /tags/ 和 /categories/ 等分类页面
             ['\(', '\)'],
             ['$', '$']
           ]
+
+
+# 1. 启用 GA 服务并提供 ID
+[services]
+  [services.googleAnalytics]
+    ID = "G-TXZZJN3Q2Y"
+
+# 2. 确保隐私设置允许 GA 运行
+[privacy]
+  [privacy.googleAnalytics]
+    disable = false
+    respectDoNotTrack = false # 如果设为true，当用户浏览器开启“Do Not Track”时，GA脚本不会加载
