@@ -26,7 +26,7 @@
 @font-face {
     font-family: 'CodeFont';
     src: url('/fonts/JetBrainsMono-Regular.woff2') format('woff2');
-    font-weight: normal;
+    font-weight: 300;
     font-style: normal;
     font-display: swap;
 }
