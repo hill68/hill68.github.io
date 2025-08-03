@@ -137,3 +137,7 @@ pre code {
   line-height: 1.5;
 }
 
+/* 隐藏章节页面标题前的 "Chapter X" 编号 */
+.chapter .article-subheading {
+    display: none;
+}
