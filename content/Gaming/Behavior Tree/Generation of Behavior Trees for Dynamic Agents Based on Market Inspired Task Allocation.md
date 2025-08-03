@@ -59,8 +59,7 @@ https://www.diva-portal.org/smash/get/diva2:1661617/FULLTEXT01.pdf
 
 ### 2.1 行为树
 
-<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-17.jpg?height=526&width=1072&top_left_y=1205&  top_left_x=498" width=500/>
-
+<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-17.jpg?height=526&width=1072&top_left_y=1205&top_left_x=498" width=500/>
 
 
 图2.1：一个简单的行为树示例，用于打开门、打开灯光然后执行其他操作。
@@ -110,7 +109,7 @@ https://www.diva-portal.org/smash/get/diva2:1661617/FULLTEXT01.pdf
 
 图2.4所示的具有 $N$ 个子节点的并行节点，会从左到右“滴答”其所有子节点。当成功的子节点数大于或等于 $M$ 时，并行节点返回成功；当失败的子节点数大于 $N - M$ 时，返回失败；若两者条件均不满足，则返回运行中。并行节点的执行详见算法3[6]。
 
-算法 3：具有 $N$ 个子节点和成功阈值 $M$ 的并行节点伪代码。
+**算法 3：** 具有 $N$ 个子节点和成功阈值 $M$ 的并行节点伪代码。
 
 <img src="https://cdn.mathpix.com/snip/images/H06JH29gtmwaNKiI8SFwtB658CKb3QjEJa0yBVFjDZQ.original.fullsize.png" width=400 />
 
