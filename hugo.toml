@@ -52,5 +52,5 @@ disableKinds = ["taxonomy"] # 关闭 /tags/ 和 /categories/ 等分类页面
   math = true
   disableLandingPageButton = true
   disablePrintButton = false
-  disableChapterTitleNumbering = true  
+  # disableChapterTitleNumbering = true  
   customCSS = ["css/custom.css"]
