@@ -131,7 +131,7 @@ $$
 
 - **状态更新函数**：
 
-
+1
     ```cpp
     void stateTransit(const Eigen::VectorXd& state0, Eigen::VectorXd& state1,
                       const Eigen::Vector2d& control_input, double tau) {
