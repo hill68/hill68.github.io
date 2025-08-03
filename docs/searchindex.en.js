@@ -233,7 +233,7 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "FlitSoft Docs",
-    "content": "This is a new chapter.\nBehavior Tree行为树",
+    "content": "Behavior Tree行为树",
     "description": "智能博弈文献与模型",
     "tags": [],
     "title": "Gaming",

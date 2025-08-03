@@ -137,6 +137,7 @@ pre code {
   line-height: 1.5;
 }
 
-.chapter-number {
+#R-body .chapter-number,
+#R-body .chapter-label {
   display: none !important;
 }
