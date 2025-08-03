@@ -8,37 +8,6 @@ publishDir = "docs"
 disableKinds = ["taxonomy"] # 关闭 /tags/ 和 /categories/ 等分类页面
 
 
-# 添加高亮配置
-  [markup.highlight]
-    anchorLineNos = false
-    codeFences = true
-    guessSyntax = true
-    lineAnchors = ""
-    lineNoStart = 1
-    lineNos = false
-    lineNumbersInTable = true
-    noClasses = true  # 重要：设置为 true
-    style = "dracula"  # 设置高亮主题 monokai, github, dracula, vs, nord 等
-    tabWidth = 4
-
-
-# Relearn 主题及其他参数
-# 这是 [params] 表格，里面只应该有 key = value 格式的行
-[params]
-  subtitle = "SubFlitSoft"
-  dateFormat = "2006-01-02"
-  showReadingTime = true
-  themeVariant = ['zen-light', 'zen-dark']
- # highlightTheme = "dracula"
-  math = true
-  disableLandingPageButton = true
-  disablePrintButton = false
-  disableChapterNumbers = true  # 全局禁用章节号
-  customCSS = ["css/custom.css"]
-
-
-
-# 这是 [markup] 表格，它也是一个独立的块，与上面的都平级
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
@@ -59,3 +28,29 @@ disableKinds = ["taxonomy"] # 关闭 /tags/ 和 /categories/ 等分类页面
             ['$', '$']
           ]
 
+# 添加高亮配置
+  [markup.highlight]
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = true
+    lineAnchors = ""
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = true  # 重要：设置为 true
+    style = "dracula"  # 设置高亮主题 monokai, github, dracula, vs, nord 等
+    tabWidth = 4
+
+
+
+# Relearn 主题及其他参数
+[params]
+  subtitle = "SubFlitSoft"
+  dateFormat = "2006-01-02"
+  showReadingTime = true
+  themeVariant = ['zen-light', 'zen-dark']
+  math = true
+  disableLandingPageButton = true
+  disablePrintButton = false
+  disableChapterNumbers = true  # 全局禁用章节号
+  customCSS = ["css/custom.css"]
