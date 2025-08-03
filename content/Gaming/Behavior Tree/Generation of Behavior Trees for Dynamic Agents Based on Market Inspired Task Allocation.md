@@ -5,7 +5,7 @@ title = '基于市场启发的任务分配的动态智能体行为树生成'
 summary= "建立了一种基于市场启发的拍卖任务分配系统，以及一种利用可用行为库生成行为树以创建自主行为的方法。通过仿真和多个实验室环境中的多次实验验证了该方法的有效性。"
 +++
 
-## 基于市场启发的任务分配的动态智能体行为树生成
+## Generation of Behavior Trees for Dynamic Agents Based on Market Inspired Task Allocation
 
 Niklas Dahlquist  
 工程物理与电气工程，2022年硕士
