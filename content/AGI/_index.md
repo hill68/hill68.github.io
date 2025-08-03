@@ -1,7 +1,7 @@
 +++
 title = "AI"
 type = "chapter"
-weight = 31
+weight = 32
 summary= "AI文献与进展"
 disableChapterTitleNumbering=true 
 +++
