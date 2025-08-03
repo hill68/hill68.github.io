@@ -63,7 +63,9 @@ https://www.diva-portal.org/smash/get/diva2:1661617/FULLTEXT01.pdf
 
 ### 2.1 行为树
 
-<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-17.jpg?height=526&width=1072&top_left_y=1205&  top_left_x=498" width=500/>
+<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-17.jpg?height=526&width=1072&top_left_y=1205&  top_left_x=498" />
+
+![](https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-17.jpg?height=526&width=1072&top_left_y=1205&top_left_x=498)
 
 
 图2.1：一个简单的行为树示例，用于打开门、打开灯光然后执行其他操作。
@@ -76,7 +78,7 @@ https://www.diva-portal.org/smash/get/diva2:1661617/FULLTEXT01.pdf
 
 ### 2.1.1 顺序节点（Sequence Node）
 
-<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-18.jpg?height=304&width=698&top_left_y=939& top_left_x=685" width=500/>
+<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-18.jpg?height=304&width=698&top_left_y=939&top_left_x=685" width=500/>
 
 
 图2.2：具有 $N$ 个子节点的顺序节点。
@@ -130,7 +132,7 @@ Algorithm 2: Pseudocode of a fallback node with $N$ children.
 
 ### 2.1.3 Parallel Node
 
-<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-19.jpg?height=301&width=695&top_left_y=1991& top_left_x=686" width=500/>
+<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-19.jpg?height=301&width=695&top_left_y=1991&top_left_x=686" width=500/>
 
 
 图2.4：具有 $N$ 个子节点的并行节点。
@@ -157,7 +159,7 @@ success threshold M.
 
 ### 2.1.4 行为节点（Action Node）
 
-<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-20.jpg?height=181&width=249&top_left_y=1400& top_left_x=909" width=500/>
+<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-20.jpg?height=181&width=249&top_left_y=1400&top_left_x=909" width=500/>
 
 
 图2.5：行为节点，节点名称描述其执行的动作。
@@ -182,7 +184,7 @@ Algorithm 4: Pseudocode of an action node.
 
 ### 2.1.5 条件节点（Condition Node）
 
-<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-21.jpg?height=186&width=418&top_left_y=1215& top_left_x=822" width=500/>
+<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-21.jpg?height=186&width=418&top_left_y=1215&top_left_x=822" width=500/>
 
 
 图2.6：条件节点。
@@ -211,7 +213,7 @@ Algorithm 5: Pseudocode of a condition node.
 ### 2.2.1 拍卖服务器
 
 拍卖服务器（或称拍卖处理器）需能够接收新的拍卖项目、竞标、发布可用拍卖信息，并在拍卖回合结束时公布结果。此类拍卖服务器的结构如图2.7流程图所示。
-<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-22.jpg?height=609&width=1186&top_left_y=1032& top_left_x=441" width=500/>
+<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-22.jpg?height=609&width=1186&top_left_y=1032&top_left_x=441" width=500/>
 
 
 图2.7：拍卖服务器结构。
@@ -219,7 +221,7 @@ Algorithm 5: Pseudocode of a condition node.
 ### 2.2.2 拍卖客户端
 
 参与出价并争取赢得部分可用任务的参与者称为拍卖客户端。拍卖客户端的结构如图2.8流程图所示。
-<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-23.jpg?height=618&width=1243&top_left_y=428& top_left_x=412" width=500/>
+<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-23.jpg?height=618&width=1243&top_left_y=428&top_left_x=412" width=500/>
 
 
 图2.8：拍卖客户端结构。
@@ -280,7 +282,7 @@ $$
 ### 2.2.9 任务分配优化
 
 确定如何分配任务给工人以最小化总成本且分配最多任务的问题，可通过构造无向图 $G=(N, E)$ 解决，其中 $N$ 表示节点，$E$ 表示节点间的边[10]。节点 $N$ 包含工人 $i$ 和任务 $j$，边 $(k, l) \in E$ 表示节点 $k$ 和 $l$ 之间的匹配成本。工人 $i$ 与任务 $j$ 之间的边表示工人执行该任务的成本。图2.9展示了工人、任务及带关联成本 $c_{i,j}$ 的边的结构示意。
-<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-25.jpg?height=581&width=844&top_left_y=435& top_left_x=606" width=500/>
+<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-25.jpg?height=581&width=844&top_left_y=435&top_left_x=606" width=500/>
 
 
 图2.9：展示工人、任务及成本相关图的结构示意。
@@ -349,7 +351,7 @@ $$
 
 ### 2.3.2 生成算法
 
-<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-27.jpg?height=1034&width=1286&top_left_y=551& top_left_x=391" width=500/>
+<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-27.jpg?height=1034&width=1286&top_left_y=551&top_left_x=391" width=500/>
 
 
 图2.10：行为树生成算法的视觉概览。
@@ -394,7 +396,7 @@ Algorithm 7: Pseudocode for exanding a condition.
 ### 2.3.3 包含安全需求
 
 如第2.3.2节所述，为解决特定任务生成行为树时，可以同时包含执行生成行为树所需满足的各种安全检查。为包含这些安全检查，创建一个行为树，将安全检查与生成的行为树作为子节点添加到一个顺序节点中。图2.11展示了该扩展的实现方式。
-<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-29.jpg?height=364&width=1029&top_left_y=426& top_left_x=516" width=500/>
+<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-29.jpg?height=364&width=1029&top_left_y=426&top_left_x=516" width=500/>
 
 
 图2.11：展示如何将为解决特定任务生成的行为树扩展以包含多种安全检查的视觉示意。
@@ -457,7 +459,7 @@ $$
 ### 3.1.1 Gazebo
 
 用于模拟仿真环境相关物理过程的软件是Gazebo[13]。Gazebo是一款开源机器人模拟器，兼容ROS，且在机器人社区广泛使用[14]。图3.1展示了Gazebo仿真环境的界面。
-<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-31.jpg?height=537&width=1072&top_left_y=1599& top_left_x=498" width=500/>
+<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-31.jpg?height=537&width=1072&top_left_y=1599&top_left_x=498" width=500/>
 
 
 图3.1：Gazebo仿真环境快照。左图为三架无人机初始配置，右图展示部分任务执行情况。
@@ -586,11 +588,11 @@ OR-Tools支持多种编程语言建模问题，本实现采用$\mathrm{C}++$定�
 ### 3.6.3 生成的行为树
 
 为解决3.5.1节定义的两个可用任务生成的行为树分别见图3.2和3.3。
-<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-36.jpg?height=583&width=1260&top_left_y=434& top_left_x=404" width=500/>
+<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-36.jpg?height=583&width=1260&top_left_y=434&top_left_x=404" width=500/>
 
 
 图3.2：为完成“移动到”任务生成的行为树。
-<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-36.jpg?height=650&width=1260&top_left_y=1217& top_left_x=404" width=500/>
+<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-36.jpg?height=650&width=1260&top_left_y=1217&top_left_x=404" width=500/>
 
 
 图3.3：为完成“探索”任务，探索多个随机点一段指定时间生成的行为树。
@@ -614,7 +616,7 @@ $$
 ### 3.6.6 备用行为树
 
 未分配任务时执行标准行为树。该行为树首先在当前位置等待指定时间，随后将无人机移至并降落在起始位置。标准行为树见图3.4。
-<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-37.jpg?height=987&width=1260&top_left_y=1334& top_left_x=401" width=500/>
+<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-37.jpg?height=987&width=1260&top_left_y=1334&top_left_x=401" width=500/>
 
 
 图3.4：无任务时执行的标准行为树。
@@ -695,11 +697,11 @@ $$
 ### 4.2.1 仿真环境
 
 图4.1和4.2展示了无人机在仿真环境中访问并完成任务的结果。无人机首先起飞并移动至成本最低的最近点，随后每完成一个任务便移动至当前位置最近的下一个点，直至所有任务完成，最后返回起始位置。
-<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-40.jpg?height=706&width=909&top_left_y=484& top_left_x=642" width=500/>
+<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-40.jpg?height=706&width=909&top_left_y=484&top_left_x=642" width=500/>
 
 
 图4.1：一架仿真无人机完成任务网格（“移动到点”任务）三维视图，实验1。
-<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-40.jpg?height=749&width=957&top_left_y=1496& top_left_x=515" width=500/>
+<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-40.jpg?height=749&width=957&top_left_y=1496&top_left_x=515" width=500/>
 
 
 图4.2：一架仿真无人机完成任务网格（“移动到点”任务）二维视图，实验1。
@@ -707,11 +709,11 @@ $$
 ### 4.2.2 实验室环境
 
 图4.3和4.4展示了无人机在物理环境中访问并完成任务的结果。无人机起飞后先移动至成本最低的最近点，随后每完成一个任务便移动至当前位置最近的下一个点，直至所有任务完成，最后返回起始位置。
-<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-41.jpg?height=707&width=917&top_left_y=880& top_left_x=638" width=500/>
+<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-41.jpg?height=707&width=917&top_left_y=880&top_left_x=638" width=500/>
 
 
 图4.3：一架真实无人机完成任务网格（“移动到点”任务）三维视图，实验1。
-<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-42.jpg?height=755&width=957&top_left_y=485& top_left_x=515" width=500/>
+<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-42.jpg?height=755&width=957&top_left_y=485&top_left_x=515" width=500/>
 
 
 图4.4：一架真实无人机完成任务网格（“移动到点”任务）二维视图，实验1。
@@ -739,11 +741,11 @@ $$
 ### 4.3.1 仿真环境
 
 图4.5和4.6展示了两架无人机在仿真环境中访问并完成任务的结果。无人机起飞后先移动至两个总成本最低的最近点，随后每完成一个任务，分别移动至当前位置最近的下一个点，直至所有任务完成，最后返回各自起始位置。
-<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-43.jpg?height=706&width=909&top_left_y=484& top_left_x=642" width=500/>
+<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-43.jpg?height=706&width=909&top_left_y=484&top_left_x=642" width=500/>
 
 
 图4.5：两架仿真无人机完成任务网格（“移动到点”任务）三维视图，实验2。
-<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-43.jpg?height=752&width=967&top_left_y=1497& top_left_x=513" width=500/>
+<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-43.jpg?height=752&width=967&top_left_y=1497&top_left_x=513" width=500/>
 
 
 图4.6：两架仿真无人机完成任务网格（“移动到点”任务）二维视图，实验2。
@@ -751,11 +753,11 @@ $$
 ### 4.3.2 实验室环境
 
 图4.7和4.8展示了两架无人机在物理环境中访问并完成任务的结果。无人机起飞后先移动至两个总成本最低的最近点，随后每完成一个任务，分别移动至当前位置最近的下一个点，直至所有任务完成，最后返回各自起始位置。
-<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-44.jpg?height=709&width=927&top_left_y=882& top_left_x=633" width=500/>
+<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-44.jpg?height=709&width=927&top_left_y=882&top_left_x=633" width=500/>
 
 
 图4.7：两架真实无人机完成任务网格（“移动到点”任务）三维视图，实验2。
-<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-45.jpg?height=755&width=960&top_left_y=485& top_left_x=511" width=500/>
+<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-45.jpg?height=755&width=960&top_left_y=485&top_left_x=511" width=500/>
 
 
 图4.8：两架真实无人机完成任务网格（“移动到点”任务）二维视图，实验2。
@@ -783,11 +785,11 @@ $$
 ### 4.4.1 仿真环境
 
 图4.9和4.10展示了三架无人机在仿真环境中访问并完成任务的结果。无人机起飞后先移动至三个总成本最低的最近点，随后每完成一个任务，分别移动至当前位置最近的下一个点，直至所有任务完成，最后返回各自起始位置。
-<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-46.jpg?height=706&width=909&top_left_y=484& top_left_x=642" width=500/>
+<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-46.jpg?height=706&width=909&top_left_y=484&top_left_x=642" width=500/>
 
 
 图4.9：三架仿真无人机完成任务网格（“移动到点”任务）三维视图，实验3。
-<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-46.jpg?height=752&width=957&top_left_y=1497& top_left_x=515" width=500/>
+<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-46.jpg?height=752&width=957&top_left_y=1497&top_left_x=515" width=500/>
 
 
 图4.10：三架仿真无人机完成任务网格（“移动到点”任务）二维视图，实验3。
@@ -795,11 +797,11 @@ $$
 ### 4.4.2 实验室环境
 
 图4.11和4.12展示了三架无人机在物理环境中访问并完成任务的结果。无人机起飞后先移动至三个总成本最低的最近点，随后每完成一个任务，分别移动至当前位置最近的下一个点，直至所有任务完成，最后返回各自起始位置。
-<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-47.jpg?height=706&width=917&top_left_y=929& top_left_x=638" width=500/>
+<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-47.jpg?height=706&width=917&top_left_y=929&top_left_x=638" width=500/>
 
 
 图4.11：三架真实无人机完成任务网格（“移动到点”任务）三维视图，实验3。
-<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-48.jpg?height=752&width=957&top_left_y=486& top_left_x=515" width=500/>
+<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-48.jpg?height=752&width=957&top_left_y=486&top_left_x=515" width=500/>
 
 
 图4.12：三架真实无人机完成任务网格（“移动到点”任务）二维视图，实验3。
@@ -820,11 +822,11 @@ $$
 ### 4.5.1 仿真环境
 
 图4.13和4.14展示了两架仿真无人机尝试访问三个点的过程。两任务完成后，一架无人机尝试完成最后一任务但因飞高于允许最大高度失败，任务返还拍卖服务器，以便重新分配给另一架无人机。随后另一无人机重复尝试完成该任务。
-<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-49.jpg?height=712&width=915&top_left_y=666& top_left_x=642" width=500/>
+<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-49.jpg?height=712&width=915&top_left_y=666&top_left_x=642" width=500/>
 
 
 图4.13：两架仿真无人机失败并重分配任务的三维视图，实验4。
-<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-50.jpg?height=752&width=952&top_left_y=486& top_left_x=518" width=500/>
+<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-50.jpg?height=752&width=952&top_left_y=486&top_left_x=518" width=500/>
 
 
 图4.14：两架仿真无人机失败并重分配任务的二维视图，实验4。
@@ -832,11 +834,11 @@ $$
 ### 4.5.2 实验室环境
 
 图4.15和4.16展示了两架无人机在物理环境中尝试访问三个点。两任务完成后，一架无人机尝试完成最后一任务但因飞高于允许最大高度失败，任务返还拍卖服务器，以便重新分配给另一架无人机。随后另一无人机重复尝试完成该任务。
-<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-51.jpg?height=706&width=923&top_left_y=484& top_left_x=632" width=500/>
+<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-51.jpg?height=706&width=923&top_left_y=484&top_left_x=632" width=500/>
 
 
 图4.15：两架真实无人机失败并重分配任务的三维视图，实验4。
-<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-51.jpg?height=761&width=957&top_left_y=1490& top_left_x=518" width=500/>
+<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-51.jpg?height=761&width=957&top_left_y=1490&top_left_x=518" width=500/>
 
 
 图4.16：两架真实无人机失败并重分配任务的二维视图，实验4。
@@ -864,11 +866,11 @@ $$
 ### 4.6.1 仿真环境
 
 图4.17和4.18展示了三架无人机在仿真环境中访问并完成任务。无人机起飞后先移动至三个总成本最低的点。两架无人机持续完成任务，第三架在执行第三个任务时接收到模拟故障信号，中断任务返回拍卖服务器并返回起始位置。其余两架无人机完成该任务，确保所有任务完成。
-<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-53.jpg?height=706&width=909&top_left_y=484& top_left_x=642" width=500/>
+<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-53.jpg?height=706&width=909&top_left_y=484&top_left_x=642" width=500/>
 
 
 图4.17：三架仿真无人机完成“移动到点”任务网格，含一架故障模拟，实验5。
-<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-53.jpg?height=752&width=958&top_left_y=1540& top_left_x=512" width=500/>
+<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-53.jpg?height=752&width=958&top_left_y=1540&top_left_x=512" width=500/>
 
 
 图4.18：三架仿真无人机完成“移动到点”任务网格二维视图，含一架故障模拟，实验5。
@@ -876,11 +878,11 @@ $$
 ### 4.6.2 实验室环境
 
 图4.19和4.20展示了三架无人机在物理环境中访问并完成任务。三架无人机起飞后先移动至三个总成本最低的点。两架无人机持续完成任务，第三架在执行第三任务时接收到模拟故障信号，中断任务返回拍卖服务器并返回起始位置。其余两架无人机完成该任务，确保所有任务完成。
-<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-54.jpg?height=712&width=929&top_left_y=1106& top_left_x=626" width=500/>
+<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-54.jpg?height=712&width=929&top_left_y=1106&top_left_x=626" width=500/>
 
 
 图4.19：三架真实无人机完成“移动到点”任务网格，含一架故障模拟，实验5。
-<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-55.jpg?height=752&width=957&top_left_y=486& top_left_x=515" width=500/>
+<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-55.jpg?height=752&width=957&top_left_y=486&top_left_x=515" width=500/>
 
 
 图4.20：三架真实无人机完成“移动到点”任务网格二维视图，含一架故障模拟，实验5。
@@ -926,11 +928,11 @@ $$
 ### 4.7.1 仿真环境
 
 图4.21和4.22展示了三架无人机访问16点并完成探索任务的过程。“探索”任务首先分配给一架无人机。因探索任务耗时较长，其他两架无人机完成所有“移动到点”任务。
-<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-56.jpg?height=712&width=932&top_left_y=832& top_left_x=628" width=500/>
+<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-56.jpg?height=712&width=932&top_left_y=832&top_left_x=628" width=500/>
 
 
 图4.21：三架仿真无人机完成“移动到点”任务网格及一项“探索”任务，实验6。
-<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-57.jpg?height=751&width=947&top_left_y=484& top_left_x=523" width=500/>
+<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-57.jpg?height=751&width=947&top_left_y=484&top_left_x=523" width=500/>
 
 
 图4.22：三架仿真无人机完成“移动到点”任务网格及一项“探索”任务二维视图，实验6。
@@ -938,11 +940,11 @@ $$
 ### 4.7.2 实验室环境
 
 图4.23和4.24展示了三架无人机访问16点并完成探索任务的过程。“探索”任务首先分配给一架无人机。因探索任务耗时较长，其他两架无人机完成所有“移动到点”任务。
-<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-58.jpg?height=712&width=915&top_left_y=484& top_left_x=642" width=500/>
+<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-58.jpg?height=712&width=915&top_left_y=484&top_left_x=642" width=500/>
 
 
 图4.23：三架真实无人机完成“移动到点”任务网格及一项“探索”任务，实验6。
-<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-58.jpg?height=749&width=963&top_left_y=1539& top_left_x=518" width=500/>
+<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-58.jpg?height=749&width=963&top_left_y=1539&top_left_x=518" width=500/>
 
 
 图4.24：三架真实无人机完成“移动到点”任务网格及一项“探索”任务二维视图，实验6。
