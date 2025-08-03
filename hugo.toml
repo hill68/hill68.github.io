@@ -35,7 +35,7 @@ disableKinds = ["taxonomy"] # 关闭 /tags/ 和 /categories/ 等分类页面
   showReadingTime = true
   themeVariant = ['zen-light', 'zen-dark']
   # 使用主题推荐的方式来设置代码高亮主题
-  highlightTheme = "dracula"
+  highlightTheme = "github"
   math = true
   disableLandingPageButton = true
   disablePrintButton = false
