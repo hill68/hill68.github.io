@@ -72,22 +72,22 @@ https://www.diva-portal.org/smash/get/diva2:1661617/FULLTEXT01.pdf
 
 ### 2.1.1 顺序节点（Sequence Node）
 
-<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-18.jpg?height=304&width=698&top_left_y=939&top_left_x=685" width=500/>
+<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-18.jpg?height=304&width=698&top_left_y=939&top_left_x=685" width=400/>
 
 
 图2.2：具有 $N$ 个子节点的顺序节点。
 
-图2.2所示的具有 $N$ 个子节点的顺序节点，会从左至右依次“滴答”子节点，直到某个子节点返回失败或运行中，并将该结果返回给顺序节点的父节点；若所有子节点均返回成功，顺序节点返回成功。顺序节点的执行详见算法1。(6)
+图2.2所示的具有 $N$ 个子节点的顺序节点，会从左至右依次“滴答”子节点，直到某个子节点返回失败或运行中，并将该结果返回给顺序节点的父节点；若所有子节点均返回成功，顺序节点返回成功。顺序节点的执行详见算法1。[6]
 
 **算法 1：** 具有 $N$ 个子节点的序列节点伪代码。
 
-<img src="https://cdn.mathpix.com/snip/images/1UATNEIzuxU-B914xm2pIOeeNpTlGRnZO-_oI68IXQU.original.fullsize.png" width=400/>
+<img src="https://cdn.mathpix.com/snip/images/1UATNEIzuxU-B914xm2pIOeeNpTlGRnZO-_oI68IXQU.original.fullsize.png" width=500/>
 
 
 
 ### 2.1.2 选择节点（Fallback Node）
 
-<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-19.jpg?height=301&width=695&top_left_y=552&top_left_x=686" width=500/>
+<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-19.jpg?height=301&width=695&top_left_y=552&top_left_x=686" width=400/>
 
 
 图2.3：具有 $N$ 个子节点的选择节点。
@@ -102,7 +102,7 @@ https://www.diva-portal.org/smash/get/diva2:1661617/FULLTEXT01.pdf
 
 ### 2.1.3 Parallel Node
 
-<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-19.jpg?height=301&width=695&top_left_y=1991&top_left_x=686" width=500/>
+<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-19.jpg?height=301&width=695&top_left_y=1991&top_left_x=686" width=400/>
 
 
 图2.4：具有 $N$ 个子节点的并行节点。
@@ -132,7 +132,7 @@ https://www.diva-portal.org/smash/get/diva2:1661617/FULLTEXT01.pdf
 
 ### 2.1.5 条件节点（Condition Node）
 
-<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-21.jpg?height=186&width=418&top_left_y=1215&top_left_x=822" width=100/>
+<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-21.jpg?height=186&width=418&top_left_y=1215&top_left_x=822" width=150/>
 
 
 图2.6：条件节点。
