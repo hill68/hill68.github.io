@@ -265,14 +265,6 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "FlitSoft Docs",
-    "content": "",
-    "description": "特殊测试",
-    "tags": [],
-    "title": "test",
-    "uri": "/testch/index.html"
-  },
-  {
-    "breadcrumb": "FlitSoft Docs",
     "content": "This is a new chapter.",
     "description": "This summary is independent of the content.",
     "tags": [],
