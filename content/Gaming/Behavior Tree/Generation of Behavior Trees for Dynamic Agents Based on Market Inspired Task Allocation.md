@@ -80,49 +80,25 @@ https://www.diva-portal.org/smash/get/diva2:1661617/FULLTEXT01.pdf
 
 图2.2所示的具有 $N$ 个子节点的顺序节点，会从左至右依次“滴答”子节点，直到某个子节点返回失败或运行中，并将该结果返回给顺序节点的父节点；若所有子节点均返回成功，顺序节点返回成功。顺序节点的执行详见算法1。(6)
 
+**算法 1：** 具有 $N$ 个子节点的序列节点伪代码。
 
+<img src="https://cdn.mathpix.com/snip/images/1UATNEIzuxU-B914xm2pIOeeNpTlGRnZO-_oI68IXQU.original.fullsize.png" width=400/>
 
-```
-Algorithm 1: Pseudocode of a sequence node with $N$ children.
-    Function Tick():
-        for $i \leftarrow 1$ to $N$ do
-            childStatus $\leftarrow$ child $(i)$.Tick ()
-            if childStatus = Running then
-                return Running
-            end
-            else if childStatus = Failure then
-                return Failure
-            end
-        end
-        return Success
-```
 
 
 ### 2.1.2 选择节点（Fallback Node）
 
-<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-19.jpg?height=301&width=695&top_left_y=552&  top_left_x=686" width=500/>
+<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-19.jpg?height=301&width=695&top_left_y=552&top_left_x=686" width=500/>
 
 
 图2.3：具有 $N$ 个子节点的选择节点。
 
 图2.3所示的具有 $N$ 个子节点的选择节点，会从左至右依次“滴答”子节点，直到某个子节点返回成功或运行中，并将该结果返回给其父节点；若所有子节点均返回失败，选择节点将返回失败给其父节点。选择节点的执行详见算法2。(6)
 
+**算法 2：** 具有 $N$ 个子节点的故障恢复节点伪代码。
 
+<img src="https://cdn.mathpix.com/snip/images/F1tG26iJyFQdkeLfBLBgQdyimrgtPieei_Q0T49QVq0.original.fullsize.png" width=400 />
 
-```
-Algorithm 2: Pseudocode of a fallback node with $N$ children.
-    Function Tick():
-        for $i \leftarrow 1$ to $N$ do
-            childStatus $\leftarrow$ child $(i)$.Tick ()
-            if childStatus = Running then
-                return Running
-            end
-            else if childStatus = Success then
-                return Success
-            end
-        end
-        return Failure
-```
 
 
 ### 2.1.3 Parallel Node
@@ -134,69 +110,40 @@ Algorithm 2: Pseudocode of a fallback node with $N$ children.
 
 图2.4所示的具有 $N$ 个子节点的并行节点，会从左到右“滴答”其所有子节点。当成功的子节点数大于或等于 $M$ 时，并行节点返回成功；当失败的子节点数大于 $N - M$ 时，返回失败；若两者条件均不满足，则返回运行中。并行节点的执行详见算法3[6]。
 
+算法 3：具有 $N$ 个子节点和成功阈值 $M$ 的并行节点伪代码。
 
-```
-Algorithm 3: Pseudocode of a parallel node with $N$ children and
-success threshold M.
-    Function Tick():
-        for $i \leftarrow 1$ to $N$ do
-            childStatus $[i] \leftarrow$ child $(i)$.Tick ()
-        end
-        if $\sum_{i}$ (childStatus $[i]=$ Success $) \geq M$ then
-            return Success
-        end
-        else if $\sum_{i}$ (childStatus $[i]=$ Failure $)>M-N$ then
-            return Failure
-        end
-        return Running
-```
+<img src="https://cdn.mathpix.com/snip/images/H06JH29gtmwaNKiI8SFwtB658CKb3QjEJa0yBVFjDZQ.original.fullsize.png" width=400 />
+
+
 
 
 ### 2.1.4 行为节点（Action Node）
 
-<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-20.jpg?height=181&width=249&top_left_y=1400&top_left_x=909" width=500/>
+<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-20.jpg?height=181&width=249&top_left_y=1400&top_left_x=909" width=100/>
 
 
 图2.5：行为节点，节点名称描述其执行的动作。
 
 如图2.5所示，行为节点在接收到来自其父节点的“滴答”时执行。若行为节点完成执行且成功，则返回成功（success）；若执行失败，则返回失败（failure）；若执行尚未完成，则返回运行中（running）。行为节点的执行详见算法4。[6]
 
-```
-Algorithm 4: Pseudocode of an action node.
-    Function Tick():
-        ExecuteCommand()
-        if action-succeeded then
-            return Success
-        end
-        else if action-failed then
-            return Failure
-        end
-        else
-            return Running
-        end
-```
+**算法 4：** 动作节点的伪代码。
+
+<img src="https://cdn.mathpix.com/snip/images/3iHHY5ZyID4oMyWqCq8Rc0N_FHxw3SSBxlPTay6peu4.original.fullsize.png" width=400 />
 
 
 ### 2.1.5 条件节点（Condition Node）
 
-<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-21.jpg?height=186&width=418&top_left_y=1215&top_left_x=822" width=500/>
+<img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-21.jpg?height=186&width=418&top_left_y=1215&top_left_x=822" width=100/>
 
 
 图2.6：条件节点。
 
 如图2.6所示，条件节点在接收到来自其父节点的“滴答”时执行。若条件为真，条件节点返回成功（success）；若条件为假，则返回失败（failure）。注意条件节点永远不会返回运行中（running）。条件节点的执行详见算法5。(6)
 
+**算法 5：** 条件节点的伪代码。
 
-```
-Algorithm 5: Pseudocode of a condition node.
-    Function Tick():
-        if condition-true then
-            return Success
-        end
-        else
-            return Failure
-        end
-```
+<img src="https://cdn.mathpix.com/snip/images/zVRvl6iRw8eBoW9I7QNu0xoL5cPkJEZps61GcMrOTYc.original.fullsize.png" width=400 />
+
 
 
 ### 2.2 基于市场的任务分配
@@ -208,6 +155,7 @@ Algorithm 5: Pseudocode of a condition node.
 ### 2.2.1 拍卖服务器
 
 拍卖服务器（或称拍卖处理器）需能够接收新的拍卖项目、竞标、发布可用拍卖信息，并在拍卖回合结束时公布结果。此类拍卖服务器的结构如图2.7流程图所示。
+
 <img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-22.jpg?height=609&width=1186&top_left_y=1032&top_left_x=441" width=500/>
 
 
@@ -216,6 +164,7 @@ Algorithm 5: Pseudocode of a condition node.
 ### 2.2.2 拍卖客户端
 
 参与出价并争取赢得部分可用任务的参与者称为拍卖客户端。拍卖客户端的结构如图2.8流程图所示。
+
 <img src="https://cdn.mathpix.com/cropped/2025_07_19_cd3900321355e83480e8g-23.jpg?height=618&width=1243&top_left_y=428&top_left_x=412" width=500/>
 
 
@@ -353,39 +302,15 @@ $$
 
 基于第2.3.1节定义的行为库，应创建一个能够解决特定条件的行为树。其核心思想是通过首先添加目标条件，然后迭代地用能够解决该条件的行为扩展每个条件，并添加该行为指定的前置条件，从而确保特定目标条件被满足[11, 12]。每添加一个行为，需保证其前置条件已被满足才能进入该行为。图2.10展示了实现该算法的视觉表示；算法6和7对该算法也做了详细描述。
 
+**算法 6：** 生成用于实现特定条件的行为树的伪代码  
 
-```
-Algorithm 6: Pseudocode for generating a behavior tree for
-achieving a specific condition.
-    Function GenerateBehaviorTree ( $C_{\text {start }}$ ):
-        Input: $C_{\text {start }}$ : Starting condition
-        Output: Tree : Behavior tree
-        Tree $\leftarrow C_{\text {start }} / *$ Add initial condition */
-        while ConditionsToExpand $\notin \varnothing$ do
-            $C_{\text {expand }} \leftarrow$ getConditionToExpand(Tree)
-            Tree $\leftarrow \operatorname{Expand}\left(\right.$ Tree,$\left.C_{\text {start }}\right)$
-        end
-        return Tree
-```
+<img src="https://cdn.mathpix.com/snip/images/BZBQNsAF7oIhif2GgtQvpPI2vid930dubGoeluJvNnU.original.fullsize.png" width=400 />
 
-```
-Algorithm 7: Pseudocode for exanding a condition.
-    Function Expand(Tree, $C$ ):
-        Input: Tree : Behavior tree with condition to expand
-                $C$ : Condition to expand
-        Output: Tree : The expanded behavior tree
-        $A \leftarrow$ FindActionThatSolvesCondition $(C)$
-        $\left[C_{\text {pre }, 1}, \ldots, C_{\text {pre }, n}\right] \leftarrow$ GetPreConditionsToAction $(A)$
-        $T_{1} \leftarrow$ Sequence $\left(\left[C_{\text {pre }, 1}, \ldots, C_{\text {pre }, n}\right], A\right) / *$ Generate a
-            sequence subtree containing the preconditions and
-            action. */
-        $T_{2} \leftarrow$ Fallback $\left(C, T_{1}\right) / *$ Generate a fallback subtree
-            containing the condition to expand and sequence
-            subtree. */
-        Tree $\leftarrow$ Replace $\left(\right.$ Tree $\left., C, T_{2}\right) / *$ Replaces the condition $C$
-            with the subtree $T_{2}$ in Tree. */
-        return Tree
-```
+
+**算法 7：** 条件扩展的伪代码。
+
+<img src="https://cdn.mathpix.com/snip/images/CeylJLqJj0Z5WmNFvjA0Ix92YXOxEjWhaNiCXrwqQFk.original.fullsize.png" width=400 />
+
 
 
 ### 2.3.3 包含安全需求
