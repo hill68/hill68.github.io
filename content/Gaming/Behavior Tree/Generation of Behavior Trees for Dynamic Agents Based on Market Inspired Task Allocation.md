@@ -945,26 +945,44 @@ $$
 ## Bibliography
 
 [1] Google wing. https://wing.com. Accessed: 2022-02-01.
-[2] Amazon prime air. https://www.amazon.com/Amazon-Prime-Air/b? ie=UTF\&\&node=8037720011. Accessed: 2022-02-01.
-[3] Matteo Iovino, Edvards Scukins, Jonathan Styrud, Petter Ögren, and Christian Smith. A survey of behavior trees in robotics and AI. CoRR, abs/2005.05842, 2020. URL https://arxiv.org/abs/2005.05842.
-[4] Christopher Iliffe Sprague, Özer Özkahraman, Andrea Munafò, Rachel Marlow, Alexander B. Phillips, and Petter Ögren. Improving the modularity of AUV control systems using behaviour trees. CoRR, abs/1811.00426, 2018. URL http://arxiv.org/abs/1811.00426.
-[5] Steve Rabin Ed. Game AI Pro, chapter 6. The Behavior Tree Starter Kit. CRC Press, 2013.
-[6] Michele Colledanchise and Petter Ögren. Behavior trees in robotics and ai. Jul 2018. doi: 10.1201/9780429489105. URL http://dx.doi.org/ 10.1201/9780429489105.
-[7] Anthony (Tony) Stentz and M. Bernardine Dias. A free market architecture for coordinating multiple robots. Technical Report CMU-RI-TR-99-42, Carnegie Mellon University, Pittsburgh, PA, December 1999.
-[8] M.B. Dias, R. Zlot, N. Kalra, and A. Stentz. Market-based multirobot coordination: A survey and analysis. Proceedings of the IEEE, 94(7): 1257-1270, 2006. doi: 10.1109/JPROC.2006.876939.
-[9] Stanford Artificial Intelligence Laboratory et al. Robotic operating system. URL https://www.ros.org.
-[10] Mikael Rönnqvist Jan Lundgren and Peter Värbrand. Optimeringslära. Studentliteratur, 2008.
-[11] Michele Colledanchise, Diogo Almeida, and Petter Ogren. Towards blended reactive planning and acting using behavior trees. pages 88398845, 05 2019. doi: 10.1109/ICRA.2019.8794128.
-[12] Tadewos G. Tadewos, Laya Shamgah, and Ali Karimoddini. On-thefly decentralized tasking of autonomous vehicles. In 2019 IEEE 58th Conference on Decision and Control (CDC), pages 2770-2775, 2019. doi: 10.1109/CDC40024.2019.9029554.
-[13] N. Koenig and A. Howard. Design and use paradigms for gazebo, an open-source multi-robot simulator. In 2004 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS) (IEEE Cat. No.04CH37566), volume 3, pages 2149-2154 vol.3, 2004. doi: 10.1109/IROS.2004.1389727.
-[14] Patricio Castillo-Pizarro, Tomas V. Arredondo, and Miguel TorresTorriti. Introductory survey to open-source mobile robot simulation software. In 2010 Latin American Robotics Symposium and Intelligent Robotics Meeting, pages 150-155, 2010. doi: 10.1109/LARS.2010.19.
-[15] Fadri Furrer, Michael Burri, Markus Achtelik, and Roland Siegwart. Robot Operating System (ROS): The Complete Reference (Volume 1), chapter RotorS-A Modular Gazebo MAV Simulator Framework, pages 595-625. Springer International Publishing, Cham, 2016. ISBN 978-3-319-26054-9. doi: 10.1007/978-3-319-26054-9_23. URL http://dx. doi.org/10.1007/978-3-319-26054-9_23.
-[16] bitcraze. Crazyflie 2.0. https://www.bitcraze.io/products/ old-products/crazyflie-2-0/. Accessed: 2022-02-01.
-[17] Morgan Quigley. Ros: an open-source robot operating system. In ICRA 2009, 2009.
-[18] Michele Colledanchise and Davide Faconti. Behaviortree.cpp. https: //github.com/BehaviorTree/BehaviorTree.CPP, 2022.
-[19] Razan Ghzouli, Thorsten Berger, Einar Broch Johnsen, Swaib Dragule, and Andrzej Wasowski. Behavior trees in action: A study of robotics applications. CoRR, abs/2010.06256, 2020. URL https://arxiv.org/ abs/2010.06256.
-[20] Laurent Perron and Vincent Furnon. Or-tools. URL https:// developers.google.com/optimization/.
-[21] Gerald Gamrath, Daniel Anderson, Ksenia Bestuzheva, Wei-Kun Chen, Leon Eifler, Maxime Gasse, Patrick Gemander, Ambros Gleixner, Leona Gottwald, Katrin Halbig, Gregor Hendel, Christopher Hojny, Thorsten
 
-Koch, Pierre Le Bodic, Stephen J. Maher, Frederic Matter, Matthias Miltenberger, Erik Mühmer, Benjamin Müller, Marc E. Pfetsch, Franziska Schlösser, Felipe Serrano, Yuji Shinano, Christine Tawfik, Stefan Vigerske, Fabian Wegscheider, Dieter Weninger, and Jakob Witzig. The SCIP Optimization Suite 7.0. Technical report, Optimization Online, March 2020. URL http://www.optimization-online.org/DB_ HTML/2020/03/7705.html.
+[2] Amazon prime air. https://www.amazon.com/Amazon-Prime-Air/b? ie=UTF\&\&node=8037720011. Accessed: 2022-02-01.
+
+[3] Matteo Iovino, Edvards Scukins, Jonathan Styrud, Petter Ögren, and Christian Smith. A survey of behavior trees in robotics and AI. CoRR, abs/2005.05842, 2020. URL https://arxiv.org/abs/2005.05842.
+
+[4] Christopher Iliffe Sprague, Özer Özkahraman, Andrea Munafò, Rachel Marlow, Alexander B. Phillips, and Petter Ögren. Improving the modularity of AUV control systems using behaviour trees. CoRR, abs/1811.00426, 2018. URL http://arxiv.org/abs/1811.00426.
+
+[5] Steve Rabin Ed. Game AI Pro, chapter 6. The Behavior Tree Starter Kit. CRC Press, 2013.
+
+[6] Michele Colledanchise and Petter Ögren. Behavior trees in robotics and ai. Jul 2018. doi: 10.1201/9780429489105. URL http://dx.doi.org/ 10.1201/9780429489105.
+
+[7] Anthony (Tony) Stentz and M. Bernardine Dias. A free market architecture for coordinating multiple robots. Technical Report CMU-RI-TR-99-42, Carnegie Mellon University, Pittsburgh, PA, December 1999.
+
+[8] M.B. Dias, R. Zlot, N. Kalra, and A. Stentz. Market-based multirobot coordination: A survey and analysis. Proceedings of the IEEE, 94(7): 1257-1270, 2006. doi: 10.1109/JPROC.2006.876939.
+
+[9] Stanford Artificial Intelligence Laboratory et al. Robotic operating system. URL https://www.ros.org.
+
+[10] Mikael Rönnqvist Jan Lundgren and Peter Värbrand. Optimeringslära. Studentliteratur, 2008.
+
+[11] Michele Colledanchise, Diogo Almeida, and Petter Ogren. Towards blended reactive planning and acting using behavior trees. pages 88398845, 05 2019. doi: 10.1109/ICRA.2019.8794128.
+
+[12] Tadewos G. Tadewos, Laya Shamgah, and Ali Karimoddini. On-thefly decentralized tasking of autonomous vehicles. In 2019 IEEE 58th Conference on Decision and Control (CDC), pages 2770-2775, 2019. doi: 10.1109/CDC40024.2019.9029554.
+
+[13] N. Koenig and A. Howard. Design and use paradigms for gazebo, an open-source multi-robot simulator. In 2004 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS) (IEEE Cat. No.04CH37566), volume 3, pages 2149-2154 vol.3, 2004. doi: 10.1109/IROS.2004.1389727.
+
+[14] Patricio Castillo-Pizarro, Tomas V. Arredondo, and Miguel TorresTorriti. Introductory survey to open-source mobile robot simulation software. In 2010 Latin American Robotics Symposium and Intelligent Robotics Meeting, pages 150-155, 2010. doi: 10.1109/LARS.2010.19.
+
+[15] Fadri Furrer, Michael Burri, Markus Achtelik, and Roland Siegwart. Robot Operating System (ROS): The Complete Reference (Volume 1), chapter RotorS-A Modular Gazebo MAV Simulator Framework, pages 595-625. Springer International Publishing, Cham, 2016. ISBN 978-3-319-26054-9. doi: 10.1007/978-3-319-26054-9_23. URL http://dx. doi.org/10.1007/978-3-319-26054-9_23.
+
+[16] bitcraze. Crazyflie 2.0. https://www.bitcraze.io/products/ old-products/crazyflie-2-0/. Accessed: 2022-02-01.
+
+[17] Morgan Quigley. Ros: an open-source robot operating system. In ICRA 2009, 2009.
+
+[18] Michele Colledanchise and Davide Faconti. Behaviortree.cpp. https: //github.com/BehaviorTree/BehaviorTree.CPP, 2022.
+
+[19] Razan Ghzouli, Thorsten Berger, Einar Broch Johnsen, Swaib Dragule, and Andrzej Wasowski. Behavior trees in action: A study of robotics applications. CoRR, abs/2010.06256, 2020. URL https://arxiv.org/ abs/2010.06256.
+
+[20] Laurent Perron and Vincent Furnon. Or-tools. URL https:// developers.google.com/optimization/.
+
+[21] Gerald Gamrath, Daniel Anderson, Ksenia Bestuzheva, Wei-Kun Chen, Leon Eifler, Maxime Gasse, Patrick Gemander, Ambros Gleixner, Leona Gottwald, Katrin Halbig, Gregor Hendel, Christopher Hojny, Thorsten Koch, Pierre Le Bodic, Stephen J. Maher, Frederic Matter, Matthias Miltenberger, Erik Mühmer, Benjamin Müller, Marc E. Pfetsch, Franziska Schlösser, Felipe Serrano, Yuji Shinano, Christine Tawfik, Stefan Vigerske, Fabian Wegscheider, Dieter Weninger, and Jakob Witzig. The SCIP Optimization Suite 7.0. Technical report, Optimization Online, March 2020. URL http://www.optimization-online.org/DB_ HTML/2020/03/7705.html.
 
