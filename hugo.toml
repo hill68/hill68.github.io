@@ -9,36 +9,36 @@ disableKinds = ["taxonomy"] # 关闭 /tags/ 和 /categories/ 等分类页面
 
 
 [markup]
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      # 允许在 Markdown 中渲染原生 HTML
-      unsafe = true
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      # 允许在 Markdown 中渲染原生 HTML
+      unsafe = true
 
-    # 启用 passthrough 扩展，并自定义数学分隔符
-    [markup.goldmark.extensions]
-      [markup.goldmark.extensions.passthrough]
-        enable = true
-        [markup.goldmark.extensions.passthrough.delimiters]
-          block = [
-            ['\[', '\]'],
-            ['$$', '$$']
-          ]
-          inline = [
-            ['\(', '\)'],
-            ['$', '$']
-          ]
+    # 启用 passthrough 扩展，并自定义数学分隔符
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [
+            ['\[', '\]'],
+            ['$$', '$$']
+          ]
+          inline = [
+            ['\(', '\)'],
+            ['$', '$']
+          ]
 
 # Relearn 主题及其他参数
 [params]
-  subtitle = "SubFlitSoft"
-  dateFormat = "2006-01-02"
-  showReadingTime = true
-  themeVariant = ['zen-light', 'zen-dark']
+  subtitle = "SubFlitSoft"
+  dateFormat = "2006-01-02"
+  showReadingTime = true
+  themeVariant = ['zen-light', 'zen-dark']
   # 使用主题推荐的方式来设置代码高亮主题
   highlightTheme = "dracula"
-  math = true
-  disableLandingPageButton = true
-  disablePrintButton = false
+  math = true
+  disableLandingPageButton = true
+  disablePrintButton = false
   # 禁用章节号的设置保持不变
-  disableChapterTitleNumbering = true
-  customCSS = ["css/custom.css"]
+  disableChapterTitleNumbering = true
+  customCSS = ["css/custom.css"]
