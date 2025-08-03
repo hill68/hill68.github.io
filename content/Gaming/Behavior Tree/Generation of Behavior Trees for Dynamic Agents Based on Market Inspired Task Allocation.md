@@ -96,7 +96,7 @@ https://www.diva-portal.org/smash/get/diva2:1661617/FULLTEXT01.pdf
 
 **算法 2：** 具有 $N$ 个子节点的故障恢复节点伪代码。
 
-<img src="https://cdn.mathpix.com/snip/images/F1tG26iJyFQdkeLfBLBgQdyimrgtPieei_Q0T49QVq0.original.fullsize.png" width=400 />
+<img src="https://cdn.mathpix.com/snip/images/F1tG26iJyFQdkeLfBLBgQdyimrgtPieei_Q0T49QVq0.original.fullsize.png" width=500 />
 
 
 
@@ -111,7 +111,7 @@ https://www.diva-portal.org/smash/get/diva2:1661617/FULLTEXT01.pdf
 
 **算法 3：** 具有 $N$ 个子节点和成功阈值 $M$ 的并行节点伪代码。
 
-<img src="https://cdn.mathpix.com/snip/images/H06JH29gtmwaNKiI8SFwtB658CKb3QjEJa0yBVFjDZQ.original.fullsize.png" width=400 />
+<img src="https://cdn.mathpix.com/snip/images/H06JH29gtmwaNKiI8SFwtB658CKb3QjEJa0yBVFjDZQ.original.fullsize.png" width=500 />
 
 
 
@@ -127,7 +127,7 @@ https://www.diva-portal.org/smash/get/diva2:1661617/FULLTEXT01.pdf
 
 **算法 4：** 动作节点的伪代码。
 
-<img src="https://cdn.mathpix.com/snip/images/3iHHY5ZyID4oMyWqCq8Rc0N_FHxw3SSBxlPTay6peu4.original.fullsize.png" width=400 />
+<img src="https://cdn.mathpix.com/snip/images/3iHHY5ZyID4oMyWqCq8Rc0N_FHxw3SSBxlPTay6peu4.original.fullsize.png" width=500 />
 
 
 ### 2.1.5 条件节点（Condition Node）
@@ -141,7 +141,7 @@ https://www.diva-portal.org/smash/get/diva2:1661617/FULLTEXT01.pdf
 
 **算法 5：** 条件节点的伪代码。
 
-<img src="https://cdn.mathpix.com/snip/images/zVRvl6iRw8eBoW9I7QNu0xoL5cPkJEZps61GcMrOTYc.original.fullsize.png" width=400 />
+<img src="https://cdn.mathpix.com/snip/images/zVRvl6iRw8eBoW9I7QNu0xoL5cPkJEZps61GcMrOTYc.original.fullsize.png" width=500 />
 
 
 
@@ -303,12 +303,12 @@ $$
 
 **算法 6：** 生成用于实现特定条件的行为树的伪代码  
 
-<img src="https://cdn.mathpix.com/snip/images/BZBQNsAF7oIhif2GgtQvpPI2vid930dubGoeluJvNnU.original.fullsize.png" width=400 />
+<img src="https://cdn.mathpix.com/snip/images/BZBQNsAF7oIhif2GgtQvpPI2vid930dubGoeluJvNnU.original.fullsize.png" width=500 />
 
 
 **算法 7：** 条件扩展的伪代码。
 
-<img src="https://cdn.mathpix.com/snip/images/CeylJLqJj0Z5WmNFvjA0Ix92YXOxEjWhaNiCXrwqQFk.original.fullsize.png" width=400 />
+<img src="https://cdn.mathpix.com/snip/images/CeylJLqJj0Z5WmNFvjA0Ix92YXOxEjWhaNiCXrwqQFk.original.fullsize.png" width=500 />
 
 
 
