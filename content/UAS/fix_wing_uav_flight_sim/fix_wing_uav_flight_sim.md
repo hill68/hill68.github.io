@@ -148,7 +148,7 @@ summary= "为小型固定翼无人机仿真系统提供逼真的飞行动力学�
 * 外环 20 Hz, 中环 50 Hz, 内环 100 Hz
 * 主循环示例：
 
-  ```
+  ```C++
   while(sim) {  
     read_state();  
     if(time%0.05==0) external_loop();  
