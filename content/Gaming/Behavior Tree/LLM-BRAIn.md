@@ -96,3 +96,16 @@ LLM-BRAIn 目前存在以下局限性：
 *   通过启用子树的递归生成来增强模型，以扩展节点库。
 *   添加功能，允许操作员根据需要改变机器人行为并请求相关注释。
 *   将 LLM-BRAIn 集成到移动机器人、机器人机械臂系统和无人机群的控制系统中。
+*   
+
+<iframe
+  src="/pdf/LLM-BRAIn.pdf"
+  width="100%"
+  height="900"
+  style="border:1px solid #ccc;"
+>
+  此浏览器不支持 iframe，请  
+  <a href="/pdf/LLM-BRAIn.pdf">点击下载 PDF</a>
+</iframe>
+
+[论文原文链接](https://arxiv.org/abs/2305.19352)
