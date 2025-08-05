@@ -1,8 +1,8 @@
 +++
-title = "Gaming"
+title = "Decision Making"
 type = "chapter"
 weight = 40
-summary= "智能博弈文献与模型"
+summary= "决策与博弈"
 +++
 
 
