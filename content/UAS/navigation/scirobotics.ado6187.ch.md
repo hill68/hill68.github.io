@@ -448,11 +448,11 @@ $$
 
 **定理1.** 设$\mathcal{D}$为在位置$\mathbf{p}_c \in \mathbb{R}^3$采集的全方向且无限密集深度图像。若集合$\mathcal{S} \subseteq \mathbb{R}^3$满足：
 
-    (a) $\mathcal{S}$为凸集；
+  (a) $\mathcal{S}$为凸集；
 
-    (b) $\mathcal{S}$不含$\mathcal{D}$中的点；
+  (b) $\mathcal{S}$不含$\mathcal{D}$中的点；
 
-    (c) $\mathbf{p}_c \in \mathcal{S}$，
+  (c) $\mathbf{p}_c \in \mathcal{S}$，
 
 则$\mathcal{S}$必位于已知自由空间内。
 
