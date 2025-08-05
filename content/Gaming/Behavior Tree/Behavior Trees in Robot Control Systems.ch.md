@@ -98,8 +98,6 @@ BTs可以与各种AI范式相结合，以增强性能、学习能力和自动化
 2. 行为树的透明度在可解释AI、演示学习和人机交互（HRI）领域中具有重要作用。
 3. 虽然行为树已从AI和机器人学角度进行了探索，但从控制理论角度进行的研究相对较少。
 
-[论文原文链接](https://arxiv.org/abs/2203.13083)
-
 
 <iframe
   src="/pdf/Behavior Trees in Robot Control Systems.ch.pdf"
@@ -111,4 +109,4 @@ BTs可以与各种AI范式相结合，以增强性能、学习能力和自动化
   <a href="/pdf/Behavior Trees in Robot Control Systems.ch.pdf">点击下载 PDF</a>
 </iframe>
 
-
+[论文原文链接](https://arxiv.org/abs/2203.13083)
