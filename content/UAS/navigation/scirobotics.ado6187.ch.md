@@ -658,27 +658,30 @@ Table S1. 不同方法的实现细节
 ## 本文其他补充材料包括：
 ### 视频1
 
-<img src="https://cdn.mathpix.com/cropped/2025_07_28_4ce3067d1cb92616a586g-24.jpg?height=1048&width=1590&top_left_y=300&top_left_x=262" width=650/>
+{{< youtube GPHuzG0ANmI 320 180 >}}
 
+视频 1. 提出 SUPER 系统的概览。SUPER 展示了其在高速下安全穿越未知且杂乱环境的能力，能够避开如电力线等细小障碍，并在多种场景中表现出鲁棒性，包括目标跟踪和自主探索。
+
+### 视频S1至S4
 
 <video controls width="640">
   <source src="/media/ado6187_movie_s1.mp4"  type="video/mp4" />
   您的浏览器不支持 video 标签。
 </video>
 
-视频 1. 提出 SUPER 系统的概览。SUPER 展示了其在高速下安全穿越未知且杂乱环境的能力，能够避开如电力线等细小障碍，并在多种场景中表现出鲁棒性，包括目标跟踪和自主探索。
-
-### 视频S1至S4
-
-<img src="https://cdn.mathpix.com/cropped/2025_07_28_4ce3067d1cb92616a586g-24.jpg?height=903&width=1590&top_left_y=1538&top_left_x=262" width=650/>
-
 视频 S1. 未知环境中的安全高速导航。
 
-<img src="https://cdn.mathpix.com/cropped/2025_07_28_4ce3067d1cb92616a586g-25.jpg?height=1036&width=1586&top_left_y=176&top_left_x=264" width=650/>
+<video controls width="640">
+  <source src="/media/ado6187_movie_s2.mp4"  type="video/mp4" />
+  您的浏览器不支持 video 标签。
+</video>
 
 视频 S2. 杂乱环境中的导航。
 
-<img src="https://cdn.mathpix.com/cropped/2025_07_28_4ce3067d1cb92616a586g-25.jpg?height=952&width=1584&top_left_y=1329&top_left_x=265" width=650/>
+<video controls width="640">
+  <source src="/media/ado6187_movie_s3.mp4"  type="video/mp4" />
+  您的浏览器不支持 video 标签。
+</video>
 
 视频 S3. SUPER 避开细小障碍能力演示。
 
