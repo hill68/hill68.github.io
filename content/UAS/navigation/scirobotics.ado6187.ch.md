@@ -134,7 +134,7 @@ SUPER采用三维激光雷达实现高速导航。相比广泛应用于学术研
 
 <img src="https://cdn.mathpix.com/cropped/2025_07_28_4ce3067d1cb92616a586g-15.jpg?height=445&width=1527&top_left_y=176&top_left_x=304" width=650/>
 
-Fig. S5. OGM 上细线检测的视觉示例 (A) 无人机面对细线（绿色显示）的第三人称视角。 (B) 检测过程的侧视图。灰色框代表占据栅格地图（OGM）中包含细线的栅格。蓝线表示穿过该栅格但未击中细线的 LiDAR 光束，红线表示击中细线的光束。由于大多数光束未检测到细线，该栅格被错误地分类为自由空间。
+**Fig. S5. ** OGM 上细线检测的视觉示例 (A) 无人机面对细线（绿色显示）的第三人称视角。 (B) 检测过程的侧视图。灰色框代表占据栅格地图（OGM）中包含细线的栅格。蓝线表示穿过该栅格但未击中细线的 LiDAR 光束，红线表示击中细线的光束。由于大多数光束未检测到细线，该栅格被错误地分类为自由空间。
 
 ### 安全保障的高速轨迹规划
 
@@ -317,13 +317,13 @@ Fig. S3. 带和不带云台结构的 Falco 示意图 (A) Falco 开源实现的�
 
 <img src="https://cdn.mathpix.com/cropped/2025_07_28_4ce3067d1cb92616a586g-14.jpg?height=1034&width=1573&top_left_y=1093&top_left_x=262" width=650/>
 
-Fig. S4. 成功率和效率评估 (A) 在不同障碍物密度（以可通行性衡量）和飞行速度下的基准方法成功率。空白列表示未达到相应速度和密度的组合。 (B) 基准方法在1080次实验中的飞行结果。 (C) 基准方法的时间消耗，方块表示平均值，误差条表示总计算时间的标准差。每个均值和标准差均基于180次测试计算。
+**Fig. S4.** 成功率和效率评估 (A) 在不同障碍物密度（以可通行性衡量）和飞行速度下的基准方法成功率。空白列表示未达到相应速度和密度的组合。 (B) 基准方法在1080次实验中的飞行结果。 (C) 基准方法的时间消耗，方块表示平均值，误差条表示总计算时间的标准差。每个均值和标准差均基于180次测试计算。
 
 ### 不同基线方法实现细节
 
 本文“安全性、成功率及效率评估”部分简要对不同基线方法的实现细节进行了比较。表S1展示了方法在四个方面的比较。首先，基于安全策略将方法分为三类：乐观型、安全感知型及安全保障型。Bubble (13)为乐观型，视未知空间为自由空间。Raptor (20)为安全感知型，主动规划轨迹以增强未知空间可见性，但无安全保证。Faster (23)和本文提出的SUPER均为安全保障型，具备理论安全保证。其次，建图方法存在差异。Raptor采用基于欧氏有符号距离场（ESDF）的地图（31），Faster采用占据栅格地图（OGM）。相比之下，Bubble和SUPER采用点云建图，Bubble额外使用K维树生成走廊。整体上，Bubble和SUPER的点云建图计算时间远低于Faster和Raptor。四种基线均采用前后端式轨迹生成，具体方法不同。Bubble、Faster和SUPER采用基于飞行走廊的前端，Raptor采用拓扑路径搜索。后端方面，Faster采用混合整数二次规划（MIQP），Raptor使用路径引导轨迹优化。但Faster的MIQP及Raptor的路径引导优化仅优化轨迹空间属性，高速飞行时轨迹可行性受限，需引入时间优化。相比之下，Bubble和SUPER基于MINCO (29)实现时空轨迹优化，在高速飞行中表现更优，正文中有验证。
 
-Table S1. 不同方法的实现细节
+**表 S1.** 不同方法的实现细节
 
 |  | 类型 | 映射 | 前端 | 后端 |
 | :--- | :--- | :--- | :--- | :--- |
@@ -342,7 +342,7 @@ Table S1. 不同方法的实现细节
 
 <img src="https://cdn.mathpix.com/cropped/2025_07_28_4ce3067d1cb92616a586g-16.jpg?height=1912&width=1590&top_left_y=177&top_left_x=262" width=650/>
 
-Fig. S6. Faster 和 SUPER 规划模块评估 (A) (i) 模拟环境的俯视图，红色圆柱隐藏在角落后方。 (ii-iv) 三种方法执行轨迹比较：Faster（23）、提出的 SUPER 以及未进行切换时间优化的 SUPER（称为 SUPER 无 OT）。 (B) 模拟中备份轨迹的速度曲线和执行情况。 (C) 在相同探索轨迹和备份走廊条件下，Faster 和 SUPER 的切换时间 $t_{\mathrm{s}}$。 (D) (i) SUPER 的真实实验，隐藏障碍用红色虚线框标示。 (ii) 时间点 $t_{2}$ 机载摄像头的第一人称视角。 (E) 时间点 $t_{1}$ 和 $t_{2}$ 的规划轨迹。$\mathcal{T}_{e}^{1}$ 和 $\mathcal{T}_{b}^{1}$ 分别为 $t_{1}$ 的探索轨迹和备份轨迹，$\mathcal{T}_{e}^{2}$ 是 $t_{2}$ 的探索轨迹。$t_{2}$ 时的备份轨迹未显示。 (F) 实验中的速度曲线。
+**Fig. S6.** Faster 和 SUPER 规划模块评估 (A) (i) 模拟环境的俯视图，红色圆柱隐藏在角落后方。 (ii-iv) 三种方法执行轨迹比较：Faster（23）、提出的 SUPER 以及未进行切换时间优化的 SUPER（称为 SUPER 无 OT）。 (B) 模拟中备份轨迹的速度曲线和执行情况。 (C) 在相同探索轨迹和备份走廊条件下，Faster 和 SUPER 的切换时间 $t_{\mathrm{s}}$。 (D) (i) SUPER 的真实实验，隐藏障碍用红色虚线框标示。 (ii) 时间点 $t_{2}$ 机载摄像头的第一人称视角。 (E) 时间点 $t_{1}$ 和 $t_{2}$ 的规划轨迹。$\mathcal{T}_{e}^{1}$ 和 $\mathcal{T}_{b}^{1}$ 分别为 $t_{1}$ 的探索轨迹和备份轨迹，$\mathcal{T}_{e}^{2}$ 是 $t_{2}$ 的探索轨迹。$t_{2}$ 时的备份轨迹未显示。 (F) 实验中的速度曲线。
 
 ### 场景空间中的凸分解
 
@@ -356,16 +356,7 @@ Fig. S6. Faster 和 SUPER 规划模块评估 (A) (i) 模拟环境的俯视图，
 
 所提CIRI基于FIRI框架（58）的迭代流程（见算法1）改进，提升计算效率并生成更大多面体。算法以线段种子$\mathrm{S}:\{\mathbf{s}_a, \mathbf{s}_b\}$及障碍点云$\mathcal{O}$为输入，初始将椭球设为单位球（第2行），迭代直至椭球体积收敛。迭代过程包含两步：第一，均匀膨胀椭球至与障碍点云相切，生成一组超平面，将凸区域与障碍分离且保证包含种子（第7行）；第二，基于二阶锥规划（SOCP）优化，求解由上述超平面定义的无障碍半空间多面体内最大体积椭球（第8行）。通过迭代精炼，超平面与椭球逐步调整，扩展内接椭球体积，得到更大多面体与更宽阔的无障碍空间区域。
 
-
-#### 基于椭球的凸分解
-
-本步骤旨在确定由一组分割超平面组成的自由多面体，这些超平面确保给定种子区域无障碍物。每个超平面用$\mathcal{H}(A,b)$表示，其中$A \mathbf{x} \leq b, \mathbf{x} \in \mathbb{R}^3$定义一个半空间。多面体$\mathcal{P}$由$K$个半空间的交集定义：$\mathcal{P}:\{\mathcal{H}_1, \ldots, \mathcal{H}_k\}$。椭球使用单位球的像，即Löwner-John椭球（70）表示，定义如下：
-
-$$
-\mathbf{E}(\mathbf{C}, \mathbf{d}) = \{\mathbf{C} \tilde{\mathbf{x}} + \mathbf{d} \mid \|\tilde{\mathbf{x}}\| \leq 1\} \tag{S1}
-$$
-
-**算法 1：场景空间迭代区域膨胀（CIRI）** 
+**算法 1：**  场景空间迭代区域膨胀（CIRI）
 
 符号说明：单位矩阵：$\mathbf{I} \in \mathbb{R}^{3 \times 3}$；以 $\mathbf{d}$ 为中心，形状矩阵为 $\mathbf{C}$ 的椭球 $\mathbf{E}$；收敛阈值：$\varepsilon$ 
 
@@ -374,6 +365,14 @@ $$
 输出：多面体：$\mathcal{P}$  
 
 <img src="https://cdn.mathpix.com/snip/images/eKXmEii835l3YqWFDMnP19nHcwF8A5MZkvyVaMwgy28.original.fullsize.png" width=650/>
+
+#### 基于椭球的凸分解
+
+本步骤旨在确定由一组分割超平面组成的自由多面体，这些超平面确保给定种子区域无障碍物。每个超平面用$\mathcal{H}(A,b)$表示，其中$A \mathbf{x} \leq b, \mathbf{x} \in \mathbb{R}^3$定义一个半空间。多面体$\mathcal{P}$由$K$个半空间的交集定义：$\mathcal{P}:\{\mathcal{H}_1, \ldots, \mathcal{H}_k\}$。椭球使用单位球的像，即Löwner-John椭球（70）表示，定义如下：
+
+$$
+\mathbf{E}(\mathbf{C}, \mathbf{d}) = \{\mathbf{C} \tilde{\mathbf{x}} + \mathbf{d} \mid \|\tilde{\mathbf{x}}\| \leq 1\} \tag{S1}
+$$
 
 
 其中$\mathbf{C} \in \mathbb{R}^{3 \times 3}$为对角形状矩阵，定义为$\mathbf{C}=\operatorname{diag}(r_x, r_y, r_z)$，$\mathbf{d} \in \mathbb{R}^3$为椭球中心。其均匀扩展定义为：
@@ -386,13 +385,7 @@ $$
 
 所提方法输入包含障碍点云$\mathcal{O} \in \mathbb{R}^{3 \times N}$（$N$点数）、世界坐标系下椭球$\mathbf{E}^\mathcal{W}$、种子$\mathbf{S}$及机器人半径$r$。流程见算法2，示意于图S7C。
 
-初始时，将激活障碍点云$\mathcal{O}_a$设为全障碍点云$\mathcal{O}$（第2行）。随后循环生成分割超平面，直到$\mathcal{O}_a$为空。每轮迭代选择离椭球中心$\mathbf{E}$最近的障碍球体$\mathbf{E}_s^\mathcal{W}$（第4行），尝试寻找椭球与该障碍球体间的分割超平面。寻找超平面的关键是定位与障碍物相交且与均匀扩展椭球$\mathbf{E}_\alpha^\mathcal{W}$相切的平面。基于文献（59）思路，将问题转到椭球坐标系$\mathcal{E}$，转化为单一最短距离规划问题，避免对不同扩展因子$\alpha$的搜索。根据式S1，椭球$\mathbf{E}^\mathcal{W}$为椭球系$\mathcal{E}$中单位球的像。通过构建逆映射，将问题转换至椭球系$\mathcal{E}$（见图S7B）。交点$\mathbf{p}_t^\mathcal{W}$对应椭球系中最靠近原点的点$\mathbf{p}_t^\mathcal{E}$，问题转为最小距离优化：
-
-$$
-\mathbf{p}_t^\mathcal{E} = \arg \min_{\mathbf{x}} \|\mathbf{x}\|_2, \quad \text{s.t.} \quad \mathbf{x} \in \mathbf{E}_s^\mathcal{E} \tag{S3}
-$$
-
-**算法 2：基于椭球的凸分解** 
+**算法 2：**  基于椭球的凸分解
 
 参数：活动障碍物点云 $\mathcal{O}_{a}$； 
 
@@ -401,6 +394,14 @@ $$
 输出：多面体：$\mathcal{P}$  
 
 <img src="https://cdn.mathpix.com/snip/images/N04JCIBaqGxB5qQAyCRhr4OnvAoGxcFim9P8PKYEVvk.original.fullsize.png" width=650/>
+
+
+初始时，将激活障碍点云$\mathcal{O}_a$设为全障碍点云$\mathcal{O}$（第2行）。随后循环生成分割超平面，直到$\mathcal{O}_a$为空。每轮迭代选择离椭球中心$\mathbf{E}$最近的障碍球体$\mathbf{E}_s^\mathcal{W}$（第4行），尝试寻找椭球与该障碍球体间的分割超平面。寻找超平面的关键是定位与障碍物相交且与均匀扩展椭球$\mathbf{E}_\alpha^\mathcal{W}$相切的平面。基于文献（59）思路，将问题转到椭球坐标系$\mathcal{E}$，转化为单一最短距离规划问题，避免对不同扩展因子$\alpha$的搜索。根据式S1，椭球$\mathbf{E}^\mathcal{W}$为椭球系$\mathcal{E}$中单位球的像。通过构建逆映射，将问题转换至椭球系$\mathcal{E}$（见图S7B）。交点$\mathbf{p}_t^\mathcal{W}$对应椭球系中最靠近原点的点$\mathbf{p}_t^\mathcal{E}$，问题转为最小距离优化：
+
+$$
+\mathbf{p}_t^\mathcal{E} = \arg \min_{\mathbf{x}} \|\mathbf{x}\|_2, \quad \text{s.t.} \quad \mathbf{x} \in \mathbf{E}_s^\mathcal{E} \tag{S3}
+$$
+
 
 该问题可高效通过求解六次多项式根（71）获得。我们用C++实现，Intel i7 CPU下典型求解时间不足0.5微秒。得切点$\mathbf{p}_t^\mathcal{E}$后，计算半空间$\mathcal{H}^\mathcal{E}(A^\mathcal{E}, b^\mathcal{E}) = (\mathbf{p}_t^\mathcal{E} / \|\mathbf{p}_t^\mathcal{E}\|, -\|\mathbf{p}_t^\mathcal{E}\|)$，及扩展因子$\alpha = \|\mathbf{p}_t^\mathcal{E}\|$。再将其反变换回世界系得到：
 
@@ -411,6 +412,10 @@ $$
 其中$\mathbf{C}, \mathbf{d}$分别为椭球$\mathbf{E}$的形状矩阵和中心。
 
 上述过程得到椭球与障碍球体的分割超平面。但可能出现种子不在生成半空间内的情况。为此，我们提出平面调整方法，确保生成多面体包含种子（第6行）。如图S7D所示，先检查$\mathbf{s}_a$和$\mathbf{s}_b$是否均在半空间$\mathcal{H}$内。若种子点$\mathbf{s}_a$在$\mathcal{H}$外，则将$\mathcal{H}$调整为过$\mathbf{s}_a$且切于障碍球体、指向另一种子点$\mathbf{s}_b$的新超平面$\mathcal{H}_{adj}$。该调整保证$\mathcal{H}_{adj}$包含$\mathbf{s}_a$和$\mathbf{s}_b$。随后用$\mathcal{H}_{adj}$替代本轮生成的$\mathcal{H}$。调整后（如必要），将$\mathcal{H}$外的障碍点从$\mathcal{O}_a$中剔除，并将$\mathcal{H}$加入多面体$\mathcal{P}$。该过程循环直至所有障碍点被排除。
+
+<img src="https://cdn.mathpix.com/cropped/2025_07_28_4ce3067d1cb92616a586g-17.jpg?height=1207&width=1608&top_left_y=166&top_left_x=253" width=650/>
+
+**Fig. S7. ** 提出的飞行走廊生成算法（CIRI）示意图 (A) 场景空间中三种不同安全飞行走廊生成方法的比较。 (B) 说明椭球坐标系 $\mathcal{E}$ 和世界坐标系 $\mathcal{W}$ 之间的变换示例。 (C) C 空间中凸分解过程的视觉展示。 (D) 平面调整策略示例，确保给定的种子点位于生成的多面体内。
 
 
 #### 最大内切椭球
