@@ -7,7 +7,7 @@ summary= "将基于运动基元的A*算法从四旋翼无人机改进适配到�
 +++
 
 
-参考的基于运动基元的四旋翼无人机A\*算法：
+基于运动基元的四旋翼无人机A\*算法：
 
 https://github.com/HKUST-Aerial-Robotics/Fast-Planner/blob/master/fast_planner/path_searching/src/kinodynamic_astar.cpp
 
