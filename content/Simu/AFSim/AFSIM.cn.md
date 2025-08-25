@@ -3,11 +3,11 @@
 date = '2025-08-24T18:07:50+08:00'
 draft = false
 weight = 3
-title = 'Advanced Framework for Simulation, Integration and Modeling (AFSIM)'
+title = 'AFSIM概览'
 summary= "本文介绍了AFSIM软件的概貌。"
 +++
 
-# Advanced Framework for Simulation, Integration and Modeling (AFSIM)
+## Advanced Framework for Simulation, Integration and Modeling (AFSIM)
 
 *Peter D. Clive, Jeffrey A. Johnson, Michael J. Moss, James M. Zeh, Brian M. Birkmire, and Douglas D. Hodson, "Advanced Framework for Simulation, Integration and Modeling (AFSIM)," in Proceedings from International Conference on Scientific Computing (CSC '15), Las Vegas, July 2015.*
 
