@@ -1080,7 +1080,7 @@ $$
 
 小于零的值会被限制为零，大于一的值会被限制为一。
 
-## B.6 References
+### B.6 References
 
 1. Doerry, Armin W., "Performance Limits for Synthetic Aperture Radar - second edition", Sandia National Laboratory Report SAND2006-0821, 2006.
 2. Johnson, Jeffery, "AFSIM Communications, Sensor and Jamming Equations", Boeing
